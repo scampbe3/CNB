@@ -1,0 +1,222 @@
+/* CNB — global styling + Home page components
+   Code-first: Squarespace content stays basic; CSS controls the look.
+*/
+
+:root{
+  --cnb-maxw: 1080px;
+  --cnb-gutter: 24px;
+
+  --cnb-bg: #ffffff;
+  --cnb-fg: #141414;
+  --cnb-muted: #4b4b4b;
+  --cnb-border: rgba(0,0,0,.14);
+
+  --cnb-radius: 18px;
+  --cnb-radius-sm: 12px;
+
+  --cnb-pad-y: clamp(44px, 6vw, 84px);
+  --cnb-pad-y-sm: clamp(28px, 4.5vw, 52px);
+
+  --cnb-h1: clamp(34px, 4.6vw, 56px);
+  --cnb-h2: clamp(26px, 3.2vw, 36px);
+  --cnb-body: 18px;
+  --cnb-body-lg: 20px;
+  --cnb-line: 1.45;
+
+  --cnb-btn-h: 48px;
+}
+
+/* Only affects pages where our JS activates it */
+body.cnb {
+  background: var(--cnb-bg);
+  color: var(--cnb-fg);
+}
+
+/* Normalize section width/padding once we’ve “claimed” the section via JS */
+.cnb-section {
+  padding: var(--cnb-pad-y) 0;
+}
+
+.cnb-section .content-wrapper,
+.cnb-section .section-border-content {
+  max-width: var(--cnb-maxw);
+  margin: 0 auto;
+  padding-left: var(--cnb-gutter);
+  padding-right: var(--cnb-gutter);
+}
+
+/* Typography (light touch; we don’t want to fight Squarespace too hard) */
+.cnb-section h1{
+  font-size: var(--cnb-h1);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px 0;
+}
+.cnb-section h2{
+  font-size: var(--cnb-h2);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 12px 0;
+}
+.cnb-section p{
+  font-size: var(--cnb-body);
+  line-height: var(--cnb-line);
+  margin: 0 0 14px 0;
+  color: var(--cnb-fg);
+}
+.cnb-section p.cnb-muted,
+.cnb-section .cnb-muted p{
+  color: var(--cnb-muted);
+}
+
+/* Buttons — style Squarespace button blocks globally inside our claimed sections */
+.cnb-section .sqs-block-button .sqs-block-button-element{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: var(--cnb-btn-h);
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--cnb-fg);
+  background: var(--cnb-fg);
+  color: var(--cnb-bg);
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform .12s ease, opacity .12s ease, background .12s ease, color .12s ease;
+}
+
+.cnb-section .sqs-block-button .sqs-block-button-element:hover{
+  transform: translateY(-1px);
+  opacity: .92;
+}
+
+/* Secondary buttons: add “(Secondary)” in Squarespace button block “Button Style” by choosing Outline,
+   OR we auto-detect via JS and add .cnb-btn-secondary where needed.
+*/
+.cnb-btn-secondary .sqs-block-button-element{
+  background: transparent !important;
+  color: var(--cnb-fg) !important;
+}
+
+/* HERO layout */
+.cnb-home-hero .content-wrapper,
+.cnb-home-hero .section-border-content{
+  padding-top: var(--cnb-pad-y-sm);
+  padding-bottom: var(--cnb-pad-y-sm);
+}
+
+.cnb-home-hero .cnb-stack{
+  display: grid;
+  gap: 18px;
+  max-width: 760px;
+}
+
+.cnb-home-hero .cnb-cta-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+/* Intro “What This Is” */
+.cnb-home-what .cnb-stack{
+  display: grid;
+  gap: 12px;
+  max-width: 820px;
+}
+
+/* AI Concierge preview */
+.cnb-home-ai{
+  border-top: 1px solid var(--cnb-border);
+  border-bottom: 1px solid var(--cnb-border);
+  background: rgba(0,0,0,.02);
+}
+
+.cnb-home-ai .cnb-stack{
+  display: grid;
+  gap: 14px;
+  max-width: 860px;
+}
+
+/* Style a Squarespace Form block to look like a “prompt box” */
+.cnb-home-ai .form-wrapper{
+  margin-top: 8px;
+  padding: 14px;
+  border: 1px solid var(--cnb-border);
+  border-radius: var(--cnb-radius);
+  background: var(--cnb-bg);
+}
+
+.cnb-home-ai input,
+.cnb-home-ai textarea{
+  border-radius: 12px !important;
+  border: 1px solid var(--cnb-border) !important;
+  padding: 12px 12px !important;
+  font-size: 16px !important;
+}
+
+/* Feature sections (Learn / Work / Dinners / Membership / Closing) */
+.cnb-feature .cnb-stack{
+  display: grid;
+  gap: 12px;
+  max-width: 900px;
+}
+
+/* Modal (AI placeholder overlay) */
+.cnb-modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.56);
+  display: none;
+  z-index: 99999;
+}
+
+.cnb-modal-overlay[data-open="true"]{
+  display: grid;
+  place-items: center;
+}
+
+.cnb-modal{
+  width: min(920px, calc(100vw - 32px));
+  border-radius: 22px;
+  background: var(--cnb-bg);
+  border: 1px solid var(--cnb-border);
+  box-shadow: 0 22px 80px rgba(0,0,0,.35);
+  padding: 18px;
+}
+
+.cnb-modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cnb-modal-title{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cnb-modal-close{
+  border: 1px solid var(--cnb-border);
+  background: transparent;
+  border-radius: 999px;
+  height: 40px;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.cnb-modal-body{
+  padding: 8px 0 2px 0;
+  color: var(--cnb-muted);
+  line-height: 1.5;
+}
+
+/* Small screens */
+@media (max-width: 640px){
+  :root{ --cnb-gutter: 18px; }
+  .cnb-section p{ font-size: 17px; }
+}
