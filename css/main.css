@@ -2,6 +2,8 @@
    Code-first: Squarespace content stays basic; CSS controls the look.
 */
 
+body { outline: 10px solid lime !important; }
+
 :root{
   --cnb-maxw: 1080px;
   --cnb-gutter: 24px;

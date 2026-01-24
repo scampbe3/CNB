@@ -2,6 +2,9 @@
 /* CNB — bootstrap
    Adds stable classes to sections based on section Anchor IDs, so CSS stays clean.
 */
+console.log("[CNB] main.js actually executed");
+
+
 (function () {
   function findSectionByAnchorId(anchorId) {
     const el = document.getElementById(anchorId);
