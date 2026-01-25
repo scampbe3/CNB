@@ -2,16 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Nunito:wght@300;400;600;700&display=swap");
 
 :root {
-  --cnb-cream: #f7f2ec;
-  --cnb-ink: #14110f;
-  --cnb-ink-soft: #2b2522;
-  --cnb-muted: #5e5853;
-  --cnb-rose: #c8706c;
-  --cnb-olive: #2f3a2c;
-  --cnb-sage: #d8dfd1;
-  --cnb-gold: #d5b16d;
-  --cnb-border: rgba(20, 17, 15, 0.12);
-  --cnb-shadow: 0 24px 60px rgba(20, 17, 15, 0.18);
+  --cnb-cream: #f6f1ea;
+  --cnb-ink: #11100f;
+  --cnb-ink-soft: #2c2724;
+  --cnb-muted: #6a635d;
+  --cnb-rose: #c86a62;
+  --cnb-olive: #2e3a30;
+  --cnb-sage: #d7ded2;
+  --cnb-gold: #cda55f;
+  --cnb-border: rgba(17, 16, 15, 0.12);
+  --cnb-shadow: 0 22px 60px rgba(17, 16, 15, 0.18);
+  --cnb-texture-camo: url("../assets/images/Thandiwe-Muriu-Camo-16.jpg");
+  --cnb-texture-fabric: url("../assets/images/african-digital-print-fabric.jpg");
 
   --cnb-serif: "Antic Didone", "Garamond", "Times New Roman", serif;
   --cnb-sans: "Nunito", "Helvetica Neue", Arial, sans-serif;
@@ -27,24 +29,17 @@
 body.cnb-active {
   font-family: var(--cnb-sans);
   color: var(--cnb-ink);
-  background: var(--cnb-cream);
+  background-color: var(--cnb-cream);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(200, 106, 98, 0.12), transparent 45%),
+    radial-gradient(circle at 82% 18%, rgba(46, 58, 48, 0.14), transparent 50%),
+    radial-gradient(circle at 35% 85%, rgba(205, 165, 95, 0.12), transparent 50%);
+  -webkit-font-smoothing: antialiased;
 }
 
 body.cnb-home {
   position: relative;
   min-height: 100vh;
-}
-
-body.cnb-home::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 15% 10%, rgba(200, 112, 108, 0.18), transparent 45%),
-    radial-gradient(circle at 80% 20%, rgba(46, 58, 44, 0.18), transparent 50%),
-    radial-gradient(circle at 30% 85%, rgba(213, 177, 109, 0.18), transparent 55%);
-  pointer-events: none;
-  z-index: -1;
 }
 
 .cnb-section {
@@ -71,23 +66,32 @@ body.cnb-home::before {
   font-weight: 400;
   margin: 0 0 16px 0;
   line-height: 1.1;
+  letter-spacing: -0.01em;
   color: var(--cnb-ink);
 }
 
 .cnb-section h1 {
   font-size: clamp(34px, 5.2vw, 64px);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .cnb-section h2 {
   font-size: clamp(26px, 3.6vw, 40px);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 .cnb-section p {
   margin: 0 0 16px 0;
   color: var(--cnb-ink-soft);
-  font-size: 18px;
+  font-size: clamp(17px, 1.9vw, 19px);
   line-height: 1.6;
   max-width: 70ch;
+}
+
+.cnb-section p + p {
+  margin-top: 8px;
 }
 
 .cnb-section img {
@@ -97,6 +101,17 @@ body.cnb-home::before {
 
 .cnb-section a {
   color: inherit;
+}
+
+.cnb-section p a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  color: var(--cnb-ink);
+}
+
+.cnb-section p a:hover {
+  color: var(--cnb-olive);
 }
 
 .cnb-section a.cnb-link {
@@ -116,8 +131,10 @@ body.cnb-home::before {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.01em;
+  font-family: var(--cnb-sans);
   background: var(--cnb-ink);
   color: var(--cnb-cream);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .cnb-btn-primary {
@@ -126,7 +143,7 @@ body.cnb-home::before {
   border-color: var(--cnb-ink);
 }
 
-.cnb-btn-secondary {
+.cnb-btn.cnb-btn-secondary {
   background: transparent;
   color: var(--cnb-ink);
   border-color: var(--cnb-ink);
@@ -175,9 +192,38 @@ body.cnb-home::before {
   border-bottom: 1px solid var(--cnb-border);
 }
 
+.cnb-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.cnb-hero::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image: var(--cnb-texture-camo);
+  background-repeat: repeat;
+  background-size: 420px;
+  opacity: 0.08;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.cnb-hero .section-border-content,
+.cnb-hero .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .cnb-hero p {
-  font-size: clamp(18px, 2.4vw, 22px);
+  font-size: clamp(18px, 2.2vw, 22px);
+  color: var(--cnb-ink-soft);
+}
+
+.cnb-hero p:first-of-type {
+  font-size: clamp(19px, 2.6vw, 24px);
   color: var(--cnb-ink);
+  font-weight: 500;
 }
 
 .cnb-hero .section-border-content,
@@ -186,10 +232,42 @@ body.cnb-home::before {
   padding-bottom: clamp(48px, 7vw, 110px);
 }
 
+.cnb-hero.cnb-has-image .section-border-content,
+.cnb-hero.cnb-has-image .content-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.85fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+
+.cnb-hero.cnb-has-image .sqs-block-image {
+  margin: 0;
+}
+
 .cnb-ai,
 #cnb-home-ai,
 #cnb-ai-concierge {
+  position: relative;
   background: linear-gradient(120deg, rgba(213, 177, 109, 0.12), rgba(47, 58, 44, 0.1));
+  overflow: hidden;
+}
+
+.cnb-ai::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--cnb-texture-fabric);
+  background-repeat: repeat;
+  background-size: 520px;
+  opacity: 0.05;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.cnb-ai .section-border-content,
+.cnb-ai .content-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .cnb-ai ul {
@@ -207,6 +285,33 @@ body.cnb-home::before {
   padding: 10px 14px;
   font-size: 14px;
   color: var(--cnb-ink);
+}
+
+.cnb-ai .form-wrapper {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: var(--cnb-radius);
+  border: 1px solid var(--cnb-border);
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(17, 16, 15, 0.08);
+}
+
+.cnb-ai .form-wrapper input,
+.cnb-ai .form-wrapper textarea {
+  border-radius: var(--cnb-radius-sm) !important;
+  border: 1px solid var(--cnb-border) !important;
+  padding: 12px 14px !important;
+  font-size: 15px !important;
+}
+
+.cnb-ai .form-wrapper button {
+  font-family: var(--cnb-sans);
+  border-radius: 999px;
+  border: 1px solid var(--cnb-ink);
+  background: var(--cnb-ink);
+  color: var(--cnb-cream);
+  padding: 10px 18px;
+  font-weight: 600;
 }
 
 .cnb-membership,
@@ -318,6 +423,19 @@ body.cnb-active [data-reveal].is-visible {
   .cnb-cta-row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .cnb-hero.cnb-has-image .section-border-content,
+  .cnb-hero.cnb-has-image .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cnb-hero::before,
+  .cnb-ai::before {
+    opacity: 0.04;
+    background-size: 360px;
   }
 }
 

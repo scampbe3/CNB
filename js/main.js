@@ -39,7 +39,21 @@
       section.setAttribute("data-reveal", "");
     }
 
+    flagSection(section);
     return section;
+  }
+
+  function flagSection(section) {
+    if (!section) return;
+    if (section.querySelector(".sqs-block-image img, img")) {
+      section.classList.add("cnb-has-image");
+    }
+    if (section.querySelector("ul, ol")) {
+      section.classList.add("cnb-has-list");
+    }
+    if (section.querySelector("form")) {
+      section.classList.add("cnb-has-form");
+    }
   }
 
   function groupButtons(section) {
@@ -62,9 +76,13 @@
   function wireAiConcierge(section) {
     if (!section) return;
 
-    const triggers = section.querySelectorAll(
-      ".sqs-block-button-element, button, a[href^='#']"
-    );
+    let triggers = Array.from(section.querySelectorAll(".sqs-block-button-element"));
+    if (!triggers.length) {
+      const fallback = section.querySelector(
+        "a[href=\"#cnb-home-ai\"], a[href=\"#cnb-ai-concierge\"], a[href=\"#cnb-ai\"]"
+      );
+      if (fallback) triggers = [fallback];
+    }
 
     triggers.forEach((trigger) => {
       if (trigger.dataset.cnbAiWired) return;
