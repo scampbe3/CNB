@@ -1,27 +1,11 @@
-/* CNB — AI Concierge (placeholder)
-   Requirement: opens as overlay/modal; user stays on Home; close returns to same scroll pos.
-*/
+/* CNB AI Concierge placeholder modal */
 (function () {
-  window.CNB = window.CNB || {};
+  "use strict";
 
-  function createModal() {
-    const overlay = document.createElement("div");
-    overlay.className = "cnb-modal-overlay";
-    overlay.innerHTML = `
-      <div class="cnb-modal" role="dialog" aria-modal="true" aria-label="AI Concierge">
-        <div class="cnb-modal-header">
-          <div class="cnb-modal-title">Cupcakes + Broccoli — AI Concierge</div>
-          <button class="cnb-modal-close" type="button">Close</button>
-        </div>
-        <div class="cnb-modal-body">
-          <p><strong>Placeholder for Phase 1.</strong> This is where the “Ask a question” experience will live.</p>
-          <p>For now, we’re proving the interaction model: overlay opens, no navigation, and closes back to the same scroll position.</p>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-    return overlay;
-  }
+  if (window.CNB && window.CNB.aiConcierge) return;
+
+  let overlay;
+  let lastFocus;
 
   function lockScroll() {
     const y = window.scrollY || 0;
@@ -42,45 +26,88 @@
     window.scrollTo(0, y);
   }
 
-  window.CNB.aiConcierge = {
-    init() {
-      // Only activate if the Home AI section exists
-      const aiSection = document.querySelector(".cnb-home-ai");
-      if (!aiSection) return;
+  function buildModal() {
+    if (overlay) return overlay;
 
-      const overlay = createModal();
+    overlay = document.createElement("div");
+    overlay.className = "cnb-modal-overlay";
+    overlay.setAttribute("aria-hidden", "true");
 
-      const open = () => {
-        overlay.dataset.open = "true";
-        lockScroll();
-      };
+    overlay.innerHTML = `
+      <div class="cnb-modal" role="dialog" aria-modal="true" aria-label="AI Concierge">
+        <div class="cnb-modal-header">
+          <h3 class="cnb-modal-title">Cupcakes + Broccoli — AI Concierge</h3>
+          <button class="cnb-modal-close" type="button">Close</button>
+        </div>
+        <div class="cnb-modal-body">
+          <p><strong>Phase 1 placeholder.</strong> This will become the expanded AI concierge experience.</p>
+          <p>Ask a question in your own words and we will guide you toward clarity, context, and next steps.</p>
+          <label class="cnb-field">
+            <span>Your question</span>
+            <input type="text" placeholder="What are you stuck on right now?" />
+          </label>
+          <div class="cnb-modal-actions">
+            <button class="cnb-btn cnb-btn-primary" type="button">Submit</button>
+            <button class="cnb-btn cnb-btn-secondary" type="button" data-ai-close>Cancel</button>
+          </div>
+        </div>
+      </div>
+    `;
 
-      const close = () => {
-        overlay.dataset.open = "false";
-        unlockScroll();
-      };
+    document.body.appendChild(overlay);
 
-      overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) close();
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) close();
+    });
+
+    const closeBtn = overlay.querySelector(".cnb-modal-close");
+    if (closeBtn) closeBtn.addEventListener("click", close);
+
+    const cancelBtn = overlay.querySelector("[data-ai-close]");
+    if (cancelBtn) cancelBtn.addEventListener("click", close);
+
+    const submitBtn = overlay.querySelector(".cnb-modal-actions .cnb-btn-primary");
+    if (submitBtn) {
+      submitBtn.addEventListener("click", () => {
+        const input = overlay.querySelector("input");
+        const value = input ? input.value.trim() : "";
+        if (value) {
+          console.log("[CNB] AI placeholder submitted:", value);
+        }
+        close();
       });
-      overlay.querySelector(".cnb-modal-close")?.addEventListener("click", close);
+    }
 
-      // Hook 1: Form submit (recommended)
-      const form = aiSection.querySelector("form");
-      if (form) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          open();
-        });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && overlay && overlay.dataset.open === "true") {
+        close();
       }
+    });
 
-      // Hook 2: If you used a Button block instead of a Form, clicking it opens modal
-      aiSection.querySelectorAll(".sqs-block-button a").forEach((a) => {
-        a.addEventListener("click", (e) => {
-          e.preventDefault();
-          open();
-        });
-      });
-    },
+    return overlay;
+  }
+
+  function open() {
+    const modal = buildModal();
+    lastFocus = document.activeElement;
+    modal.dataset.open = "true";
+    modal.setAttribute("aria-hidden", "false");
+    lockScroll();
+    const input = modal.querySelector("input");
+    if (input) input.focus();
+  }
+
+  function close() {
+    if (!overlay) return;
+    overlay.dataset.open = "false";
+    overlay.setAttribute("aria-hidden", "true");
+    unlockScroll();
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+  }
+
+  window.CNB = window.CNB || {};
+  window.CNB.aiConcierge = {
+    open,
+    close,
   };
 })();
