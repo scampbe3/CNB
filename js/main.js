@@ -3,13 +3,28 @@
   "use strict";
 
   const SECTION_CONFIG = [
-    { ids: ["cnb-home-hero", "cnb-hero"], classes: ["cnb-hero"] },
-    { ids: ["cnb-home-what", "cnb-what-we-do"], classes: [] },
+    {
+      ids: ["cnb-home-hero", "cnb-hero"],
+      classes: ["cnb-hero", "cnb-photo-panel", "cnb-photo-hero"],
+    },
+    {
+      ids: ["cnb-home-what", "cnb-what-we-do"],
+      classes: ["cnb-what", "cnb-photo-panel", "cnb-photo-what"],
+    },
     { ids: ["cnb-home-ai", "cnb-ai-concierge"], classes: ["cnb-ai"] },
-    { ids: ["cnb-home-learn", "cnb-learn"], classes: [] },
-    { ids: ["cnb-home-work", "cnb-work-with-amanda"], classes: [] },
-    { ids: ["cnb-home-dinners", "cnb-blind-dinners"], classes: [] },
-    { ids: ["cnb-home-membership", "cnb-membership"], classes: ["cnb-membership"] },
+    {
+      ids: ["cnb-home-learn", "cnb-learn"],
+      classes: ["cnb-learn", "cnb-photo-panel", "cnb-photo-learn"],
+    },
+    {
+      ids: ["cnb-home-work", "cnb-work-with-amanda"],
+      classes: ["cnb-work", "cnb-photo-panel", "cnb-photo-work"],
+    },
+    { ids: ["cnb-home-dinners", "cnb-blind-dinners"], classes: ["cnb-dinners", "cnb-dinners-texture"] },
+    {
+      ids: ["cnb-home-membership", "cnb-membership"],
+      classes: ["cnb-membership", "cnb-membership-texture"],
+    },
     { ids: ["cnb-home-closing", "cnb-closing"], classes: ["cnb-closing"] },
   ];
 

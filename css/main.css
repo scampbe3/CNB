@@ -14,13 +14,17 @@
   --cnb-shadow: 0 22px 60px rgba(17, 16, 15, 0.18);
   --cnb-texture-camo: url("../assets/images/Thandiwe-Muriu-Camo-16.jpg");
   --cnb-texture-fabric: url("../assets/images/african-digital-print-fabric.jpg");
+  --cnb-photo-hero: url("../assets/images/Thandiwe-Muriu-Ascension.jpg");
+  --cnb-photo-what: url("../assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg");
+  --cnb-photo-learn: url("../assets/images/1muriu-8-scaled.jpg");
+  --cnb-photo-work: url("../assets/images/Butler-Indi-10Det1-1920x1438.jpg");
 
   --cnb-serif: "Antic Didone", "Garamond", "Times New Roman", serif;
   --cnb-sans: "Nunito", "Helvetica Neue", Arial, sans-serif;
 
-  --cnb-maxw: 1120px;
+  --cnb-maxw: 1040px;
   --cnb-gutter: clamp(18px, 4vw, 36px);
-  --cnb-section-pad: clamp(56px, 9vw, 120px);
+  --cnb-section-pad: clamp(72px, 10vw, 144px);
   --cnb-radius-lg: 28px;
   --cnb-radius: 18px;
   --cnb-radius-sm: 12px;
@@ -74,6 +78,7 @@ body.cnb-home {
   font-size: clamp(34px, 5.2vw, 64px);
   letter-spacing: -0.02em;
   text-wrap: balance;
+  max-width: 18ch;
 }
 
 .cnb-section h2 {
@@ -129,7 +134,7 @@ body.cnb-home {
   border-radius: 999px;
   border: 1px solid var(--cnb-ink);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.01em;
   font-family: var(--cnb-sans);
   background: var(--cnb-ink);
@@ -154,11 +159,11 @@ body.cnb-home {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 20px !important;
+  padding: 10px 18px !important;
   border-radius: 999px !important;
   border: 1px solid var(--cnb-ink) !important;
   font-weight: 600 !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   letter-spacing: 0.01em;
   background: var(--cnb-ink) !important;
   color: var(--cnb-cream) !important;
@@ -194,25 +199,6 @@ body.cnb-home {
 
 .cnb-hero {
   position: relative;
-  overflow: hidden;
-}
-
-.cnb-hero::before {
-  content: "";
-  position: absolute;
-  inset: -10%;
-  background-image: var(--cnb-texture-camo);
-  background-repeat: repeat;
-  background-size: 420px;
-  opacity: 0.08;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-}
-
-.cnb-hero .section-border-content,
-.cnb-hero .content-wrapper {
-  position: relative;
-  z-index: 1;
 }
 
 .cnb-hero p {
@@ -242,6 +228,83 @@ body.cnb-home {
 
 .cnb-hero.cnb-has-image .sqs-block-image {
   margin: 0;
+}
+
+.cnb-photo-panel {
+  position: relative;
+}
+
+.cnb-photo-panel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: clamp(12px, 6vw, 52px);
+  width: min(320px, 34vw);
+  height: min(420px, 52vw);
+  transform: translateY(-50%);
+  background-image: var(--cnb-photo);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--cnb-radius);
+  box-shadow: var(--cnb-shadow);
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.cnb-photo-panel .content-wrapper,
+.cnb-photo-panel .section-border-content {
+  position: relative;
+  z-index: 1;
+  padding-right: clamp(220px, 34vw, 460px);
+}
+
+.cnb-photo-panel.cnb-has-image::after {
+  display: none;
+}
+
+.cnb-photo-panel.cnb-has-image .content-wrapper,
+.cnb-photo-panel.cnb-has-image .section-border-content {
+  padding-right: var(--cnb-gutter);
+}
+
+.cnb-photo-hero {
+  --cnb-photo: var(--cnb-photo-hero);
+}
+
+.cnb-photo-what {
+  --cnb-photo: var(--cnb-photo-what);
+}
+
+.cnb-photo-learn {
+  --cnb-photo: var(--cnb-photo-learn);
+}
+
+.cnb-photo-work {
+  --cnb-photo: var(--cnb-photo-work);
+}
+
+.cnb-what .content-wrapper,
+.cnb-what .section-border-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title cta"
+    "copy copy";
+  gap: 16px 24px;
+  align-items: start;
+}
+
+.cnb-what .sqs-block:first-child {
+  grid-area: title;
+}
+
+.cnb-what .sqs-block-button {
+  grid-area: cta;
+  justify-self: end;
+  align-self: start;
+}
+
+.cnb-what .sqs-block:not(.sqs-block-button):not(:first-child) {
+  grid-area: copy;
 }
 
 .cnb-ai,
@@ -320,6 +383,51 @@ body.cnb-home {
   background: rgba(47, 58, 44, 0.08);
 }
 
+.cnb-dinners-texture {
+  position: relative;
+  background: rgba(247, 242, 234, 0.75);
+}
+
+.cnb-dinners-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--cnb-texture-camo);
+  background-repeat: repeat;
+  background-size: 520px;
+  opacity: 0.08;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.cnb-dinners-texture .content-wrapper,
+.cnb-dinners-texture .section-border-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cnb-membership-texture {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.cnb-membership-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--cnb-texture-fabric);
+  background-repeat: repeat;
+  background-size: 520px;
+  opacity: 0.06;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.cnb-membership-texture .content-wrapper,
+.cnb-membership-texture .section-border-content {
+  position: relative;
+  z-index: 1;
+}
 .cnb-closing,
 #cnb-home-closing,
 #cnb-closing {
@@ -429,11 +537,39 @@ body.cnb-active [data-reveal].is-visible {
   .cnb-hero.cnb-has-image .content-wrapper {
     grid-template-columns: 1fr;
   }
+
+  .cnb-photo-panel::after {
+    position: static;
+    display: block;
+    width: min(420px, 90%);
+    height: 260px;
+    margin: 28px auto 0;
+    transform: none;
+  }
+
+  .cnb-photo-panel .content-wrapper,
+  .cnb-photo-panel .section-border-content {
+    padding-right: var(--cnb-gutter);
+  }
+
+  .cnb-what .content-wrapper,
+  .cnb-what .section-border-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "copy"
+      "cta";
+  }
+
+  .cnb-what .sqs-block-button {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 640px) {
-  .cnb-hero::before,
-  .cnb-ai::before {
+  .cnb-ai::before,
+  .cnb-dinners-texture::before,
+  .cnb-membership-texture::before {
     opacity: 0.04;
     background-size: 360px;
   }
