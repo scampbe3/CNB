@@ -1,0 +1,390 @@
+{
+  "columns": ["section", "field", "value", "link", "notes"],
+  "rows": [
+    {
+      "section": "Hero",
+      "field": "Kicker",
+      "value": "Cupcakes + Broccoli",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Hero",
+      "field": "Title",
+      "value": "Black ownership is Black survival, freedom and wealth.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Hero",
+      "field": "Subhead",
+      "value": "Cupcakes + Broccoli is a founder-led platform where Black entrepreneurs learn, build, and come together around ownership.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Hero",
+      "field": "Body 1",
+      "value": "Cupcakes + Broccoli brings together practical guidance, lived experience, and community to help Black founders move from idea to execution with confidence.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Hero",
+      "field": "Note",
+      "value": "This work is led by Amanda Johnson.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Hero",
+      "field": "CTA 1",
+      "value": "Join Membership",
+      "link": "/membership",
+      "notes": "primary"
+    },
+    {
+      "section": "Hero",
+      "field": "CTA 2",
+      "value": "Learn More About Cupcakes + Broccoli",
+      "link": "/about",
+      "notes": "ghost"
+    },
+    {
+      "section": "Hero",
+      "field": "Image",
+      "value": "assets/images/Thandiwe-Muriu-Ascension.jpg",
+      "link": "",
+      "notes": "Portrait of a woman in patterned textiles."
+    },
+    {
+      "section": "What This Is",
+      "field": "Eyebrow",
+      "value": "What this is",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "What This Is",
+      "field": "Title",
+      "value": "Built Around Experience",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "What This Is",
+      "field": "Body 1",
+      "value": "Cupcakes + Broccoli is not a generic platform or content library. It is an ecosystem shaped by real experience and extended through community.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "What This Is",
+      "field": "Body 2",
+      "value": "Everything here is designed to support clarity, confidence, and ownership over time.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "What This Is",
+      "field": "Inline link",
+      "value": "Learn how Cupcakes + Broccoli works",
+      "link": "/about",
+      "notes": ""
+    },
+    {
+      "section": "What This Is",
+      "field": "Image",
+      "value": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
+      "link": "",
+      "notes": "Portrait framed by soft light and layered textiles."
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Eyebrow",
+      "value": "AI concierge",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Title",
+      "value": "Ask What You Are Actually Stuck On",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Body 1",
+      "value": "The Cupcakes + Broccoli AI concierge helps you think through real decisions.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Body 2",
+      "value": "Ask questions in your own words and receive guidance shaped by lived experience, cultural context, and the full Cupcakes + Broccoli ecosystem. This tool is designed to help you get oriented, gain clarity, and decide what to focus on next. Premium members receive unlimited access to deeper responses trained on the full Cupcakes + Broccoli library.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "CTA",
+      "value": "Ask a question",
+      "link": "#ai-concierge",
+      "notes": "accent, modal"
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Prompt 1",
+      "value": "How do I price my work without undercutting myself",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Prompt 2",
+      "value": "What should I focus on before launching",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Prompt 3",
+      "value": "How do I know when it is time to leave my job",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "AI Concierge",
+      "field": "Prompt 4",
+      "value": "What does sustainable growth actually look like",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Learn",
+      "field": "Eyebrow",
+      "value": "Learn",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Learn",
+      "field": "Title",
+      "value": "Practical Learning You Can Use",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Learn",
+      "field": "Body 1",
+      "value": "Learning at Cupcakes + Broccoli is built for application.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Learn",
+      "field": "Body 2",
+      "value": "Inside the library you will find tools, frameworks, and stories that help founders make decisions and move work forward.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Learn",
+      "field": "CTA",
+      "value": "Explore Resources",
+      "link": "/learn",
+      "notes": "primary"
+    },
+    {
+      "section": "Learn",
+      "field": "Image",
+      "value": "assets/images/1muriu-8-scaled.jpg",
+      "link": "",
+      "notes": "Portrait of a woman in a geometric patterned backdrop."
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Eyebrow",
+      "value": "Work With Amanda",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Title",
+      "value": "Guidance Led by Experience",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Body 1",
+      "value": "All consulting and advisory work at Cupcakes + Broccoli is led directly by Amanda Johnson.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Body 2",
+      "value": "This work draws on deep corporate experience and years spent advising Black-owned businesses navigating growth, uncertainty, and limited access to support.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Body 3",
+      "value": "Premium members receive access to discounted one-on-one Zoom office hours for focused decision-making.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "CTA",
+      "value": "Work With Amanda",
+      "link": "/work-with-amanda",
+      "notes": "ghost"
+    },
+    {
+      "section": "Work With Amanda",
+      "field": "Image",
+      "value": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+      "link": "",
+      "notes": "Portrait of a woman with bold color styling."
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "Eyebrow",
+      "value": "Blind Dinners",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "Title",
+      "value": "Community at the Table",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "Body 1",
+      "value": "Blind Dinners are intimate, invitation-based gatherings hosted by Amanda Johnson for Black founders.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "Body 2",
+      "value": "They are not networking events. They are moments of trust, perspective, and shared understanding.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "CTA",
+      "value": "Learn About Blind Dinners",
+      "link": "/blind-dinners",
+      "notes": "ghost"
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "Image",
+      "value": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
+      "link": "",
+      "notes": "Portrait layered over a patterned textile background."
+    },
+    {
+      "section": "Membership",
+      "field": "Eyebrow",
+      "value": "Membership",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "Title",
+      "value": "Membership That Grows With You",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "Body 1",
+      "value": "Cupcakes + Broccoli membership gives Black founders access to tools, frameworks, and guidance shaped by real experience.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "Body 2",
+      "value": "Some members come for clarity.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "Body 3",
+      "value": "Others come for structure.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "Body 4",
+      "value": "Premium members come because they want to stay close to the work.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Membership",
+      "field": "CTA 1",
+      "value": "Join Membership",
+      "link": "/membership",
+      "notes": "primary"
+    },
+    {
+      "section": "Membership",
+      "field": "CTA 2",
+      "value": "Compare Membership Options",
+      "link": "/membership",
+      "notes": "ghost"
+    },
+    {
+      "section": "Membership",
+      "field": "Image",
+      "value": "assets/images/african-digital-print-fabric.jpg",
+      "link": "",
+      "notes": "Colorful African print fabric pattern."
+    },
+    {
+      "section": "Closing",
+      "field": "Eyebrow",
+      "value": "Closing",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Closing",
+      "field": "Title",
+      "value": "Ownership Is a Practice",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Closing",
+      "field": "Body 1",
+      "value": "Cupcakes + Broccoli exists for Black founders who want to think clearly, build deliberately, and own what they create.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Closing",
+      "field": "CTA",
+      "value": "Explore Membership",
+      "link": "/membership",
+      "notes": "primary"
+    }
+  ]
+}
