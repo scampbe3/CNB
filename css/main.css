@@ -61,6 +61,27 @@ body.cnb-home {
   margin: 0 auto;
   padding-left: var(--cnb-gutter);
   padding-right: var(--cnb-gutter);
+  text-align: left;
+}
+
+.cnb-section .sqs-layout,
+.cnb-section .sqs-row,
+.cnb-section .sqs-col {
+  width: 100% !important;
+}
+
+.cnb-section .sqs-col {
+  float: none !important;
+  margin-left: 0 !important;
+}
+
+.cnb-section .sqs-block-button {
+  display: inline-block !important;
+  margin: 0 12px 10px 0 !important;
+}
+
+.cnb-section .sqs-block-button:last-child {
+  margin-right: 0 !important;
 }
 
 .cnb-section h1,
@@ -248,6 +269,8 @@ body.cnb-home {
   border-radius: var(--cnb-radius);
   box-shadow: var(--cnb-shadow);
   filter: saturate(0.95) contrast(1.05);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .cnb-photo-panel .content-wrapper,
@@ -282,30 +305,6 @@ body.cnb-home {
   --cnb-photo: var(--cnb-photo-work);
 }
 
-.cnb-what .content-wrapper,
-.cnb-what .section-border-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas:
-    "title cta"
-    "copy copy";
-  gap: 16px 24px;
-  align-items: start;
-}
-
-.cnb-what .sqs-block:first-child {
-  grid-area: title;
-}
-
-.cnb-what .sqs-block-button {
-  grid-area: cta;
-  justify-self: end;
-  align-self: start;
-}
-
-.cnb-what .sqs-block:not(.sqs-block-button):not(:first-child) {
-  grid-area: copy;
-}
 
 .cnb-ai,
 #cnb-home-ai,

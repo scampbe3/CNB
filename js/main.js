@@ -77,9 +77,17 @@
     if (!buttons.length) return;
 
     const parent = buttons[0].parentElement;
-    if (parent && buttons.every((btn) => btn.parentElement === parent)) {
+    if (!parent) return;
+
+    if (buttons.every((btn) => btn.parentElement === parent)) {
       parent.classList.add("cnb-cta-row");
+      return;
     }
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "cnb-cta-row";
+    parent.insertBefore(wrapper, buttons[0]);
+    buttons.forEach((btn) => wrapper.appendChild(btn));
   }
 
   function markSecondaryButton(section) {
