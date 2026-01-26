@@ -125,14 +125,18 @@
     }
 
     const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title"));
-    if (section.title && section.title.startsWith("Black ownership is")) {
-      const firstLine = "Black ownership is";
-      const remainder = section.title.replace(firstLine, "").trim();
-      const lineOne = createEl("span", "cnb-home-title-line", firstLine);
-      const lineTwo = createEl("span", "cnb-home-title-line", remainder || "");
-      title.append(lineOne, lineTwo);
-    } else {
-      title.textContent = section.title || "";
+    if (section.title) {
+      const normalized = section.title.trim();
+      const target = "Black ownership is";
+      if (normalized.toLowerCase().startsWith(target.toLowerCase())) {
+        const remainder = normalized.slice(target.length).trim();
+        const lineOne = createEl("span", "cnb-home-title-line", target);
+        const lineTwoText = remainder.startsWith("Black") ? remainder : `Black ${remainder}`.trim();
+        const lineTwo = createEl("span", "cnb-home-title-line", lineTwoText);
+        title.append(lineOne, lineTwo);
+      } else {
+        title.textContent = normalized;
+      }
     }
     heroTop.appendChild(title);
 
@@ -292,9 +296,8 @@
     });
   };
 
-  const injectHeaderBrand = () => {
-    const header = document.querySelector("header");
-    if (!header || header.querySelector(".cnb-header-title")) return;
+  const insertHeaderBrand = (header) => {
+    if (!header || header.querySelector(".cnb-header-title")) return true;
 
     const title = document.createElement("span");
     title.className = "cnb-header-title";
@@ -314,10 +317,10 @@
       const logoWrapper = logoEl.closest("a") || logoEl.parentElement;
       if (logoWrapper && logoWrapper.parentElement) {
         logoWrapper.insertAdjacentElement("afterend", title);
-        return;
+        return true;
       }
       brandingRoot.appendChild(title);
-      return;
+      return true;
     }
 
     const logoEl = header.querySelector("img, svg");
@@ -325,11 +328,32 @@
       const logoWrapper = logoEl.closest("a") || logoEl.parentElement;
       if (logoWrapper && logoWrapper.parentElement) {
         logoWrapper.insertAdjacentElement("afterend", title);
-        return;
+        return true;
       }
     }
 
     header.prepend(title);
+    return true;
+  };
+
+  const injectHeaderBrand = () => {
+    const header =
+      document.querySelector("header") ||
+      document.querySelector(".Header") ||
+      document.querySelector("#header");
+    if (insertHeaderBrand(header)) return;
+
+    const observer = new MutationObserver(() => {
+      const nextHeader =
+        document.querySelector("header") ||
+        document.querySelector(".Header") ||
+        document.querySelector("#header");
+      if (nextHeader && insertHeaderBrand(nextHeader)) {
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
   };
 
   const bindPromptFill = () => {
