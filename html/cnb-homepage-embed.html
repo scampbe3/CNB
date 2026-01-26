@@ -1,15 +1,16 @@
 <!-- Squarespace Code Block: C+B Home page mount -->
-<div
-  data-cnb-home-root
-  data-cnb-src="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/data/cnb-homepage.json"
-  data-cnb-assets="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main"
-></div>
+<div data-cnb-home-root></div>
 
-<!-- Add these to Squarespace Code Injection (Header) -->
+<!-- Add this to Squarespace Code Injection (Footer) -->
 <!--
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/css/cnb-homepage.css">
-<script defer src="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/js/ai-concierge.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/js/cnb-homepage.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/js/cnb-loader.js"></script>
 -->
 
-<!-- Optional for fast cache-busting while testing: append ?v=YYYYMMDDHHMM to the URLs above. -->
+<!--
+This loader resolves the latest commit SHA and loads:
+- css/cnb-homepage.css
+- js/ai-concierge.js
+- js/cnb-homepage.js
+- data/cnb-homepage.json
+No manual cache-busting required.
+-->
