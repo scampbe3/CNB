@@ -296,16 +296,31 @@
     const header = document.querySelector("header");
     if (!header || header.querySelector(".cnb-header-title")) return;
 
-    const logoEl =
-      header.querySelector(".header-title-logo img") ||
-      header.querySelector(".header-logo img") ||
-      header.querySelector(".Header-branding img") ||
-      header.querySelector("img");
-
     const title = document.createElement("span");
     title.className = "cnb-header-title";
     title.textContent = "Cupcakes + Broccoli";
 
+    const brandingRoot =
+      header.querySelector(".header-title-logo") ||
+      header.querySelector(".header-logo") ||
+      header.querySelector(".Header-branding") ||
+      header.querySelector(".header-branding") ||
+      header.querySelector(".site-title") ||
+      header.querySelector(".header-title") ||
+      header.querySelector("[data-header-branding]");
+
+    if (brandingRoot) {
+      const logoEl = brandingRoot.querySelector("img, svg") || brandingRoot;
+      const logoWrapper = logoEl.closest("a") || logoEl.parentElement;
+      if (logoWrapper && logoWrapper.parentElement) {
+        logoWrapper.insertAdjacentElement("afterend", title);
+        return;
+      }
+      brandingRoot.appendChild(title);
+      return;
+    }
+
+    const logoEl = header.querySelector("img, svg");
     if (logoEl) {
       const logoWrapper = logoEl.closest("a") || logoEl.parentElement;
       if (logoWrapper && logoWrapper.parentElement) {
@@ -314,16 +329,7 @@
       }
     }
 
-    const branding =
-      header.querySelector(".Header-branding") ||
-      header.querySelector(".header-title") ||
-      header.querySelector("[data-header-branding]");
-
-    if (branding) {
-      branding.appendChild(title);
-    } else {
-      header.prepend(title);
-    }
+    header.prepend(title);
   };
 
   const bindPromptFill = () => {

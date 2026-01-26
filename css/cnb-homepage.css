@@ -154,12 +154,14 @@
   gap: 12px;
   margin-bottom: clamp(24px, 4.2vw, 52px);
   max-width: min(680px, 90%);
+  align-items: start;
 }
 
 .cnb-home-hero-title {
   max-width: 100%;
   font-size: clamp(28px, 4.8vw, 56px);
   margin: 0;
+  line-height: 1.1;
 }
 
 .cnb-home-title-line {
@@ -405,9 +407,9 @@
 .cnb-header-title {
   display: inline-flex;
   align-items: center;
-  margin-left: 24px;
+  margin-left: 32px;
   font-family: var(--cnb-serif);
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 0.04em;
   color: #f8f5f1;
   white-space: nowrap;
