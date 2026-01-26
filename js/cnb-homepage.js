@@ -270,6 +270,49 @@
     return sectionEl;
   };
 
+  const renderSiteHeader = (data) => {
+    const headerData = (data && data.header) || {};
+    if (headerData.enabled === false) return null;
+
+    const header = createEl("header", "cnb-site-header");
+    const inner = createEl("div", "cnb-site-header-inner");
+
+    const brand = createEl("div", "cnb-site-brand");
+    const logoSrc = headerData.logo || "assets/images/cb-icon-white.png";
+    const logo = document.createElement("img");
+    logo.className = "cnb-site-logo";
+    logo.src = normalizeUrl(logoSrc);
+    logo.alt = headerData.logoAlt || "Cupcakes + Broccoli";
+    brand.appendChild(logo);
+
+    const title = createEl("span", "cnb-site-title", headerData.title || "Cupcakes + Broccoli");
+    brand.appendChild(title);
+
+    inner.appendChild(brand);
+
+    const navItems = headerData.nav || [
+      { label: "Home", href: "/" },
+      { label: "Contact", href: "/contact" },
+      { label: "Instagram", href: "https://www.instagram.com" },
+      { label: "LinkedIn", href: "https://www.linkedin.com" },
+    ];
+
+    const nav = createEl("nav", "cnb-site-nav");
+    nav.setAttribute("aria-label", "Primary");
+    navItems.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href || "#";
+      link.textContent = item.label || "";
+      if (item.newWindow) link.target = "_blank";
+      if (item.rel) link.rel = item.rel;
+      nav.appendChild(link);
+    });
+    inner.appendChild(nav);
+
+    header.appendChild(inner);
+    return header;
+  };
+
   const renderSection = (section) => {
     switch (section.type) {
       case "hero":
@@ -391,12 +434,14 @@
   };
 
   const hydrate = (data) => {
+    document.body.classList.add("cnb-homepage-active");
     mount.classList.add("cnb-home-root");
+    const header = renderSiteHeader(data);
+    if (header) mount.appendChild(header);
     const sections = (data && data.sections) || defaultData.sections;
     sections.forEach((section) => mount.appendChild(renderSection(section)));
     bindModalTriggers();
     bindPromptFill();
-    injectHeaderBrand();
     setupRevealObserver();
   };
 

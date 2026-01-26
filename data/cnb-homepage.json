@@ -1,6 +1,17 @@
 {
   "page": "cnb-home",
   "version": "2026-01-homepage-v3",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      { "label": "Home", "href": "/" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+    ]
+  },
   "sections": [
     {
       "id": "hero",
