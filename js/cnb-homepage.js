@@ -131,9 +131,6 @@
 
     renderBody(section.body, copy);
 
-    const ctas = renderCtas(section.ctas);
-    if (ctas) copy.appendChild(ctas);
-
     const media = createEl("div", "cnb-home-hero-media");
     if (section.note) {
       const note = withReveal(createEl("div", "cnb-home-hero-note", section.note));
@@ -212,10 +209,29 @@
 
     const list = createEl("ul", "cnb-ai-prompts");
     (section.prompts || []).forEach((prompt) => {
-      const item = createEl("li", "", prompt);
+      const item = createEl("li", "");
+      const button = createEl("button", "cnb-ai-prompt", prompt);
+      button.type = "button";
+      button.dataset.prompt = prompt;
+      item.appendChild(button);
       list.appendChild(item);
     });
     panel.appendChild(list);
+
+    const inputWrap = createEl("label", "cnb-ai-input");
+    const inputLabel = createEl("span", "cnb-ai-input-label", "Your question");
+    const textarea = document.createElement("textarea");
+    textarea.className = "cnb-ai-textarea";
+    textarea.rows = 3;
+    textarea.placeholder = section.inputPlaceholder || "Type your question here.";
+    inputWrap.append(inputLabel, textarea);
+    panel.appendChild(inputWrap);
+
+    const ctas = renderCtas(section.ctas);
+    if (ctas) {
+      ctas.classList.add("cnb-ai-actions");
+      panel.appendChild(ctas);
+    }
 
     grid.append(copy, panel);
     inner.appendChild(grid);
@@ -271,6 +287,19 @@
     });
   };
 
+  const bindPromptFill = () => {
+    mount.addEventListener("click", (event) => {
+      const promptButton = event.target.closest(".cnb-ai-prompt");
+      if (!promptButton) return;
+      const panel = promptButton.closest(".cnb-ai-panel");
+      if (!panel) return;
+      const textarea = panel.querySelector(".cnb-ai-textarea");
+      if (!textarea) return;
+      textarea.value = promptButton.dataset.prompt || promptButton.textContent || "";
+      textarea.focus();
+    });
+  };
+
   const setupRevealObserver = () => {
     const sections = Array.from(mount.querySelectorAll(".cnb-home-section"));
     if (!("IntersectionObserver" in window)) {
@@ -297,6 +326,7 @@
     const sections = (data && data.sections) || defaultData.sections;
     sections.forEach((section) => mount.appendChild(renderSection(section)));
     bindModalTriggers();
+    bindPromptFill();
     setupRevealObserver();
   };
 
