@@ -131,7 +131,11 @@
       if (normalized.toLowerCase().startsWith(target.toLowerCase())) {
         const remainder = normalized.slice(target.length).trim();
         const lineOne = createEl("span", "cnb-home-title-line", target);
-        const lineTwoText = remainder.startsWith("Black") ? remainder : `Black ${remainder}`.trim();
+        const lineTwoText = remainder
+          ? remainder.startsWith("Black")
+            ? remainder
+            : `Black ${remainder}`.trim()
+          : "";
         const lineTwo = createEl("span", "cnb-home-title-line", lineTwoText);
         title.append(lineOne, lineTwo);
       } else {

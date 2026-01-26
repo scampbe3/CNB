@@ -72,6 +72,8 @@ body.cnb-homepage-active header[data-test="header"] {
   letter-spacing: 0.04em;
   color: #f8f5f1;
   white-space: nowrap;
+  line-height: 1;
+  transform: translateY(-2px);
 }
 
 .cnb-site-nav {
@@ -81,6 +83,7 @@ body.cnb-homepage-active header[data-test="header"] {
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .cnb-site-nav a {
@@ -220,7 +223,8 @@ body.cnb-homepage-active header[data-test="header"] {
 }
 
 .cnb-home-hero-top {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   margin-bottom: clamp(16px, 3vw, 40px);
   max-width: min(680px, 90%);
@@ -232,6 +236,7 @@ body.cnb-homepage-active header[data-test="header"] {
   font-size: clamp(28px, 4.8vw, 56px);
   margin: 0;
   line-height: 1.1;
+  order: 2;
 }
 
 .cnb-home-title-line {
@@ -294,6 +299,7 @@ body.cnb-homepage-active header[data-test="header"] {
   width: fit-content;
   white-space: nowrap;
   justify-self: start;
+  order: 1;
 }
 
 .cnb-home-image {
