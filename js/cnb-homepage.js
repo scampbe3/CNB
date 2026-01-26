@@ -119,18 +119,24 @@
     const grid = createEl("div", "cnb-home-grid hero");
 
     const heroTop = createEl("div", "cnb-home-hero-top");
-    const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title", section.title || ""));
-    heroTop.appendChild(title);
-
     if (section.note) {
       const note = withReveal(createEl("div", "cnb-home-hero-note", section.note));
       heroTop.appendChild(note);
     }
 
-    const copy = createEl("div", "cnb-home-copy");
-    const kicker = renderKicker(section.kicker, "cnb-home-kicker");
-    if (kicker) copy.appendChild(kicker);
+    const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title"));
+    if (section.title && section.title.startsWith("Black ownership is")) {
+      const firstLine = "Black ownership is";
+      const remainder = section.title.replace(firstLine, "").trim();
+      const lineOne = createEl("span", "cnb-home-title-line", firstLine);
+      const lineTwo = createEl("span", "cnb-home-title-line", remainder || "");
+      title.append(lineOne, lineTwo);
+    } else {
+      title.textContent = section.title || "";
+    }
+    heroTop.appendChild(title);
 
+    const copy = createEl("div", "cnb-home-copy");
     if (section.subhead) {
       const subhead = withReveal(createEl("p", "cnb-home-subhead", section.subhead));
       copy.appendChild(subhead);
