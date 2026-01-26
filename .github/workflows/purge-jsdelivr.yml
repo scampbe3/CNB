@@ -1,0 +1,17 @@
+name: Purge jsDelivr CDN
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr assets
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/scampbe3/CNB@main/css/cnb-homepage.css"
+          curl -s "https://purge.jsdelivr.net/gh/scampbe3/CNB@main/js/cnb-homepage.js"
+          curl -s "https://purge.jsdelivr.net/gh/scampbe3/CNB@main/js/ai-concierge.js"
+          curl -s "https://purge.jsdelivr.net/gh/scampbe3/CNB@main/data/cnb-homepage.json"
