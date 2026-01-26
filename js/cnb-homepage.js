@@ -200,9 +200,6 @@
 
     renderBody(section.body, copy);
 
-    const ctas = renderCtas(section.ctas);
-    if (ctas) copy.appendChild(ctas);
-
     const panel = createEl("div", "cnb-ai-panel");
     const label = withReveal(createEl("div", "cnb-ai-label", section.panelLabel || "Example prompts"));
     panel.appendChild(label);
