@@ -48,6 +48,10 @@
   padding-top: clamp(36px, 6vw, 96px);
 }
 
+.cnb-home-hero .cnb-home-kicker {
+  display: none;
+}
+
 .cnb-home-section::before {
   content: "";
   position: absolute;
@@ -152,7 +156,7 @@
 .cnb-home-hero-top {
   display: grid;
   gap: 12px;
-  margin-bottom: clamp(24px, 4.2vw, 52px);
+  margin-bottom: clamp(16px, 3vw, 40px);
   max-width: min(680px, 90%);
   align-items: start;
 }
@@ -166,6 +170,10 @@
 
 .cnb-home-title-line {
   display: block;
+}
+
+.cnb-home-title-line:first-child {
+  white-space: nowrap;
 }
 
 .cnb-home-subhead {
@@ -407,9 +415,9 @@
 .cnb-header-title {
   display: inline-flex;
   align-items: center;
-  margin-left: 32px;
+  margin-left: 36px;
   font-family: var(--cnb-serif);
-  font-size: 24px;
+  font-size: 26px;
   letter-spacing: 0.04em;
   color: #f8f5f1;
   white-space: nowrap;
@@ -538,6 +546,11 @@
 
   .cnb-home-btn {
     width: 100%;
+  }
+
+  .cnb-header-title {
+    margin-left: 16px;
+    font-size: 18px;
   }
 }
 
