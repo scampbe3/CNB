@@ -44,6 +44,10 @@
   border-top: 0;
 }
 
+.cnb-home-hero {
+  padding-top: clamp(36px, 6vw, 96px);
+}
+
 .cnb-home-section::before {
   content: "";
   position: absolute;
@@ -145,6 +149,18 @@
   letter-spacing: -0.01em;
 }
 
+.cnb-home-hero-top {
+  display: grid;
+  gap: 12px;
+  margin-bottom: clamp(24px, 4.2vw, 52px);
+}
+
+.cnb-home-hero-title {
+  max-width: 100%;
+  font-size: clamp(28px, 4.8vw, 56px);
+  margin: 0;
+}
+
 .cnb-home-subhead {
   font-size: clamp(18px, 2.5vw, 26px);
   line-height: 1.45;
@@ -192,8 +208,10 @@
   border: 1px solid var(--cnb-border);
   box-shadow: var(--cnb-shadow);
   font-family: var(--cnb-serif);
-  font-size: clamp(18px, 2.6vw, 26px);
+  font-size: clamp(14px, 1.8vw, 18px);
   color: var(--cnb-ink);
+  width: fit-content;
+  white-space: nowrap;
 }
 
 .cnb-home-image {
@@ -379,6 +397,17 @@
   margin-top: 16px;
 }
 
+.cnb-header-title {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 16px;
+  font-family: var(--cnb-serif);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #f8f5f1;
+  white-space: nowrap;
+}
+
 .cnb-home-root [data-reveal] {
   opacity: 0;
   transform: translateY(18px);
@@ -486,6 +515,11 @@
 
   .cnb-home-image {
     min-height: 220px;
+  }
+
+  .cnb-home-hero-note {
+    white-space: normal;
+    width: auto;
   }
 }
 

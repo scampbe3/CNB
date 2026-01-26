@@ -118,12 +118,19 @@
     const inner = createEl("div", "cnb-home-inner");
     const grid = createEl("div", "cnb-home-grid hero");
 
+    const heroTop = createEl("div", "cnb-home-hero-top");
+    const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title", section.title || ""));
+    heroTop.appendChild(title);
+
+    if (section.note) {
+      const note = withReveal(createEl("div", "cnb-home-hero-note", section.note));
+      heroTop.appendChild(note);
+    }
+
     const copy = createEl("div", "cnb-home-copy");
     const kicker = renderKicker(section.kicker, "cnb-home-kicker");
     if (kicker) copy.appendChild(kicker);
 
-    const title = withReveal(createEl("h1", "cnb-home-title", section.title || ""));
-    copy.appendChild(title);
     if (section.subhead) {
       const subhead = withReveal(createEl("p", "cnb-home-subhead", section.subhead));
       copy.appendChild(subhead);
@@ -132,16 +139,11 @@
     renderBody(section.body, copy);
 
     const media = createEl("div", "cnb-home-hero-media");
-    if (section.note) {
-      const note = withReveal(createEl("div", "cnb-home-hero-note", section.note));
-      media.appendChild(note);
-    }
-
     const image = renderImage(section.image);
     if (image) media.appendChild(image);
 
     grid.append(copy, media);
-    inner.appendChild(grid);
+    inner.append(heroTop, grid);
     sectionEl.appendChild(inner);
 
     applyRevealDelays(sectionEl);
@@ -284,6 +286,40 @@
     });
   };
 
+  const injectHeaderBrand = () => {
+    const header = document.querySelector("header");
+    if (!header || header.querySelector(".cnb-header-title")) return;
+
+    const logoEl =
+      header.querySelector(".header-title-logo img") ||
+      header.querySelector(".header-logo img") ||
+      header.querySelector(".Header-branding img") ||
+      header.querySelector("img");
+
+    const title = document.createElement("span");
+    title.className = "cnb-header-title";
+    title.textContent = "Cupcakes + Broccoli";
+
+    if (logoEl) {
+      const logoWrapper = logoEl.closest("a") || logoEl.parentElement;
+      if (logoWrapper && logoWrapper.parentElement) {
+        logoWrapper.insertAdjacentElement("afterend", title);
+        return;
+      }
+    }
+
+    const branding =
+      header.querySelector(".Header-branding") ||
+      header.querySelector(".header-title") ||
+      header.querySelector("[data-header-branding]");
+
+    if (branding) {
+      branding.appendChild(title);
+    } else {
+      header.prepend(title);
+    }
+  };
+
   const bindPromptFill = () => {
     mount.addEventListener("click", (event) => {
       const promptButton = event.target.closest(".cnb-ai-prompt");
@@ -324,6 +360,7 @@
     sections.forEach((section) => mount.appendChild(renderSection(section)));
     bindModalTriggers();
     bindPromptFill();
+    injectHeaderBrand();
     setupRevealObserver();
   };
 
