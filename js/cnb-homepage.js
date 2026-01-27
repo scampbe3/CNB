@@ -383,6 +383,12 @@
 
     inner.appendChild(brand);
 
+    const toggle = createEl("button", "cnb-site-toggle", "Menu");
+    toggle.type = "button";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Toggle navigation");
+    inner.appendChild(toggle);
+
     const navItems = headerData.nav || [
       { label: "Home", href: "/" },
       { label: "Contact", href: "/contact" },
@@ -392,6 +398,9 @@
 
     const nav = createEl("nav", "cnb-site-nav");
     nav.setAttribute("aria-label", "Primary");
+    const navId = `cnb-site-nav-${Math.random().toString(36).slice(2, 8)}`;
+    nav.id = navId;
+    toggle.setAttribute("aria-controls", navId);
     navItems.forEach((item) => {
       const link = document.createElement("a");
       link.href = item.href || "#";
@@ -404,6 +413,24 @@
       nav.appendChild(link);
     });
     inner.appendChild(nav);
+
+    const closeNav = () => {
+      header.classList.remove("is-nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("is-nav-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeNav();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 960) closeNav();
+    });
 
     header.appendChild(inner);
     return header;
