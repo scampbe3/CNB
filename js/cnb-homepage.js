@@ -77,7 +77,85 @@
     return withReveal(anchor);
   };
 
-  const renderImage = (image) => {
+  const clamp01 = (value) => Math.min(1, Math.max(0, value));
+
+  const shouldUseCors = (src) => {
+    try {
+      const url = new URL(src, window.location.href);
+      if (url.origin === window.location.origin) return true;
+      return /cdn\.jsdelivr\.net|githubusercontent\.com$/i.test(url.hostname);
+    } catch (err) {
+      return false;
+    }
+  };
+
+  const computeImageAccentRgb = (img) => {
+    const size = 48;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    if (!ctx) return null;
+
+    ctx.drawImage(img, 0, 0, size, size);
+
+    let data;
+    try {
+      data = ctx.getImageData(0, 0, size, size).data;
+    } catch (err) {
+      return null;
+    }
+
+    let weightTotal = 0;
+    let rTotal = 0;
+    let gTotal = 0;
+    let bTotal = 0;
+
+    // Sample a subset of pixels to keep this very cheap.
+    for (let i = 0; i < data.length; i += 16) {
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+      const a = data[i + 3];
+      if (a < 200) continue;
+
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const spread = max - min;
+      const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      // Exclude black, white, and very light/dark tones.
+      if (luma < 32 || luma > 225) continue;
+
+      const saturation = max === 0 ? 0 : spread / max;
+      // Exclude grayscale-ish colors.
+      if (saturation < 0.2 || spread < 24) continue;
+
+      const midTone = clamp01(1 - Math.abs(luma / 255 - 0.55) * 1.6);
+      const weight = saturation * (0.6 + 0.8 * midTone);
+      if (weight <= 0) continue;
+
+      weightTotal += weight;
+      rTotal += r * weight;
+      gTotal += g * weight;
+      bTotal += b * weight;
+    }
+
+    if (!weightTotal) return null;
+    return {
+      r: Math.round(rTotal / weightTotal),
+      g: Math.round(gTotal / weightTotal),
+      b: Math.round(bTotal / weightTotal),
+    };
+  };
+
+  const applyImageAccentToSection = (sectionEl, img) => {
+    if (!sectionEl || sectionEl.dataset.theme === "ink") return;
+    const accent = computeImageAccentRgb(img);
+    if (!accent) return;
+    sectionEl.style.setProperty("--cnb-section-accent-rgb", `${accent.r}, ${accent.g}, ${accent.b}`);
+  };
+
+  const renderImage = (image, options = {}) => {
     if (!image) return null;
     const imageData = typeof image === "string" ? { src: image } : image;
     if (!imageData || !imageData.src) return null;
@@ -86,9 +164,21 @@
     const img = document.createElement("img");
     img.alt = imageData.alt || "";
     img.loading = "lazy";
-    img.src = normalizeUrl(imageData.src);
+    const src = normalizeUrl(imageData.src);
+    if (shouldUseCors(src)) img.crossOrigin = "anonymous";
+    img.src = src;
     if (imageData.fit) img.dataset.fit = imageData.fit;
     figure.appendChild(img);
+
+    const { sectionEl } = options;
+    if (sectionEl) {
+      const applyAccent = () => applyImageAccentToSection(sectionEl, img);
+      if (img.complete) {
+        requestAnimationFrame(applyAccent);
+      } else {
+        img.addEventListener("load", applyAccent, { once: true });
+      }
+    }
 
     if (imageData.caption || imageData.credit) {
       const captionText = [imageData.caption, imageData.credit].filter(Boolean).join(" ");
@@ -152,7 +242,7 @@
     renderBody(section.body, copy);
 
     const media = createEl("div", "cnb-home-hero-media");
-    const image = renderImage(section.image);
+    const image = renderImage(section.image, { sectionEl });
     if (image) media.appendChild(image);
 
     grid.append(copy, media);
@@ -185,7 +275,7 @@
     if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-media");
-    const image = renderImage(section.image);
+    const image = renderImage(section.image, { sectionEl });
     if (image) media.appendChild(image);
 
     if (image) {
