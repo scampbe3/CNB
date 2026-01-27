@@ -22,6 +22,7 @@
   --cnb-section-pad: clamp(64px, 9vw, 150px);
   --cnb-footer-gap-height: clamp(36px, 6vw, 96px);
   --cnb-header-divider: rgba(255, 255, 255, 0.08);
+  --cnb-header-title-offset: -10px;
 }
 
 .cnb-home-root {
@@ -125,7 +126,7 @@ body.cnb-homepage-active .content {
   color: #f8f5f1;
   white-space: nowrap;
   line-height: 1;
-  transform: none;
+  transform: translateY(var(--cnb-header-title-offset));
 }
 
 .cnb-site-toggle {
