@@ -306,6 +306,9 @@
       const link = document.createElement("a");
       link.href = item.href || "#";
       link.textContent = item.label || "";
+      if (item.variant === "button" || item.isButton) {
+        link.classList.add("cnb-site-nav-button");
+      }
       if (item.newWindow) link.target = "_blank";
       if (item.rel) link.rel = item.rel;
       nav.appendChild(link);

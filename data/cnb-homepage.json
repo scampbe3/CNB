@@ -7,9 +7,13 @@
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
       { "label": "Home", "href": "/" },
-      { "label": "Contact", "href": "/contact" },
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
     ]
   },
   "sections": [
