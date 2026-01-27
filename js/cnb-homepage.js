@@ -383,12 +383,6 @@
 
     inner.appendChild(brand);
 
-    const toggle = createEl("button", "cnb-site-toggle", "Menu");
-    toggle.type = "button";
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Toggle navigation");
-    inner.appendChild(toggle);
-
     const navItems = headerData.nav || [
       { label: "Home", href: "/" },
       { label: "Contact", href: "/contact" },
@@ -396,32 +390,50 @@
       { label: "LinkedIn", href: "https://www.linkedin.com" },
     ];
 
+    const loginItem = navItems.find((item) => item.variant === "button" || item.isButton);
+    const menuItems = loginItem ? navItems.filter((item) => item !== loginItem) : navItems;
+
+    const navWrap = createEl("div", "cnb-site-nav-wrap");
     const nav = createEl("nav", "cnb-site-nav");
     nav.setAttribute("aria-label", "Primary");
     const navId = `cnb-site-nav-${Math.random().toString(36).slice(2, 8)}`;
     nav.id = navId;
-    toggle.setAttribute("aria-controls", navId);
-    navItems.forEach((item) => {
+    menuItems.forEach((item) => {
       const link = document.createElement("a");
       link.href = item.href || "#";
       link.textContent = item.label || "";
-      if (item.variant === "button" || item.isButton) {
-        link.classList.add("cnb-site-nav-button");
-      }
       if (item.newWindow) link.target = "_blank";
       if (item.rel) link.rel = item.rel;
       nav.appendChild(link);
     });
-    inner.appendChild(nav);
+    navWrap.appendChild(nav);
+
+    const menuToggle = createEl("button", "cnb-site-menu-toggle", "Menu");
+    menuToggle.type = "button";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-controls", navId);
+    menuToggle.setAttribute("aria-label", "Toggle navigation");
+    navWrap.appendChild(menuToggle);
+    inner.appendChild(navWrap);
+
+    if (loginItem) {
+      const loginLink = document.createElement("a");
+      loginLink.href = loginItem.href || "#";
+      loginLink.textContent = loginItem.label || "";
+      loginLink.className = "cnb-site-nav-button cnb-site-login";
+      if (loginItem.newWindow) loginLink.target = "_blank";
+      if (loginItem.rel) loginLink.rel = loginItem.rel;
+      inner.appendChild(loginLink);
+    }
 
     const closeNav = () => {
-      header.classList.remove("is-nav-open");
-      toggle.setAttribute("aria-expanded", "false");
+      header.classList.remove("is-menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
     };
 
-    toggle.addEventListener("click", () => {
-      const isOpen = header.classList.toggle("is-nav-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("is-menu-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     nav.addEventListener("click", (event) => {
