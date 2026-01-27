@@ -199,7 +199,7 @@ body.cnb-homepage-active .sqs-footer {
 .cnb-footer-gap {
   position: relative;
   height: var(--cnb-footer-gap-height);
-  background: #0f0e0d;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(246, 241, 234, 0.9));
   width: 100%;
 }
 
@@ -207,9 +207,7 @@ body.cnb-homepage-active .sqs-footer {
   content: "";
   position: absolute;
   inset: 0;
-  margin: 0 auto;
-  width: min(100%, calc(var(--cnb-max-width) + var(--cnb-gutter) * 2));
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(246, 241, 234, 0.9));
+  background: transparent;
 }
 
 .cnb-site-footer {
