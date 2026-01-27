@@ -229,8 +229,8 @@ body.cnb-homepage-active header[data-test="header"] {
 .cnb-home-hero-top {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: clamp(8px, 1.6vw, 18px);
+  gap: 6px;
+  margin-bottom: clamp(6px, 1.2vw, 14px);
   margin-top: 0;
   max-width: none;
   width: 100%;
@@ -245,7 +245,6 @@ body.cnb-homepage-active header[data-test="header"] {
   font-size: clamp(28px, 4.8vw, 56px);
   margin: 0;
   line-height: 1.1;
-  order: 2;
   position: relative;
   z-index: 2;
   overflow: visible;
@@ -297,18 +296,18 @@ body.cnb-homepage-active header[data-test="header"] {
 }
 
 .cnb-home-hero-note {
-  background: #fff;
-  border-radius: var(--cnb-radius-md);
-  padding: clamp(18px, 3.2vw, 28px);
-  border: 1px solid var(--cnb-border);
-  box-shadow: var(--cnb-shadow);
-  font-family: var(--cnb-serif);
-  font-size: clamp(14px, 1.8vw, 18px);
-  color: var(--cnb-ink);
-  width: fit-content;
-  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  font-family: var(--cnb-sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cnb-muted);
+  width: auto;
+  white-space: normal;
   justify-self: start;
-  order: 1;
 }
 
 .cnb-home-image {

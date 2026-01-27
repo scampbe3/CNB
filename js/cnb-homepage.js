@@ -124,27 +124,21 @@
       heroTop.appendChild(note);
     }
 
+    const copy = createEl("div", "cnb-home-copy");
     const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title"));
     if (section.title) {
       const normalized = section.title.trim();
-      const target = "Black ownership is";
+      const target = "Black ownership is Black";
       if (normalized.toLowerCase().startsWith(target.toLowerCase())) {
         const remainder = normalized.slice(target.length).trim();
         const lineOne = createEl("span", "cnb-home-title-line", target);
-        const lineTwoText = remainder
-          ? remainder.startsWith("Black")
-            ? remainder
-            : `Black ${remainder}`.trim()
-          : "";
-        const lineTwo = createEl("span", "cnb-home-title-line", lineTwoText);
+        const lineTwo = createEl("span", "cnb-home-title-line", remainder || "");
         title.append(lineOne, lineTwo);
       } else {
         title.textContent = normalized;
       }
     }
-    heroTop.appendChild(title);
-
-    const copy = createEl("div", "cnb-home-copy");
+    copy.appendChild(title);
     if (section.subhead) {
       const subhead = withReveal(createEl("p", "cnb-home-subhead", section.subhead));
       copy.appendChild(subhead);
