@@ -629,7 +629,12 @@
     const sections = (data && data.sections) || defaultData.sections;
     sections.forEach((section) => mount.appendChild(renderSection(section)));
     const footer = renderSiteFooter(data);
-    if (footer) mount.appendChild(footer);
+    if (footer) {
+      const gap = createEl("div", "cnb-footer-gap");
+      gap.setAttribute("aria-hidden", "true");
+      mount.appendChild(gap);
+      mount.appendChild(footer);
+    }
     bindModalTriggers();
     bindPromptFill();
     setupRevealObserver();
