@@ -17,7 +17,7 @@
   --cnb-radius-sm: 12px;
   --cnb-max-width: 1120px;
   --cnb-gutter: clamp(18px, 4vw, 48px);
-  --cnb-header-height: 110px;
+  --cnb-header-height: 120px;
 }
 
 .cnb-home-root {
@@ -48,9 +48,9 @@ body.cnb-homepage-active header[data-test="header"] {
 }
 
 .cnb-site-header-inner {
-  width: min(100%, var(--cnb-max-width));
+  width: 100%;
   margin: 0 auto;
-  padding: 22px var(--cnb-gutter);
+  padding: 18px 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,12 +61,12 @@ body.cnb-homepage-active header[data-test="header"] {
 .cnb-site-brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .cnb-site-logo {
-  width: 66px;
-  height: 66px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -84,10 +84,11 @@ body.cnb-homepage-active header[data-test="header"] {
   display: flex;
   align-items: center;
   gap: 22px;
-  font-size: 14px;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   line-height: 1;
+  font-family: var(--cnb-sans);
 }
 
 .cnb-site-nav a {
@@ -243,7 +244,7 @@ body.cnb-homepage-active header[data-test="header"] {
   max-width: none;
   width: 100%;
   font-size: clamp(28px, 4.8vw, 56px);
-  margin: 0;
+  margin: 0 0 6px;
   line-height: 1.1;
   position: relative;
   z-index: 2;
@@ -253,6 +254,19 @@ body.cnb-homepage-active header[data-test="header"] {
 .cnb-home-title-line {
   display: block;
   white-space: nowrap;
+}
+
+.cnb-home-hero .cnb-home-body:first-of-type,
+.cnb-home-hero .cnb-home-subhead {
+  margin-top: 14px;
+}
+
+.cnb-home-hero .cnb-home-subhead {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.65;
+  color: var(--cnb-ink-soft);
+  max-width: 70ch;
+  font-family: var(--cnb-sans);
 }
 
 .cnb-home-subhead {
@@ -601,7 +615,7 @@ body.cnb-homepage-active header[data-test="header"] {
 
 @media (max-width: 960px) {
   :root {
-    --cnb-header-height: 88px;
+    --cnb-header-height: 96px;
   }
 
   .cnb-home-grid.hero,
@@ -627,13 +641,14 @@ body.cnb-homepage-active header[data-test="header"] {
   }
 
   .cnb-site-logo {
-    width: 54px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
   }
 
   .cnb-site-header-inner {
     flex-direction: column;
     align-items: flex-start;
+    padding: 14px 24px;
   }
 
   .cnb-site-nav {

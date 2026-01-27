@@ -128,12 +128,17 @@
     const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title"));
     if (section.title) {
       const normalized = section.title.trim();
-      const target = "Black ownership is Black";
-      if (normalized.toLowerCase().startsWith(target.toLowerCase())) {
-        const remainder = normalized.slice(target.length).trim();
-        const lineOne = createEl("span", "cnb-home-title-line", target);
-        const lineTwo = createEl("span", "cnb-home-title-line", remainder || "");
-        title.append(lineOne, lineTwo);
+      const lineOneText = "Black ownership is";
+      const lineTwoText = "Black survival,";
+      if (normalized.toLowerCase().startsWith(lineOneText.toLowerCase())) {
+        const afterLineOne = normalized.slice(lineOneText.length).trim();
+        const afterLineTwo = afterLineOne.toLowerCase().startsWith(lineTwoText.toLowerCase())
+          ? afterLineOne.slice(lineTwoText.length).trim()
+          : afterLineOne.replace(/^Black\\s+survival,?/i, "").trim();
+        const lineOne = createEl("span", "cnb-home-title-line", lineOneText);
+        const lineTwo = createEl("span", "cnb-home-title-line", lineTwoText);
+        const lineThree = createEl("span", "cnb-home-title-line", afterLineTwo || "");
+        title.append(lineOne, lineTwo, lineThree);
       } else {
         title.textContent = normalized;
       }
