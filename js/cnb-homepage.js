@@ -406,16 +406,6 @@
       if (item.rel) link.rel = item.rel;
       nav.appendChild(link);
     });
-    navWrap.appendChild(nav);
-
-    const menuToggle = createEl("button", "cnb-site-menu-toggle", "Menu");
-    menuToggle.type = "button";
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-controls", navId);
-    menuToggle.setAttribute("aria-label", "Toggle navigation");
-    navWrap.appendChild(menuToggle);
-    inner.appendChild(navWrap);
-
     if (loginItem) {
       const loginLink = document.createElement("a");
       loginLink.href = loginItem.href || "#";
@@ -423,8 +413,21 @@
       loginLink.className = "cnb-site-nav-button cnb-site-login";
       if (loginItem.newWindow) loginLink.target = "_blank";
       if (loginItem.rel) loginLink.rel = loginItem.rel;
-      inner.appendChild(loginLink);
+      navWrap.appendChild(loginLink);
     }
+
+    const menuRow = createEl("div", "cnb-site-menu-row");
+    menuRow.appendChild(nav);
+
+    const menuToggle = createEl("button", "cnb-site-menu-toggle", "Menu");
+    menuToggle.type = "button";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-controls", navId);
+    menuToggle.setAttribute("aria-label", "Toggle navigation");
+    menuRow.appendChild(menuToggle);
+
+    navWrap.appendChild(menuRow);
+    inner.appendChild(navWrap);
 
     const closeNav = () => {
       header.classList.remove("is-menu-open");

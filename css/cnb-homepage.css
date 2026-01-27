@@ -151,9 +151,18 @@ body.cnb-homepage-active .content {
 
 .cnb-site-nav-wrap {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
   margin-left: auto;
+  position: relative;
+}
+
+.cnb-site-menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
   position: relative;
 }
 
@@ -182,10 +191,6 @@ body.cnb-homepage-active .content {
 }
 
 .cnb-site-nav {
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 22px;
@@ -256,7 +261,7 @@ body.cnb-homepage-active .content {
 }
 
 .cnb-site-login {
-  margin-left: 6px;
+  margin-left: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -271,6 +276,7 @@ body.cnb-homepage-active .content {
   text-transform: uppercase;
   color: #f8f5f1;
   text-decoration: none;
+  align-self: flex-end;
 }
 
 .cnb-site-nav a:hover,
@@ -327,7 +333,7 @@ body.cnb-homepage-active .sqs-footer {
     #0f0e0d;
   color: #f8f5f1;
   border-top: 1px solid var(--cnb-header-divider);
-  box-shadow: 0 -1px 0 var(--cnb-header-divider);
+  box-shadow: inset 0 1px 0 var(--cnb-header-divider);
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -979,6 +985,12 @@ body.cnb-homepage-active .sqs-footer {
 
   .cnb-site-nav-wrap {
     margin-left: auto;
+    gap: 8px;
+  }
+
+  .cnb-site-menu-row {
+    width: 100%;
+    justify-content: flex-end;
   }
 
   .cnb-site-nav {
