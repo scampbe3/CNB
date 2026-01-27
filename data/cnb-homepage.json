@@ -16,6 +16,14 @@
       { "label": "Login", "href": "/login", "variant": "button" }
     ]
   },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+    ]
+  },
   "sections": [
     {
       "id": "hero",

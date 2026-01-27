@@ -144,21 +144,78 @@ body.cnb-homepage-active header[data-test="header"] {
   border-color: rgba(248, 245, 241, 0.75);
 }
 
-body.cnb-homepage-active footer,
+body.cnb-homepage-active footer:not(.cnb-site-footer),
 body.cnb-homepage-active #footer-sections,
 body.cnb-homepage-active .footer-sections,
-body.cnb-homepage-active .Footer {
+body.cnb-homepage-active .Footer,
+body.cnb-homepage-active .Site-footer,
+body.cnb-homepage-active .sqs-footer {
+  display: none !important;
+}
+
+.cnb-site-footer {
+  margin-top: clamp(48px, 9vw, 120px);
+  padding: clamp(48px, 8vw, 96px) 0;
   background: radial-gradient(120% 140% at 50% -12%, rgba(255, 255, 255, 0.16), transparent 62%),
     #0f0e0d;
   color: #f8f5f1;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-body.cnb-homepage-active footer a,
-body.cnb-homepage-active #footer-sections a,
-body.cnb-homepage-active .footer-sections a,
-body.cnb-homepage-active .Footer a {
+.cnb-site-footer-inner {
+  width: min(100%, var(--cnb-max-width));
+  margin: 0 auto;
+  padding: 0 var(--cnb-gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.cnb-site-footer-left,
+.cnb-site-footer-right {
+  font-family: var(--cnb-serif);
+  font-size: clamp(18px, 2.4vw, 28px);
+  letter-spacing: 0.02em;
+}
+
+.cnb-site-footer-right {
+  text-align: right;
+}
+
+.cnb-site-footer a {
   color: #f8f5f1;
+  text-decoration: none;
+}
+
+.cnb-site-footer a:hover,
+.cnb-site-footer a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.cnb-site-footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cnb-site-footer-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 245, 241, 0.5);
+  background: rgba(248, 245, 241, 0.06);
+}
+
+.cnb-site-footer-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #f8f5f1;
 }
 
 .cnb-home-root * {
@@ -205,6 +262,11 @@ body.cnb-homepage-active .Footer a {
   background: radial-gradient(circle, rgba(var(--cnb-section-accent-rgb, 200, 106, 98), 0.34), transparent 70%);
   opacity: 0.94;
   pointer-events: none;
+}
+
+.cnb-home-section:first-of-type::before {
+  left: -140px;
+  right: auto;
 }
 
 .cnb-home-section:nth-of-type(even)::before {
@@ -778,6 +840,17 @@ body.cnb-homepage-active .Footer a {
     margin-top: 4px;
     padding: 10px 16px;
     align-self: stretch;
+    text-align: center;
+  }
+
+  .cnb-site-footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .cnb-site-footer-left,
+  .cnb-site-footer-right {
     text-align: center;
   }
 }
