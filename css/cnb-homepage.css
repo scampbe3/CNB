@@ -158,6 +158,9 @@ body.cnb-homepage-active .content {
 }
 
 .cnb-site-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid rgba(248, 245, 241, 0.55);
@@ -165,6 +168,7 @@ body.cnb-homepage-active .content {
   color: #f8f5f1;
   font-family: var(--cnb-sans);
   font-size: 12px;
+  line-height: 1;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
@@ -253,6 +257,9 @@ body.cnb-homepage-active .content {
 
 .cnb-site-login {
   margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   border: 1px solid rgba(248, 245, 241, 0.55);
   border-radius: 999px;
@@ -260,6 +267,7 @@ body.cnb-homepage-active .content {
   font-weight: 600;
   font-family: var(--cnb-sans);
   font-size: 12px;
+  line-height: 1;
   text-transform: uppercase;
   color: #f8f5f1;
   text-decoration: none;
