@@ -339,7 +339,7 @@ body.cnb-homepage-active header[data-test="header"] {
 }
 
 .cnb-home-grid.split .cnb-home-image {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
 }
 
 .cnb-home-image img {

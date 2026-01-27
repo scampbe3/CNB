@@ -60,10 +60,10 @@
         "Ask questions in your own words and receive guidance shaped by lived experience, cultural context, and the full Cupcakes + Broccoli ecosystem. This tool is designed to help you get oriented, gain clarity, and decide what to focus on next. Premium members receive unlimited access to deeper responses trained on the full Cupcakes + Broccoli library."
       ],
       "prompts": [
-        "How do I price my work without undercutting myself",
-        "What should I focus on before launching",
-        "How do I know when it is time to leave my job",
-        "What does sustainable growth actually look like"
+        "How do I price my work without undercutting myself?",
+        "What should I focus on before launching?",
+        "How do I know when it is time to leave my job?",
+        "What does sustainable growth actually look like?"
       ],
       "ctas": [
         { "label": "Ask a question", "href": "#ai-concierge", "variant": "accent", "behavior": "modal" }
