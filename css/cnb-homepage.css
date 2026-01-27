@@ -22,7 +22,7 @@
   --cnb-section-pad: clamp(64px, 9vw, 150px);
   --cnb-footer-gap-height: clamp(36px, 6vw, 96px);
   --cnb-header-divider: rgba(255, 255, 255, 0.08);
-  --cnb-header-title-offset: -0px;
+  --cnb-header-title-offset: -30px;
 }
 
 .cnb-home-root {
