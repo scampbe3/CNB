@@ -328,6 +328,10 @@ body.cnb-homepage-active header[data-test="header"] {
   gap: 18px;
 }
 
+.cnb-home-hero .cnb-home-hero-media {
+  margin-top: clamp(-44px, -5vw, -78px);
+}
+
 .cnb-home-hero-note {
   background: transparent;
   border: 0;
@@ -673,6 +677,10 @@ body.cnb-homepage-active header[data-test="header"] {
   .cnb-site-nav {
     flex-wrap: wrap;
     gap: 12px 18px;
+  }
+
+  .cnb-home-hero .cnb-home-hero-media {
+    margin-top: 0;
   }
 
   .cnb-site-nav a.cnb-site-nav-button {
