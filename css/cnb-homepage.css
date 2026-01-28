@@ -169,7 +169,7 @@ body.cnb-homepage-active .content {
   gap: clamp(8px, 1.6vw, 12px);
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   min-width: 0;
 }
 
