@@ -25,6 +25,7 @@
   --cnb-header-title-offset: -0.5em;
   --cnb-title-size: clamp(20px, 2.4vw, 30px);
   --cnb-menu-drop: 14px;
+  --cnb-menu-button-height: 36px;
 }
 
 .cnb-home-root {
@@ -177,6 +178,7 @@ body.cnb-homepage-active .content {
   align-self: flex-end;
   overflow: visible;
   min-width: 0;
+  min-height: var(--cnb-menu-button-height);
 }
 
 .cnb-site-menu-toggle {
@@ -184,6 +186,7 @@ body.cnb-homepage-active .content {
   align-items: center;
   justify-content: center;
   padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 16px);
+  min-height: var(--cnb-menu-button-height);
   border-radius: 999px;
   border: 1px solid rgba(248, 245, 241, 0.55);
   background: transparent;
@@ -288,6 +291,7 @@ body.cnb-homepage-active .content {
   align-items: center;
   justify-content: center;
   padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 16px);
+  min-height: var(--cnb-menu-button-height);
   border: 1px solid rgba(248, 245, 241, 0.55);
   border-radius: 999px;
   letter-spacing: 0.18em;
