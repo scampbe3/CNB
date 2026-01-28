@@ -982,6 +982,23 @@ body.cnb-homepage-active .sqs-footer {
     white-space: normal;
   }
 
+  .cnb-home-hero-title .cnb-home-title-line {
+    display: inline;
+  }
+
+  .cnb-home-hero-title .cnb-home-title-line:nth-child(1) {
+    display: block;
+  }
+
+  .cnb-home-hero-title .cnb-home-title-line:nth-child(2),
+  .cnb-home-hero-title .cnb-home-title-line:nth-child(3) {
+    white-space: nowrap;
+  }
+
+  .cnb-home-hero-title .cnb-home-title-line:nth-child(2)::after {
+    content: " ";
+  }
+
   .cnb-site-header-inner {
     flex-direction: row;
     align-items: center;
