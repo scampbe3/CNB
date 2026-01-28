@@ -168,7 +168,9 @@ body.cnb-homepage-active .content {
   justify-content: flex-end;
   gap: clamp(8px, 1.6vw, 12px);
   position: relative;
-  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  align-self: flex-end;
   overflow: visible;
   min-width: 0;
 }
@@ -1006,8 +1008,8 @@ body.cnb-homepage-active .sqs-footer {
   }
 
   .cnb-site-menu-row {
-    width: 100%;
-    justify-content: flex-end;
+    width: max-content;
+    max-width: 100%;
   }
 
   .cnb-home-hero .cnb-home-hero-media {
