@@ -959,10 +959,6 @@ body.cnb-homepage-active .sqs-footer {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --cnb-header-height: 96px;
-  }
-
   .cnb-home-grid.hero,
   .cnb-home-grid.split {
     grid-template-columns: 1fr;
@@ -1005,6 +1001,12 @@ body.cnb-homepage-active .sqs-footer {
   .cnb-site-menu-row {
     width: max-content;
     max-width: 100%;
+  }
+
+  .cnb-site-nav {
+    font-size: clamp(10px, 2.6vw, 12px);
+    letter-spacing: 0.08em;
+    gap: clamp(8px, 2.2vw, 14px);
   }
 
   .cnb-home-hero .cnb-home-hero-media {
