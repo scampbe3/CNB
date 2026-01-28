@@ -990,6 +990,10 @@ body.cnb-homepage-active .sqs-footer {
     gap: 12px;
   }
 
+  .cnb-site-logo {
+    margin-top: -4px;
+  }
+
   .cnb-site-brand {
     gap: 14px;
   }
