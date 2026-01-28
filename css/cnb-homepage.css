@@ -23,6 +23,8 @@
   --cnb-footer-gap-height: clamp(36px, 6vw, 96px);
   --cnb-header-divider: rgba(255, 255, 255, 0.08);
   --cnb-header-title-offset: -0.5em;
+  --cnb-title-size: clamp(20px, 2.4vw, 30px);
+  --cnb-menu-drop: clamp(10px, 1.6vw, 18px);
 }
 
 .cnb-home-root {
@@ -115,14 +117,14 @@ body.cnb-homepage-active .content {
 }
 
 .cnb-site-logo {
-  width: 96px;
-  height: 96px;
+  width: calc(var(--cnb-title-size) * 3.2);
+  height: calc(var(--cnb-title-size) * 3.2);
   object-fit: contain;
 }
 
 .cnb-site-title {
   font-family: var(--cnb-serif);
-  font-size: clamp(20px, 2.4vw, 30px);
+  font-size: var(--cnb-title-size);
   letter-spacing: 0.04em;
   color: #f8f5f1;
   white-space: nowrap;
@@ -160,6 +162,8 @@ body.cnb-homepage-active .content {
   position: relative;
   width: 100%;
   min-width: 0;
+  align-self: flex-start;
+  padding-top: 6px;
 }
 
 .cnb-site-menu-row {
@@ -202,8 +206,8 @@ body.cnb-homepage-active .content {
 
 .cnb-site-nav {
   position: absolute;
-  right: calc(100% + clamp(8px, 1.6vw, 12px));
-  top: 50%;
+  right: 0;
+  top: calc(100% + var(--cnb-menu-drop));
   display: flex;
   align-items: center;
   gap: clamp(10px, 1.6vw, 18px);
@@ -221,15 +225,15 @@ body.cnb-homepage-active .content {
   min-width: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50%) scaleX(0);
-  transform-origin: right center;
+  transform: translateY(0) scaleX(0);
+  transform-origin: right top;
   transition: transform 0.35s ease, opacity 0.25s ease;
 }
 
 .cnb-site-header.is-menu-open .cnb-site-nav {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(-50%) scaleX(1);
+  transform: translateY(0) scaleX(1);
 }
 
 .cnb-site-nav a {
@@ -981,11 +985,6 @@ body.cnb-homepage-active .sqs-footer {
     white-space: normal;
   }
 
-  .cnb-site-logo {
-    width: 72px;
-    height: 72px;
-  }
-
   .cnb-site-header-inner {
     flex-direction: row;
     align-items: center;
@@ -996,10 +995,6 @@ body.cnb-homepage-active .sqs-footer {
 
   .cnb-site-brand {
     gap: 14px;
-  }
-
-  .cnb-site-title {
-    font-size: 22px;
   }
 
   .cnb-site-nav-wrap {
