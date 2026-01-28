@@ -24,7 +24,7 @@
   --cnb-header-divider: rgba(255, 255, 255, 0.08);
   --cnb-header-title-offset: -0.5em;
   --cnb-title-size: clamp(20px, 2.4vw, 30px);
-  --cnb-menu-drop: clamp(10px, 1.6vw, 18px);
+  --cnb-menu-drop: 14px;
 }
 
 .cnb-home-root {
@@ -1004,9 +1004,9 @@ body.cnb-homepage-active .sqs-footer {
   }
 
   .cnb-site-nav {
-    font-size: clamp(10px, 2.6vw, 12px);
-    letter-spacing: 0.08em;
-    gap: clamp(8px, 2.2vw, 14px);
+    font-size: clamp(9px, 2vw, 11px);
+    letter-spacing: 0.06em;
+    gap: clamp(6px, 1.6vw, 10px);
   }
 
   .cnb-home-hero .cnb-home-hero-media {
