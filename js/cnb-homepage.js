@@ -7,7 +7,7 @@
   if (mount.dataset.cnbMounted === "true") return;
   mount.dataset.cnbMounted = "true";
 
-  const jsonUrl = mount.dataset.cnbSrc || window.CNB_HOME_JSON_URL;
+  const jsonUrl = mount.dataset.cnbSrc || window.CNB_CONTENT_URL || window.CNB_HOME_JSON_URL;
   const assetBase = mount.dataset.cnbAssets || window.CNB_HOME_ASSET_BASE || "";
 
   const normalizeUrl = (value) => {
