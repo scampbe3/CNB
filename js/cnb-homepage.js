@@ -655,11 +655,44 @@
     setupRevealObserver();
   };
 
+  const fetchJson = (url) =>
+    fetch(url)
+      .then((res) => (res.ok ? res.json() : null))
+      .catch(() => null);
+
+  const fallbackUrl = window.CNB_HOME_FALLBACK_URL;
+  const mergeWithFallback = (primary, fallback) => {
+    if (!primary) return fallback || defaultData;
+    if (!fallback) return primary;
+    const merged = { ...fallback, ...primary };
+    if (!primary.header && fallback.header) merged.header = fallback.header;
+    if (!primary.footer && fallback.footer) merged.footer = fallback.footer;
+    if (!Array.isArray(primary.sections) || primary.sections.length === 0) {
+      merged.sections = fallback.sections || primary.sections || [];
+    }
+    return merged;
+  };
+
   if (jsonUrl) {
-    fetch(jsonUrl)
-      .then((res) => (res.ok ? res.json() : defaultData))
-      .then(hydrate)
-      .catch(() => hydrate(defaultData));
+    fetchJson(jsonUrl)
+      .then((data) => {
+        if (fallbackUrl && fallbackUrl !== jsonUrl) {
+          const needsFallback =
+            !data || !data.header || !data.footer || !Array.isArray(data.sections) || data.sections.length === 0;
+          if (needsFallback) {
+            return fetchJson(fallbackUrl).then((fallback) => mergeWithFallback(data, fallback));
+          }
+        }
+        return data;
+      })
+      .then((data) => hydrate(data || defaultData))
+      .catch(() => {
+        if (fallbackUrl && fallbackUrl !== jsonUrl) {
+          fetchJson(fallbackUrl).then((data) => hydrate(data || defaultData));
+        } else {
+          hydrate(defaultData);
+        }
+      });
   } else if (window.CNB_HOME_DATA) {
     hydrate(window.CNB_HOME_DATA);
   } else {

@@ -19,12 +19,14 @@
   };
 
   const setMountSources = (base) => {
+    const externalContentUrl = window.CNB_CONTENT_URL;
     const mount = document.querySelector("[data-cnb-home-root]");
     if (mount) {
-      mount.dataset.cnbSrc = `${base}/data/cnb-homepage.json`;
+      mount.dataset.cnbSrc = externalContentUrl || `${base}/data/cnb-homepage.json`;
       mount.dataset.cnbAssets = base;
     }
     window.CNB_HOME_JSON_URL = `${base}/data/cnb-homepage.json`;
+    window.CNB_HOME_FALLBACK_URL = `${base}/data/cnb-homepage.json`;
     window.CNB_HOME_ASSET_BASE = base;
   };
 
