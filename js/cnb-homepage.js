@@ -660,6 +660,38 @@
       .then((res) => (res.ok ? res.json() : null))
       .catch(() => null);
 
+  const loadJsonp = (url, timeoutMs = 8000) =>
+    new Promise((resolve, reject) => {
+      if (!url) return reject(new Error("Missing URL"));
+      const callbackName = `CNBContentCallback_${Math.random().toString(36).slice(2, 8)}`;
+      const hasCallback = /[?&]callback=/.test(url);
+      const jsonpUrl = hasCallback ? url : `${url}${url.includes("?") ? "&" : "?"}callback=${callbackName}`;
+      let timeoutId;
+      const script = document.createElement("script");
+      window[callbackName] = (data) => {
+        clearTimeout(timeoutId);
+        delete window[callbackName];
+        script.remove();
+        resolve(data);
+      };
+      script.onerror = () => {
+        clearTimeout(timeoutId);
+        delete window[callbackName];
+        script.remove();
+        reject(new Error("JSONP failed"));
+      };
+      timeoutId = window.setTimeout(() => {
+        delete window[callbackName];
+        script.remove();
+        reject(new Error("JSONP timeout"));
+      }, timeoutMs);
+      script.src = jsonpUrl;
+      script.async = true;
+      document.head.appendChild(script);
+    });
+
+  const shouldJsonp = (url) => /script\\.google\\.com|googleusercontent\\.com/.test(url || "");
+
   const fallbackUrl = window.CNB_HOME_FALLBACK_URL;
   const mergeWithFallback = (primary, fallback) => {
     if (!primary) return fallback || defaultData;
@@ -675,6 +707,12 @@
 
   if (jsonUrl) {
     fetchJson(jsonUrl)
+      .then((data) => {
+        if (!data && shouldJsonp(jsonUrl)) {
+          return loadJsonp(jsonUrl).catch(() => null);
+        }
+        return data;
+      })
       .then((data) => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
           const needsFallback =

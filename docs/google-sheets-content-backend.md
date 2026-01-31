@@ -33,7 +33,7 @@ const SECTION_MAP = {
   "Closing": "closing"
 };
 
-function doGet() {
+function doGet(e) {
   const base = JSON.parse(UrlFetchApp.fetch(BASE_JSON_URL).getContentText());
   const sheet = SpreadsheetApp.getActive().getSheetByName("Content");
   if (!sheet) {
@@ -55,7 +55,14 @@ function doGet() {
 
   applyRows(base, rows);
 
-  return ContentService.createTextOutput(JSON.stringify(base))
+  const output = JSON.stringify(base);
+  const callback = e && e.parameter && e.parameter.callback ? e.parameter.callback : "";
+  if (callback) {
+    return ContentService.createTextOutput(`${callback}(${output});`)
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
+  return ContentService.createTextOutput(output)
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -76,18 +83,21 @@ function applyRows(page, rows) {
     if (!sectionName || !field) return;
     const sectionId = SECTION_MAP[sectionName];
     if (!sectionId) return;
-    const bucket = (updates[sectionId] ||= {});
+    if (!updates[sectionId]) updates[sectionId] = {};
+    const bucket = updates[sectionId];
 
     if (/^Body\\s*\\d+/i.test(field)) {
       const idx = Number(field.replace(/\\D+/g, "")) || 1;
-      (bucket.body ||= {})[idx] = value;
+      if (!bucket.body) bucket.body = {};
+      bucket.body[idx] = value;
       bucket.hasBody = true;
       return;
     }
 
     if (/^Prompt\\s*\\d+/i.test(field)) {
       const idx = Number(field.replace(/\\D+/g, "")) || 1;
-      (bucket.prompts ||= {})[idx] = value;
+      if (!bucket.prompts) bucket.prompts = {};
+      bucket.prompts[idx] = value;
       bucket.hasPrompts = true;
       return;
     }
@@ -95,7 +105,8 @@ function applyRows(page, rows) {
     if (/^CTA\\s*\\d*/i.test(field)) {
       const idxMatch = field.match(/\\d+/);
       const idx = idxMatch ? Number(idxMatch[0]) : 1;
-      (bucket.ctas ||= {})[idx] = { label: value, href: link, notes };
+      if (!bucket.ctas) bucket.ctas = {};
+      bucket.ctas[idx] = { label: value, href: link, notes };
       bucket.hasCtas = true;
       return;
     }
@@ -194,6 +205,8 @@ Deploy:
 - Who has access: **Anyone**
 
 Copy the Web App URL.
+
+Note: every new deployment creates a **new URL**. If you redeploy, update the Squarespace header script to the new URL.
 
 ## 3) Point the site at the endpoint
 
