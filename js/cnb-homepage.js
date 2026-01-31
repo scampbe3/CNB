@@ -656,7 +656,7 @@
   };
 
   const fetchJson = (url) =>
-    fetch(url)
+    fetch(url, { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : null))
       .catch(() => null);
 
