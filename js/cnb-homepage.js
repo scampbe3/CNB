@@ -2,8 +2,14 @@
   const ROOT_SELECTOR = "[data-cnb-home-root]";
   const defaultData = { sections: [] };
 
-  const mount = document.querySelector(ROOT_SELECTOR);
-  if (!mount) return;
+  const mounts = Array.from(document.querySelectorAll(ROOT_SELECTOR));
+  if (!mounts.length) return;
+  const mount =
+    mounts.find((node) => node.dataset && node.dataset.cnbPage && node.dataset.cnbPage.trim()) ||
+    mounts[0];
+  mounts.forEach((node) => {
+    if (node !== mount) node.remove();
+  });
   const jsonUrl = mount.dataset.cnbSrc || window.CNB_CONTENT_URL || window.CNB_HOME_JSON_URL;
   const renderedSrc = mount.dataset.cnbRenderedSrc;
   if (mount.dataset.cnbMounted === "true" && renderedSrc === jsonUrl) return;
@@ -1078,6 +1084,11 @@
     setupRevealObserver();
   };
 
+  const safeHydrate = (data) => {
+    if (mount.dataset.cnbRenderedSrc !== jsonUrl) return;
+    hydrate(data);
+  };
+
   const fetchJson = (url) =>
     fetch(url, { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : null))
@@ -1155,19 +1166,19 @@
         const data = applyRowsToPage(base, rows);
         window.CNB_LAST_CONTENT_SOURCE = source || "csv";
         window.CNB_LAST_CONTENT_DATA = data;
-        hydrate(data || defaultData);
+        safeHydrate(data || defaultData);
       })
       .catch(() => {
         if (fallbackUrl) {
           fetchJson(fallbackUrl).then((data) => {
             window.CNB_LAST_CONTENT_SOURCE = "fallback";
             window.CNB_LAST_CONTENT_DATA = data || defaultData;
-            hydrate(data || defaultData);
+            safeHydrate(data || defaultData);
           });
         } else {
           window.CNB_LAST_CONTENT_SOURCE = "default";
           window.CNB_LAST_CONTENT_DATA = defaultData;
-          hydrate(defaultData);
+          safeHydrate(defaultData);
         }
       });
   } else if (jsonUrl) {
@@ -1202,24 +1213,24 @@
       })
       .then((data) => {
         window.CNB_LAST_CONTENT_DATA = data || defaultData;
-        hydrate(data || defaultData);
+        safeHydrate(data || defaultData);
       })
       .catch(() => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
           fetchJson(fallbackUrl).then((data) => {
             window.CNB_LAST_CONTENT_SOURCE = "fallback";
             window.CNB_LAST_CONTENT_DATA = data || defaultData;
-            hydrate(data || defaultData);
+            safeHydrate(data || defaultData);
           });
         } else {
           window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE || "default";
           window.CNB_LAST_CONTENT_DATA = defaultData;
-          hydrate(defaultData);
+          safeHydrate(defaultData);
         }
       });
   } else if (window.CNB_HOME_DATA) {
-    hydrate(window.CNB_HOME_DATA);
+    safeHydrate(window.CNB_HOME_DATA);
   } else {
-    hydrate(defaultData);
+    safeHydrate(defaultData);
   }
 })();
