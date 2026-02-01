@@ -4,10 +4,12 @@
 
   const mount = document.querySelector(ROOT_SELECTOR);
   if (!mount) return;
-  if (mount.dataset.cnbMounted === "true") return;
-  mount.dataset.cnbMounted = "true";
-
   const jsonUrl = mount.dataset.cnbSrc || window.CNB_CONTENT_URL || window.CNB_HOME_JSON_URL;
+  const renderedSrc = mount.dataset.cnbRenderedSrc;
+  if (mount.dataset.cnbMounted === "true" && renderedSrc === jsonUrl) return;
+  mount.dataset.cnbMounted = "true";
+  mount.dataset.cnbRenderedSrc = jsonUrl || "";
+  if (mount.childElementCount) mount.innerHTML = "";
   const assetBase = mount.dataset.cnbAssets || window.CNB_HOME_ASSET_BASE || "";
 
   const SECTION_MAP = {
