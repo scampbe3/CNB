@@ -55,7 +55,10 @@
     const resolvedContentUrl = isHomePage ? externalContentUrl || dataUrl : dataUrl;
 
     if (mount) {
-      mount.dataset.cnbSrc = mount.dataset.cnbSrc || resolvedContentUrl;
+      const existingSrc = mount.dataset.cnbSrc;
+      const shouldOverride =
+        !existingSrc || (!isHomePage && externalContentUrl && existingSrc === externalContentUrl);
+      mount.dataset.cnbSrc = shouldOverride ? resolvedContentUrl : existingSrc;
       mount.dataset.cnbAssets = base;
     }
     window.CNB_HOME_JSON_URL = resolvedContentUrl;
