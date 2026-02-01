@@ -10,6 +10,17 @@
   const jsonUrl = mount.dataset.cnbSrc || window.CNB_CONTENT_URL || window.CNB_HOME_JSON_URL;
   const assetBase = mount.dataset.cnbAssets || window.CNB_HOME_ASSET_BASE || "";
 
+  const SECTION_MAP = {
+    Hero: "hero",
+    "What This Is": "what",
+    "AI Concierge": "ai",
+    Learn: "learn",
+    "Work With Amanda": "work",
+    "Blind Dinners": "dinners",
+    Membership: "membership",
+    Closing: "closing",
+  };
+
   const normalizeUrl = (value) => {
     if (!value) return "";
     const trimmed = String(value).trim();
@@ -290,6 +301,209 @@
     applyRevealDelays(sectionEl);
     return sectionEl;
   };
+
+  const parseCsv = (text) => {
+    if (!text) return [];
+    const rows = [];
+    let row = [];
+    let field = "";
+    let inQuotes = false;
+    for (let i = 0; i < text.length; i += 1) {
+      const char = text[i];
+      if (inQuotes) {
+        if (char === '"') {
+          if (text[i + 1] === '"') {
+            field += '"';
+            i += 1;
+          } else {
+            inQuotes = false;
+          }
+        } else {
+          field += char;
+        }
+        continue;
+      }
+      if (char === '"') {
+        inQuotes = true;
+        continue;
+      }
+      if (char === ",") {
+        row.push(field);
+        field = "";
+        continue;
+      }
+      if (char === "\n") {
+        row.push(field);
+        rows.push(row);
+        row = [];
+        field = "";
+        continue;
+      }
+      if (char === "\r") continue;
+      field += char;
+    }
+    if (field.length || row.length) {
+      row.push(field);
+      rows.push(row);
+    }
+    return rows;
+  };
+
+  const rowsFromCsv = (text) => {
+    const grid = parseCsv(text);
+    if (!grid.length) return [];
+    const headers = grid.shift().map((h) => String(h || "").trim());
+    return grid
+      .filter((row) => row.some((cell) => String(cell || "").trim() !== ""))
+      .map((row) => {
+        const obj = {};
+        headers.forEach((key, i) => {
+          if (!key) return;
+          obj[key] = row[i] == null ? "" : String(row[i]);
+        });
+        return obj;
+      });
+  };
+
+  const applyRowsToPage = (page, rows) => {
+    const byId = {};
+    (page.sections || []).forEach((section) => {
+      if (section.id) byId[section.id] = section;
+    });
+
+    const updates = {};
+
+    rows.forEach((row) => {
+      const sectionName = row.section || "";
+      const field = row.field || "";
+      const value = row.value || "";
+      const link = row.link || "";
+      const notes = row.notes || "";
+      if (!sectionName || !field) return;
+      const sectionId = SECTION_MAP[sectionName];
+      if (!sectionId) return;
+      if (!updates[sectionId]) updates[sectionId] = {};
+      const bucket = updates[sectionId];
+
+      if (/^Body\s*\d+/i.test(field)) {
+        const idx = Number(field.replace(/\D+/g, "")) || 1;
+        if (!bucket.body) bucket.body = {};
+        bucket.body[idx] = value;
+        bucket.hasBody = true;
+        return;
+      }
+
+      if (/^Prompt\s*\d+/i.test(field)) {
+        const idx = Number(field.replace(/\D+/g, "")) || 1;
+        if (!bucket.prompts) bucket.prompts = {};
+        bucket.prompts[idx] = value;
+        bucket.hasPrompts = true;
+        return;
+      }
+
+      if (/^CTA\s*\d*/i.test(field)) {
+        const idxMatch = field.match(/\d+/);
+        const idx = idxMatch ? Number(idxMatch[0]) : 1;
+        if (!bucket.ctas) bucket.ctas = {};
+        bucket.ctas[idx] = { label: value, href: link, notes };
+        bucket.hasCtas = true;
+        return;
+      }
+
+      if (/^Inline\s*link/i.test(field)) {
+        bucket.inlineLink = { label: value, href: link };
+        return;
+      }
+
+      if (/^Image/i.test(field)) {
+        bucket.image = { src: value, alt: notes };
+        return;
+      }
+
+      if (/^Panel\s*label/i.test(field)) {
+        bucket.panelLabel = value;
+        return;
+      }
+
+      if (/^Title/i.test(field)) {
+        bucket.title = value;
+        return;
+      }
+
+      if (/^Subhead/i.test(field)) {
+        bucket.subhead = value;
+        return;
+      }
+
+      if (/^Note/i.test(field)) {
+        bucket.note = value;
+        return;
+      }
+
+      if (/^Eyebrow/i.test(field)) {
+        bucket.eyebrow = value;
+      }
+    });
+
+    Object.keys(updates).forEach((sectionId) => {
+      const section = byId[sectionId];
+      if (!section) return;
+      const data = updates[sectionId];
+
+      ["title", "subhead", "note", "eyebrow", "panelLabel"].forEach((key) => {
+        if (key in data) section[key] = data[key];
+      });
+
+      if (data.inlineLink) section.inlineLink = data.inlineLink;
+      if (data.image && data.image.src) {
+        section.image = section.image || {};
+        section.image.src = data.image.src;
+        if (data.image.alt) section.image.alt = data.image.alt;
+      }
+
+      if (data.hasBody) {
+        const body = Object.keys(data.body || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((k) => data.body[k])
+          .filter(Boolean);
+        section.body = body;
+      }
+
+      if (data.hasPrompts) {
+        const prompts = Object.keys(data.prompts || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((k) => data.prompts[k])
+          .filter(Boolean);
+        section.prompts = prompts;
+      }
+
+      if (data.hasCtas) {
+        const ctas = Object.keys(data.ctas || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((k) => {
+            const cta = data.ctas[k];
+            if (!cta || !cta.label) return null;
+            const out = { label: cta.label, href: cta.href };
+            const note = (cta.notes || "").toLowerCase();
+            if (note.includes("primary")) out.variant = "primary";
+            if (note.includes("ghost")) out.variant = "ghost";
+            if (note.includes("accent")) out.variant = "accent";
+            if (note.includes("modal")) out.behavior = "modal";
+            return out;
+          })
+          .filter(Boolean);
+        section.ctas = ctas;
+      }
+    });
+
+    return page;
+  };
+
+  const isCsvUrl = (url) => /\.csv(?:\?|$)/i.test(url || "") || /output=csv/i.test(url || "");
+  const fetchText = (url) =>
+    fetch(url, { cache: "no-store" })
+      .then((res) => (res.ok ? res.text() : null))
+      .catch(() => null);
 
   const renderAi = (section) => {
     const sectionEl = buildSection(section, "cnb-home-ai");
@@ -705,7 +919,34 @@
     return merged;
   };
 
-  if (jsonUrl) {
+  if (jsonUrl && isCsvUrl(jsonUrl)) {
+    window.CNB_LAST_CONTENT_URL = jsonUrl;
+    const loadCsv = fetchText(jsonUrl);
+    const loadBase = fallbackUrl ? fetchJson(fallbackUrl) : Promise.resolve(defaultData);
+    Promise.all([loadCsv, loadBase])
+      .then(([csvText, baseData]) => {
+        if (!csvText) throw new Error("Missing CSV");
+        const rows = rowsFromCsv(csvText);
+        const base = baseData ? JSON.parse(JSON.stringify(baseData)) : JSON.parse(JSON.stringify(defaultData));
+        const data = applyRowsToPage(base, rows);
+        window.CNB_LAST_CONTENT_SOURCE = "csv";
+        window.CNB_LAST_CONTENT_DATA = data;
+        hydrate(data || defaultData);
+      })
+      .catch(() => {
+        if (fallbackUrl) {
+          fetchJson(fallbackUrl).then((data) => {
+            window.CNB_LAST_CONTENT_SOURCE = "fallback";
+            window.CNB_LAST_CONTENT_DATA = data || defaultData;
+            hydrate(data || defaultData);
+          });
+        } else {
+          window.CNB_LAST_CONTENT_SOURCE = "default";
+          window.CNB_LAST_CONTENT_DATA = defaultData;
+          hydrate(defaultData);
+        }
+      });
+  } else if (jsonUrl) {
     window.CNB_LAST_CONTENT_URL = jsonUrl;
     const useJsonp = shouldJsonp(jsonUrl);
     const loadPrimary = useJsonp
