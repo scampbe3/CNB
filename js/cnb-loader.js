@@ -2,11 +2,23 @@
   const repo = "scampbe3/CNB";
   const branch = "main";
 
+  const getCacheBust = () => {
+    const val = window.CNB_ASSET_VERSION || window.CNB_CACHE_BUST || "";
+    return val ? String(val) : "";
+  };
+
+  const withCacheBust = (url) => {
+    const bust = getCacheBust();
+    if (!bust || !url) return url;
+    const sep = url.includes("?") ? "&" : "?";
+    return `${url}${sep}v=${encodeURIComponent(bust)}`;
+  };
+
   const addStylesheet = (href) => {
     if (!href) return;
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = href;
+    link.href = withCacheBust(href);
     document.head.appendChild(link);
   };
 
@@ -14,7 +26,7 @@
     if (!src) return;
     const script = document.createElement("script");
     script.defer = true;
-    script.src = src;
+    script.src = withCacheBust(src);
     document.head.appendChild(script);
   };
 
