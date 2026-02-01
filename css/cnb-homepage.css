@@ -791,6 +791,10 @@ body.cnb-homepage-active .sqs-footer {
   align-items: stretch;
 }
 
+.cnb-home-tiers-grid.is-stacked {
+  grid-template-columns: 1fr;
+}
+
 .cnb-tier-card {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(20, 17, 15, 0.12);

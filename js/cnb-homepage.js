@@ -349,9 +349,13 @@
     const headerList = renderList(section.list, "cnb-home-list");
     if (headerList) header.appendChild(headerList);
 
-    if (header.childElementCount) inner.appendChild(header);
+    const content = createEl("div", "cnb-home-copy cnb-home-tiers-copy");
+    if (header.childElementCount) content.appendChild(header);
 
     const grid = createEl("div", "cnb-home-tiers-grid");
+    if (section.variant === "stacked" || section.stack === "vertical") {
+      grid.classList.add("is-stacked");
+    }
     (section.tiers || []).forEach((tier) => {
       const card = withReveal(createEl("div", "cnb-tier-card"));
       if (tier && tier.featured) card.classList.add("is-featured");
@@ -392,10 +396,26 @@
       grid.appendChild(card);
     });
 
-    inner.appendChild(grid);
+    content.appendChild(grid);
 
     const ctas = renderCtas(section.ctas);
-    if (ctas) inner.appendChild(ctas);
+    if (ctas) content.appendChild(ctas);
+
+    if (section.image) {
+      const gridWrap = createEl("div", "cnb-home-grid split");
+      if (section.layout === "image-left") gridWrap.classList.add("is-reversed");
+      const media = createEl("div", "cnb-home-media");
+      const image = renderImage(section.image, { sectionEl });
+      if (image) media.appendChild(image);
+      if (image) {
+        gridWrap.append(content, media);
+      } else {
+        gridWrap.append(content);
+      }
+      inner.appendChild(gridWrap);
+    } else {
+      inner.appendChild(content);
+    }
 
     sectionEl.appendChild(inner);
     applyRevealDelays(sectionEl);
@@ -724,19 +744,37 @@
     const sectionEl = buildSection(section, "cnb-home-closing");
     const inner = createEl("div", "cnb-home-inner");
 
+    const copy = createEl("div", "cnb-home-copy");
+
     const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
-    if (eyebrow) inner.appendChild(eyebrow);
+    if (eyebrow) copy.appendChild(eyebrow);
 
     const title = withReveal(createEl("h2", "cnb-home-title", section.title || ""));
-    inner.appendChild(title);
+    copy.appendChild(title);
 
-    renderBody(section.body, inner);
+    renderBody(section.body, copy);
 
     const list = renderList(section.list, "cnb-home-list");
-    if (list) inner.appendChild(list);
+    if (list) copy.appendChild(list);
 
     const ctas = renderCtas(section.ctas);
-    if (ctas) inner.appendChild(ctas);
+    if (ctas) copy.appendChild(ctas);
+
+    if (section.image) {
+      const grid = createEl("div", "cnb-home-grid split");
+      if (section.layout === "image-left") grid.classList.add("is-reversed");
+      const media = createEl("div", "cnb-home-media");
+      const image = renderImage(section.image, { sectionEl });
+      if (image) media.appendChild(image);
+      if (image) {
+        grid.append(copy, media);
+      } else {
+        grid.append(copy);
+      }
+      inner.appendChild(grid);
+    } else {
+      inner.appendChild(copy);
+    }
 
     sectionEl.appendChild(inner);
     applyRevealDelays(sectionEl);
