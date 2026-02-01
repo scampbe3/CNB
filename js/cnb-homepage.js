@@ -723,26 +723,32 @@
     loadPrimary
       .then((data) => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
-          const needsFallback =
-            !data || !data.header || !data.footer || !Array.isArray(data.sections) || data.sections.length === 0;
+          const needsFallback = !data || !Array.isArray(data.sections) || data.sections.length === 0;
           if (needsFallback) {
             return fetchJson(fallbackUrl).then((fallback) => {
-              window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE || "fallback";
+              window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE
+                ? `${window.CNB_LAST_CONTENT_SOURCE}+fallback`
+                : "fallback";
               return mergeWithFallback(data, fallback);
             });
           }
         }
         return data;
       })
-      .then((data) => hydrate(data || defaultData))
+      .then((data) => {
+        window.CNB_LAST_CONTENT_DATA = data || defaultData;
+        hydrate(data || defaultData);
+      })
       .catch(() => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
           fetchJson(fallbackUrl).then((data) => {
             window.CNB_LAST_CONTENT_SOURCE = "fallback";
+            window.CNB_LAST_CONTENT_DATA = data || defaultData;
             hydrate(data || defaultData);
           });
         } else {
           window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE || "default";
+          window.CNB_LAST_CONTENT_DATA = defaultData;
           hydrate(defaultData);
         }
       });
