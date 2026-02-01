@@ -365,6 +365,69 @@
       });
   };
 
+  const deriveGvizUrl = (csvUrl) => {
+    if (!csvUrl) return "";
+    if (/\/gviz\/tq/i.test(csvUrl)) return csvUrl;
+    try {
+      const url = new URL(csvUrl, window.location.href);
+      url.pathname = url.pathname.replace(/\/pub\/?$/i, "/gviz/tq");
+      url.searchParams.set("tqx", "out:json");
+      return url.toString();
+    } catch (err) {
+      return "";
+    }
+  };
+
+  const loadGviz = (url, timeoutMs = 8000) =>
+    new Promise((resolve, reject) => {
+      if (!url) return reject(new Error("Missing GViz URL"));
+      const script = document.createElement("script");
+      let timeoutId;
+      const cleanup = () => {
+        clearTimeout(timeoutId);
+        script.remove();
+        if (window.google && window.google.visualization && window.google.visualization.Query) {
+          delete window.google.visualization.Query.setResponse;
+        }
+      };
+      const setResponse = (data) => {
+        cleanup();
+        resolve(data);
+      };
+      window.google = window.google || {};
+      window.google.visualization = window.google.visualization || {};
+      window.google.visualization.Query = window.google.visualization.Query || {};
+      window.google.visualization.Query.setResponse = setResponse;
+      script.onerror = () => {
+        cleanup();
+        reject(new Error("GViz load failed"));
+      };
+      timeoutId = window.setTimeout(() => {
+        cleanup();
+        reject(new Error("GViz timeout"));
+      }, timeoutMs);
+      script.src = url;
+      script.async = true;
+      document.head.appendChild(script);
+    });
+
+  const rowsFromGviz = (payload) => {
+    const table = payload && payload.table;
+    if (!table || !Array.isArray(table.cols) || !Array.isArray(table.rows)) return [];
+    const headers = table.cols.map((col) => String((col && col.label) || "").trim());
+    return table.rows
+      .map((row) => {
+        const obj = {};
+        (row.c || []).forEach((cell, i) => {
+          const key = headers[i];
+          if (!key) return;
+          obj[key] = cell && cell.v != null ? String(cell.v) : "";
+        });
+        return obj;
+      })
+      .filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
+  };
+
   const applyRowsToPage = (page, rows) => {
     const byId = {};
     (page.sections || []).forEach((section) => {
@@ -925,11 +988,26 @@
     const loadBase = fallbackUrl ? fetchJson(fallbackUrl) : Promise.resolve(defaultData);
     Promise.all([loadCsv, loadBase])
       .then(([csvText, baseData]) => {
-        if (!csvText) throw new Error("Missing CSV");
-        const rows = rowsFromCsv(csvText);
+        if (!csvText) return { rows: null, baseData };
+        return { rows: rowsFromCsv(csvText), baseData, source: "csv" };
+      })
+      .then((result) => {
+        if (result && result.rows) return result;
+        const gvizUrl = deriveGvizUrl(jsonUrl);
+        if (!gvizUrl) return { rows: null, baseData: result ? result.baseData : null };
+        return loadGviz(gvizUrl)
+          .then((payload) => ({
+            rows: rowsFromGviz(payload),
+            baseData: result ? result.baseData : null,
+            source: "gviz",
+          }))
+          .catch(() => ({ rows: null, baseData: result ? result.baseData : null }));
+      })
+      .then(({ rows, baseData, source }) => {
+        if (!rows || rows.length === 0) throw new Error("Missing rows");
         const base = baseData ? JSON.parse(JSON.stringify(baseData)) : JSON.parse(JSON.stringify(defaultData));
         const data = applyRowsToPage(base, rows);
-        window.CNB_LAST_CONTENT_SOURCE = "csv";
+        window.CNB_LAST_CONTENT_SOURCE = source || "csv";
         window.CNB_LAST_CONTENT_DATA = data;
         hydrate(data || defaultData);
       })
