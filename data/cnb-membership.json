@@ -35,6 +35,10 @@
         "Core Membership offers steady guidance and practical tools.",
         "Premium Membership offers deeper access, closer connection, and priority opportunities."
       ],
+      "image": {
+        "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+        "alt": "Portrait in patterned textiles."
+      },
       "theme": "light"
     },
     {

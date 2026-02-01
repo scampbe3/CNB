@@ -236,6 +236,11 @@
     const sectionEl = createEl("section", `cnb-home-section ${extraClass || ""}`.trim());
     if (section.id) sectionEl.id = section.id;
     if (section.theme) sectionEl.dataset.theme = section.theme;
+    if (section.image) {
+      sectionEl.dataset.hasImage = "true";
+      const layout = section.layout === "image-left" ? "image-left" : "image-right";
+      sectionEl.dataset.textSide = layout === "image-left" ? "right" : "left";
+    }
     return sectionEl;
   };
 
