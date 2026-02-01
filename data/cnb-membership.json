@@ -1,0 +1,238 @@
+{
+  "page": "membership",
+  "version": "2026-01-membership-v1",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "note": "Membership",
+      "title": "Choose Your Membership",
+      "subhead": "Steady guidance or deeper access, depending on where you are now.",
+      "body": [
+        "Core Membership offers steady guidance and practical tools.",
+        "Premium Membership offers deeper access, closer connection, and priority opportunities."
+      ],
+      "image": {
+        "src": "assets/images/african-digital-print-fabric.jpg",
+        "alt": "Colorful African print fabric pattern."
+      },
+      "theme": "light"
+    },
+    {
+      "id": "membership-options",
+      "type": "tiers",
+      "tiers": [
+        {
+          "title": "Core Membership",
+          "price": "$25 per month",
+          "summary": "Steady guidance and practical tools"
+        },
+        {
+          "title": "Premium Membership",
+          "price": "$59 per month",
+          "summary": "Deeper access, closer connection, and priority opportunities",
+          "featured": true
+        }
+      ],
+      "ctas": [
+        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Compare Membership Options", "href": "#membership-tiers", "variant": "ghost" }
+      ],
+      "theme": "paper"
+    },
+    {
+      "id": "built-around",
+      "type": "feature",
+      "eyebrow": "Membership",
+      "title": "Membership Built Around Black Founders",
+      "body": [
+        "Cupcakes + Broccoli membership is designed to support Black founders over time.",
+        "Black entrepreneurs start businesses at one of the fastest rates in the United States, yet face persistent barriers to scale, capital access, and sustainability. Many are building without inherited wealth, institutional backing, or insider networks.",
+        "Cupcakes + Broccoli exists to meet that reality directly.",
+        "This is not a course you complete or a community you scroll through. It is an ongoing relationship with ideas, guidance, and people shaped by real experience working with Black-owned businesses.",
+        "The work is led by Amanda Johnson."
+      ],
+      "theme": "light"
+    },
+    {
+      "id": "membership-includes",
+      "type": "feature",
+      "eyebrow": "Membership",
+      "title": "What Membership Includes",
+      "body": [
+        "Membership provides access to:"
+      ],
+      "list": [
+        "Curated tools, frameworks, and guides for real decisions",
+        "An AI concierge built around questions Black founders actually ask",
+        "Stories and reflections that provide context and perspective",
+        "Invitations to conversations and shared learning",
+        "Access to one-on-one Zoom office hours with Amanda",
+        "Eligibility for Blind Dinners at the Premium level"
+      ],
+      "bodyAfter": [
+        "This support is designed to evolve as your work evolves."
+      ],
+      "theme": "paper"
+    },
+    {
+      "id": "how-people-use",
+      "type": "feature",
+      "eyebrow": "Membership",
+      "title": "How People Use Membership",
+      "body": [
+        "Some members arrive with a specific decision they need to make.",
+        "Others return as their business shifts or needs recalibration.",
+        "Membership is not meant to be consumed quickly. It is meant to be returned to."
+      ],
+      "inlineLink": { "label": "Browse learning resources", "href": "/learn" },
+      "theme": "light"
+    },
+    {
+      "id": "membership-tiers",
+      "type": "tiers",
+      "variant": "detailed",
+      "eyebrow": "Membership",
+      "title": "Membership Tiers",
+      "body": [
+        "Choose the tier that fits how you want to engage right now."
+      ],
+      "tiers": [
+        {
+          "title": "Core Membership",
+          "price": "$25 per month",
+          "summary": "For founders who want steady guidance without feeling overwhelmed.",
+          "lead": "Includes:",
+          "bullets": [
+            "Access to a rotating set of curated resources and frameworks",
+            "Limited monthly access to the AI concierge for exploration and orientation",
+            "Stories and reflections from founders and collaborators",
+            "Invitations to select virtual conversations",
+            "Access to full-price one-on-one Zoom office hours with Amanda"
+          ],
+          "note": "Core is designed for intentional use and steady progress.",
+          "cta": { "label": "Join Core Membership for $25/month", "href": "/membership", "variant": "ghost" }
+        },
+        {
+          "title": "Premium Membership",
+          "price": "$59 per month",
+          "summary": "For founders who want deeper access and closer connection.",
+          "lead": "Includes everything in Core, plus:",
+          "bullets": [
+            "Unlimited access to the full resource and framework library",
+            "Unlimited access to the AI concierge, with deeper responses trained on the full Cupcakes + Broccoli library",
+            "Full access to member-only stories and reflections",
+            "Access to discounted one-on-one Zoom office hours with Amanda at 50% off",
+            "Eligibility for Blind Dinners by invitation",
+            "Early access to new tools, essays, and resources"
+          ],
+          "note": "Premium Membership is intentionally limited to protect depth, care, and quality.",
+          "cta": { "label": "Join Premium Membership for $59/month", "href": "/membership", "variant": "primary" },
+          "featured": true
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "id": "ai-access",
+      "type": "feature",
+      "eyebrow": "AI Concierge",
+      "title": "AI Concierge Access",
+      "body": [
+        "The AI concierge helps founders get unstuck and oriented.",
+        "Core members receive limited monthly access designed for exploration, clarity, and identifying which resources may be most useful.",
+        "Premium members receive unlimited AI access, including deeper responses trained on the full Cupcakes + Broccoli library and Amanda’s proprietary frameworks."
+      ],
+      "theme": "paper"
+    },
+    {
+      "id": "office-hours",
+      "type": "feature",
+      "eyebrow": "Office Hours",
+      "title": "One-on-One Office Hours",
+      "body": [
+        "Office hours are focused, 45-minute Zoom sessions designed for real decision-making.",
+        "These are not pitches or performances. They are practical, direct conversations grounded in where you are right now.",
+        "Sessions are limited each month and available on a first come, first served basis.",
+        "Full rate: $150 per hour. Premium rate: $75 per hour (50% off).",
+        "Office hours are available to members only."
+      ],
+      "inlineLink": { "label": "Learn more about working with Amanda", "href": "/work-with-amanda" },
+      "theme": "light"
+    },
+    {
+      "id": "blind-dinners",
+      "type": "feature",
+      "eyebrow": "Blind Dinners",
+      "title": "Blind Dinners and Membership",
+      "body": [
+        "Blind Dinners are intimate, invitation-only gatherings for Black founders and select People of Color and LGBTQIA+ leaders.",
+        "Eligibility is reserved for select Premium members. Membership ensures shared context, trust, and care before anyone comes to the table."
+      ],
+      "inlineLink": { "label": "Learn about Blind Dinners", "href": "/blind-dinners" },
+      "theme": "paper"
+    },
+    {
+      "id": "premium-question",
+      "type": "feature",
+      "eyebrow": "FAQ",
+      "title": "Do I Need Premium to Work With Amanda?",
+      "body": [
+        "No.",
+        "Core members can book one-on-one office hours at the full rate and may inquire about consulting opportunities. Membership provides shared language and context that makes the work more effective.",
+        "Premium members receive closer access, discounted office hours, and earlier visibility into limited consulting availability."
+      ],
+      "theme": "light"
+    },
+    {
+      "id": "choosing-tier",
+      "type": "feature",
+      "eyebrow": "Membership",
+      "title": "Choosing a Tier",
+      "body": [
+        "You can start with Core and upgrade to Premium at any time.",
+        "Some founders remain in Core for steady guidance. Others move into Premium when they want deeper access and closer proximity to Amanda’s thinking.",
+        "There is no expectation to over-engage. Membership is meant to support your work, not add pressure."
+      ],
+      "theme": "paper"
+    },
+    {
+      "id": "invitation",
+      "type": "closing",
+      "eyebrow": "Invitation",
+      "title": "An Invitation",
+      "body": [
+        "Cupcakes + Broccoli membership is an investment in how you think and how you build.",
+        "If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here."
+      ],
+      "ctas": [
+        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
+      ],
+      "theme": "ink"
+    }
+  ]
+}

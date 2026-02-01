@@ -30,15 +30,33 @@
     document.head.appendChild(script);
   };
 
+  const resolvePageKey = (mount) => {
+    if (mount && mount.dataset && mount.dataset.cnbPage) {
+      return String(mount.dataset.cnbPage).trim();
+    }
+    if (window.CNB_PAGE) return String(window.CNB_PAGE).trim();
+    return "";
+  };
+
+  const resolveDataUrl = (base, pageKey) => {
+    const normalized = (pageKey || "").toLowerCase();
+    if (!normalized || normalized === "home" || normalized === "homepage") {
+      return `${base}/data/cnb-homepage.json`;
+    }
+    return `${base}/data/cnb-${normalized}.json`;
+  };
+
   const setMountSources = (base) => {
     const externalContentUrl = window.CNB_CONTENT_URL;
     const mount = document.querySelector("[data-cnb-home-root]");
+    const pageKey = resolvePageKey(mount);
+    const dataUrl = externalContentUrl || resolveDataUrl(base, pageKey);
     if (mount) {
-      mount.dataset.cnbSrc = externalContentUrl || `${base}/data/cnb-homepage.json`;
+      mount.dataset.cnbSrc = dataUrl;
       mount.dataset.cnbAssets = base;
     }
-    window.CNB_HOME_JSON_URL = `${base}/data/cnb-homepage.json`;
-    window.CNB_HOME_FALLBACK_URL = `${base}/data/cnb-homepage.json`;
+    window.CNB_HOME_JSON_URL = dataUrl;
+    window.CNB_HOME_FALLBACK_URL = dataUrl;
     window.CNB_HOME_ASSET_BASE = base;
   };
 

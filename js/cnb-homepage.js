@@ -58,6 +58,23 @@
     });
   };
 
+  const renderList = (items, className = "cnb-home-list") => {
+    if (!items || !items.length) return null;
+    const list = withReveal(createEl("ul", className));
+    items.forEach((item) => {
+      const value =
+        typeof item === "string"
+          ? item
+          : item && (item.text || item.label || item.value)
+            ? item.text || item.label || item.value
+            : "";
+      if (!value) return;
+      const li = createEl("li", "", value);
+      list.appendChild(li);
+    });
+    return list;
+  };
+
   const buildCta = (cta) => {
     const isModal = cta.behavior === "modal";
     const el = document.createElement(isModal ? "button" : "a");
@@ -254,9 +271,12 @@
 
     const media = createEl("div", "cnb-home-hero-media");
     const image = renderImage(section.image, { sectionEl });
-    if (image) media.appendChild(image);
-
-    grid.append(copy, media);
+    if (image) {
+      media.appendChild(image);
+      grid.append(copy, media);
+    } else {
+      grid.append(copy);
+    }
     inner.append(heroTop, grid);
     sectionEl.appendChild(inner);
 
@@ -279,6 +299,13 @@
 
     renderBody(section.body, copy);
 
+    const list = renderList(section.list, "cnb-home-list");
+    if (list) copy.appendChild(list);
+
+    if (section.bodyAfter) {
+      renderBody(section.bodyAfter, copy);
+    }
+
     const inlineLink = renderInlineLink(section.inlineLink);
     if (inlineLink) copy.appendChild(inlineLink);
 
@@ -298,6 +325,77 @@
     inner.appendChild(grid);
     sectionEl.appendChild(inner);
 
+    applyRevealDelays(sectionEl);
+    return sectionEl;
+  };
+
+  const renderTiers = (section) => {
+    const sectionEl = buildSection(section, "cnb-home-tiers");
+    if (section.variant) sectionEl.classList.add(`is-${section.variant}`);
+    const inner = createEl("div", "cnb-home-inner");
+
+    const header = createEl("div", "cnb-home-tiers-header");
+    const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
+    if (eyebrow) header.appendChild(eyebrow);
+
+    if (section.title) {
+      header.appendChild(withReveal(createEl("h2", "cnb-home-title", section.title)));
+    }
+
+    renderBody(section.body, header);
+
+    const headerList = renderList(section.list, "cnb-home-list");
+    if (headerList) header.appendChild(headerList);
+
+    if (header.childElementCount) inner.appendChild(header);
+
+    const grid = createEl("div", "cnb-home-tiers-grid");
+    (section.tiers || []).forEach((tier) => {
+      const card = withReveal(createEl("div", "cnb-tier-card"));
+      if (tier && tier.featured) card.classList.add("is-featured");
+
+      if (tier && tier.kicker) {
+        card.appendChild(withReveal(createEl("div", "cnb-tier-kicker", tier.kicker)));
+      }
+
+      if (tier && tier.title) {
+        card.appendChild(withReveal(createEl("h3", "cnb-tier-title", tier.title)));
+      }
+
+      if (tier && tier.price) {
+        card.appendChild(withReveal(createEl("div", "cnb-tier-price", tier.price)));
+      }
+
+      if (tier && tier.summary) {
+        card.appendChild(withReveal(createEl("p", "cnb-tier-summary", tier.summary)));
+      }
+
+      if (tier && tier.lead) {
+        card.appendChild(withReveal(createEl("p", "cnb-tier-lead", tier.lead)));
+      }
+
+      const tierList = renderList(tier && tier.bullets, "cnb-tier-list");
+      if (tierList) card.appendChild(tierList);
+
+      if (tier && tier.note) {
+        card.appendChild(withReveal(createEl("p", "cnb-tier-note", tier.note)));
+      }
+
+      if (tier && tier.cta && tier.cta.label) {
+        const ctaEl = buildCta(tier.cta);
+        ctaEl.classList.add("cnb-tier-cta");
+        card.appendChild(ctaEl);
+      }
+
+      grid.appendChild(card);
+    });
+
+    inner.appendChild(grid);
+
+    const ctas = renderCtas(section.ctas);
+    if (ctas) inner.appendChild(ctas);
+
+    sectionEl.appendChild(inner);
     applyRevealDelays(sectionEl);
     return sectionEl;
   };
@@ -632,6 +730,9 @@
 
     renderBody(section.body, inner);
 
+    const list = renderList(section.list, "cnb-home-list");
+    if (list) inner.appendChild(list);
+
     const ctas = renderCtas(section.ctas);
     if (ctas) inner.appendChild(ctas);
 
@@ -799,6 +900,8 @@
         return renderHero(section);
       case "ai":
         return renderAi(section);
+      case "tiers":
+        return renderTiers(section);
       case "closing":
         return renderClosing(section);
       default:
@@ -914,7 +1017,10 @@
   };
 
   const hydrate = (data) => {
-    document.body.classList.add("cnb-homepage-active");
+    document.body.classList.add("cnb-homepage-active", "cnb-page-active");
+    if (data && data.page) {
+      document.body.classList.add(`cnb-page-${data.page}`);
+    }
     mount.classList.add("cnb-home-root");
     const header = renderSiteHeader(data);
     if (header) mount.appendChild(header);
