@@ -47,16 +47,19 @@
   };
 
   const setMountSources = (base) => {
-    const externalContentUrl = window.CNB_CONTENT_URL;
     const mount = document.querySelector("[data-cnb-home-root]");
     const pageKey = resolvePageKey(mount);
-    const dataUrl = externalContentUrl || resolveDataUrl(base, pageKey);
+    const externalContentUrl = window.CNB_CONTENT_URL;
+    const dataUrl = resolveDataUrl(base, pageKey);
+    const isHomePage = !pageKey || pageKey === "home" || pageKey === "homepage";
+    const resolvedContentUrl = isHomePage ? externalContentUrl || dataUrl : dataUrl;
+
     if (mount) {
-      mount.dataset.cnbSrc = dataUrl;
+      mount.dataset.cnbSrc = mount.dataset.cnbSrc || resolvedContentUrl;
       mount.dataset.cnbAssets = base;
     }
-    window.CNB_HOME_JSON_URL = dataUrl;
-    window.CNB_HOME_FALLBACK_URL = dataUrl;
+    window.CNB_HOME_JSON_URL = resolvedContentUrl;
+    window.CNB_HOME_FALLBACK_URL = resolvedContentUrl;
     window.CNB_HOME_ASSET_BASE = base;
   };
 
