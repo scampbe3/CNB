@@ -706,19 +706,30 @@
   };
 
   if (jsonUrl) {
-    fetchJson(jsonUrl)
-      .then((data) => {
-        if (!data && shouldJsonp(jsonUrl)) {
-          return loadJsonp(jsonUrl).catch(() => null);
-        }
-        return data;
-      })
+    window.CNB_LAST_CONTENT_URL = jsonUrl;
+    const useJsonp = shouldJsonp(jsonUrl);
+    const loadPrimary = useJsonp
+      ? loadJsonp(jsonUrl)
+          .then((data) => {
+            window.CNB_LAST_CONTENT_SOURCE = "jsonp";
+            return data;
+          })
+          .catch(() => null)
+      : fetchJson(jsonUrl).then((data) => {
+          if (data) window.CNB_LAST_CONTENT_SOURCE = "fetch";
+          return data;
+        });
+
+    loadPrimary
       .then((data) => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
           const needsFallback =
             !data || !data.header || !data.footer || !Array.isArray(data.sections) || data.sections.length === 0;
           if (needsFallback) {
-            return fetchJson(fallbackUrl).then((fallback) => mergeWithFallback(data, fallback));
+            return fetchJson(fallbackUrl).then((fallback) => {
+              window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE || "fallback";
+              return mergeWithFallback(data, fallback);
+            });
           }
         }
         return data;
@@ -726,8 +737,12 @@
       .then((data) => hydrate(data || defaultData))
       .catch(() => {
         if (fallbackUrl && fallbackUrl !== jsonUrl) {
-          fetchJson(fallbackUrl).then((data) => hydrate(data || defaultData));
+          fetchJson(fallbackUrl).then((data) => {
+            window.CNB_LAST_CONTENT_SOURCE = "fallback";
+            hydrate(data || defaultData);
+          });
         } else {
+          window.CNB_LAST_CONTENT_SOURCE = window.CNB_LAST_CONTENT_SOURCE || "default";
           hydrate(defaultData);
         }
       });
