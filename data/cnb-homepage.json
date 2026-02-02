@@ -6,7 +6,7 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "/" },
+      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
       { "label": "About", "href": "/about" },
       { "label": "Work With Amanda", "href": "/work-with-amanda" },
       { "label": "Learn", "href": "/learn" },
