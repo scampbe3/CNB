@@ -1131,7 +1131,31 @@
 
   const shouldJsonp = (url) => /script\\.google\\.com|googleusercontent\\.com/.test(url || "");
 
-  const fallbackUrl = window.CNB_HOME_FALLBACK_URL;
+  const resolvePageKey = () => {
+    const mount = document.querySelector("[data-cnb-home-root]");
+    if (mount && mount.dataset && mount.dataset.cnbPage) {
+      return String(mount.dataset.cnbPage).trim().toLowerCase();
+    }
+    if (window.CNB_PAGE) return String(window.CNB_PAGE).trim().toLowerCase();
+    return "";
+  };
+
+  const buildFallbackUrl = () => {
+    const assetBase = window.CNB_HOME_ASSET_BASE || window.CNB_ASSET_BASE || "";
+    if (!assetBase) return "";
+    const pageKey = resolvePageKey();
+    if (!pageKey || pageKey === "home" || pageKey === "homepage") {
+      return `${assetBase}/data/cnb-homepage.json`;
+    }
+    return `${assetBase}/data/cnb-${pageKey}.json`;
+  };
+
+  let fallbackUrl = window.CNB_HOME_FALLBACK_URL;
+  if (!fallbackUrl || isCsvUrl(fallbackUrl)) {
+    const builtFallback = buildFallbackUrl();
+    if (builtFallback) fallbackUrl = builtFallback;
+  }
+  window.CNB_HOME_FALLBACK_URL = fallbackUrl;
   const mergeWithFallback = (primary, fallback) => {
     if (!primary) return fallback || defaultData;
     if (!fallback) return primary;
