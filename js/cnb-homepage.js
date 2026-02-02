@@ -574,8 +574,13 @@
       const link = row.link || "";
       const notes = row.notes || "";
       if (!sectionName || !field) return;
-      const sectionId = SECTION_MAP[sectionName];
-      if (!sectionId) return;
+    let sectionId = SECTION_MAP[sectionName];
+    if (!sectionId) {
+      const normalized = String(sectionName).trim().toLowerCase();
+      const directMatch = Object.keys(byId).find((id) => id.toLowerCase() === normalized);
+      sectionId = directMatch || "";
+    }
+    if (!sectionId) return;
       if (!updates[sectionId]) updates[sectionId] = {};
       const bucket = updates[sectionId];
 
@@ -584,6 +589,22 @@
         if (!bucket.body) bucket.body = {};
         bucket.body[idx] = value;
         bucket.hasBody = true;
+        return;
+      }
+
+      if (/^Body\s*After\s*\d+/i.test(field)) {
+        const idx = Number(field.replace(/\D+/g, "")) || 1;
+        if (!bucket.bodyAfter) bucket.bodyAfter = {};
+        bucket.bodyAfter[idx] = value;
+        bucket.hasBodyAfter = true;
+        return;
+      }
+
+      if (/^List\s*\d+/i.test(field)) {
+        const idx = Number(field.replace(/\D+/g, "")) || 1;
+        if (!bucket.list) bucket.list = {};
+        bucket.list[idx] = value;
+        bucket.hasList = true;
         return;
       }
 
@@ -661,6 +682,22 @@
           .map((k) => data.body[k])
           .filter(Boolean);
         section.body = body;
+      }
+
+      if (data.hasBodyAfter) {
+        const bodyAfter = Object.keys(data.bodyAfter || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((k) => data.bodyAfter[k])
+          .filter(Boolean);
+        section.bodyAfter = bodyAfter;
+      }
+
+      if (data.hasList) {
+        const list = Object.keys(data.list || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((k) => data.list[k])
+          .filter(Boolean);
+        section.list = list;
       }
 
       if (data.hasPrompts) {

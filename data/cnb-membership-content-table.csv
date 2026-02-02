@@ -1,0 +1,78 @@
+section,field,value,link,notes
+hero,Note,Membership,,
+hero,Title,Choose Your Membership,,
+hero,Subhead,"Steady guidance or deeper access, depending on where you are now.",,
+hero,Body 1,"Core Membership offers steady guidance and practical tools.",,
+hero,Body 2,"Premium Membership offers deeper access, closer connection, and priority opportunities.",,
+hero,Image,assets/images/Butler-Indi-10Det1-1920x1438.jpg,,Portrait in patterned textiles.
+membership-options,Image,assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg,,Portrait with patterned textiles.
+membership-options,CTA 1,Join Membership,/membership,primary
+membership-options,CTA 2,Compare Membership Options,#membership-tiers,ghost
+built-around,Eyebrow,Membership,,
+built-around,Title,Membership Built Around Black Founders,,
+built-around,Body 1,"Cupcakes + Broccoli membership is designed to support Black founders over time.",,
+built-around,Body 2,"Black entrepreneurs start businesses at one of the fastest rates in the United States, yet face persistent barriers to scale, capital access, and sustainability. Many are building without inherited wealth, institutional backing, or insider networks.",,
+built-around,Body 3,"Cupcakes + Broccoli exists to meet that reality directly.",,
+built-around,Body 4,"This is not a course you complete or a community you scroll through. It is an ongoing relationship with ideas, guidance, and people shaped by real experience working with Black-owned businesses.",,
+built-around,Body 5,The work is led by Amanda Johnson.,,
+built-around,Image,assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg,,Portrait layered with camo-inspired textiles.
+membership-includes,Eyebrow,Membership,,
+membership-includes,Title,What Membership Includes,,
+membership-includes,Body 1,Membership provides access to:,,
+membership-includes,List 1,"Curated tools, frameworks, and guides for real decisions",,
+membership-includes,List 2,An AI concierge built around questions Black founders actually ask,,
+membership-includes,List 3,Stories and reflections that provide context and perspective,,
+membership-includes,List 4,Invitations to conversations and shared learning,,
+membership-includes,List 5,Access to one-on-one Zoom office hours with Amanda,,
+membership-includes,List 6,Eligibility for Blind Dinners at the Premium level,,
+membership-includes,Body After 1,This support is designed to evolve as your work evolves.,,
+membership-includes,Image,assets/images/murius-7-scaled.jpg,,Portrait with geometric patterned backdrop.
+how-people-use,Eyebrow,Membership,,
+how-people-use,Title,How People Use Membership,,
+how-people-use,Body 1,Some members arrive with a specific decision they need to make.,,
+how-people-use,Body 2,Others return as their business shifts or needs recalibration.,,
+how-people-use,Body 3,Membership is not meant to be consumed quickly. It is meant to be returned to.,,
+how-people-use,Inline link,Browse learning resources,/learn,
+how-people-use,Image,assets/images/muriu-6-scaled.jpg,,Portrait framed by soft light.
+membership-tiers,Eyebrow,Membership,,
+membership-tiers,Title,Membership Tiers,,
+membership-tiers,Body 1,Choose the tier that fits how you want to engage right now.,,
+ai-access,Eyebrow,AI Concierge,,
+ai-access,Title,AI Concierge Access,,
+ai-access,Body 1,The AI concierge helps founders get unstuck and oriented.,,
+ai-access,Body 2,"Core members receive limited monthly access designed for exploration, clarity, and identifying which resources may be most useful.",,
+ai-access,Body 3,"Premium members receive unlimited AI access, including deeper responses trained on the full Cupcakes + Broccoli library and Amanda's proprietary frameworks.",,
+ai-access,Image,assets/images/image-5.jpg,,Textile-inspired portrait detail.
+office-hours,Eyebrow,Office Hours,,
+office-hours,Title,One-on-One Office Hours,,
+office-hours,Body 1,"Office hours are focused, 45-minute Zoom sessions designed for real decision-making.",,
+office-hours,Body 2,"These are not pitches or performances. They are practical, direct conversations grounded in where you are right now.",,
+office-hours,Body 3,"Sessions are limited each month and available on a first come, first served basis.",,
+office-hours,Body 4,"Full rate: $150 per hour. Premium rate: $75 per hour (50% off).",,
+office-hours,Body 5,Office hours are available to members only.,,
+office-hours,Inline link,Learn more about working with Amanda,/work-with-amanda,
+office-hours,Image,assets/images/butler-7.jpg,,Portrait with bold color styling.
+blind-dinners,Eyebrow,Blind Dinners,,
+blind-dinners,Title,Blind Dinners and Membership,,
+blind-dinners,Body 1,"Blind Dinners are intimate, invitation-only gatherings for Black founders and select People of Color and LGBTQIA+ leaders.",,
+blind-dinners,Body 2,"Eligibility is reserved for select Premium members. Membership ensures shared context, trust, and care before anyone comes to the table.",,
+blind-dinners,Inline link,Learn about Blind Dinners,/blind-dinners,
+blind-dinners,Image,assets/images/Thandiwe-Muriu-Camo-16.jpg,,Portrait layered over a patterned textile background.
+premium-question,Eyebrow,FAQ,,
+premium-question,Title,Do I Need Premium to Work With Amanda?,,
+premium-question,Body 1,No.,,
+premium-question,Body 2,"Core members can book one-on-one office hours at the full rate and may inquire about consulting opportunities. Membership provides shared language and context that makes the work more effective.",,
+premium-question,Body 3,"Premium members receive closer access, discounted office hours, and earlier visibility into limited consulting availability.",,
+premium-question,Image,assets/images/Thandiwe-Muriu-Ascension.jpg,,Portrait in patterned textiles.
+choosing-tier,Eyebrow,Membership,,
+choosing-tier,Title,Choosing a Tier,,
+choosing-tier,Body 1,You can start with Core and upgrade to Premium at any time.,,
+choosing-tier,Body 2,"Some founders remain in Core for steady guidance. Others move into Premium when they want deeper access and closer proximity to Amanda's thinking.",,
+choosing-tier,Body 3,There is no expectation to over-engage. Membership is meant to support your work, not add pressure.,,
+choosing-tier,Image,assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg,,Portrait framed by soft light and layered textiles.
+invitation,Eyebrow,Invitation,,
+invitation,Title,An Invitation,,
+invitation,Body 1,Cupcakes + Broccoli membership is an investment in how you think and how you build.,,
+invitation,Body 2,"If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here.",,
+invitation,CTA 1,Join Membership,/membership,primary
+invitation,CTA 2,Learn How Cupcakes + Broccoli Works,/about,ghost
