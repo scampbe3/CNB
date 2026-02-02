@@ -62,7 +62,7 @@
       mount.dataset.cnbAssets = base;
     }
     window.CNB_HOME_JSON_URL = resolvedContentUrl;
-    window.CNB_HOME_FALLBACK_URL = resolvedContentUrl;
+    window.CNB_HOME_FALLBACK_URL = dataUrl;
     window.CNB_HOME_ASSET_BASE = base;
   };
 
