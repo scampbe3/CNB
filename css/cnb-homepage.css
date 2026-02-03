@@ -1214,7 +1214,6 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     left: auto;
     justify-content: center;
     transform-origin: center top;
-    transform: translateX(-50%) scaleX(0);
     max-width: calc(100vw - 32px);
   }
 
