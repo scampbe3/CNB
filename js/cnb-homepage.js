@@ -497,7 +497,18 @@
         }
         return row;
       }
-      if (row.length === 5) return row;
+      if (row.length === 5) {
+        const section = row[0] == null ? "" : String(row[0]);
+        const field = row[1] == null ? "" : String(row[1]);
+        const value = row[2] == null ? "" : String(row[2]);
+        const link = row[3] == null ? "" : String(row[3]);
+        const notes = row[4] == null ? "" : String(row[4]);
+        if (link && !looksLikeUrl(link)) {
+          const merged = [value, link, notes].filter((part) => String(part).trim() !== "").join(", ");
+          return [section, field, merged, "", ""];
+        }
+        return [section, field, value, link, notes];
+      }
 
       const section = row[0] == null ? "" : String(row[0]);
       const field = row[1] == null ? "" : String(row[1]);
