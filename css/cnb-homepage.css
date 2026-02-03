@@ -1162,6 +1162,11 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 }
 
 @media (max-width: 720px) {
+  .cnb-site-header {
+    height: auto;
+    min-height: var(--cnb-header-height);
+  }
+
   .cnb-home-grid.hero,
   .cnb-home-grid.split {
     grid-template-columns: 1fr;
@@ -1255,6 +1260,8 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 
   .cnb-site-nav-mobile {
     display: flex;
+    margin-top: 6px;
+    padding-bottom: 10px;
   }
 
 
