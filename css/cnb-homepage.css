@@ -209,10 +209,12 @@ body.cnb-homepage-active .content {
   min-width: 0;
 }
 
-.cnb-site-menu-toggle {
+.cnb-site-menu-toggle,
+.cnb-site-login {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: clamp(72px, 9vw, 92px);
   padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 16px);
   border-radius: 999px;
   border: 1px solid rgba(248, 245, 241, 0.55);
@@ -321,10 +323,6 @@ body.cnb-homepage-active .content {
 
 .cnb-site-login {
   margin-left: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 16px);
   border: 1px solid rgba(248, 245, 241, 0.55);
   border-radius: 999px;
   letter-spacing: 0.18em;
