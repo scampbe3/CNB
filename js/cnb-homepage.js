@@ -338,7 +338,13 @@
     const sectionEl = buildSection(section, "cnb-home-feature");
     const inner = createEl("div", "cnb-home-inner");
     const grid = createEl("div", "cnb-home-grid split");
-    if (section.layout === "image-left") grid.classList.add("is-reversed");
+    const layout = String(section.layout || "");
+    const isImageLeft = /image-left/i.test(layout);
+    const isCutaway = /cutaway/i.test(layout);
+    const isSteps = /steps/i.test(layout);
+    if (isImageLeft) grid.classList.add("is-reversed");
+    if (isCutaway) grid.classList.add("is-cutaway");
+    grid.classList.add(isImageLeft ? "text-right" : "text-left");
 
     const copy = createEl("div", "cnb-home-copy");
     const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
@@ -350,6 +356,7 @@
     renderBody(section.body, copy);
 
     const list = renderList(section.list, "cnb-home-list");
+    if (list && isSteps) list.classList.add("is-steps");
     if (list) copy.appendChild(list);
 
     if (section.bodyAfter) {
@@ -367,7 +374,11 @@
     if (image) media.appendChild(image);
 
     if (image) {
-      grid.append(copy, media);
+      if (isCutaway) {
+        grid.append(media, copy);
+      } else {
+        grid.append(copy, media);
+      }
     } else {
       grid.append(copy);
     }
