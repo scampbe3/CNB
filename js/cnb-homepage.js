@@ -484,13 +484,49 @@
     const grid = parseCsv(text);
     if (!grid.length) return [];
     const headers = grid.shift().map((h) => String(h || "").trim());
+    if (headers[0]) headers[0] = headers[0].replace(/^\uFEFF/, "");
+
+    const looksLikeUrl = (value) =>
+      /^(?:https?:\/\/|\/|#|mailto:|tel:|www\.)/i.test(String(value || "").trim());
+
+    const normalizeRow = (row) => {
+      if (!Array.isArray(row)) return row;
+      if (headers.length !== 5) {
+        if (row.length < headers.length) {
+          return row.concat(Array(headers.length - row.length).fill(""));
+        }
+        return row;
+      }
+      if (row.length === 5) return row;
+
+      const section = row[0] == null ? "" : String(row[0]);
+      const field = row[1] == null ? "" : String(row[1]);
+      const rest = row.slice(2).map((cell) => (cell == null ? "" : String(cell)));
+
+      if (!rest.length) return [section, field, "", "", ""];
+      if (rest.length <= 3) {
+        return [section, field, rest[0] || "", rest[1] || "", rest[2] || ""];
+      }
+
+      const linkIndex = rest.findIndex((cell) => looksLikeUrl(cell));
+      if (linkIndex === -1) {
+        return [section, field, rest.join(",").trim(), "", ""];
+      }
+
+      const value = rest.slice(0, linkIndex).join(",").trim();
+      const link = rest[linkIndex] || "";
+      const notes = rest.slice(linkIndex + 1).join(",").trim();
+      return [section, field, value, link, notes];
+    };
+
     return grid
       .filter((row) => row.some((cell) => String(cell || "").trim() !== ""))
       .map((row) => {
+        const normalizedRow = normalizeRow(row);
         const obj = {};
         headers.forEach((key, i) => {
           if (!key) return;
-          obj[key] = row[i] == null ? "" : String(row[i]);
+          obj[key] = normalizedRow[i] == null ? "" : String(normalizedRow[i]);
         });
         return obj;
       });
