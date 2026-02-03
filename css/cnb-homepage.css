@@ -1211,8 +1211,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     letter-spacing: 0.06em;
     gap: clamp(6px, 1.6vw, 10px);
     right: auto;
-    left: 50%;
-    right: auto;
+    left: auto;
     justify-content: center;
     transform-origin: center top;
     transform: translateX(-50%) scaleX(0);
