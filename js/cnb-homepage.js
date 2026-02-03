@@ -974,10 +974,6 @@
       navWrap.appendChild(loginLink);
     }
 
-    const navPanel = createEl("div", "cnb-site-nav-panel");
-    navPanel.appendChild(nav);
-    navWrap.appendChild(navPanel);
-
     const menuRow = createEl("div", "cnb-site-menu-row");
 
     const menuToggle = createEl("button", "cnb-site-menu-toggle", "Menu");
@@ -987,7 +983,11 @@
     menuToggle.setAttribute("aria-label", "Toggle navigation");
     menuRow.appendChild(menuToggle);
 
+    const navPanel = createEl("div", "cnb-site-nav-panel");
+    navPanel.appendChild(nav);
+
     navWrap.appendChild(menuRow);
+    navWrap.appendChild(navPanel);
     inner.appendChild(navWrap);
 
     const closeNav = () => {

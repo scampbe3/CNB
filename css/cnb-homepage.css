@@ -1219,13 +1219,18 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     width: 100%;
     max-width: 100%;
     justify-content: center;
+    align-self: stretch;
     transform-origin: center top;
-    transform: scaleX(0);
-    padding: 0 16px;
+    padding: 6px 16px 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
   }
 
   .cnb-site-header.is-menu-open .cnb-site-nav-panel {
-    transform: scaleX(1);
+    max-height: 64px;
+    opacity: 1;
   }
 
   .cnb-site-nav {
