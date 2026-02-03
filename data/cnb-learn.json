@@ -1,0 +1,143 @@
+{
+  "page": "learn",
+  "version": "2026-01-learn-v1",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "note": "Learn",
+      "title": "Practical Learning for Real Decisions",
+      "subhead": "Learning at Cupcakes + Broccoli is designed to be used.",
+      "body": [
+        "The resources here are built to help Black founders make decisions, move work forward, and build with confidence.",
+        "This is practical guidance, grounded in real experience."
+      ],
+      "image": {
+        "src": "assets/images/muriu-6-scaled.jpg",
+        "alt": "Portrait framed by soft light."
+      },
+      "theme": "light"
+    },
+    {
+      "id": "what-youll-find",
+      "type": "feature",
+      "eyebrow": "What You Will Find Here",
+      "title": "Tools, Frameworks, and Stories",
+      "body": [
+        "The Learn section brings together tools, frameworks, and stories shaped by real founder work.",
+        "You will find:"
+      ],
+      "list": [
+        "Decision frameworks for pricing, positioning, and focus",
+        "Step-by-step guides for launching, restructuring, and scaling",
+        "Templates for proposals, scopes of work, and strategy documents",
+        "Case studies drawn from real situations",
+        "Essays and reflections that provide context and perspective"
+      ],
+      "image": {
+        "src": "assets/images/murius-7-scaled.jpg",
+        "alt": "Portrait with geometric patterned backdrop."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "how-to-use",
+      "type": "feature",
+      "eyebrow": "How to Use This Section",
+      "title": "Start With a Question",
+      "body": [
+        "Some founders come here with a specific question.",
+        "Others come when something feels stuck.",
+        "You can browse by topic or use the AI concierge to get oriented before going deeper."
+      ],
+      "inlineLink": {
+        "label": "Ask a question using the AI concierge",
+        "href": "/#ai"
+      },
+      "image": {
+        "src": "assets/images/image-5.jpg",
+        "alt": "Textile-inspired portrait detail."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "access-membership",
+      "type": "feature",
+      "eyebrow": "Access and Membership",
+      "title": "Built for Public Access and Deeper Membership",
+      "body": [
+        "A portion of the Learn library is available publicly.",
+        "Deeper tools and expanded frameworks are available through Membership, which helps keep the work thoughtful and well-supported."
+      ],
+      "ctas": [
+        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Browse Available Resources", "href": "/learn", "variant": "ghost" }
+      ],
+      "image": {
+        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
+        "alt": "Portrait layered over a patterned textile background."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "learning-context",
+      "type": "feature",
+      "eyebrow": "Learning in Context",
+      "title": "Connected to the Work",
+      "body": [
+        "Learning at Cupcakes + Broccoli does not happen in isolation.",
+        "Many resources connect to consulting work, member conversations, Blind Dinners, and shared stories from the community. The goal is not consumption. It is application."
+      ],
+      "inlineLink": {
+        "label": "See how learning connects to real experiences",
+        "href": "/stories"
+      },
+      "image": {
+        "src": "assets/images/african-digital-print-fabric.jpg",
+        "alt": "Colorful African print fabric pattern."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "invitation",
+      "type": "closing",
+      "eyebrow": "An Invitation",
+      "title": "Start Learning",
+      "body": [
+        "If you are looking for shortcuts, this may not be the right place.",
+        "If you are looking for practical guidance grounded in experience and care, you are welcome here."
+      ],
+      "ctas": [
+        { "label": "Start Learning", "href": "/learn", "variant": "primary" }
+      ],
+      "theme": "ink"
+    }
+  ]
+}

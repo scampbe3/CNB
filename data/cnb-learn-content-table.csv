@@ -1,0 +1,42 @@
+section,field,value,link,notes
+hero,Note,Learn,,
+hero,Title,Practical Learning for Real Decisions,,
+hero,Subhead,Learning at Cupcakes + Broccoli is designed to be used.,,
+hero,Body 1,The resources here are built to help Black founders make decisions, move work forward, and build with confidence.,,
+hero,Body 2,This is practical guidance, grounded in real experience.,,
+hero,Image,assets/images/muriu-6-scaled.jpg,,Portrait framed by soft light.
+what-youll-find,Eyebrow,What You Will Find Here,,
+what-youll-find,Title,Tools, Frameworks, and Stories,,
+what-youll-find,Body 1,The Learn section brings together tools, frameworks, and stories shaped by real founder work.,,
+what-youll-find,Body 2,You will find:,,
+what-youll-find,List 1,Decision frameworks for pricing, positioning, and focus,,
+what-youll-find,List 2,Step-by-step guides for launching, restructuring, and scaling,,
+what-youll-find,List 3,Templates for proposals, scopes of work, and strategy documents,,
+what-youll-find,List 4,Case studies drawn from real situations,,
+what-youll-find,List 5,Essays and reflections that provide context and perspective,,
+what-youll-find,Image,assets/images/murius-7-scaled.jpg,,Portrait with geometric patterned backdrop.
+how-to-use,Eyebrow,How to Use This Section,,
+how-to-use,Title,Start With a Question,,
+how-to-use,Body 1,Some founders come here with a specific question.,,
+how-to-use,Body 2,Others come when something feels stuck.,,
+how-to-use,Body 3,You can browse by topic or use the AI concierge to get oriented before going deeper.,,
+how-to-use,Inline link,Ask a question using the AI concierge,/#ai,
+how-to-use,Image,assets/images/image-5.jpg,,Textile-inspired portrait detail.
+access-membership,Eyebrow,Access and Membership,,
+access-membership,Title,Built for Public Access and Deeper Membership,,
+access-membership,Body 1,A portion of the Learn library is available publicly.,,
+access-membership,Body 2,Deeper tools and expanded frameworks are available through Membership, which helps keep the work thoughtful and well-supported.,,
+access-membership,CTA 1,Explore Membership,/membership,primary
+access-membership,CTA 2,Browse Available Resources,/learn,ghost
+access-membership,Image,assets/images/Thandiwe-Muriu-Camo-16.jpg,,Portrait layered over a patterned textile background.
+learning-context,Eyebrow,Learning in Context,,
+learning-context,Title,Connected to the Work,,
+learning-context,Body 1,Learning at Cupcakes + Broccoli does not happen in isolation.,,
+learning-context,Body 2,Many resources connect to consulting work, member conversations, Blind Dinners, and shared stories from the community. The goal is not consumption. It is application.,,
+learning-context,Inline link,See how learning connects to real experiences,/stories,
+learning-context,Image,assets/images/african-digital-print-fabric.jpg,,Colorful African print fabric pattern.
+invitation,Eyebrow,An Invitation,,
+invitation,Title,Start Learning,,
+invitation,Body 1,If you are looking for shortcuts, this may not be the right place.,,
+invitation,Body 2,If you are looking for practical guidance grounded in experience and care, you are welcome here.,,
+invitation,CTA 1,Start Learning,/learn,primary
