@@ -286,9 +286,19 @@
     const title = withReveal(createEl("h1", "cnb-home-title cnb-home-hero-title"));
     if (section.title) {
       const normalized = section.title.trim();
+      const isMobileTitle = window.matchMedia("(max-width: 720px)").matches;
+      const mobilePrefix = "Black ownership is Black";
       const lineOneText = "Black ownership is";
       const lineTwoText = "Black survival,";
-      if (normalized.toLowerCase().startsWith(lineOneText.toLowerCase())) {
+      if (normalized.toLowerCase().startsWith(mobilePrefix.toLowerCase()) && isMobileTitle) {
+        let remainder = normalized.slice(mobilePrefix.length).trim();
+        if (remainder) {
+          remainder = remainder.replace(/^survival,?/i, "survival,").replace(/freedom\\s+and/i, "freedom, and");
+        }
+        const lineOne = createEl("span", "cnb-home-title-line", mobilePrefix);
+        const lineTwo = createEl("span", "cnb-home-title-line", remainder || "");
+        title.append(lineOne, lineTwo);
+      } else if (normalized.toLowerCase().startsWith(lineOneText.toLowerCase())) {
         const afterLineOne = normalized.slice(lineOneText.length).trim();
         const afterLineTwo = afterLineOne.toLowerCase().startsWith(lineTwoText.toLowerCase())
           ? afterLineOne.slice(lineTwoText.length).trim()

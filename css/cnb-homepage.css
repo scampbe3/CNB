@@ -1199,20 +1199,19 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   }
 
   .cnb-home-hero-title .cnb-home-title-line {
-    display: inline;
+    display: block;
   }
 
   .cnb-home-hero-title .cnb-home-title-line:nth-child(1) {
     display: block;
   }
 
-  .cnb-home-hero-title .cnb-home-title-line:nth-child(2),
-  .cnb-home-hero-title .cnb-home-title-line:nth-child(3) {
+  .cnb-home-hero-title .cnb-home-title-line:nth-child(2) {
     white-space: nowrap;
   }
 
   .cnb-home-hero-title .cnb-home-title-line:nth-child(2)::after {
-    content: " ";
+    content: "";
   }
 
   .cnb-site-header-inner {
