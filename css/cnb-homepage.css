@@ -913,7 +913,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 }
 
 .cnb-home-btn.ghost {
-  background: transparent;
+  background: #fff;
   color: var(--cnb-ink);
 }
 
@@ -1210,6 +1210,20 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     font-size: clamp(9px, 2vw, 11px);
     letter-spacing: 0.06em;
     gap: clamp(6px, 1.6vw, 10px);
+    left: 50%;
+    right: auto;
+    justify-content: center;
+    transform-origin: center top;
+    transform: translateX(-50%) scaleX(0);
+    max-width: calc(100vw - 32px);
+  }
+
+  .cnb-site-header.is-menu-open .cnb-site-nav {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .cnb-site-header.is-menu-open .cnb-site-nav a.is-current {
+    display: none;
   }
 
   .cnb-home-hero .cnb-home-hero-media {

@@ -42,6 +42,33 @@
     return `${base}/${path}`;
   };
 
+  const normalizePath = (value) => {
+    if (!value) return "";
+    try {
+      const url = new URL(value, window.location.href);
+      const path = url.pathname.replace(/\/+$/, "");
+      return path || "/";
+    } catch (err) {
+      const cleaned = String(value).split("#")[0].replace(/^[a-z]+:\/\//i, "");
+      const path = cleaned.startsWith("/") ? cleaned : `/${cleaned}`;
+      return path.replace(/\/+$/, "") || "/";
+    }
+  };
+
+  const isSameOriginPath = (href) => {
+    if (!href) return false;
+    const trimmed = String(href).trim();
+    if (!trimmed || trimmed.startsWith("#")) return false;
+    try {
+      const url = new URL(trimmed, window.location.href);
+      if (url.origin !== window.location.origin) return false;
+      return normalizePath(url.pathname) === normalizePath(window.location.pathname);
+    } catch (err) {
+      if (!trimmed.startsWith("/")) return false;
+      return normalizePath(trimmed) === normalizePath(window.location.pathname);
+    }
+  };
+
   const createEl = (tag, className, text) => {
     const el = document.createElement(tag);
     if (className) el.className = className;
@@ -928,6 +955,11 @@
       const link = document.createElement("a");
       link.href = item.href || "#";
       link.textContent = item.label || "";
+      if (item.page && resolvePageKey() && String(item.page).toLowerCase() === resolvePageKey()) {
+        link.classList.add("is-current");
+      } else if (isSameOriginPath(item.href || "")) {
+        link.classList.add("is-current");
+      }
       if (item.newWindow) link.target = "_blank";
       if (item.rel) link.rel = item.rel;
       nav.appendChild(link);
