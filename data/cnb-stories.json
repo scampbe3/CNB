@@ -6,57 +6,22 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      {
-        "label": "Home",
-        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
-      },
-      {
-        "label": "About",
-        "href": "/about"
-      },
-      {
-        "label": "Work With Amanda",
-        "href": "/work-with-amanda"
-      },
-      {
-        "label": "Learn",
-        "href": "/learn"
-      },
-      {
-        "label": "Stories",
-        "href": "/stories"
-      },
-      {
-        "label": "Blind Dinners",
-        "href": "/blind-dinners"
-      },
-      {
-        "label": "Membership",
-        "href": "/membership"
-      },
-      {
-        "label": "Login",
-        "href": "/login",
-        "variant": "button"
-      }
+      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      {
-        "label": "Instagram",
-        "href": "https://www.instagram.com",
-        "newWindow": true,
-        "rel": "noopener"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com",
-        "newWindow": true,
-        "rel": "noopener"
-      }
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
     ]
   },
   "sections": [
@@ -90,7 +55,7 @@
         "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
         "alt": "Portrait in patterned textiles."
       },
-      "layout": "image-right cutaway",
+      "layout": "image-right",
       "theme": "paper"
     },
     {
@@ -114,7 +79,7 @@
         "src": "assets/images/murius-7-scaled.jpg",
         "alt": "Portrait with geometric patterned backdrop."
       },
-      "layout": "image-left steps",
+      "layout": "image-left",
       "theme": "light"
     },
     {
@@ -184,16 +149,8 @@
         "Membership makes space for deeper reflection, trust, and care."
       ],
       "ctas": [
-        {
-          "label": "Explore Membership",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Browse Stories",
-          "href": "/stories",
-          "variant": "ghost"
-        }
+        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Browse Stories", "href": "/stories", "variant": "ghost" }
       ],
       "image": {
         "src": "assets/images/muriu-6-scaled.jpg",
@@ -212,11 +169,7 @@
         "If you are looking for honesty, context, and shared experience from people building toward ownership, you are welcome here."
       ],
       "ctas": [
-        {
-          "label": "Read the Stories",
-          "href": "/stories",
-          "variant": "primary"
-        }
+        { "label": "Read the Stories", "href": "/stories", "variant": "primary" }
       ],
       "theme": "ink"
     }
