@@ -6,57 +6,22 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      {
-        "label": "Home",
-        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
-      },
-      {
-        "label": "About",
-        "href": "/about"
-      },
-      {
-        "label": "Work With Amanda",
-        "href": "/work-with-amanda"
-      },
-      {
-        "label": "Learn",
-        "href": "/learn"
-      },
-      {
-        "label": "Stories",
-        "href": "/stories"
-      },
-      {
-        "label": "Blind Dinners",
-        "href": "/blind-dinners"
-      },
-      {
-        "label": "Membership",
-        "href": "/membership"
-      },
-      {
-        "label": "Login",
-        "href": "/login",
-        "variant": "button"
-      }
+      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      {
-        "label": "Instagram",
-        "href": "https://www.instagram.com",
-        "newWindow": true,
-        "rel": "noopener"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com",
-        "newWindow": true,
-        "rel": "noopener"
-      }
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
     ]
   },
   "sections": [
@@ -99,16 +64,8 @@
         }
       ],
       "ctas": [
-        {
-          "label": "Join Membership",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Compare Membership Options",
-          "href": "#membership-tiers",
-          "variant": "ghost"
-        }
+        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Compare Membership Options", "href": "#membership-tiers", "variant": "ghost" }
       ],
       "theme": "paper"
     },
@@ -121,7 +78,7 @@
         "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg",
         "alt": "Portrait layered with camo-inspired textiles."
       },
-      "layout": "image-right ledger",
+      "layout": "image-right",
       "body": [
         "Cupcakes + Broccoli membership is designed to support Black founders over time.",
         "Black entrepreneurs start businesses at one of the fastest rates in the United States, yet face persistent barriers to scale, capital access, and sustainability. Many are building without inherited wealth, institutional backing, or insider networks.",
@@ -140,7 +97,7 @@
         "src": "assets/images/murius-7-scaled.jpg",
         "alt": "Portrait with geometric patterned backdrop."
       },
-      "layout": "image-left ledger",
+      "layout": "image-left",
       "body": [
         "Membership provides access to:"
       ],
@@ -166,16 +123,13 @@
         "src": "assets/images/muriu-6-scaled.jpg",
         "alt": "Portrait framed by soft light."
       },
-      "layout": "image-right stagger",
+      "layout": "image-right",
       "body": [
         "Some members arrive with a specific decision they need to make.",
         "Others return as their business shifts or needs recalibration.",
         "Membership is not meant to be consumed quickly. It is meant to be returned to."
       ],
-      "inlineLink": {
-        "label": "Browse learning resources",
-        "href": "/learn"
-      },
+      "inlineLink": { "label": "Browse learning resources", "href": "/learn" },
       "theme": "light"
     },
     {
@@ -201,11 +155,7 @@
             "Access to full-price one-on-one Zoom office hours with Amanda"
           ],
           "note": "Core is designed for intentional use and steady progress.",
-          "cta": {
-            "label": "Join Core Membership for $25/month",
-            "href": "/membership",
-            "variant": "ghost"
-          }
+          "cta": { "label": "Join Core Membership for $25/month", "href": "/membership", "variant": "ghost" }
         },
         {
           "title": "Premium Membership",
@@ -221,11 +171,7 @@
             "Early access to new tools, essays, and resources"
           ],
           "note": "Premium Membership is intentionally limited to protect depth, care, and quality.",
-          "cta": {
-            "label": "Join Premium Membership for $59/month",
-            "href": "/membership",
-            "variant": "primary"
-          },
+          "cta": { "label": "Join Premium Membership for $59/month", "href": "/membership", "variant": "primary" },
           "featured": true
         }
       ],
@@ -240,7 +186,7 @@
         "src": "assets/images/image-5.jpg",
         "alt": "Textile-inspired portrait detail."
       },
-      "layout": "image-left overlay",
+      "layout": "image-left",
       "body": [
         "The AI concierge helps founders get unstuck and oriented.",
         "Core members receive limited monthly access designed for exploration, clarity, and identifying which resources may be most useful.",
@@ -257,7 +203,7 @@
         "src": "assets/images/butler-7.jpg",
         "alt": "Portrait with bold color styling."
       },
-      "layout": "image-left ledger",
+      "layout": "image-left",
       "body": [
         "Office hours are focused, 45-minute Zoom sessions designed for real decision-making.",
         "These are not pitches or performances. They are practical, direct conversations grounded in where you are right now.",
@@ -265,10 +211,7 @@
         "Full rate: $150 per hour. Premium rate: $75 per hour (50% off).",
         "Office hours are available to members only."
       ],
-      "inlineLink": {
-        "label": "Learn more about working with Amanda",
-        "href": "/work-with-amanda"
-      },
+      "inlineLink": { "label": "Learn more about working with Amanda", "href": "/work-with-amanda" },
       "theme": "light"
     },
     {
@@ -280,15 +223,12 @@
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
         "alt": "Portrait layered over a patterned textile background."
       },
-      "layout": "image-right overlay",
+      "layout": "image-right",
       "body": [
         "Blind Dinners are intimate, invitation-only gatherings for Black founders and select People of Color and LGBTQIA+ leaders.",
         "Eligibility is reserved for select Premium members. Membership ensures shared context, trust, and care before anyone comes to the table."
       ],
-      "inlineLink": {
-        "label": "Learn about Blind Dinners",
-        "href": "/blind-dinners"
-      },
+      "inlineLink": { "label": "Learn about Blind Dinners", "href": "/blind-dinners" },
       "theme": "paper"
     },
     {
@@ -300,7 +240,7 @@
         "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
         "alt": "Portrait in patterned textiles."
       },
-      "layout": "image-left stagger",
+      "layout": "image-left",
       "body": [
         "No.",
         "Core members can book one-on-one office hours at the full rate and may inquire about consulting opportunities. Membership provides shared language and context that makes the work more effective.",
@@ -317,7 +257,7 @@
         "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
         "alt": "Portrait framed by soft light and layered textiles."
       },
-      "layout": "image-right ledger",
+      "layout": "image-right",
       "body": [
         "You can start with Core and upgrade to Premium at any time.",
         "Some founders remain in Core for steady guidance. Others move into Premium when they want deeper access and closer proximity to Amanda’s thinking.",
@@ -335,16 +275,8 @@
         "If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here."
       ],
       "ctas": [
-        {
-          "label": "Join Membership",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Learn How Cupcakes + Broccoli Works",
-          "href": "/about",
-          "variant": "ghost"
-        }
+        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
       ],
       "theme": "ink"
     }

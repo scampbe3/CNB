@@ -338,16 +338,7 @@
     const sectionEl = buildSection(section, "cnb-home-feature");
     const inner = createEl("div", "cnb-home-inner");
     const grid = createEl("div", "cnb-home-grid split");
-    const layout = String(section.layout || "");
-    const isImageLeft = /image-left/i.test(layout);
-    const isStaggered = /stagger/i.test(layout);
-    const isLedger = /ledger/i.test(layout);
-    const isOverlay = /overlay/i.test(layout);
-    if (isImageLeft) grid.classList.add("is-reversed");
-    if (isStaggered) grid.classList.add("is-staggered");
-    if (isLedger) grid.classList.add("is-ledger");
-    if (isOverlay) grid.classList.add("is-overlay");
-    grid.classList.add(isImageLeft ? "text-right" : "text-left");
+    if (section.layout === "image-left") grid.classList.add("is-reversed");
 
     const copy = createEl("div", "cnb-home-copy");
     const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
@@ -376,11 +367,7 @@
     if (image) media.appendChild(image);
 
     if (image) {
-      if (isOverlay) {
-        grid.append(media, copy);
-      } else {
-        grid.append(copy, media);
-      }
+      grid.append(copy, media);
     } else {
       grid.append(copy);
     }

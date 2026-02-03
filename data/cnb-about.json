@@ -6,57 +6,22 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      {
-        "label": "Home",
-        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
-      },
-      {
-        "label": "About",
-        "href": "/about"
-      },
-      {
-        "label": "Work With Amanda",
-        "href": "/work-with-amanda"
-      },
-      {
-        "label": "Learn",
-        "href": "/learn"
-      },
-      {
-        "label": "Stories",
-        "href": "/stories"
-      },
-      {
-        "label": "Blind Dinners",
-        "href": "/blind-dinners"
-      },
-      {
-        "label": "Membership",
-        "href": "/membership"
-      },
-      {
-        "label": "Login",
-        "href": "/login",
-        "variant": "button"
-      }
+      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
+      { "label": "About", "href": "/about" },
+      { "label": "Work With Amanda", "href": "/work-with-amanda" },
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Stories", "href": "/stories" },
+      { "label": "Blind Dinners", "href": "/blind-dinners" },
+      { "label": "Membership", "href": "/membership" },
+      { "label": "Login", "href": "/login", "variant": "button" }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      {
-        "label": "Instagram",
-        "href": "https://www.instagram.com",
-        "newWindow": true,
-        "rel": "noopener"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com",
-        "newWindow": true,
-        "rel": "noopener"
-      }
+      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
     ]
   },
   "sections": [
@@ -100,7 +65,7 @@
         "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
         "alt": "Portrait in patterned textiles."
       },
-      "layout": "image-right ledger",
+      "layout": "image-right",
       "theme": "paper"
     },
     {
@@ -123,7 +88,7 @@
         "src": "assets/images/muriu-6-scaled.jpg",
         "alt": "Portrait framed by soft light."
       },
-      "layout": "image-left stagger",
+      "layout": "image-left",
       "theme": "light"
     },
     {
@@ -142,7 +107,7 @@
         "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg",
         "alt": "Portrait layered with camo-inspired textiles."
       },
-      "layout": "image-right ledger",
+      "layout": "image-right",
       "theme": "paper"
     },
     {
@@ -165,22 +130,14 @@
         "This is not about hustle or constant growth. It is about building something sustainable, on purpose."
       ],
       "ctas": [
-        {
-          "label": "Explore Membership",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Browse Resources",
-          "href": "/learn",
-          "variant": "ghost"
-        }
+        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Browse Resources", "href": "/learn", "variant": "ghost" }
       ],
       "image": {
         "src": "assets/images/murius-7-scaled.jpg",
         "alt": "Portrait with geometric patterned backdrop."
       },
-      "layout": "image-left ledger",
+      "layout": "image-left",
       "theme": "light"
     },
     {
@@ -194,17 +151,13 @@
         "Blind Dinners are intentionally limited and available to select members."
       ],
       "ctas": [
-        {
-          "label": "Learn about Blind Dinners",
-          "href": "/blind-dinners",
-          "variant": "ghost"
-        }
+        { "label": "Learn about Blind Dinners", "href": "/blind-dinners", "variant": "ghost" }
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
         "alt": "Portrait layered over a patterned textile background."
       },
-      "layout": "image-right overlay",
+      "layout": "image-right",
       "theme": "paper"
     },
     {
@@ -225,7 +178,7 @@
         "src": "assets/images/african-digital-print-fabric.jpg",
         "alt": "Colorful African print fabric pattern."
       },
-      "layout": "image-left stagger",
+      "layout": "image-left",
       "theme": "light"
     },
     {
@@ -239,16 +192,8 @@
         "If you are looking for clarity, honesty, and a community grounded in real experience, you are welcome here."
       ],
       "ctas": [
-        {
-          "label": "Join Membership",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Read Founder Stories",
-          "href": "/stories",
-          "variant": "ghost"
-        }
+        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Read Founder Stories", "href": "/stories", "variant": "ghost" }
       ],
       "theme": "ink"
     }
