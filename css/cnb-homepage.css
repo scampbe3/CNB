@@ -1250,7 +1250,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   }
 
   .cnb-site-menu-toggle {
-    display: none;
+    display: inline-flex;
   }
 
   .cnb-site-nav-mobile {
