@@ -1219,9 +1219,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     max-width: calc(100vw);
   }
 
-  .cnb-site-header.is-menu-open .cnb-site-nav {
-    transform: translateX(-50%) scaleX(1);
-  }
+
 
 
   .cnb-site-header.is-menu-open .cnb-site-nav a.is-current {
