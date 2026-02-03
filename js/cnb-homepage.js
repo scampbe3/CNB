@@ -608,6 +608,9 @@
       .filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
   };
 
+  const looksLikeUrl = (value) =>
+    /^(?:https?:\/\/|\/|#|mailto:|tel:|www\.)/i.test(String(value || "").trim());
+
   const applyRowsToPage = (page, rows) => {
     const byId = {};
     (page.sections || []).forEach((section) => {
@@ -619,10 +622,18 @@
     rows.forEach((row) => {
       const sectionName = row.section || "";
       const field = row.field || "";
-      const value = row.value || "";
-      const link = row.link || "";
-      const notes = row.notes || "";
+      let value = row.value || "";
+      let link = row.link || "";
+      let notes = row.notes || "";
       if (!sectionName || !field) return;
+
+      const isCtaField = /^cta\s*\d*/i.test(field) || /^inline\s*link/i.test(field);
+      if (!isCtaField && link && !looksLikeUrl(link)) {
+        const merged = [value, link, notes].filter((part) => String(part || "").trim() !== "").join(", ");
+        value = merged;
+        link = "";
+        notes = "";
+      }
     let sectionId = SECTION_MAP[sectionName];
     if (!sectionId) {
       const normalized = String(sectionName).trim().toLowerCase();
