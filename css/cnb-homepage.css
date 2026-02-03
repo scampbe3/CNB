@@ -212,10 +212,28 @@ body.cnb-homepage-active .content {
   border-color: rgba(248, 245, 241, 0.75);
 }
 
-.cnb-site-nav {
+.cnb-site-nav-panel {
   position: absolute;
   right: 0;
   top: calc(100% + var(--cnb-menu-drop));
+  display: flex;
+  justify-content: flex-end;
+  width: max-content;
+  max-width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0) scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.cnb-site-header.is-menu-open .cnb-site-nav-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scaleX(1);
+}
+
+.cnb-site-nav {
   display: flex;
   align-items: center;
   gap: clamp(10px, 1.6vw, 18px);
@@ -231,17 +249,6 @@ body.cnb-homepage-active .content {
   white-space: nowrap;
   max-width: 100%;
   min-width: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(0) scaleX(0);
-  transform-origin: right top;
-  transition: transform 0.35s ease, opacity 0.25s ease;
-}
-
-.cnb-site-header.is-menu-open .cnb-site-nav {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0) scaleX(1);
 }
 
 .cnb-site-nav a {
@@ -1207,16 +1214,29 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     justify-content: flex-end;
   }
 
+  .cnb-site-nav-panel {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    transform-origin: center top;
+    transform: scaleX(0);
+    padding: 0 16px;
+  }
+
+  .cnb-site-header.is-menu-open .cnb-site-nav-panel {
+    transform: scaleX(1);
+  }
+
   .cnb-site-nav {
     font-size: clamp(9px, 2vw, 11px);
     letter-spacing: 0.06em;
     gap: clamp(6px, 1.6vw, 10px);
-    left: auto;
-    right: auto;
     justify-content: center;
     transform-origin: center top;
-    margin-inline: auto;
-    max-width: calc(100vw);
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
   }
 
 
