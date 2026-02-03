@@ -752,6 +752,52 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   order: -1;
 }
 
+.cnb-home-grid.split.is-ledger {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: start;
+}
+
+.cnb-home-grid.split.is-ledger .cnb-home-media {
+  align-self: start;
+}
+
+.cnb-home-grid.split.is-staggered .cnb-home-media {
+  transform: translateY(clamp(12px, 3vw, 40px));
+}
+
+.cnb-home-grid.split.is-overlay {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  position: relative;
+}
+
+.cnb-home-grid.split.is-overlay .cnb-home-media {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  order: 0;
+}
+
+.cnb-home-grid.split.is-overlay .cnb-home-copy {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: center;
+  z-index: 1;
+  background: rgba(246, 241, 234, 0.92);
+  border: 1px solid rgba(20, 17, 15, 0.12);
+  box-shadow: var(--cnb-shadow);
+  border-radius: var(--cnb-radius-md);
+  padding: clamp(18px, 4vw, 32px);
+  max-width: min(560px, 88%);
+}
+
+.cnb-home-grid.split.is-overlay.text-right .cnb-home-copy {
+  justify-self: end;
+}
+
+.cnb-home-grid.split.is-overlay.text-left .cnb-home-copy {
+  justify-self: start;
+}
+
 .cnb-home-hero-media {
   display: grid;
   gap: 18px;
@@ -792,6 +838,11 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 
 .cnb-home-grid.split .cnb-home-image {
   aspect-ratio: 3 / 4;
+}
+
+.cnb-home-grid.split.is-overlay .cnb-home-image {
+  aspect-ratio: 4 / 3;
+  min-height: clamp(300px, 40vw, 420px);
 }
 
 .cnb-home-image img {
@@ -1181,6 +1232,34 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 
   .cnb-home-grid.split.is-reversed .cnb-home-media {
     order: 0;
+  }
+
+  .cnb-home-grid.split.is-staggered .cnb-home-media {
+    transform: none;
+  }
+
+  .cnb-home-grid.split.is-overlay {
+    grid-template-columns: 1fr;
+  }
+
+  .cnb-home-grid.split.is-overlay .cnb-home-media,
+  .cnb-home-grid.split.is-overlay .cnb-home-copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .cnb-home-grid.split.is-overlay .cnb-home-copy {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .cnb-home-grid.split.is-overlay .cnb-home-image {
+    aspect-ratio: 3 / 4;
+    min-height: 220px;
   }
 
   .cnb-home-image {

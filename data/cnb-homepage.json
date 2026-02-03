@@ -6,22 +6,57 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -35,8 +70,16 @@
       ],
       "note": "This work is led by Amanda Johnson.",
       "ctas": [
-        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Learn More About Cupcakes + Broccoli", "href": "/about", "variant": "ghost" }
+        {
+          "label": "Join Membership",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Learn More About Cupcakes + Broccoli",
+          "href": "/about",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
@@ -54,12 +97,15 @@
         "Cupcakes + Broccoli is not a generic platform or content library. It is an ecosystem shaped by real experience and extended through community.",
         "Everything here is designed to support clarity, confidence, and ownership over time."
       ],
-      "inlineLink": { "label": "Learn how Cupcakes + Broccoli works", "href": "/about" },
+      "inlineLink": {
+        "label": "Learn how Cupcakes + Broccoli works",
+        "href": "/about"
+      },
       "image": {
         "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
         "alt": "Portrait framed by soft light and layered textiles."
       },
-      "layout": "image-left",
+      "layout": "image-left ledger",
       "theme": "light"
     },
     {
@@ -78,7 +124,12 @@
         "What does sustainable growth actually look like?"
       ],
       "ctas": [
-        { "label": "Ask a question", "href": "#ai-concierge", "variant": "accent", "behavior": "modal" }
+        {
+          "label": "Ask a question",
+          "href": "#ai-concierge",
+          "variant": "accent",
+          "behavior": "modal"
+        }
       ],
       "panelLabel": "Example prompts",
       "theme": "mist"
@@ -93,13 +144,17 @@
         "Inside the library you will find tools, frameworks, and stories that help founders make decisions and move work forward."
       ],
       "ctas": [
-        { "label": "Explore Resources", "href": "/learn", "variant": "primary" }
+        {
+          "label": "Explore Resources",
+          "href": "/learn",
+          "variant": "primary"
+        }
       ],
       "image": {
         "src": "assets/images/1muriu-8-scaled.jpg",
         "alt": "Portrait of a woman in a geometric patterned backdrop."
       },
-      "layout": "image-right",
+      "layout": "image-right stagger",
       "theme": "light"
     },
     {
@@ -113,13 +168,17 @@
         "Premium members receive access to discounted one-on-one Zoom office hours for focused decision-making."
       ],
       "ctas": [
-        { "label": "Work With Amanda", "href": "/work-with-amanda", "variant": "ghost" }
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
         "alt": "Portrait of a woman with bold color styling."
       },
-      "layout": "image-left",
+      "layout": "image-left overlay",
       "theme": "light"
     },
     {
@@ -132,13 +191,17 @@
         "They are not networking events. They are moments of trust, perspective, and shared understanding."
       ],
       "ctas": [
-        { "label": "Learn About Blind Dinners", "href": "/blind-dinners", "variant": "ghost" }
+        {
+          "label": "Learn About Blind Dinners",
+          "href": "/blind-dinners",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
         "alt": "Portrait layered over a patterned textile background."
       },
-      "layout": "image-right",
+      "layout": "image-right ledger",
       "theme": "light"
     },
     {
@@ -153,15 +216,23 @@
         "Premium members come because they want to stay close to the work."
       ],
       "ctas": [
-        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Compare Membership Options", "href": "/membership", "variant": "ghost" }
+        {
+          "label": "Join Membership",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Compare Membership Options",
+          "href": "/membership",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/african-digital-print-fabric.jpg",
         "alt": "Colorful African print fabric pattern.",
         "fit": "cover"
       },
-      "layout": "image-left",
+      "layout": "image-left stagger",
       "theme": "paper"
     },
     {
@@ -173,7 +244,11 @@
         "Cupcakes + Broccoli exists for Black founders who want to think clearly, build deliberately, and own what they create."
       ],
       "ctas": [
-        { "label": "Explore Membership", "href": "/membership", "variant": "primary" }
+        {
+          "label": "Explore Membership",
+          "href": "/membership",
+          "variant": "primary"
+        }
       ],
       "theme": "ink"
     }

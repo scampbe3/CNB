@@ -6,22 +6,57 @@
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -61,7 +96,7 @@
         "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
         "alt": "Portrait in patterned textiles."
       },
-      "layout": "image-right",
+      "layout": "image-right ledger",
       "theme": "paper"
     },
     {
@@ -83,7 +118,7 @@
         "src": "assets/images/muriu-6-scaled.jpg",
         "alt": "Portrait framed by soft light."
       },
-      "layout": "image-left",
+      "layout": "image-left stagger",
       "theme": "light"
     },
     {
@@ -101,7 +136,7 @@
         "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg",
         "alt": "Portrait layered with camo-inspired textiles."
       },
-      "layout": "image-right",
+      "layout": "image-right overlay",
       "theme": "paper"
     },
     {
@@ -126,7 +161,7 @@
         "src": "assets/images/murius-7-scaled.jpg",
         "alt": "Portrait with geometric patterned backdrop."
       },
-      "layout": "image-left",
+      "layout": "image-left ledger",
       "theme": "light"
     },
     {
@@ -146,7 +181,7 @@
         "src": "assets/images/african-digital-print-fabric.jpg",
         "alt": "Colorful African print fabric pattern."
       },
-      "layout": "image-right",
+      "layout": "image-right overlay",
       "theme": "paper"
     },
     {
@@ -166,7 +201,7 @@
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
         "alt": "Portrait layered over a patterned textile background."
       },
-      "layout": "image-left",
+      "layout": "image-left stagger",
       "theme": "light"
     },
     {
@@ -179,8 +214,16 @@
         "If you are interested in working together, the first step is to share where you are and what you are navigating. From there, we can determine whether it is a good fit."
       ],
       "ctas": [
-        { "label": "Request to Work With Amanda", "href": "/contact", "variant": "primary" },
-        { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
+        {
+          "label": "Request to Work With Amanda",
+          "href": "/contact",
+          "variant": "primary"
+        },
+        {
+          "label": "Learn How Cupcakes + Broccoli Works",
+          "href": "/about",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }
