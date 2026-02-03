@@ -1210,11 +1210,11 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     font-size: clamp(9px, 2vw, 11px);
     letter-spacing: 0.06em;
     gap: clamp(6px, 1.6vw, 10px);
-    right: 0;
-    left: 0;
+    right: auto;
+    left: auto;
     justify-content: center;
     transform-origin: center top;
-    max-width: calc(100vw - 32px);
+    max-width: calc(100vw);
     margin-inline: auto;
   }
 
