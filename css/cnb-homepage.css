@@ -1165,6 +1165,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   .cnb-site-header {
     height: auto;
     min-height: var(--cnb-header-height);
+    --cnb-header-title-offset: -0.15em;
   }
 
   .cnb-home-grid.hero,
@@ -1218,12 +1219,12 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16px;
+    padding: 18px 16px 12px;
     gap: 12px;
   }
 
   .cnb-site-logo {
-    margin-top: -1.5em;
+    margin-top: 4px;
   }
 
   .cnb-site-brand {
@@ -1259,9 +1260,13 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   }
 
   .cnb-site-nav-mobile {
-    display: flex;
+    display: none;
     margin-top: 6px;
     padding-bottom: 10px;
+  }
+
+  .cnb-site-header.is-menu-open .cnb-site-nav-mobile {
+    display: flex;
   }
 
 
