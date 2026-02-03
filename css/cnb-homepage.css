@@ -1220,17 +1220,17 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     max-width: 100%;
     justify-content: center;
     align-self: stretch;
-    transform-origin: center top;
     padding: 6px 16px 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.25s ease;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    overflow: visible;
+    transition: none;
   }
 
   .cnb-site-header.is-menu-open .cnb-site-nav-panel {
-    max-height: 64px;
     opacity: 1;
+    transform: none;
   }
 
   .cnb-site-nav {
@@ -1239,9 +1239,9 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     gap: clamp(6px, 1.6vw, 10px);
     justify-content: center;
     transform-origin: center top;
-    width: 100%;
+    width: auto;
     max-width: 100%;
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
 
