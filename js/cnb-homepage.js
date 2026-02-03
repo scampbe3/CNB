@@ -539,6 +539,8 @@
       const url = new URL(csvUrl, window.location.href);
       url.pathname = url.pathname.replace(/\/pub\/?$/i, "/gviz/tq");
       url.searchParams.set("tqx", "out:json");
+      url.searchParams.delete("output");
+      url.searchParams.delete("single");
       return url.toString();
     } catch (err) {
       return "";
