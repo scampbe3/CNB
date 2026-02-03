@@ -1243,30 +1243,28 @@
 
   if (jsonUrl && isCsvUrl(jsonUrl)) {
     window.CNB_LAST_CONTENT_URL = jsonUrl;
-    const loadCsv = fetchText(jsonUrl);
+    const isGoogleSheetCsv = /docs\.google\.com\/spreadsheets/i.test(jsonUrl);
+    const gvizUrl = isGoogleSheetCsv ? deriveGvizUrl(jsonUrl) : "";
+    const loadGvizRows = gvizUrl
+      ? loadGviz(gvizUrl)
+          .then((payload) => rowsFromGviz(payload))
+          .catch(() => null)
+      : Promise.resolve(null);
+    const loadCsvRows = fetchText(jsonUrl)
+      .then((csvText) => (csvText ? rowsFromCsv(csvText) : null))
+      .catch(() => null);
     const loadBase = fallbackUrl ? fetchJson(fallbackUrl) : Promise.resolve(defaultData);
-    Promise.all([loadCsv, loadBase])
-      .then(([csvText, baseData]) => {
-        if (!csvText) return { rows: null, baseData };
-        return { rows: rowsFromCsv(csvText), baseData, source: "csv" };
-      })
-      .then((result) => {
-        if (result && result.rows) return result;
-        const gvizUrl = deriveGvizUrl(jsonUrl);
-        if (!gvizUrl) return { rows: null, baseData: result ? result.baseData : null };
-        return loadGviz(gvizUrl)
-          .then((payload) => ({
-            rows: rowsFromGviz(payload),
-            baseData: result ? result.baseData : null,
-            source: "gviz",
-          }))
-          .catch(() => ({ rows: null, baseData: result ? result.baseData : null }));
+    Promise.all([loadGvizRows, loadCsvRows, loadBase])
+      .then(([gvizRows, csvRows, baseData]) => {
+        const rows = (gvizRows && gvizRows.length ? gvizRows : csvRows) || null;
+        const source = gvizRows && gvizRows.length ? "gviz" : "csv";
+        return { rows, baseData, source };
       })
       .then(({ rows, baseData, source }) => {
         if (!rows || rows.length === 0) throw new Error("Missing rows");
         const base = baseData ? JSON.parse(JSON.stringify(baseData)) : JSON.parse(JSON.stringify(defaultData));
         const data = applyRowsToPage(base, rows);
-        window.CNB_LAST_CONTENT_SOURCE = source || "csv";
+        window.CNB_LAST_CONTENT_SOURCE = source;
         window.CNB_LAST_CONTENT_DATA = data;
         safeHydrate(data || defaultData);
       })
