@@ -955,9 +955,10 @@
       const link = document.createElement("a");
       link.href = item.href || "#";
       link.textContent = item.label || "";
-      if (item.page && resolvePageKey() && String(item.page).toLowerCase() === resolvePageKey()) {
-        link.classList.add("is-current");
-      } else if (isSameOriginPath(item.href || "")) {
+      const isCurrent =
+        (item.page && resolvePageKey() && String(item.page).toLowerCase() === resolvePageKey()) ||
+        isSameOriginPath(item.href || "");
+      if (isCurrent) {
         link.classList.add("is-current");
       }
       if (item.newWindow) link.target = "_blank";
@@ -990,6 +991,21 @@
     navWrap.appendChild(navPanel);
     inner.appendChild(navWrap);
 
+    const mobileNav = createEl("nav", "cnb-site-nav-mobile");
+    mobileNav.setAttribute("aria-label", "Primary");
+    menuItems.forEach((item) => {
+      const isCurrent =
+        (item.page && resolvePageKey() && String(item.page).toLowerCase() === resolvePageKey()) ||
+        isSameOriginPath(item.href || "");
+      if (isCurrent) return;
+      const link = document.createElement("a");
+      link.href = item.href || "#";
+      link.textContent = item.label || "";
+      if (item.newWindow) link.target = "_blank";
+      if (item.rel) link.rel = item.rel;
+      mobileNav.appendChild(link);
+    });
+
     const closeNav = () => {
       header.classList.remove("is-menu-open");
       menuToggle.setAttribute("aria-expanded", "false");
@@ -1009,6 +1025,7 @@
     });
 
     header.appendChild(inner);
+    header.appendChild(mobileNav);
     return header;
   };
 
