@@ -752,49 +752,6 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   order: -1;
 }
 
-.cnb-home-grid.split.is-band .cnb-home-copy {
-  background: linear-gradient(
-    120deg,
-    rgba(var(--cnb-section-accent-rgb), 0.12),
-    rgba(20, 17, 15, 0.02) 65%
-  );
-  border-radius: var(--cnb-radius-md);
-  padding: clamp(18px, 4vw, 36px);
-}
-
-.cnb-home-grid.split.is-sidecar .cnb-home-media {
-  display: grid;
-  gap: 12px;
-}
-
-.cnb-home-media-caption {
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cnb-muted);
-  max-width: 26ch;
-}
-
-.cnb-home-grid.split.is-sidecar.text-left .cnb-home-media-caption {
-  justify-self: start;
-  text-align: left;
-}
-
-.cnb-home-grid.split.is-sidecar.text-right .cnb-home-media-caption {
-  justify-self: end;
-  text-align: right;
-}
-
-.cnb-home-grid.split.is-split-stack .cnb-home-copy {
-  display: grid;
-  gap: clamp(16px, 2.6vw, 28px);
-}
-
-.cnb-home-copy-after {
-  border-top: 1px solid rgba(20, 17, 15, 0.12);
-  padding-top: clamp(14px, 2.4vw, 20px);
-}
-
 .cnb-home-hero-media {
   display: grid;
   gap: 18px;
@@ -1224,15 +1181,6 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 
   .cnb-home-grid.split.is-reversed .cnb-home-media {
     order: 0;
-  }
-
-  .cnb-home-grid.split.is-band .cnb-home-copy {
-    padding: clamp(16px, 6vw, 24px);
-  }
-
-  .cnb-home-grid.split.is-sidecar .cnb-home-media-caption {
-    justify-self: start;
-    text-align: left;
   }
 
   .cnb-home-image {
