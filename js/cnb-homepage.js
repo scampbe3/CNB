@@ -338,7 +338,16 @@
     const sectionEl = buildSection(section, "cnb-home-feature");
     const inner = createEl("div", "cnb-home-inner");
     const grid = createEl("div", "cnb-home-grid split");
-    if (section.layout === "image-left") grid.classList.add("is-reversed");
+    const layout = String(section.layout || "");
+    const isImageLeft = /image-left/i.test(layout);
+    const isBand = /band/i.test(layout);
+    const isSidecar = /sidecar/i.test(layout);
+    const isSplitStack = /split-stack/i.test(layout);
+    if (isImageLeft) grid.classList.add("is-reversed");
+    if (isBand) grid.classList.add("is-band");
+    if (isSidecar) grid.classList.add("is-sidecar");
+    if (isSplitStack) grid.classList.add("is-split-stack");
+    grid.classList.add(isImageLeft ? "text-right" : "text-left");
 
     const copy = createEl("div", "cnb-home-copy");
     const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
@@ -347,13 +356,25 @@
     const title = withReveal(createEl("h2", "cnb-home-title", section.title || ""));
     copy.appendChild(title);
 
-    renderBody(section.body, copy);
+    if (isSplitStack) {
+      const mainBlock = createEl("div", "cnb-home-copy-main");
+      renderBody(section.body, mainBlock);
+      const list = renderList(section.list, "cnb-home-list");
+      if (list) mainBlock.appendChild(list);
+      copy.appendChild(mainBlock);
 
-    const list = renderList(section.list, "cnb-home-list");
-    if (list) copy.appendChild(list);
-
-    if (section.bodyAfter) {
-      renderBody(section.bodyAfter, copy);
+      if (section.bodyAfter) {
+        const afterBlock = createEl("div", "cnb-home-copy-after");
+        renderBody(section.bodyAfter, afterBlock);
+        copy.appendChild(afterBlock);
+      }
+    } else {
+      renderBody(section.body, copy);
+      const list = renderList(section.list, "cnb-home-list");
+      if (list) copy.appendChild(list);
+      if (section.bodyAfter) {
+        renderBody(section.bodyAfter, copy);
+      }
     }
 
     const inlineLink = renderInlineLink(section.inlineLink);
@@ -364,7 +385,18 @@
 
     const media = createEl("div", "cnb-home-media");
     const image = renderImage(section.image, { sectionEl });
-    if (image) media.appendChild(image);
+    if (image) {
+      media.appendChild(image);
+      if (isSidecar) {
+        const captionText =
+          section.caption ||
+          (section.image && (section.image.caption || section.image.alt)) ||
+          "";
+        if (captionText) {
+          media.appendChild(createEl("div", "cnb-home-media-caption", captionText));
+        }
+      }
+    }
 
     if (image) {
       grid.append(copy, media);
