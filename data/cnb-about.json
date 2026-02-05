@@ -184,6 +184,16 @@
       "theme": "ink"
     },
     {
+      "id": "name-means-image",
+      "type": "feature",
+      "layoutVariant": "image-band",
+      "image": {
+        "src": "assets/images/african-digital-print-fabric.jpg",
+        "alt": "Colorful African print fabric pattern."
+      },
+      "theme": "light"
+    },
+    {
       "id": "invitation",
       "type": "closing",
       "eyebrow": "An Invitation",

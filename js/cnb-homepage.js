@@ -93,6 +93,26 @@
     });
   };
 
+  const renderBodyWithInlineImage = (body, parent, sectionEl, section) => {
+    const items = body || [];
+    const inlineAfter = Number.isFinite(section.inlineImageAfter)
+      ? Math.max(1, Math.floor(section.inlineImageAfter))
+      : null;
+    let inlineImage = null;
+    if (inlineAfter && section.image) {
+      inlineImage = renderImage(section.image, { sectionEl, inline: true });
+    }
+    items.forEach((copy, index) => {
+      const p = withReveal(createEl("p", "cnb-home-body", copy));
+      parent.appendChild(p);
+      if (inlineImage && index + 1 === inlineAfter) {
+        parent.appendChild(inlineImage);
+        inlineImage = null;
+      }
+    });
+    if (inlineImage) parent.appendChild(inlineImage);
+  };
+
   const renderList = (items, className = "cnb-home-list") => {
     if (!items || !items.length) return null;
     const list = withReveal(createEl("ul", className));
@@ -231,6 +251,7 @@
     if (!imageData || !imageData.src) return null;
 
     const figure = withReveal(createEl("figure", "cnb-home-image"));
+    if (options.inline) figure.classList.add("is-inline");
     const img = document.createElement("img");
     img.alt = imageData.alt || "";
     img.loading = "lazy";
@@ -327,7 +348,11 @@
       copy.appendChild(subhead);
     }
 
-    renderBody(section.body, copy);
+    if (section.inlineImageAfter) {
+      renderBodyWithInlineImage(section.body, copy, sectionEl, section);
+    } else {
+      renderBody(section.body, copy);
+    }
 
     const media = createEl("div", "cnb-home-hero-media");
     const image = renderImage(section.image, { sectionEl });
@@ -376,7 +401,7 @@
     if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-media");
-    const image = renderImage(section.image, { sectionEl });
+    const image = section.inlineImageAfter ? null : renderImage(section.image, { sectionEl });
     if (image) media.appendChild(image);
 
     if (image) {
