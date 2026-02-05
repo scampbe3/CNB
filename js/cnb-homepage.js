@@ -267,7 +267,10 @@
   };
 
   const buildSection = (section, extraClass) => {
-    const sectionEl = createEl("section", `cnb-home-section ${extraClass || ""}`.trim());
+    const classes = ["cnb-home-section"];
+    if (extraClass) classes.push(extraClass);
+    if (section && section.layoutVariant) classes.push(`is-layout-${section.layoutVariant}`);
+    const sectionEl = createEl("section", classes.join(" ").trim());
     if (section.id) sectionEl.id = section.id;
     if (section.theme) sectionEl.dataset.theme = section.theme;
     if (section.image) {

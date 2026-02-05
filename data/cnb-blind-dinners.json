@@ -50,7 +50,7 @@
       "body": [
         "Blind Dinners bring together a carefully curated mix of guests, including:"
       ],
-      "listVariant": "card-grid",
+      "listVariant": "card-stack",
       "list": [
         "Business owners and founders",
         "Influencers and cultural leaders",
@@ -91,6 +91,7 @@
       "type": "feature",
       "eyebrow": "About the Food",
       "title": "Home Cooked, Served With Care",
+      "layoutVariant": "band-card",
       "body": [
         "The food served at Blind Dinners is home cooked by Amanda.",
         "Amanda is not a chef. She cooks because cooking is how she creates care and belonging.",

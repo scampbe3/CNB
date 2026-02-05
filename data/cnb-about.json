@@ -166,6 +166,7 @@
       "type": "feature",
       "eyebrow": "What the Name Means",
       "title": "Joy and Discipline",
+      "layoutVariant": "ink-interlude",
       "body": [
         "Cupcakes + Broccoli is about balance.",
         "Joy and discipline.",
@@ -180,7 +181,7 @@
         "alt": "Colorful African print fabric pattern."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "ink"
     },
     {
       "id": "invitation",
