@@ -119,6 +119,7 @@
         "Cupcakes + Broccoli is a membership-based ecosystem centered on guidance, learning, and community.",
         "It includes:"
       ],
+      "listVariant": "card-grid",
       "list": [
         "Practical tools and decision frameworks",
         "An AI concierge built around real founder questions",

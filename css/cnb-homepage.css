@@ -1230,6 +1230,14 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     --cnb-header-title-offset: -0.15em;
   }
 
+  .cnb-home-list.is-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cnb-home-list.is-card-grid li {
+    min-width: 0;
+  }
+
   .cnb-home-grid.hero,
   .cnb-home-grid.split {
     grid-template-columns: 1fr;

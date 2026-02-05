@@ -48,7 +48,7 @@
       "body": [
         "This work is for Black founders who are navigating high-impact decisions without a trusted sounding board."
       ],
-      "listVariant": "numbered",
+      "listVariant": "card-grid",
       "list": [
         "Are making high-impact decisions without a trusted sounding board",
         "Feel stuck between vision and execution",
@@ -113,6 +113,7 @@
       "body": [
         "Engagements are intentionally flexible and tailored to each founder’s needs. Work may include:"
       ],
+      "listVariant": "card-grid",
       "list": [
         "Clarifying direction and priorities",
         "Pressure-testing ideas and strategies",
