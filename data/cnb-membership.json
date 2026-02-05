@@ -101,6 +101,7 @@
       "body": [
         "Membership provides access to:"
       ],
+      "listVariant": "card-grid",
       "list": [
         "Curated tools, frameworks, and guides for real decisions",
         "An AI concierge built around questions Black founders actually ask",

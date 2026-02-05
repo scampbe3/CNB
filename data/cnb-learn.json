@@ -50,6 +50,7 @@
         "The Learn section brings together tools, frameworks, and stories shaped by real founder work.",
         "You will find:"
       ],
+      "listVariant": "pill-grid",
       "list": [
         "Decision frameworks for pricing, positioning, and focus",
         "Step-by-step guides for launching, restructuring, and scaling",

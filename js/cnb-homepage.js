@@ -110,6 +110,13 @@
     return list;
   };
 
+  const applyListVariant = (listEl, section) => {
+    if (!listEl || !section) return;
+    const variant = section.listVariant || section.listStyle || section.listLayout;
+    if (!variant) return;
+    listEl.classList.add(`is-${variant}`);
+  };
+
   const buildCta = (cta) => {
     const isModal = cta.behavior === "modal";
     const el = document.createElement(isModal ? "button" : "a");
@@ -350,7 +357,10 @@
     renderBody(section.body, copy);
 
     const list = renderList(section.list, "cnb-home-list");
-    if (list) copy.appendChild(list);
+    if (list) {
+      applyListVariant(list, section);
+      copy.appendChild(list);
+    }
 
     if (section.bodyAfter) {
       renderBody(section.bodyAfter, copy);
@@ -395,7 +405,10 @@
     renderBody(section.body, header);
 
     const headerList = renderList(section.list, "cnb-home-list");
-    if (headerList) header.appendChild(headerList);
+    if (headerList) {
+      applyListVariant(headerList, section);
+      header.appendChild(headerList);
+    }
 
     const content = createEl("div", "cnb-home-copy cnb-home-tiers-copy");
     if (header.childElementCount) content.appendChild(header);
@@ -900,7 +913,10 @@
     renderBody(section.body, copy);
 
     const list = renderList(section.list, "cnb-home-list");
-    if (list) copy.appendChild(list);
+    if (list) {
+      applyListVariant(list, section);
+      copy.appendChild(list);
+    }
 
     const ctas = renderCtas(section.ctas);
     if (ctas) copy.appendChild(ctas);
