@@ -1211,24 +1211,7 @@
     );
     inner.appendChild(company);
 
-    const socialWrap = createEl("div", "cnb-site-footer-social");
-    const headerNav = (data && data.header && data.header.nav) || [];
-    const socialItems =
-      footerData.social ||
-      headerNav.filter((item) => /instagram|linkedin/i.test(item.label || ""));
-
-    socialItems.forEach((item) => {
-      const link = document.createElement("a");
-      link.className = "cnb-site-footer-icon";
-      link.href = item.href || "#";
-      link.setAttribute("aria-label", item.label || "Social link");
-      if (item.newWindow) link.target = "_blank";
-      if (item.rel) link.rel = item.rel;
-      const iconType = /linkedin/i.test(item.label || "") ? "linkedin" : "instagram";
-      link.appendChild(createIconSvg(iconType));
-      socialWrap.appendChild(link);
-    });
-    inner.appendChild(socialWrap);
+    // Social icons removed per design direction.
 
     const emailLink = document.createElement("a");
     emailLink.className = "cnb-site-footer-right";
@@ -1379,6 +1362,17 @@
     });
   };
 
+  const syncLearnAiLink = () => {
+    if (!document.body.classList.contains("cnb-page-learn")) return;
+    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3#ai";
+    const link = mount.querySelector(".cnb-inline-link");
+    if (!link) return;
+    const text = (link.textContent || "").trim().toLowerCase();
+    if (text === "ask a question using the ai concierge") {
+      link.setAttribute("href", targetHref);
+    }
+  };
+
   const hydrate = (data) => {
     document.body.classList.add("cnb-homepage-active", "cnb-page-active");
     if (data && data.page) {
@@ -1400,6 +1394,7 @@
     bindPromptFill();
     setupRevealObserver();
     syncMembershipJoinLinks();
+    syncLearnAiLink();
   };
 
   const safeHydrate = (data) => {

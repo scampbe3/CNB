@@ -55,20 +55,7 @@
     company.textContent = footerData.company;
     inner.appendChild(company);
 
-    const socialWrap = document.createElement("div");
-    socialWrap.className = "cnb-site-footer-social";
-    footerData.social.forEach((item) => {
-      const link = document.createElement("a");
-      link.className = "cnb-site-footer-icon";
-      link.href = item.href || "#";
-      link.setAttribute("aria-label", item.label || "Social link");
-      if (item.newWindow) link.target = "_blank";
-      if (item.rel) link.rel = item.rel;
-      const iconType = /linkedin/i.test(item.label || "") ? "linkedin" : "instagram";
-      link.appendChild(createIconSvg(iconType));
-      socialWrap.appendChild(link);
-    });
-    inner.appendChild(socialWrap);
+    // Social icons removed per design direction.
 
     const emailLink = document.createElement("a");
     emailLink.className = "cnb-site-footer-right";
