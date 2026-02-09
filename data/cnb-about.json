@@ -41,8 +41,8 @@
         "href": "/membership"
       },
       "image": {
-        "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
-        "alt": "Portrait in patterned textiles."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 8.jpg",
+        "alt": "Amanda Johnson smiling in a studio portrait."
       },
       "theme": "light"
     },
@@ -62,8 +62,8 @@
         "href": "/work-with-amanda"
       },
       "image": {
-        "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
-        "alt": "Portrait in patterned textiles."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 6.jpg",
+        "alt": "Amanda Johnson in a close studio portrait."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -85,8 +85,8 @@
         "href": "/stories"
       },
       "image": {
-        "src": "assets/images/muriu-6-scaled.jpg",
-        "alt": "Portrait framed by soft light."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
+        "alt": "Amanda Johnson in a studio portrait, looking to the side."
       },
       "layout": "image-left",
       "theme": "light"
@@ -104,8 +104,8 @@
         "Ownership is."
       ],
       "image": {
-        "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg",
-        "alt": "Portrait layered with camo-inspired textiles."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 3.jpg",
+        "alt": "Amanda Johnson in a focused studio portrait."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -135,8 +135,8 @@
         { "label": "Browse Resources", "href": "/learn", "variant": "ghost" }
       ],
       "image": {
-        "src": "assets/images/murius-7-scaled.jpg",
-        "alt": "Portrait with geometric patterned backdrop."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda_-_5_3500x4184.jpg",
+        "alt": "Amanda Johnson smiling in a bright studio portrait."
       },
       "layout": "image-left",
       "theme": "light"
@@ -155,8 +155,8 @@
         { "label": "Learn about Blind Dinners", "href": "/blind-dinners", "variant": "ghost" }
       ],
       "image": {
-        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Portrait layered over a patterned textile background."
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/b198dea0-e06c-41da-8ca6-9c52724cbc11.JPEG",
+        "alt": "Blind Dinner table setting with shared dishes."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -177,8 +177,8 @@
         "This platform exists to help founders hold both."
       ],
       "image": {
-        "src": "assets/images/african-digital-print-fabric.jpg",
-        "alt": "Colorful African print fabric pattern."
+        "src": "assets/images/additional_images/African textile close up - fabric sheets/tela-africana-wax-uganda_6.jpg",
+        "alt": "African textile pattern in bright blue and yellow."
       },
       "layout": "image-left",
       "theme": "ink"
@@ -188,8 +188,8 @@
       "type": "feature",
       "layoutVariant": "image-band",
       "image": {
-        "src": "assets/images/african-digital-print-fabric.jpg",
-        "alt": "Colorful African print fabric pattern."
+        "src": "assets/images/additional_images/African textile close up - fabric sheets/gwtm_programs_rtamabstraction_2300x1120.jpg",
+        "alt": "Geometric textile pattern in warm gold tones."
       },
       "theme": "light"
     },
