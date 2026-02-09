@@ -71,6 +71,7 @@
   const injectAssets = (base) => {
     setMountSources(base);
     addStylesheet(`${base}/css/cnb-homepage.css`);
+    addScript(`${base}/js/cnb-site-footer.js`);
     addScript(`${base}/js/ai-concierge.js`);
     addScript(`${base}/js/cnb-homepage.js`);
     if (shouldLoadJoinHelper()) {
