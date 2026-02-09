@@ -763,6 +763,15 @@
         return;
       }
 
+      if (/^Tier\s*\d+\s*CTA/i.test(field)) {
+        const idxMatch = field.match(/\d+/);
+        const idx = idxMatch ? Number(idxMatch[0]) : 1;
+        if (!bucket.tierCtas) bucket.tierCtas = {};
+        bucket.tierCtas[idx] = { label: value, href: link, notes };
+        bucket.hasTierCtas = true;
+        return;
+      }
+
       if (/^Inline\s*link/i.test(field)) {
         bucket.inlineLink = { label: value, href: link };
         return;
@@ -862,6 +871,27 @@
           })
           .filter(Boolean);
         section.ctas = ctas;
+      }
+
+      if (data.hasTierCtas && Array.isArray(section.tiers)) {
+        Object.keys(data.tierCtas || {}).forEach((key) => {
+          const idx = Number(key) - 1;
+          if (!Number.isFinite(idx) || idx < 0 || idx >= section.tiers.length) return;
+          const cta = data.tierCtas[key];
+          if (!cta || (!cta.label && !cta.href)) return;
+          const base = section.tiers[idx].cta || {};
+          const out = {
+            ...base,
+            label: cta.label || base.label || "",
+            href: cta.href || base.href || "",
+          };
+          const note = (cta.notes || "").toLowerCase();
+          if (note.includes("primary")) out.variant = "primary";
+          if (note.includes("ghost")) out.variant = "ghost";
+          if (note.includes("accent")) out.variant = "accent";
+          if (note.includes("modal")) out.behavior = "modal";
+          if (out.label) section.tiers[idx].cta = out;
+        });
       }
     });
 
