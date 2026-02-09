@@ -1363,6 +1363,22 @@
     sections.forEach((section) => observer.observe(section));
   };
 
+  const syncMembershipJoinLinks = () => {
+    if (!document.body.classList.contains("cnb-page-membership")) return;
+    const compareBtn = mount.querySelector(
+      '.cnb-home-btn[href^="#membership-tiers"], .cnb-home-btn[href="#membership-tiers"]'
+    );
+    const targetHref = compareBtn ? compareBtn.getAttribute("href") : "#membership-tiers";
+    const joinButtons = Array.from(mount.querySelectorAll(".cnb-home-btn")).filter((btn) => {
+      const label = (btn.textContent || "").trim().toLowerCase();
+      return label === "join membership";
+    });
+    joinButtons.forEach((btn) => {
+      if (btn.tagName.toLowerCase() !== "a") return;
+      btn.setAttribute("href", targetHref);
+    });
+  };
+
   const hydrate = (data) => {
     document.body.classList.add("cnb-homepage-active", "cnb-page-active");
     if (data && data.page) {
@@ -1383,6 +1399,7 @@
     bindModalTriggers();
     bindPromptFill();
     setupRevealObserver();
+    syncMembershipJoinLinks();
   };
 
   const safeHydrate = (data) => {
