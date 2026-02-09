@@ -1364,24 +1364,39 @@
 
   const syncLearnAiLink = () => {
     if (!document.body.classList.contains("cnb-page-learn")) return;
-    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3";
+    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3#ai";
     const link = mount.querySelector(".cnb-inline-link");
     if (!link) return;
     const text = (link.textContent || "").trim().toLowerCase();
     if (text === "ask a question using the ai concierge") {
       link.setAttribute("href", targetHref);
-      link.dataset.cnbTargetSection = "ai";
     }
   };
 
+  const getStickyHeaderOffset = () => {
+    const header = mount.querySelector(".cnb-site-header") || document.querySelector(".cnb-site-header");
+    if (!header) return 0;
+    const style = window.getComputedStyle(header);
+    if (style.position !== "fixed" && style.position !== "sticky") return 0;
+    return header.getBoundingClientRect().height + 16;
+  };
+
   const jumpToTargetSection = () => {
-    if (!window.location.hash) return;
-    const hash = window.location.hash.replace("#", "");
-    if (hash !== "ai") return;
-    const section = mount.querySelector("#ai");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    const hash = (window.location.hash || "").replace("#", "").trim().toLowerCase();
+    if (!hash) return;
+    const targetHash = hash === "ai-concierge" ? "ai" : hash;
+    if (targetHash !== "ai") return;
+
+    const scrollToAi = () => {
+      const section = mount.querySelector("#ai") || mount.querySelector("#ai-concierge");
+      if (!section) return;
+      const top = Math.max(0, section.getBoundingClientRect().top + window.scrollY - getStickyHeaderOffset());
+      window.scrollTo({ top, behavior: "auto" });
+    };
+
+    [0, 120, 300, 700, 1200].forEach((delay) => {
+      window.setTimeout(scrollToAi, delay);
+    });
   };
 
   const hydrate = (data) => {
@@ -1407,6 +1422,10 @@
     syncMembershipJoinLinks();
     syncLearnAiLink();
     jumpToTargetSection();
+    if (!window.__cnbHashJumpWired) {
+      window.__cnbHashJumpWired = true;
+      window.addEventListener("hashchange", jumpToTargetSection);
+    }
   };
 
   const safeHydrate = (data) => {
