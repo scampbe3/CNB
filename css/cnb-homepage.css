@@ -1025,6 +1025,10 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   object-fit: contain;
 }
 
+body.cnb-page-stories #what-youll-find .cnb-home-image img {
+  object-position: 40% center;
+}
+
 .cnb-home-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
