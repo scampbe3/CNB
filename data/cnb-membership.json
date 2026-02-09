@@ -64,7 +64,7 @@
         }
       ],
       "ctas": [
-        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Join Membership", "href": "#membership-tiers", "variant": "primary" },
         { "label": "Compare Membership Options", "href": "#membership-tiers", "variant": "ghost" }
       ],
       "theme": "paper"
@@ -288,7 +288,7 @@
         "If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here."
       ],
       "ctas": [
-        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
+        { "label": "Join Membership", "href": "#membership-tiers", "variant": "primary" },
         { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
       ],
       "theme": "ink"

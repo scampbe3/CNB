@@ -6,7 +6,7 @@ hero,Body 1,"Core Membership offers steady guidance and practical tools.",,
 hero,Body 2,"Premium Membership offers deeper access, closer connection, and priority opportunities.",,
 hero,Image,assets/images/Butler-Indi-10Det1-1920x1438.jpg,,Portrait in patterned textiles.
 membership-options,Image,assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg,,Portrait with patterned textiles.
-membership-options,CTA 1,Join Membership,/membership,primary
+membership-options,CTA 1,Join Membership,#membership-tiers,primary
 membership-options,CTA 2,Compare Membership Options,#membership-tiers,ghost
 built-around,Eyebrow,Membership,,
 built-around,Title,Membership Built Around Black Founders,,
@@ -80,5 +80,5 @@ invitation,Eyebrow,Invitation,,
 invitation,Title,An Invitation,,
 invitation,Body 1,Cupcakes + Broccoli membership is an investment in how you think and how you build.,,
 invitation,Body 2,"If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here.",,
-invitation,CTA 1,Join Membership,/membership,primary
+invitation,CTA 1,Join Membership,#membership-tiers,primary
 invitation,CTA 2,Learn How Cupcakes + Broccoli Works,/about,ghost
