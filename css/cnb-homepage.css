@@ -412,7 +412,7 @@ body.cnb-global-footer-active .sqs-footer {
   margin: 0 auto;
   padding: 0 var(--cnb-gutter);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   height: 100%;
   gap: 24px;

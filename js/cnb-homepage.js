@@ -1364,12 +1364,23 @@
 
   const syncLearnAiLink = () => {
     if (!document.body.classList.contains("cnb-page-learn")) return;
-    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3#ai";
+    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3";
     const link = mount.querySelector(".cnb-inline-link");
     if (!link) return;
     const text = (link.textContent || "").trim().toLowerCase();
     if (text === "ask a question using the ai concierge") {
       link.setAttribute("href", targetHref);
+      link.dataset.cnbTargetSection = "ai";
+    }
+  };
+
+  const jumpToTargetSection = () => {
+    if (!window.location.hash) return;
+    const hash = window.location.hash.replace("#", "");
+    if (hash !== "ai") return;
+    const section = mount.querySelector("#ai");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -1395,6 +1406,7 @@
     setupRevealObserver();
     syncMembershipJoinLinks();
     syncLearnAiLink();
+    jumpToTargetSection();
   };
 
   const safeHydrate = (data) => {
