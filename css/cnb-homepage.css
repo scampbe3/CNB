@@ -1029,6 +1029,14 @@ body.cnb-page-stories #what-youll-find .cnb-home-image img {
   object-position: 80% center;
 }
 
+body.cnb-page-blind-dinners #why-it-exists .cnb-home-image img {
+  object-position: 60% center;
+}
+
+body.cnb-page-about #what-cnb-is .cnb-home-image img {
+  object-position: 60% center;
+}
+
 .cnb-home-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
