@@ -66,11 +66,16 @@
     window.CNB_HOME_ASSET_BASE = base;
   };
 
+  const shouldLoadJoinHelper = () => /\/join\/?$/i.test(window.location.pathname);
+
   const injectAssets = (base) => {
     setMountSources(base);
     addStylesheet(`${base}/css/cnb-homepage.css`);
     addScript(`${base}/js/ai-concierge.js`);
     addScript(`${base}/js/cnb-homepage.js`);
+    if (shouldLoadJoinHelper()) {
+      addScript(`${base}/js/cnb-join.js`);
+    }
   };
 
   const fetchLatestSha = async () => {

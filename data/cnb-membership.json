@@ -158,7 +158,7 @@
           "note": "Core is designed for intentional use and steady progress.",
           "cta": {
             "label": "Join Core Membership for $25/month",
-            "href": "https://www.cupcakesandbroccoli.com/join#core-membership-link",
+            "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#core-membership-link",
             "variant": "ghost"
           }
         },
@@ -178,7 +178,7 @@
           "note": "Premium Membership is intentionally limited to protect depth, care, and quality.",
           "cta": {
             "label": "Join Premium Membership for $59/month",
-            "href": "https://www.cupcakesandbroccoli.com/join#premium-membership-link",
+            "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#premium-membership-link",
             "variant": "primary"
           },
           "featured": true

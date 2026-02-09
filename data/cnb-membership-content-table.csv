@@ -37,8 +37,8 @@ how-people-use,Image,assets/images/muriu-6-scaled.jpg,,Portrait framed by soft l
 membership-tiers,Eyebrow,Membership,,
 membership-tiers,Title,Membership Tiers,,
 membership-tiers,Body 1,Choose the tier that fits how you want to engage right now.,,
-membership-tiers,Tier 1 CTA,Join Core Membership for $25/month,https://www.cupcakesandbroccoli.com/join#core-membership-link,ghost
-membership-tiers,Tier 2 CTA,Join Premium Membership for $59/month,https://www.cupcakesandbroccoli.com/join#premium-membership-link,primary
+membership-tiers,Tier 1 CTA,Join Core Membership for $25/month,https://www.cupcakesandbroccoli.com/join?autojoin=1#core-membership-link,ghost
+membership-tiers,Tier 2 CTA,Join Premium Membership for $59/month,https://www.cupcakesandbroccoli.com/join?autojoin=1#premium-membership-link,primary
 ai-access,Eyebrow,AI Concierge,,
 ai-access,Title,AI Concierge Access,,
 ai-access,Body 1,The AI concierge helps founders get unstuck and oriented.,,
