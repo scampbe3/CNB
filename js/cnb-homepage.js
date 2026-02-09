@@ -139,9 +139,37 @@
 
   const buildCta = (cta) => {
     const isModal = cta.behavior === "modal";
-    const el = document.createElement(isModal ? "button" : "a");
+    const hasJoin = Boolean(cta.joinPlanId && cta.joinPricingOptionId);
+    const el = document.createElement(isModal || hasJoin ? "button" : "a");
     el.className = `cnb-home-btn ${cta.variant || "primary"}`.trim();
     el.textContent = cta.label || "";
+
+    if (hasJoin) {
+      el.type = "button";
+      el.dataset.joinPlanId = cta.joinPlanId;
+      el.dataset.joinPricingOptionId = cta.joinPricingOptionId;
+      el.dataset.joinSource = cta.joinSource || "MEMBER_AREA_BLOCK";
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        const api = window.UserAccountApi;
+        if (api && typeof api.joinPricingPlan === "function") {
+          const source = cta.joinSource || "MEMBER_AREA_BLOCK";
+          const meta =
+            cta.joinMeta || {
+              pricingPlanId: cta.joinPlanId,
+              pricingOptions: [{ id: cta.joinPricingOptionId }],
+              pricingType: "RECURRING",
+              isPaywall: true,
+              firstPricingOptionId: cta.joinPricingOptionId,
+            };
+          api.joinPricingPlan(cta.joinPlanId, cta.joinPricingOptionId, "", false, source, meta);
+        } else if (cta.href) {
+          window.location.href = cta.href;
+        }
+      });
+      return el;
+    }
+
     if (isModal) {
       el.type = "button";
       el.dataset.behavior = "modal";
@@ -772,6 +800,26 @@
         return;
       }
 
+      if (/^Tier\s*\d+\s*(Join\s*)?(Plan|Pricing\s*Plan)\s*Id/i.test(field)) {
+        const idxMatch = field.match(/\d+/);
+        const idx = idxMatch ? Number(idxMatch[0]) : 1;
+        if (!bucket.tierJoin) bucket.tierJoin = {};
+        if (!bucket.tierJoin[idx]) bucket.tierJoin[idx] = {};
+        bucket.tierJoin[idx].planId = value;
+        bucket.hasTierJoin = true;
+        return;
+      }
+
+      if (/^Tier\s*\d+\s*(Join\s*)?(Pricing\s*)?(Option|Price)\s*Id/i.test(field)) {
+        const idxMatch = field.match(/\d+/);
+        const idx = idxMatch ? Number(idxMatch[0]) : 1;
+        if (!bucket.tierJoin) bucket.tierJoin = {};
+        if (!bucket.tierJoin[idx]) bucket.tierJoin[idx] = {};
+        bucket.tierJoin[idx].optionId = value;
+        bucket.hasTierJoin = true;
+        return;
+      }
+
       if (/^Inline\s*link/i.test(field)) {
         bucket.inlineLink = { label: value, href: link };
         return;
@@ -891,6 +939,21 @@
           if (note.includes("accent")) out.variant = "accent";
           if (note.includes("modal")) out.behavior = "modal";
           if (out.label) section.tiers[idx].cta = out;
+        });
+      }
+
+      if (data.hasTierJoin && Array.isArray(section.tiers)) {
+        Object.keys(data.tierJoin || {}).forEach((key) => {
+          const idx = Number(key) - 1;
+          if (!Number.isFinite(idx) || idx < 0 || idx >= section.tiers.length) return;
+          const join = data.tierJoin[key] || {};
+          if (!join.planId && !join.optionId) return;
+          const base = section.tiers[idx].cta || {};
+          section.tiers[idx].cta = {
+            ...base,
+            joinPlanId: join.planId || base.joinPlanId || "",
+            joinPricingOptionId: join.optionId || base.joinPricingOptionId || "",
+          };
         });
       }
     });

@@ -159,6 +159,8 @@
           "cta": {
             "label": "Join Core Membership for $25/month",
             "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#core-membership-link",
+            "joinPlanId": "34040e67-4151-4d37-8564-fe1ccee8c1d5",
+            "joinPricingOptionId": "936ce20b-014f-4fc4-bc10-4d57f943ccbd",
             "variant": "ghost"
           }
         },
@@ -179,6 +181,8 @@
           "cta": {
             "label": "Join Premium Membership for $59/month",
             "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#premium-membership-link",
+            "joinPlanId": "575958e3-6d3f-473a-ae7d-2c4cf96b9ede",
+            "joinPricingOptionId": "e5be412f-b0cf-4387-8540-539e98e16ed6",
             "variant": "primary"
           },
           "featured": true

@@ -38,7 +38,11 @@ membership-tiers,Eyebrow,Membership,,
 membership-tiers,Title,Membership Tiers,,
 membership-tiers,Body 1,Choose the tier that fits how you want to engage right now.,,
 membership-tiers,Tier 1 CTA,Join Core Membership for $25/month,https://www.cupcakesandbroccoli.com/join?autojoin=1#core-membership-link,ghost
+membership-tiers,Tier 1 Plan ID,34040e67-4151-4d37-8564-fe1ccee8c1d5,,
+membership-tiers,Tier 1 Option ID,936ce20b-014f-4fc4-bc10-4d57f943ccbd,,
 membership-tiers,Tier 2 CTA,Join Premium Membership for $59/month,https://www.cupcakesandbroccoli.com/join?autojoin=1#premium-membership-link,primary
+membership-tiers,Tier 2 Plan ID,575958e3-6d3f-473a-ae7d-2c4cf96b9ede,,
+membership-tiers,Tier 2 Option ID,e5be412f-b0cf-4387-8540-539e98e16ed6,,
 ai-access,Eyebrow,AI Concierge,,
 ai-access,Title,AI Concierge Access,,
 ai-access,Body 1,The AI concierge helps founders get unstuck and oriented.,,
