@@ -47,7 +47,7 @@
          "link" : "",
          "notes" : "true/false",
          "section" : "Announcement",
-         "value" : "true"
+         "value" : "TRUE"
       },
       {
          "field" : "Eyebrow",
@@ -61,7 +61,7 @@
          "link" : "",
          "notes" : "",
          "section" : "Hero",
-         "value" : "Own Your Joy"
+         "value" : "Own Your Joy!!!!"
       },
       {
          "field" : "Subhead",
@@ -299,7 +299,7 @@
          "link" : "",
          "notes" : "true/false",
          "section" : "Footer",
-         "value" : "true"
+         "value" : "TRUE"
       },
       {
          "field" : "Footer line override",

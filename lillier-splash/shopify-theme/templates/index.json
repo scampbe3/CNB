@@ -1,172 +1,172 @@
 {
-  "sections": {
-    "announcement": {
-      "type": "lillier-announcement-bar",
-      "settings": {
-        "show_bar": true
-      }
-    },
-    "header": {
-      "type": "lillier-header",
-      "settings": {
-        "logo_wordmark": "LILLIER"
-      }
-    },
-    "hero": {
-      "type": "lillier-hero-editorial",
-      "settings": {
-        "eyebrow": "Lillier",
-        "heading": "Own Your Joy",
-        "subhead": "Shop Black. Every day. All in one cart.",
-        "body": "<p>Lillier is the one-stop marketplace for high-quality products from Black-owned businesses. From household essentials to beauty, food and style, we make it easy to shop Black daily. Every purchase supports ownership, independence and the next generation of Black entrepreneurs.</p>",
-        "primary_cta_label": "Shop New Arrivals",
-        "primary_cta_url": "/collections/new-arrivals",
-        "secondary_cta_label": "Explore Brands",
-        "secondary_cta_url": "/pages/brands",
-        "theme_variant": "ink"
-      }
-    },
-    "categories": {
-      "type": "lillier-category-rail",
-      "blocks": {
-        "category_1": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Household Essentials",
-            "support_text": ""
-          }
-        },
-        "category_2": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Beauty and Personal Care",
-            "support_text": ""
-          }
-        },
-        "category_3": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Food and Beverage",
-            "support_text": ""
-          }
-        },
-        "category_4": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Home and Decor",
-            "support_text": ""
-          }
-        },
-        "category_5": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Fashion and Accessories",
-            "support_text": ""
-          }
-        },
-        "category_6": {
-          "type": "category_card",
-          "settings": {
-            "label_override": "Gifts and Stationery",
-            "support_text": ""
-          }
-        }
+   "order" : [
+      "announcement",
+      "header",
+      "hero",
+      "categories",
+      "spotlight",
+      "difference",
+      "closing",
+      "footer"
+   ],
+   "sections" : {
+      "announcement" : {
+         "settings" : {
+            "show_bar" : 1
+         },
+         "type" : "lillier-announcement-bar"
       },
-      "block_order": [
-        "category_1",
-        "category_2",
-        "category_3",
-        "category_4",
-        "category_5",
-        "category_6"
-      ],
-      "settings": {
-        "eyebrow": "Shop by category",
-        "heading": "Shop by Category",
-        "intro": "Find everything you need and everything you did not know you needed from Black-owned businesses across beauty, home, pantry and style. Every brand you see is independently owned and carefully vetted for quality, design and integrity.",
-        "cta_label": "Browse All Collections",
-        "cta_url": "/collections"
-      }
-    },
-    "spotlight": {
-      "type": "lillier-brand-spotlight",
-      "settings": {
-        "eyebrow": "Featured story",
-        "heading": "Behind Every Brand, a Story",
-        "body": "Lillier was built to make Black ownership visible and sustainable. Each month, we spotlight a featured brand and the business owner behind it, sharing how they built, what drives them and where they are headed next.",
-        "manual_title": "Featured Brand Story",
-        "manual_excerpt": "Use this area to highlight one founder story each month.",
-        "manual_cta_label": "Explore More Stories",
-        "manual_cta_url": "/pages/stories"
-      }
-    },
-    "difference": {
-      "type": "lillier-difference-grid",
-      "blocks": {
-        "point_1": {
-          "type": "difference_point",
-          "settings": {
-            "point_text": "One cart checkout across multiple Black-owned brands"
-          }
-        },
-        "point_2": {
-          "type": "difference_point",
-          "settings": {
-            "point_text": "Thousands of verified Black-owned businesses"
-          }
-        },
-        "point_3": {
-          "type": "difference_point",
-          "settings": {
-            "point_text": "Everyday essentials alongside special finds"
-          }
-        },
-        "point_4": {
-          "type": "difference_point",
-          "settings": {
-            "point_text": "Built for scale and sustainability"
-          }
-        }
+      "categories" : {
+         "block_order" : [
+            "category_1",
+            "category_2",
+            "category_3",
+            "category_4",
+            "category_5",
+            "category_6"
+         ],
+         "blocks" : {
+            "category_1" : {
+               "settings" : {
+                  "label_override" : "Household Essentials",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            },
+            "category_2" : {
+               "settings" : {
+                  "label_override" : "Beauty and Personal Care",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            },
+            "category_3" : {
+               "settings" : {
+                  "label_override" : "Food and Beverage",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            },
+            "category_4" : {
+               "settings" : {
+                  "label_override" : "Home and Decor",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            },
+            "category_5" : {
+               "settings" : {
+                  "label_override" : "Fashion and Accessories",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            },
+            "category_6" : {
+               "settings" : {
+                  "label_override" : "Gifts and Stationery",
+                  "support_text" : ""
+               },
+               "type" : "category_card"
+            }
+         },
+         "settings" : {
+            "cta_label" : "Browse All Collections",
+            "cta_url" : "/collections",
+            "eyebrow" : "Shop by category",
+            "heading" : "Shop by Category",
+            "intro" : "Find everything you need and everything you did not know you needed from Black-owned businesses across beauty, home, pantry and style. Every brand you see is independently owned and carefully vetted for quality, design and integrity."
+         },
+         "type" : "lillier-category-rail"
       },
-      "block_order": [
-        "point_1",
-        "point_2",
-        "point_3",
-        "point_4"
-      ],
-      "settings": {
-        "eyebrow": "The Lillier Difference",
-        "heading": "More Than a Marketplace",
-        "body": "Lillier is a retail platform designed to support Black-owned businesses beyond the checkout. Through visibility, distribution and long-term investment, we help brands grow while giving customers a simple way to buy Black every day.",
-        "primary_cta_label": "Learn More About Lillier",
-        "primary_cta_url": "/pages/about"
+      "closing" : {
+         "settings" : {
+            "body" : "Every order helps a Black-owned business grow. Together, we are proving that joy and ownership belong in the same sentence.",
+            "cta_label" : "Shop Now",
+            "cta_url" : "/collections/all",
+            "eyebrow" : "Closing",
+            "heading" : "Every Cart Is a Contribution"
+         },
+         "type" : "lillier-closing-cta"
+      },
+      "difference" : {
+         "block_order" : [
+            "point_1",
+            "point_2",
+            "point_3",
+            "point_4"
+         ],
+         "blocks" : {
+            "point_1" : {
+               "settings" : {
+                  "point_text" : "One cart checkout across multiple Black-owned brands"
+               },
+               "type" : "difference_point"
+            },
+            "point_2" : {
+               "settings" : {
+                  "point_text" : "Thousands of verified Black-owned businesses"
+               },
+               "type" : "difference_point"
+            },
+            "point_3" : {
+               "settings" : {
+                  "point_text" : "Everyday essentials alongside special finds"
+               },
+               "type" : "difference_point"
+            },
+            "point_4" : {
+               "settings" : {
+                  "point_text" : "Built for scale and sustainability"
+               },
+               "type" : "difference_point"
+            }
+         },
+         "settings" : {
+            "body" : "Lillier is a retail platform designed to support Black-owned businesses beyond the checkout. Through visibility, distribution and long-term investment, we help brands grow while giving customers a simple way to buy Black every day.",
+            "eyebrow" : "The Lillier Difference",
+            "heading" : "More Than a Marketplace",
+            "primary_cta_label" : "Learn More About Lillier",
+            "primary_cta_url" : "/pages/about"
+         },
+         "type" : "lillier-difference-grid"
+      },
+      "footer" : {
+         "settings" : {
+            "show_sister_link" : 1
+         },
+         "type" : "lillier-footer-utility"
+      },
+      "header" : {
+         "settings" : {
+            "logo_wordmark" : "LILLIER"
+         },
+         "type" : "lillier-header"
+      },
+      "hero" : {
+         "settings" : {
+            "body" : "<p>Lillier is the one-stop marketplace for high-quality products from Black-owned businesses. From household essentials to beauty, food and style, we make it easy to shop Black daily. Every purchase supports ownership, independence and the next generation of Black entrepreneurs.</p>",
+            "eyebrow" : "Lillier",
+            "heading" : "Own Your Joy!!!!",
+            "primary_cta_label" : "Shop New Arrivals",
+            "primary_cta_url" : "/collections/new-arrivals",
+            "secondary_cta_label" : "Explore Brands",
+            "secondary_cta_url" : "/pages/brands",
+            "subhead" : "Shop Black. Every day. All in one cart.",
+            "theme_variant" : "ink"
+         },
+         "type" : "lillier-hero-editorial"
+      },
+      "spotlight" : {
+         "settings" : {
+            "body" : "Lillier was built to make Black ownership visible and sustainable. Each month, we spotlight a featured brand and the business owner behind it, sharing how they built, what drives them and where they are headed next.",
+            "eyebrow" : "Featured story",
+            "heading" : "Behind Every Brand, a Story",
+            "manual_cta_label" : "Explore More Stories",
+            "manual_cta_url" : "/pages/stories",
+            "manual_excerpt" : "Use this area to highlight one founder story each month.",
+            "manual_title" : "Featured Brand Story"
+         },
+         "type" : "lillier-brand-spotlight"
       }
-    },
-    "closing": {
-      "type": "lillier-closing-cta",
-      "settings": {
-        "eyebrow": "Closing",
-        "heading": "Every Cart Is a Contribution",
-        "body": "Every order helps a Black-owned business grow. Together, we are proving that joy and ownership belong in the same sentence.",
-        "cta_label": "Shop Now",
-        "cta_url": "/collections/all"
-      }
-    },
-    "footer": {
-      "type": "lillier-footer-utility",
-      "settings": {
-        "show_sister_link": true
-      }
-    }
-  },
-  "order": [
-    "announcement",
-    "header",
-    "hero",
-    "categories",
-    "spotlight",
-    "difference",
-    "closing",
-    "footer"
-  ]
+   }
 }

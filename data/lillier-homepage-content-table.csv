@@ -4,9 +4,9 @@ Global,Cart helper text,You can shop multiple Black-owned businesses with one ch
 Global,Shipping note text,Items may ship separately from each brand.,,
 Global,Trust line default,This product is from a verified Black-owned business.,,
 Global,Footer support line,Supporting Black-owned businesses every day.,,
-Announcement,Show bar,true,,true/false
+Announcement,Show bar,TRUE,,true/false
 Hero,Eyebrow,Lillier,,
-Hero,Title,Own Your Joy,,
+Hero,Title,Own Your Joy!!!!,,
 Hero,Subhead,Shop Black. Every day. All in one cart.,,
 Hero,Body,"Lillier is the one-stop marketplace for high-quality products from Black-owned businesses. From household essentials to beauty, food and style, we make it easy to shop Black daily. Every purchase supports ownership, independence and the next generation of Black entrepreneurs.",,plain text ok; sync wraps as richtext
 Hero,CTA 1,Shop New Arrivals,/collections/new-arrivals,primary
@@ -40,5 +40,5 @@ Closing,Eyebrow,Closing,,
 Closing,Title,Every Cart Is a Contribution,,
 Closing,Body,"Every order helps a Black-owned business grow. Together, we are proving that joy and ownership belong in the same sentence.",,
 Closing,CTA,Shop Now,/collections/all,
-Footer,Show sister link,true,,true/false
+Footer,Show sister link,TRUE,,true/false
 Footer,Footer line override,,,leave blank to use Global > Footer support line
