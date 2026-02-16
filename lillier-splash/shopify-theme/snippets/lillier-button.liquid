@@ -1,0 +1,14 @@
+{%- assign btn_label = label | default: 'Learn more' -%}
+{%- assign btn_url = url | default: '#' -%}
+{%- assign btn_variant = variant | default: 'primary' -%}
+{%- assign btn_tag = tag | default: 'a' -%}
+
+{%- if btn_tag == 'button' -%}
+  <button class="lillier-btn lillier-btn--{{ btn_variant }} {{ class }}" type="{{ type | default: 'button' }}">
+    {{ btn_label }}
+  </button>
+{%- else -%}
+  <a class="lillier-btn lillier-btn--{{ btn_variant }} {{ class }}" href="{{ btn_url }}">
+    {{ btn_label }}
+  </a>
+{%- endif -%}

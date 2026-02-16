@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "main": {
+      "type": "main-cart",
+      "settings": {}
+    },
+    "footer_main": {
+      "type": "main-cart-footer",
+      "settings": {}
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "main",
+    "footer_main",
+    "footer"
+  ]
+}

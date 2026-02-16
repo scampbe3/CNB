@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "main",
+    "footer"
+  ]
+}

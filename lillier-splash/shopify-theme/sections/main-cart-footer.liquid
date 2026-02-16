@@ -1,0 +1,20 @@
+{%- if cart.item_count > 0 -%}
+  {%- capture cart_footer_content -%}
+    <h2 class="lillier-heading">Order summary</h2>
+    <p class="lillier-body">Subtotal: {{ cart.total_price | money }}</p>
+    {%- if settings.cart_helper_text != blank -%}
+      <p class="lillier-body">{{ settings.cart_helper_text }}</p>
+    {%- endif -%}
+    <form action="{{ routes.cart_url }}" method="post">
+      <button class="lillier-btn lillier-btn--primary" name="checkout" type="submit">Checkout</button>
+    </form>
+  {%- endcapture -%}
+
+  {% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-cart-footer-shell', width: 'lillier-shell--tight', content: cart_footer_content %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Main Cart Footer"
+}
+{% endschema %}

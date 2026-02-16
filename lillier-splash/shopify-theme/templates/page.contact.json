@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "main": {
+      "type": "main-contact",
+      "settings": {
+        "heading": "Contact",
+        "body": "For support, partnerships, or brand inquiries, send us a message."
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "main",
+    "footer"
+  ]
+}

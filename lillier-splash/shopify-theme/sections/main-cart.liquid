@@ -1,0 +1,42 @@
+{%- capture cart_content -%}
+  <h1 class="lillier-heading lillier-heading--lg">Cart</h1>
+
+  {%- if cart.item_count == 0 -%}
+    <p class="lillier-body">Your cart is currently empty.</p>
+    <p>{% render 'lillier-button', label: 'Continue shopping', url: routes.all_products_collection_url, variant: 'secondary' %}</p>
+  {%- else -%}
+    {%- form 'cart', cart -%}
+      <table class="lillier-cart-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for item in cart.items -%}
+            <tr>
+              <td>
+                <a href="{{ item.url }}">{{ item.product.title }}</a>
+              </td>
+              <td>
+                <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+              </td>
+              <td>{{ item.final_line_price | money }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+      <p><button class="lillier-btn lillier-btn--secondary" type="submit">Update cart</button></p>
+    {%- endform -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-cart-shell', content: cart_content %}
+
+{% schema %}
+{
+  "name": "Main Cart"
+}
+{% endschema %}

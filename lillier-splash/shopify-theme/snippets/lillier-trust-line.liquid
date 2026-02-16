@@ -1,0 +1,4 @@
+{%- assign trust_text = text | default: settings.trust_line_default -%}
+{%- if trust_text != blank -%}
+  <p class="lillier-trust-line {{ class }}">{{ trust_text }}</p>
+{%- endif -%}

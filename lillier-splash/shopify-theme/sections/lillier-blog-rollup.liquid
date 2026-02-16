@@ -1,0 +1,92 @@
+{%- assign selected_blog = section.settings.blog -%}
+
+{%- capture blog_rollup_content -%}
+  {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+  <h2 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h2>
+  {%- if section.settings.intro != blank -%}
+    <p class="lillier-body">{{ section.settings.intro }}</p>
+  {%- endif -%}
+
+  <div class="lillier-product-grid">
+    {%- if selected_blog != blank -%}
+      {%- for article in selected_blog.articles limit: section.settings.article_limit -%}
+        <article class="lillier-category-card">
+          <a class="lillier-category-card__media" href="{{ article.url }}">
+            {% render 'lillier-media', image: article.image, alt: article.title %}
+          </a>
+          <div class="lillier-category-card__body">
+            <h3 class="lillier-heading"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p class="lillier-body">{{ article.excerpt | strip_html | truncate: 120 }}</p>
+          </div>
+        </article>
+      {%- else -%}
+        <p class="lillier-body">No stories published yet.</p>
+      {%- endfor -%}
+    {%- else -%}
+      <p class="lillier-body">Select a blog in this section's settings to show stories.</p>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.cta_label != blank and section.settings.cta_url != blank -%}
+    <div class="lillier-btn-group">
+      {% render 'lillier-button', label: section.settings.cta_label, url: section.settings.cta_url %}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-blog-rollup-shell', content: blog_rollup_content %}
+
+{% schema %}
+{
+  "name": "Lillier Blog Rollup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Stories"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Behind Every Brand, a Story"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "article_limit",
+      "label": "Article limit",
+      "default": 6,
+      "min": 3,
+      "max": 12,
+      "step": 1
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Explore More Stories"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Blog Rollup"
+    }
+  ]
+}
+{% endschema %}

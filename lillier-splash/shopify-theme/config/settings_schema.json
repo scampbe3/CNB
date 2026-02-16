@@ -1,0 +1,71 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Lillier Custom",
+    "theme_version": "0.1.0",
+    "theme_author": "CNB Team",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  {
+    "name": "Global Content",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      },
+      {
+        "type": "text",
+        "id": "global_banner_text",
+        "label": "Announcement bar text",
+        "default": "Shop Black. Every day. All in one cart."
+      },
+      {
+        "type": "text",
+        "id": "cart_helper_text",
+        "label": "Cart helper text",
+        "default": "You can shop multiple Black-owned businesses with one checkout."
+      },
+      {
+        "type": "text",
+        "id": "shipping_note_text",
+        "label": "Shipping note text",
+        "default": "Items may ship separately from each brand."
+      },
+      {
+        "type": "text",
+        "id": "trust_line_default",
+        "label": "Default trust line",
+        "default": "This product is from a verified Black-owned business."
+      },
+      {
+        "type": "text",
+        "id": "footer_support_line",
+        "label": "Footer support line",
+        "default": "Supporting Black-owned businesses every day."
+      },
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "url",
+        "id": "social_tiktok",
+        "label": "TikTok URL"
+      },
+      {
+        "type": "text",
+        "id": "sister_site_link_label",
+        "label": "Sister site link label",
+        "default": "Explore Cupcakes + Broccoli"
+      },
+      {
+        "type": "url",
+        "id": "sister_site_link_url",
+        "label": "Sister site link URL"
+      }
+    ]
+  }
+]

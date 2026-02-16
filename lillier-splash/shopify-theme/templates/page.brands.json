@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "hero": {
+      "type": "lillier-story-richtext",
+      "settings": {
+        "eyebrow": "Brands",
+        "heading": "Explore Brands",
+        "body": "<p>Discover independently owned, Black-owned businesses across beauty, home, pantry, style, and gifting.</p>"
+      }
+    },
+    "collections": {
+      "type": "main-list-collections",
+      "settings": {
+        "heading": "Shop by category",
+        "intro": "Every category is curated for quality, design, and everyday utility."
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "collections",
+    "footer"
+  ]
+}

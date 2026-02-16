@@ -1,0 +1,89 @@
+{%- capture cta_content -%}
+  <div class="lillier-closing-cta">
+    <div class="lillier-closing-cta__content">
+      {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+      <h2 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h2>
+      <div class="lillier-closing-cta__media lillier-closing-cta__media-inline-mobile">
+        {%- if section.settings.image_override != blank -%}
+          {% render 'lillier-media', image: section.settings.image_override, alt: section.settings.heading %}
+        {%- else -%}
+          <img
+            src="{{ 'lillier-branding-05.jpg' | asset_url }}"
+            alt="{{ section.settings.heading | default: 'Lillier visual' | escape }}"
+            loading="lazy"
+            width="3000"
+            height="2400"
+          >
+        {%- endif -%}
+      </div>
+      {%- if section.settings.body != blank -%}
+        <p class="lillier-body">{{ section.settings.body }}</p>
+      {%- endif -%}
+      {%- if section.settings.cta_label != blank and section.settings.cta_url != blank -%}
+        {% render 'lillier-button', label: section.settings.cta_label, url: section.settings.cta_url %}
+      {%- endif -%}
+    </div>
+    <div class="lillier-closing-cta__media">
+      {%- if section.settings.image_override != blank -%}
+        {% render 'lillier-media', image: section.settings.image_override, alt: section.settings.heading %}
+      {%- else -%}
+        <img
+          src="{{ 'lillier-branding-05.jpg' | asset_url }}"
+          alt="{{ section.settings.heading | default: 'Lillier visual' | escape }}"
+          loading="lazy"
+          width="3000"
+          height="2400"
+        >
+      {%- endif -%}
+    </div>
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-closing-cta-shell', width: 'lillier-shell--tight', content: cta_content %}
+
+{% schema %}
+{
+  "name": "Lillier Closing CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Stay connected"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop with intention"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Return often for essentials and stories worth sharing."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Start shopping"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_override",
+      "label": "Right image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Closing CTA"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,33 @@
+{%- liquid
+  assign bar_text = section.settings.text | default: settings.global_banner_text
+-%}
+
+{%- if section.settings.show_bar and bar_text != blank -%}
+  <div class="lillier-announcement">
+    <p>{{ bar_text }}</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Lillier Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

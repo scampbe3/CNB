@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "hero": {
+      "type": "lillier-hero-editorial",
+      "settings": {
+        "eyebrow": "About",
+        "heading": "Own Your Joy",
+        "subhead": "Making it easy to support Black-owned businesses every day.",
+        "theme_variant": "cream",
+        "primary_cta_label": "Shop the Collection",
+        "primary_cta_url": "/collections/all"
+      }
+    },
+    "story_one": {
+      "type": "lillier-story-richtext",
+      "settings": {
+        "eyebrow": "Our story",
+        "heading": "Our Story",
+        "body": "<p>Lillier was created to solve a simple problem. People want to support Black-owned businesses, but it is often hard to do consistently.</p><p>Shopping usually means visiting multiple websites, placing separate orders and paying multiple shipping fees. Over time, convenience wins and intention gets lost.</p><p>Lillier brings everything together in one place. One cart. One checkout. Thousands of Black-owned businesses offering the products people actually use every day.</p><p>Buying Black should not require extra effort. It should feel natural, accessible and rewarding.</p>"
+      }
+    },
+    "story_two": {
+      "type": "lillier-story-richtext",
+      "settings": {
+        "eyebrow": "Purpose",
+        "heading": "Why Lillier Exists",
+        "body": "<p>Black-owned businesses face real barriers to distribution, visibility and growth. Even brands with exceptional products struggle to reach customers at scale.</p><p>Lillier exists to change that.</p><p>We are building a retail platform that prioritizes ownership, quality and sustainability. By bringing Black-owned brands together under one roof, we make it easier for customers to shop with intention and for businesses to grow with consistency.</p><p>Every purchase is a vote for ownership. Every cart supports real people and real livelihoods.</p>"
+      }
+    },
+    "story_three": {
+      "type": "lillier-story-richtext",
+      "settings": {
+        "eyebrow": "The name",
+        "heading": "Our Name",
+        "body": "<p>Lillier is named after the founder's grandmother, Lillier Madison.</p><p>She believed that joy was not something handed to you. It was something you had to make for yourself.</p><p>You got to make your own self happy.</p><p>That belief lives at the center of Lillier. Ownership is joy. Independence is joy. Building something of your own is joy.</p>"
+      }
+    },
+    "closing": {
+      "type": "lillier-closing-cta",
+      "settings": {
+        "heading": "Joy Is Something You Own",
+        "body": "Support Black-owned businesses every day through practical, intentional shopping.",
+        "cta_label": "Shop the Collection",
+        "cta_url": "/collections/all"
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "story_one",
+    "story_two",
+    "story_three",
+    "closing",
+    "footer"
+  ]
+}

@@ -1,0 +1,14 @@
+{%- capture page_content -%}
+  <article class="lillier-page">
+    <h1 class="lillier-heading lillier-heading--lg">{{ page.title }}</h1>
+    <div class="lillier-body rte">{{ page.content }}</div>
+  </article>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-page-shell', width: 'lillier-shell--tight', content: page_content %}
+
+{% schema %}
+{
+  "name": "Main Page"
+}
+{% endschema %}

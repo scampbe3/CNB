@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "hero": {
+      "type": "lillier-story-richtext",
+      "settings": {
+        "eyebrow": "Stories",
+        "heading": "Behind Every Brand, a Story",
+        "body": "<p>Lillier spotlights the owners, the build journey, and the values behind the products people buy every day.</p>"
+      }
+    },
+    "rollup": {
+      "type": "lillier-blog-rollup",
+      "settings": {
+        "eyebrow": "Featured",
+        "heading": "Explore More Stories",
+        "article_limit": 6
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "rollup",
+    "footer"
+  ]
+}

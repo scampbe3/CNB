@@ -1,0 +1,4 @@
+{%- assign text_value = text | default: '' -%}
+{%- if text_value != blank -%}
+  <p class="lillier-eyebrow {{ class }}">{{ text_value }}</p>
+{%- endif -%}

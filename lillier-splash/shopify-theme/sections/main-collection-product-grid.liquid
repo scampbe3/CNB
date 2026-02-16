@@ -1,0 +1,42 @@
+{%- paginate collection.products by section.settings.products_per_page -%}
+  {%- capture collection_content -%}
+    {% render 'lillier-eyebrow', text: collection.metafields.custom.editorial_subhead.value %}
+    <h1 class="lillier-heading lillier-heading--lg">{{ collection.title }}</h1>
+    {%- if collection.description != blank -%}
+      <div class="lillier-body rte">{{ collection.description }}</div>
+    {%- endif -%}
+
+    <div class="lillier-product-grid">
+      {%- for product in collection.products -%}
+        {% render 'lillier-product-card', product: product %}
+      {%- else -%}
+        <p>No products found in this collection.</p>
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      <nav aria-label="Pagination">
+        {{ paginate | default_pagination }}
+      </nav>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-collection-shell', content: collection_content %}
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Main Collection Product Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "default": 12,
+      "min": 6,
+      "max": 24,
+      "step": 3
+    }
+  ]
+}
+{% endschema %}

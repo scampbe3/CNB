@@ -1,0 +1,18 @@
+{%- assign media_alt = alt | default: image.alt | default: '' -%}
+{%- assign media_classes = class | default: '' -%}
+{%- assign placeholder_class = 'lillier-media-placeholder ' | append: media_classes -%}
+
+{%- if image != blank -%}
+  {{
+    image
+    | image_url: width: 2400
+    | image_tag:
+      loading: loading | default: 'lazy',
+      widths: '360, 540, 720, 960, 1200, 1600, 2000',
+      sizes: '(min-width: 990px) 50vw, 100vw',
+      class: media_classes,
+      alt: media_alt
+  }}
+{%- else -%}
+  {{ 'image' | placeholder_svg_tag: placeholder_class }}
+{%- endif -%}

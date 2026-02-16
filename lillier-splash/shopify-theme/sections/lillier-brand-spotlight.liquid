@@ -1,0 +1,108 @@
+{%- liquid
+  assign spotlight_image = section.settings.manual_image
+  assign spotlight_title = section.settings.manual_title
+  assign spotlight_excerpt = section.settings.manual_excerpt
+  assign spotlight_url = section.settings.manual_cta_url
+  assign spotlight_cta = section.settings.manual_cta_label
+-%}
+
+{%- capture spotlight_content -%}
+  {%- capture spotlight_detail_content -%}
+    {%- if spotlight_title != blank -%}
+      <h3 class="lillier-heading">{{ spotlight_title }}</h3>
+    {%- endif -%}
+    {%- if spotlight_excerpt != blank -%}
+      <p class="lillier-body">{{ spotlight_excerpt }}</p>
+    {%- endif -%}
+    {%- if spotlight_cta != blank and spotlight_url != blank -%}
+      {% render 'lillier-button', label: spotlight_cta, url: spotlight_url %}
+    {%- endif -%}
+  {%- endcapture -%}
+  <div class="lillier-spotlight">
+    <div class="lillier-spotlight__copy">
+      {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+      <h2 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h2>
+      {%- if section.settings.body != blank -%}
+        <p class="lillier-body">{{ section.settings.body }}</p>
+      {%- endif -%}
+      <div class="lillier-spotlight__detail lillier-spotlight__detail--desktop">
+        {{ spotlight_detail_content }}
+      </div>
+    </div>
+    <div class="lillier-spotlight__media">
+      {% if spotlight_image != blank %}
+        {% render 'lillier-media', image: spotlight_image, alt: spotlight_title %}
+      {% else %}
+        <img
+          src="{{ 'lillier-branding-05.jpg' | asset_url }}"
+          alt="{{ spotlight_title | default: section.settings.heading | escape }}"
+          loading="lazy"
+          width="1200"
+          height="900"
+        >
+      {% endif %}
+    </div>
+    <div class="lillier-spotlight__detail lillier-spotlight__detail--mobile">
+      {{ spotlight_detail_content }}
+    </div>
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-spotlight-shell', content: spotlight_content %}
+
+{% schema %}
+{
+  "name": "Lillier Brand Spotlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Featured story"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet the maker"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Stories help you discover the values and people behind each product."
+    },
+    {
+      "type": "image_picker",
+      "id": "manual_image",
+      "label": "Manual image"
+    },
+    {
+      "type": "text",
+      "id": "manual_title",
+      "label": "Manual title"
+    },
+    {
+      "type": "textarea",
+      "id": "manual_excerpt",
+      "label": "Manual excerpt"
+    },
+    {
+      "type": "text",
+      "id": "manual_cta_label",
+      "label": "Manual CTA label",
+      "default": "Read story"
+    },
+    {
+      "type": "url",
+      "id": "manual_cta_url",
+      "label": "Manual CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Brand Spotlight"
+    }
+  ]
+}
+{% endschema %}

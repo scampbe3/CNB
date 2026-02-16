@@ -1,0 +1,66 @@
+name: Lillier Sheet Sync
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - lillier_sheet_dirty
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate secret configuration
+        env:
+          CSV_URL: ${{ secrets.LILLIER_SHEET_CSV_URL }}
+        run: |
+          if [ -z "$CSV_URL" ]; then
+            echo "Missing repository secret: LILLIER_SHEET_CSV_URL"
+            exit 1
+          fi
+
+      - name: Download published sheet CSV
+        env:
+          CSV_URL: ${{ secrets.LILLIER_SHEET_CSV_URL }}
+        run: |
+          curl -fsSL "$CSV_URL" -o data/lillier-homepage-content-table.csv
+
+      - name: Import and sync
+        run: |
+          perl scripts/lillier-content-pipeline.pl import-csv \
+            --in data/lillier-homepage-content-table.csv \
+            --out data/lillier-homepage-content-table.json
+
+          perl scripts/lillier-content-pipeline.pl sync \
+            --table data/lillier-homepage-content-table.json \
+            --template lillier-splash/shopify-theme/templates/index.json \
+            --settings lillier-splash/shopify-theme/config/settings_data.json
+
+      - name: Commit and push when changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/lillier-homepage-content-table.csv \
+            data/lillier-homepage-content-table.json \
+            lillier-splash/shopify-theme/templates/index.json \
+            lillier-splash/shopify-theme/config/settings_data.json
+
+          if git diff --cached --quiet; then
+            echo "No sheet-driven content changes."
+            exit 0
+          fi
+
+          git commit -m "chore(lillier): sync homepage content from Google Sheet"
+          git push

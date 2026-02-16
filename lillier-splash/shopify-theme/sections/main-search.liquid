@@ -1,0 +1,50 @@
+{%- capture search_content -%}
+  <h1 class="lillier-heading lillier-heading--lg">Search</h1>
+
+  <form action="{{ routes.search_url }}" method="get" role="search">
+    <label class="visually-hidden" for="SearchInput">Search</label>
+    <input
+      id="SearchInput"
+      type="search"
+      name="q"
+      value="{{ search.terms | escape }}"
+      placeholder="Search products, stories, and pages"
+    >
+    <button class="lillier-btn lillier-btn--primary" type="submit">Search</button>
+  </form>
+
+  {%- if search.performed -%}
+    <p class="lillier-body">
+      {{ search.results_count }} result{% if search.results_count != 1 %}s{% endif %} for "{{ search.terms }}"
+    </p>
+    <div class="lillier-product-grid">
+      {%- for item in search.results -%}
+        <article class="lillier-category-card">
+          <a class="lillier-category-card__media" href="{{ item.url }}">
+            {%- if item.featured_image != blank -%}
+              {% render 'lillier-media', image: item.featured_image, alt: item.title %}
+            {%- elsif item.image != blank -%}
+              {% render 'lillier-media', image: item.image, alt: item.title %}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag }}
+            {%- endif -%}
+          </a>
+          <div class="lillier-category-card__body">
+            <p class="lillier-eyebrow">{{ item.object_type }}</p>
+            <h2 class="lillier-heading"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+          </div>
+        </article>
+      {%- else -%}
+        <p class="lillier-body">No results found.</p>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-search-shell', content: search_content %}
+
+{% schema %}
+{
+  "name": "Main Search"
+}
+{% endschema %}

@@ -1,0 +1,19 @@
+:root {
+  --lillier-gold: #d8a300;
+  --lillier-ink: #121212;
+  --lillier-cream: #f8f3e7;
+  --lillier-page-bg: #d8a300;
+  --lillier-muted: #5f5b52;
+  --lillier-border: #ddd5c7;
+  --lillier-radius: 1.25rem;
+  --lillier-space-1: 0.5rem;
+  --lillier-space-2: 0.75rem;
+  --lillier-space-3: 1rem;
+  --lillier-space-4: 1.5rem;
+  --lillier-space-5: 2rem;
+  --lillier-space-6: 3rem;
+  --lillier-space-7: 4rem;
+  --lillier-shell-max: 1280px;
+  --lillier-font-display: "IvyPresto Display", "Canela", "Times New Roman", serif;
+  --lillier-font-body: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

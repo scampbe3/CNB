@@ -1,0 +1,42 @@
+{%- paginate blog.articles by section.settings.articles_per_page -%}
+  {%- capture blog_content -%}
+    <h1 class="lillier-heading lillier-heading--lg">{{ blog.title }}</h1>
+    <div class="lillier-product-grid">
+      {%- for article in blog.articles -%}
+        <article class="lillier-category-card">
+          <a class="lillier-category-card__media" href="{{ article.url }}">
+            {% render 'lillier-media', image: article.image, alt: article.title %}
+          </a>
+          <div class="lillier-category-card__body">
+            <h2 class="lillier-heading"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+            <p class="lillier-body">{{ article.excerpt | strip_html | truncate: 120 }}</p>
+          </div>
+        </article>
+      {%- else -%}
+        <p>No stories yet.</p>
+      {%- endfor -%}
+    </div>
+    {%- if paginate.pages > 1 -%}
+      <nav aria-label="Pagination">{{ paginate | default_pagination }}</nav>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-blog-shell', content: blog_content %}
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Main Blog",
+  "settings": [
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "label": "Articles per page",
+      "default": 6,
+      "min": 3,
+      "max": 12,
+      "step": 3
+    }
+  ]
+}
+{% endschema %}

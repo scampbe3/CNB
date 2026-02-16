@@ -1,0 +1,82 @@
+{%- capture difference_content -%}
+  {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+  <h2 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h2>
+  {%- if section.settings.body != blank -%}
+    <p class="lillier-body">{{ section.settings.body }}</p>
+  {%- endif -%}
+  <div class="lillier-difference-grid">
+    {%- for block in section.blocks -%}
+      <article class="lillier-difference-card" {{ block.shopify_attributes }}>
+        {{ block.settings.point_text }}
+      </article>
+    {%- else -%}
+      <article class="lillier-difference-card">Add difference points in Theme Editor.</article>
+    {%- endfor -%}
+  </div>
+  {%- if section.settings.primary_cta_label != blank and section.settings.primary_cta_url != blank -%}
+    <div class="lillier-btn-group">
+      {% render 'lillier-button', label: section.settings.primary_cta_label, url: section.settings.primary_cta_url %}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-difference-shell', content: difference_content %}
+
+{% schema %}
+{
+  "name": "Lillier Difference Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Why Lillier"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "More than a marketplace"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body"
+    },
+    {
+      "type": "text",
+      "id": "primary_cta_label",
+      "label": "Primary CTA label"
+    },
+    {
+      "type": "url",
+      "id": "primary_cta_url",
+      "label": "Primary CTA URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "difference_point",
+      "name": "Difference point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "point_text",
+          "label": "Point text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Lillier Difference Grid",
+      "blocks": [
+        { "type": "difference_point", "settings": { "point_text": "Curated with care, not volume." } },
+        { "type": "difference_point", "settings": { "point_text": "Built for repeat buying and discovery." } },
+        { "type": "difference_point", "settings": { "point_text": "Centering Black-owned brands with intention." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "heading": "Shop by category",
+        "intro": "Find everything you need from Black-owned businesses across beauty, home, pantry, style, and gifts."
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "main",
+    "footer"
+  ]
+}

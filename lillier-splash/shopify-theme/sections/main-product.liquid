@@ -1,0 +1,53 @@
+{%- capture product_content -%}
+  <div class="lillier-product-layout">
+    <div class="lillier-product-gallery">
+      {% if product.featured_image != blank %}
+        {% render 'lillier-media', image: product.featured_image, alt: product.title %}
+      {% endif %}
+      {%- for media in product.media limit: 4 -%}
+        {%- if media.media_type == 'image' -%}
+          {% render 'lillier-media', image: media.preview_image, alt: product.title %}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <div class="lillier-product-details">
+      <h1 class="lillier-heading lillier-heading--lg">{{ product.title }}</h1>
+      <p class="lillier-body">{{ product.price | money }}</p>
+      {%- if product.metafields.custom.brand_name_override.value != blank -%}
+        <p class="lillier-body">Brand: {{ product.metafields.custom.brand_name_override.value }}</p>
+      {%- endif -%}
+      <div class="lillier-body rte">{{ product.description }}</div>
+
+      {%- form 'product', product -%}
+        {%- if product.has_only_default_variant == false -%}
+          <label for="variant">Variant</label>
+          <select name="id" id="variant">
+            {%- for variant in product.variants -%}
+              <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {%- endfor -%}
+          </select>
+        {%- else -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {%- endif -%}
+        <button class="lillier-btn lillier-btn--primary" type="submit" {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}Add to cart{% else %}Sold out{% endif %}
+        </button>
+      {%- endform -%}
+
+      {% render 'lillier-trust-line' %}
+      {%- if settings.shipping_note_text != blank -%}
+        <p class="lillier-body">{{ settings.shipping_note_text }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-product-shell', content: product_content %}
+
+{% schema %}
+{
+  "name": "Main Product"
+}
+{% endschema %}

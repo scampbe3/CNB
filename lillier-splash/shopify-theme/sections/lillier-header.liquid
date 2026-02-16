@@ -1,0 +1,119 @@
+{%- assign nav_id = 'lillier-header-nav-' | append: section.id -%}
+{%- assign has_menu_links = false -%}
+{%- if section.settings.menu != blank and section.settings.menu.links.size > 0 -%}
+  {%- assign has_menu_links = true -%}
+{%- endif -%}
+{%- capture header_content -%}
+  <header class="lillier-header" data-lillier-header>
+    <div class="lillier-header__inner">
+      <a class="lillier-logo" href="{{ routes.root_url }}">
+        {%- if section.settings.logo != blank -%}
+          {{
+            section.settings.logo
+            | image_url: width: 400
+            | image_tag:
+              loading: 'eager',
+              class: 'lillier-logo-image',
+              alt: section.settings.logo_alt | default: shop.name
+          }}
+        {%- else -%}
+          <img
+            src="{{ 'lillier-logo-large.png' | asset_url }}"
+            alt="{{ section.settings.logo_alt | default: shop.name }}"
+            class="lillier-logo-image lillier-logo-image--fallback"
+            loading="eager"
+            width="420"
+            height="160"
+          >
+        {%- endif -%}
+      </a>
+
+      <div class="lillier-header__menu-area">
+        <button
+          class="lillier-header__menu lillier-header__menu--left"
+          type="button"
+          data-lillier-menu-toggle
+          aria-expanded="false"
+          aria-controls="{{ nav_id }}"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+        <div class="lillier-header__nav-panel" id="{{ nav_id }}" data-lillier-menu-panel>
+          <nav class="lillier-header__nav" aria-label="Primary">
+            {%- if has_menu_links -%}
+              {%- for link in section.settings.menu.links -%}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {%- endfor -%}
+            {%- else -%}
+              <a href="{{ routes.root_url }}">Home</a>
+              <a href="/collections/all">Shop</a>
+              <a href="/pages/about">About</a>
+              <a href="/pages/brands">Brands</a>
+              <a href="/pages/stories">Stories</a>
+              <a href="/pages/contact">Contact</a>
+            {%- endif -%}
+          </nav>
+        </div>
+      </div>
+
+      <div class="lillier-header__utility" aria-label="Site utility">
+        <div class="lillier-header__utility-row">
+          <a class="lillier-header__cart" href="{{ routes.cart_url }}" aria-label="Cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 7h12l-1.2 11H7.2L6 7Z" />
+              <path d="M9 7a3 3 0 1 1 6 0" />
+            </svg>
+          </a>
+        </div>
+        <form class="lillier-header__search" action="{{ routes.search_url }}" method="get" role="search">
+          <label class="visually-hidden" for="lillier-header-search-{{ section.id }}">Search</label>
+          <input
+            id="lillier-header-search-{{ section.id }}"
+            name="q"
+            type="search"
+            autocomplete="off"
+            placeholder="{{ settings.global_banner_text | default: 'Shop Black. Every day. All in one cart.' | escape }}"
+          >
+        </form>
+      </div>
+    </div>
+  </header>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-header-shell', content: header_content %}
+
+{% schema %}
+{
+  "name": "Lillier Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "logo_alt",
+      "label": "Logo alt text",
+      "default": "Lillier"
+    },
+    {
+      "type": "text",
+      "id": "logo_wordmark",
+      "label": "Fallback wordmark",
+      "default": "LILLIER"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Navigation menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Header"
+    }
+  ]
+}
+{% endschema %}

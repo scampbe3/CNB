@@ -1,0 +1,53 @@
+{%- capture richtext_content -%}
+  {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+  {%- if section.settings.heading != blank -%}
+    <h2 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+  <div class="lillier-body rte">{{ section.settings.body }}</div>
+  {%- if section.settings.cta_label != blank and section.settings.cta_url != blank -%}
+    <div class="lillier-btn-group">
+      {% render 'lillier-button', label: section.settings.cta_label, url: section.settings.cta_url, variant: 'secondary' %}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-story-richtext-shell', width: 'lillier-shell--tight', content: richtext_content %}
+
+{% schema %}
+{
+  "name": "Lillier Story Richtext",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Add narrative copy here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Story Richtext"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,18 @@
+{%- capture not_found_content -%}
+  <div class="lillier-404">
+    <h1 class="lillier-heading lillier-heading--lg">Not found</h1>
+    <p class="lillier-body">The page you were looking for does not exist.</p>
+    <div class="lillier-btn-group">
+      {% render 'lillier-button', label: 'Go home', url: routes.root_url %}
+      {% render 'lillier-button', label: 'Search', url: routes.search_url, variant: 'secondary' %}
+    </div>
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-404-shell', width: 'lillier-shell--tight', content: not_found_content %}
+
+{% schema %}
+{
+  "name": "Main 404"
+}
+{% endschema %}

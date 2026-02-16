@@ -1,0 +1,50 @@
+{%- liquid
+  assign footer_line = section.settings.footer_line_override | default: settings.footer_support_line
+-%}
+
+{%- capture footer_content -%}
+  <footer class="lillier-footer">
+    <div class="lillier-footer__inner">
+      <div>
+        <p>{{ shop.name }}</p>
+      </div>
+      <div>
+        {% render 'lillier-trust-line' %}
+      </div>
+      <div>
+        {%- if footer_line != blank -%}
+          <p>{{ footer_line }}</p>
+        {%- endif -%}
+        {%- if section.settings.show_sister_link and settings.sister_site_link_label != blank and settings.sister_site_link_url != blank -%}
+          <p><a href="{{ settings.sister_site_link_url }}">{{ settings.sister_site_link_label }}</a></p>
+        {%- endif -%}
+      </div>
+    </div>
+  </footer>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-footer-shell', content: footer_content %}
+
+{% schema %}
+{
+  "name": "Lillier Footer Utility",
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_line_override",
+      "label": "Footer line override"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sister_link",
+      "label": "Show sister site link",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Footer Utility"
+    }
+  ]
+}
+{% endschema %}

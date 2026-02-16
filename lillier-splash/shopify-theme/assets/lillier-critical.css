@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  background: var(--lillier-cream);
+  color: var(--lillier-ink);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--lillier-font-body);
+  line-height: 1.5;
+}
+
+.lillier-main-content {
+  min-height: 100svh;
+}

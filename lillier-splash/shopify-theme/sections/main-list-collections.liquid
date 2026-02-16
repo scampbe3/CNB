@@ -1,0 +1,61 @@
+{%- capture list_collections_content -%}
+  {%- if section.settings.heading != blank -%}
+    <h1 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h1>
+  {%- endif -%}
+  {%- if section.settings.intro != blank -%}
+    <p class="lillier-body">{{ section.settings.intro }}</p>
+  {%- endif -%}
+
+  <div class="lillier-category-grid">
+    {%- for collection in collections -%}
+      {%- if collection.handle != 'frontpage' -%}
+        <article class="lillier-category-card">
+          <a class="lillier-category-card__media" href="{{ collection.url }}">
+            {% if collection.featured_image != blank %}
+              {% render 'lillier-media', image: collection.featured_image, alt: collection.title %}
+            {% else %}
+              {{ 'collection-1' | placeholder_svg_tag }}
+            {% endif %}
+          </a>
+          <div class="lillier-category-card__body">
+            <h2 class="lillier-heading">
+              <a href="{{ collection.url }}">{{ collection.title }}</a>
+            </h2>
+            {%- if collection.description != blank -%}
+              <p class="lillier-body">{{ collection.description | strip_html | truncate: 120 }}</p>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endif -%}
+    {%- else -%}
+      <article class="lillier-category-card">
+        <div class="lillier-category-card__body">
+          <h2 class="lillier-heading">No collections yet</h2>
+          <p class="lillier-body">Create collections in Shopify admin to populate this page.</p>
+        </div>
+      </article>
+    {%- endfor -%}
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-list-collections-shell', content: list_collections_content %}
+
+{% schema %}
+{
+  "name": "Main List Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Browse all collections"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro",
+      "default": "Explore curated categories across beauty, home, pantry, style, and gifts."
+    }
+  ]
+}
+{% endschema %}

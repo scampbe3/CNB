@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "header": {
+      "type": "lillier-header",
+      "settings": {
+        "logo_wordmark": "LILLIER"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "articles_per_page": 6
+      }
+    },
+    "footer": {
+      "type": "lillier-footer-utility",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "main",
+    "footer"
+  ]
+}

@@ -1,0 +1,20 @@
+{%- capture article_content -%}
+  <article class="lillier-article">
+    <p class="lillier-eyebrow">{{ article.published_at | date: "%B %d, %Y" }}</p>
+    <h1 class="lillier-heading lillier-heading--lg">{{ article.title }}</h1>
+    {% if article.image != blank %}
+      <div class="lillier-article__media">
+        {% render 'lillier-media', image: article.image, alt: article.title %}
+      </div>
+    {% endif %}
+    <div class="lillier-body rte">{{ article.content }}</div>
+  </article>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-article-shell', width: 'lillier-shell--tight', content: article_content %}
+
+{% schema %}
+{
+  "name": "Main Article"
+}
+{% endschema %}

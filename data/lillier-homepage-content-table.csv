@@ -1,0 +1,44 @@
+section,field,value,link,notes
+Global,Banner text,Shop Black. Every day. All in one cart.,,
+Global,Cart helper text,You can shop multiple Black-owned businesses with one checkout.,,
+Global,Shipping note text,Items may ship separately from each brand.,,
+Global,Trust line default,This product is from a verified Black-owned business.,,
+Global,Footer support line,Supporting Black-owned businesses every day.,,
+Announcement,Show bar,true,,true/false
+Hero,Eyebrow,Lillier,,
+Hero,Title,Own Your Joy,,
+Hero,Subhead,Shop Black. Every day. All in one cart.,,
+Hero,Body,"Lillier is the one-stop marketplace for high-quality products from Black-owned businesses. From household essentials to beauty, food and style, we make it easy to shop Black daily. Every purchase supports ownership, independence and the next generation of Black entrepreneurs.",,plain text ok; sync wraps as richtext
+Hero,CTA 1,Shop New Arrivals,/collections/new-arrivals,primary
+Hero,CTA 2,Explore Brands,/pages/brands,secondary
+Hero,Theme variant,ink,,gold|cream|ink
+Categories,Eyebrow,Shop by category,,
+Categories,Title,Shop by Category,,
+Categories,Intro,"Find everything you need and everything you did not know you needed from Black-owned businesses across beauty, home, pantry and style. Every brand you see is independently owned and carefully vetted for quality, design and integrity.",,
+Categories,CTA,Browse All Collections,/collections,
+Categories,Category 1,Household Essentials,,
+Categories,Category 2,Beauty and Personal Care,,
+Categories,Category 3,Food and Beverage,,
+Categories,Category 4,Home and Decor,,
+Categories,Category 5,Fashion and Accessories,,
+Categories,Category 6,Gifts and Stationery,,
+Spotlight,Eyebrow,Featured story,,
+Spotlight,Title,"Behind Every Brand, a Story",,
+Spotlight,Body,"Lillier was built to make Black ownership visible and sustainable. Each month, we spotlight a featured brand and the business owner behind it, sharing how they built, what drives them and where they are headed next.",,
+Spotlight,Story title,Featured Brand Story,,
+Spotlight,Story excerpt,Use this area to highlight one founder story each month.,,
+Spotlight,CTA,Explore More Stories,/pages/stories,
+Difference,Eyebrow,The Lillier Difference,,
+Difference,Title,More Than a Marketplace,,
+Difference,Body,"Lillier is a retail platform designed to support Black-owned businesses beyond the checkout. Through visibility, distribution and long-term investment, we help brands grow while giving customers a simple way to buy Black every day.",,
+Difference,Point 1,One cart checkout across multiple Black-owned brands,,
+Difference,Point 2,Thousands of verified Black-owned businesses,,
+Difference,Point 3,Everyday essentials alongside special finds,,
+Difference,Point 4,Built for scale and sustainability,,
+Difference,CTA,Learn More About Lillier,/pages/about,
+Closing,Eyebrow,Closing,,
+Closing,Title,Every Cart Is a Contribution,,
+Closing,Body,"Every order helps a Black-owned business grow. Together, we are proving that joy and ownership belong in the same sentence.",,
+Closing,CTA,Shop Now,/collections/all,
+Footer,Show sister link,true,,true/false
+Footer,Footer line override,,,leave blank to use Global > Footer support line

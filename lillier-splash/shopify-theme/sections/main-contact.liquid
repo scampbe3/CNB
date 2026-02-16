@@ -1,0 +1,49 @@
+{%- capture contact_content -%}
+  <h1 class="lillier-heading lillier-heading--lg">{{ section.settings.heading }}</h1>
+  {%- if section.settings.body != blank -%}
+    <p class="lillier-body">{{ section.settings.body }}</p>
+  {%- endif -%}
+
+  {%- form 'contact', class: 'lillier-contact-form' -%}
+    {%- if form.posted_successfully? -%}
+      <p class="lillier-body">Thanks. We received your message.</p>
+    {%- endif -%}
+    {{ form.errors | default_errors }}
+
+    <p>
+      <label for="ContactFormName">Name</label><br>
+      <input id="ContactFormName" type="text" name="contact[name]" value="{{ form.name }}">
+    </p>
+    <p>
+      <label for="ContactFormEmail">Email</label><br>
+      <input id="ContactFormEmail" type="email" name="contact[email]" value="{{ form.email }}" required>
+    </p>
+    <p>
+      <label for="ContactFormMessage">Message</label><br>
+      <textarea id="ContactFormMessage" name="contact[body]" rows="8">{{ form.body }}</textarea>
+    </p>
+    <button class="lillier-btn lillier-btn--primary" type="submit">Send</button>
+  {%- endform -%}
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-main-contact-shell', width: 'lillier-shell--tight', content: contact_content %}
+
+{% schema %}
+{
+  "name": "Main Contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Contact"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Questions, brand inquiries, or partnership ideas? Send us a message."
+    }
+  ]
+}
+{% endschema %}

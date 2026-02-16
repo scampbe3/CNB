@@ -1,0 +1,312 @@
+{
+   "columns" : [
+      "section",
+      "field",
+      "value",
+      "link",
+      "notes"
+   ],
+   "rows" : [
+      {
+         "field" : "Banner text",
+         "link" : "",
+         "notes" : "",
+         "section" : "Global",
+         "value" : "Shop Black. Every day. All in one cart."
+      },
+      {
+         "field" : "Cart helper text",
+         "link" : "",
+         "notes" : "",
+         "section" : "Global",
+         "value" : "You can shop multiple Black-owned businesses with one checkout."
+      },
+      {
+         "field" : "Shipping note text",
+         "link" : "",
+         "notes" : "",
+         "section" : "Global",
+         "value" : "Items may ship separately from each brand."
+      },
+      {
+         "field" : "Trust line default",
+         "link" : "",
+         "notes" : "",
+         "section" : "Global",
+         "value" : "This product is from a verified Black-owned business."
+      },
+      {
+         "field" : "Footer support line",
+         "link" : "",
+         "notes" : "",
+         "section" : "Global",
+         "value" : "Supporting Black-owned businesses every day."
+      },
+      {
+         "field" : "Show bar",
+         "link" : "",
+         "notes" : "true/false",
+         "section" : "Announcement",
+         "value" : "true"
+      },
+      {
+         "field" : "Eyebrow",
+         "link" : "",
+         "notes" : "",
+         "section" : "Hero",
+         "value" : "Lillier"
+      },
+      {
+         "field" : "Title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Hero",
+         "value" : "Own Your Joy"
+      },
+      {
+         "field" : "Subhead",
+         "link" : "",
+         "notes" : "",
+         "section" : "Hero",
+         "value" : "Shop Black. Every day. All in one cart."
+      },
+      {
+         "field" : "Body",
+         "link" : "",
+         "notes" : "plain text ok; sync wraps as richtext",
+         "section" : "Hero",
+         "value" : "Lillier is the one-stop marketplace for high-quality products from Black-owned businesses. From household essentials to beauty, food and style, we make it easy to shop Black daily. Every purchase supports ownership, independence and the next generation of Black entrepreneurs."
+      },
+      {
+         "field" : "CTA 1",
+         "link" : "/collections/new-arrivals",
+         "notes" : "primary",
+         "section" : "Hero",
+         "value" : "Shop New Arrivals"
+      },
+      {
+         "field" : "CTA 2",
+         "link" : "/pages/brands",
+         "notes" : "secondary",
+         "section" : "Hero",
+         "value" : "Explore Brands"
+      },
+      {
+         "field" : "Theme variant",
+         "link" : "",
+         "notes" : "gold|cream|ink",
+         "section" : "Hero",
+         "value" : "ink"
+      },
+      {
+         "field" : "Eyebrow",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Shop by category"
+      },
+      {
+         "field" : "Title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Shop by Category"
+      },
+      {
+         "field" : "Intro",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Find everything you need and everything you did not know you needed from Black-owned businesses across beauty, home, pantry and style. Every brand you see is independently owned and carefully vetted for quality, design and integrity."
+      },
+      {
+         "field" : "CTA",
+         "link" : "/collections",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Browse All Collections"
+      },
+      {
+         "field" : "Category 1",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Household Essentials"
+      },
+      {
+         "field" : "Category 2",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Beauty and Personal Care"
+      },
+      {
+         "field" : "Category 3",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Food and Beverage"
+      },
+      {
+         "field" : "Category 4",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Home and Decor"
+      },
+      {
+         "field" : "Category 5",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Fashion and Accessories"
+      },
+      {
+         "field" : "Category 6",
+         "link" : "",
+         "notes" : "",
+         "section" : "Categories",
+         "value" : "Gifts and Stationery"
+      },
+      {
+         "field" : "Eyebrow",
+         "link" : "",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Featured story"
+      },
+      {
+         "field" : "Title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Behind Every Brand, a Story"
+      },
+      {
+         "field" : "Body",
+         "link" : "",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Lillier was built to make Black ownership visible and sustainable. Each month, we spotlight a featured brand and the business owner behind it, sharing how they built, what drives them and where they are headed next."
+      },
+      {
+         "field" : "Story title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Featured Brand Story"
+      },
+      {
+         "field" : "Story excerpt",
+         "link" : "",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Use this area to highlight one founder story each month."
+      },
+      {
+         "field" : "CTA",
+         "link" : "/pages/stories",
+         "notes" : "",
+         "section" : "Spotlight",
+         "value" : "Explore More Stories"
+      },
+      {
+         "field" : "Eyebrow",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "The Lillier Difference"
+      },
+      {
+         "field" : "Title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "More Than a Marketplace"
+      },
+      {
+         "field" : "Body",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "Lillier is a retail platform designed to support Black-owned businesses beyond the checkout. Through visibility, distribution and long-term investment, we help brands grow while giving customers a simple way to buy Black every day."
+      },
+      {
+         "field" : "Point 1",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "One cart checkout across multiple Black-owned brands"
+      },
+      {
+         "field" : "Point 2",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "Thousands of verified Black-owned businesses"
+      },
+      {
+         "field" : "Point 3",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "Everyday essentials alongside special finds"
+      },
+      {
+         "field" : "Point 4",
+         "link" : "",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "Built for scale and sustainability"
+      },
+      {
+         "field" : "CTA",
+         "link" : "/pages/about",
+         "notes" : "",
+         "section" : "Difference",
+         "value" : "Learn More About Lillier"
+      },
+      {
+         "field" : "Eyebrow",
+         "link" : "",
+         "notes" : "",
+         "section" : "Closing",
+         "value" : "Closing"
+      },
+      {
+         "field" : "Title",
+         "link" : "",
+         "notes" : "",
+         "section" : "Closing",
+         "value" : "Every Cart Is a Contribution"
+      },
+      {
+         "field" : "Body",
+         "link" : "",
+         "notes" : "",
+         "section" : "Closing",
+         "value" : "Every order helps a Black-owned business grow. Together, we are proving that joy and ownership belong in the same sentence."
+      },
+      {
+         "field" : "CTA",
+         "link" : "/collections/all",
+         "notes" : "",
+         "section" : "Closing",
+         "value" : "Shop Now"
+      },
+      {
+         "field" : "Show sister link",
+         "link" : "",
+         "notes" : "true/false",
+         "section" : "Footer",
+         "value" : "true"
+      },
+      {
+         "field" : "Footer line override",
+         "link" : "",
+         "notes" : "leave blank to use Global > Footer support line",
+         "section" : "Footer",
+         "value" : ""
+      }
+   ]
+}

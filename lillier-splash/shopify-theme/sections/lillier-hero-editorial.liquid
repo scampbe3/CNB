@@ -1,0 +1,178 @@
+{%- liquid
+  assign variant_class = 'lillier-hero--' | append: section.settings.theme_variant
+  assign focus_x = section.settings.media_focus_x | append: '%'
+  assign focus_y = section.settings.media_focus_y | append: '%'
+  assign fallback_media = 'lillier-branding-03.jpg'
+-%}
+
+{%- capture hero_content -%}
+  <div class="lillier-hero {{ variant_class }}">
+    <div class="lillier-hero__grid">
+      <div class="lillier-hero__copy">
+        {% render 'lillier-eyebrow', text: section.settings.eyebrow %}
+        <h1 class="lillier-heading lillier-heading--xl">{{ section.settings.heading }}</h1>
+        {%- if section.settings.subhead != blank -%}
+          <p class="lillier-body">{{ section.settings.subhead }}</p>
+        {%- endif -%}
+        <div class="lillier-hero__media lillier-hero__media-inline-mobile" style="--focus-x: {{ focus_x }}; --focus-y: {{ focus_y }};">
+          {% if section.settings.media_mobile != blank %}
+            {% render 'lillier-media', image: section.settings.media_mobile, class: 'lillier-hero__media-inline-mobile-image', alt: section.settings.heading, loading: 'eager' %}
+          {% elsif section.settings.media_desktop != blank %}
+            {% render 'lillier-media', image: section.settings.media_desktop, class: 'lillier-hero__media-inline-mobile-image', alt: section.settings.heading, loading: 'eager' %}
+          {% else %}
+            <img
+              src="{{ fallback_media | asset_url }}"
+              alt="{{ section.settings.heading | escape }}"
+              class="lillier-hero__media-inline-mobile-image"
+              loading="eager"
+              width="1200"
+              height="900"
+            >
+          {% endif %}
+        </div>
+        {%- if section.settings.body != blank -%}
+          <div class="lillier-body rte">{{ section.settings.body }}</div>
+        {%- endif -%}
+        <div class="lillier-btn-group">
+          {%- if section.settings.primary_cta_label != blank and section.settings.primary_cta_url != blank -%}
+            {% render 'lillier-button', label: section.settings.primary_cta_label, url: section.settings.primary_cta_url, variant: 'primary' %}
+          {%- endif -%}
+          {%- if section.settings.secondary_cta_label != blank and section.settings.secondary_cta_url != blank -%}
+            {% render 'lillier-button', label: section.settings.secondary_cta_label, url: section.settings.secondary_cta_url, variant: 'secondary' %}
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="lillier-hero__media" style="--focus-x: {{ focus_x }}; --focus-y: {{ focus_y }};">
+        {% if section.settings.media_mobile != blank %}
+          {% render 'lillier-media', image: section.settings.media_mobile, class: 'lillier-hero__media-mobile', alt: section.settings.heading, loading: 'eager' %}
+        {% elsif section.settings.media_desktop != blank %}
+          {% render 'lillier-media', image: section.settings.media_desktop, class: 'lillier-hero__media-mobile', alt: section.settings.heading, loading: 'eager' %}
+        {% else %}
+          <img
+            src="{{ fallback_media | asset_url }}"
+            alt="{{ section.settings.heading | escape }}"
+            class="lillier-hero__media-mobile"
+            loading="eager"
+            width="1200"
+            height="900"
+          >
+        {% endif %}
+
+        {% if section.settings.media_desktop != blank %}
+          {% render 'lillier-media', image: section.settings.media_desktop, class: 'lillier-hero__media-desktop', alt: section.settings.heading, loading: 'eager' %}
+        {% elsif section.settings.media_mobile != blank %}
+          {% render 'lillier-media', image: section.settings.media_mobile, class: 'lillier-hero__media-desktop', alt: section.settings.heading, loading: 'eager' %}
+        {% else %}
+          <img
+            src="{{ fallback_media | asset_url }}"
+            alt="{{ section.settings.heading | escape }}"
+            class="lillier-hero__media-desktop"
+            loading="eager"
+            width="1200"
+            height="900"
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{%- endcapture -%}
+
+{% render 'lillier-section-shell', section_id: section.id, classes: 'lillier-hero-shell', content: hero_content %}
+
+{% schema %}
+{
+  "name": "Lillier Hero Editorial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Lillier"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Own your joy."
+    },
+    {
+      "type": "textarea",
+      "id": "subhead",
+      "label": "Subhead",
+      "default": "A curated destination for joyful, intentional shopping."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Shop by need, discover by story, and support exceptional makers.</p>"
+    },
+    {
+      "type": "text",
+      "id": "primary_cta_label",
+      "label": "Primary CTA label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "primary_cta_url",
+      "label": "Primary CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_cta_label",
+      "label": "Secondary CTA label",
+      "default": "Read stories"
+    },
+    {
+      "type": "url",
+      "id": "secondary_cta_url",
+      "label": "Secondary CTA URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_desktop",
+      "label": "Desktop media"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_mobile",
+      "label": "Mobile media"
+    },
+    {
+      "type": "range",
+      "id": "media_focus_x",
+      "label": "Media focus X",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "media_focus_y",
+      "label": "Media focus Y",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "select",
+      "id": "theme_variant",
+      "label": "Theme variant",
+      "default": "gold",
+      "options": [
+        { "value": "gold", "label": "Gold" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "ink", "label": "Ink" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lillier Hero Editorial"
+    }
+  ]
+}
+{% endschema %}
