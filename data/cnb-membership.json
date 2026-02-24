@@ -1,27 +1,62 @@
 {
   "page": "membership",
-  "version": "2026-01-membership-v1",
+  "version": "2026-02-membership-v2-decision-room",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -29,11 +64,23 @@
       "id": "hero",
       "type": "hero",
       "note": "Membership",
-      "title": "Choose Your Membership",
-      "subhead": "Steady guidance or deeper access, depending on where you are now.",
+      "title": "The Decision Room",
+      "subhead": "$39 per month",
       "body": [
-        "Core Membership offers steady guidance and practical tools.",
-        "Premium Membership offers deeper access, closer connection, and priority opportunities."
+        "The Decision Room is the membership for Black founders who want stronger decisions and steadier momentum.",
+        "No tiers. No layered access logic. You are either in the room or not."
+      ],
+      "ctas": [
+        {
+          "label": "Join The Decision Room",
+          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
+          "variant": "primary"
+        },
+        {
+          "label": "Member Login",
+          "href": "/login",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
@@ -42,254 +89,83 @@
       "theme": "light"
     },
     {
-      "id": "membership-options",
-      "type": "tiers",
-      "layout": "image-left",
-      "variant": "stacked",
-      "image": {
-        "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg",
-        "alt": "Portrait with patterned textiles."
-      },
-      "tiers": [
-        {
-          "title": "Core Membership",
-          "price": "$25 per month",
-          "summary": "Steady guidance and practical tools"
-        },
-        {
-          "title": "Premium Membership",
-          "price": "$59 per month",
-          "summary": "Deeper access, closer connection, and priority opportunities",
-          "featured": true
-        }
-      ],
-      "ctas": [
-        { "label": "Join Membership", "href": "#membership-tiers", "variant": "primary" },
-        { "label": "Compare Membership Options", "href": "#membership-tiers", "variant": "ghost" }
-      ],
-      "theme": "paper"
-    },
-    {
-      "id": "built-around",
+      "id": "what-it-includes",
       "type": "feature",
-      "eyebrow": "Membership",
-      "title": "Membership Built Around Black Founders",
-      "image": {
-        "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565225290_01-Camo-36.jpg",
-        "alt": "Portrait layered with camo-inspired textiles."
-      },
-      "layout": "image-right",
+      "eyebrow": "What You Get",
+      "title": "Structured Guidance You Can Use",
       "body": [
-        "Cupcakes + Broccoli membership is designed to support Black founders over time.",
-        "Black entrepreneurs start businesses at one of the fastest rates in the United States, yet face persistent barriers to scale, capital access, and sustainability. Many are building without inherited wealth, institutional backing, or insider networks.",
-        "Cupcakes + Broccoli exists to meet that reality directly.",
-        "This is not a course you complete or a community you scroll through. It is an ongoing relationship with ideas, guidance, and people shaped by real experience working with Black-owned businesses.",
-        "The work is led by Amanda Johnson."
+        "Membership includes practical support designed for real business decisions."
       ],
-      "theme": "light"
-    },
-    {
-      "id": "membership-includes",
-      "type": "feature",
-      "eyebrow": "Membership",
-      "title": "What Membership Includes",
+      "listVariant": "card-grid",
+      "list": [
+        "Written prompt stacks for high-stakes founder decisions",
+        "Guided frameworks you can apply immediately",
+        "Curated resources, essays, and implementation tools",
+        "Periodic issue-based direction inside the membership portal"
+      ],
+      "bodyAfter": [
+        "Everything is built to support clearer thinking and better execution over time."
+      ],
       "image": {
         "src": "assets/images/murius-7-scaled.jpg",
         "alt": "Portrait with geometric patterned backdrop."
       },
-      "layout": "image-left",
-      "body": [
-        "Membership provides access to:"
-      ],
-      "listVariant": "card-grid",
-      "list": [
-        "Curated tools, frameworks, and guides for real decisions",
-        "An AI concierge built around questions Black founders actually ask",
-        "Stories and reflections that provide context and perspective",
-        "Invitations to conversations and shared learning",
-        "Access to one-on-one Zoom office hours with Amanda",
-        "Eligibility for Blind Dinners at the Premium level"
-      ],
-      "bodyAfter": [
-        "This support is designed to evolve as your work evolves."
-      ],
+      "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "how-people-use",
+      "id": "preview",
       "type": "feature",
-      "eyebrow": "Membership",
-      "title": "How People Use Membership",
-      "image": {
-        "src": "assets/images/muriu-6-scaled.jpg",
-        "alt": "Portrait framed by soft light."
-      },
-      "layout": "image-right",
+      "eyebrow": "Preview Content",
+      "title": "Public Preview, Member Depth",
       "body": [
-        "Some members arrive with a specific decision they need to make.",
-        "Others return as their business shifts or needs recalibration.",
-        "Membership is not meant to be consumed quickly. It is meant to be returned to."
+        "This page is the public sales page for The Decision Room.",
+        "You can preview the shape of the work here. Full content is available after login."
       ],
-      "inlineLink": { "label": "Browse learning resources", "href": "/learn" },
-      "theme": "light"
-    },
-    {
-      "id": "membership-tiers",
-      "type": "tiers",
-      "variant": "detailed",
-      "eyebrow": "Membership",
-      "title": "Membership Tiers",
-      "body": [
-        "Choose the tier that fits how you want to engage right now."
+      "listVariant": "card-stack",
+      "list": [
+        "Preview excerpts and sample prompts",
+        "Membership overview and orientation",
+        "Clear next-step path into the portal"
       ],
-      "tiers": [
+      "ctas": [
         {
-          "title": "Core Membership",
-          "price": "$25 per month",
-          "summary": "For founders who want steady guidance without feeling overwhelmed.",
-          "lead": "Includes:",
-          "bullets": [
-            "Access to a rotating set of curated resources and frameworks",
-            "Limited monthly access to the AI concierge for exploration and orientation",
-            "Stories and reflections from founders and collaborators",
-            "Invitations to select virtual conversations",
-            "Access to full-price one-on-one Zoom office hours with Amanda"
-          ],
-          "note": "Core is designed for intentional use and steady progress.",
-          "cta": {
-            "label": "Join Core Membership for $25/month",
-            "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#core-membership-link",
-            "joinPlanId": "34040e67-4151-4d37-8564-fe1ccee8c1d5",
-            "joinPricingOptionId": "936ce20b-014f-4fc4-bc10-4d57f943ccbd",
-            "variant": "ghost"
-          }
+          "label": "Join The Decision Room",
+          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
+          "variant": "primary"
         },
         {
-          "title": "Premium Membership",
-          "price": "$59 per month",
-          "summary": "For founders who want deeper access and closer connection.",
-          "lead": "Includes everything in Core, plus:",
-          "bullets": [
-            "Unlimited access to the full resource and framework library",
-            "Unlimited access to the AI concierge, with deeper responses trained on the full Cupcakes + Broccoli library",
-            "Full access to member-only stories and reflections",
-            "Access to discounted one-on-one Zoom office hours with Amanda at 50% off",
-            "Eligibility for Blind Dinners by invitation",
-            "Early access to new tools, essays, and resources"
-          ],
-          "note": "Premium Membership is intentionally limited to protect depth, care, and quality.",
-          "cta": {
-            "label": "Join Premium Membership for $59/month",
-            "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#premium-membership-link",
-            "joinPlanId": "575958e3-6d3f-473a-ae7d-2c4cf96b9ede",
-            "joinPricingOptionId": "e5be412f-b0cf-4387-8540-539e98e16ed6",
-            "variant": "primary"
-          },
-          "featured": true
+          "label": "Login to Continue",
+          "href": "/login",
+          "variant": "ghost"
         }
       ],
-      "theme": "light"
-    },
-    {
-      "id": "ai-access",
-      "type": "feature",
-      "eyebrow": "AI Concierge",
-      "title": "AI Concierge Access",
       "image": {
         "src": "assets/images/image-5.jpg",
         "alt": "Textile-inspired portrait detail."
       },
       "layout": "image-left",
-      "body": [
-        "The AI concierge helps founders get unstuck and oriented.",
-        "Core members receive limited monthly access designed for exploration, clarity, and identifying which resources may be most useful.",
-        "Premium members receive unlimited AI access, including deeper responses trained on the full Cupcakes + Broccoli library and Amanda’s proprietary frameworks."
-      ],
-      "theme": "paper"
-    },
-    {
-      "id": "office-hours",
-      "type": "feature",
-      "eyebrow": "Office Hours",
-      "title": "One-on-One Office Hours",
-      "image": {
-        "src": "assets/images/butler-7.jpg",
-        "alt": "Portrait with bold color styling."
-      },
-      "layout": "image-left",
-      "body": [
-        "Office hours are focused, 45-minute Zoom sessions designed for real decision-making.",
-        "These are not pitches or performances. They are practical, direct conversations grounded in where you are right now.",
-        "Sessions are limited each month and available on a first come, first served basis.",
-        "Full rate: $150 per hour. Premium rate: $75 per hour (50% off).",
-        "Office hours are available to members only."
-      ],
-      "inlineLink": { "label": "Learn more about working with Amanda", "href": "/work-with-amanda" },
       "theme": "light"
-    },
-    {
-      "id": "blind-dinners",
-      "type": "feature",
-      "eyebrow": "Blind Dinners",
-      "title": "Blind Dinners and Membership",
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Portrait layered over a patterned textile background."
-      },
-      "layout": "image-right",
-      "body": [
-        "Blind Dinners are intimate, invitation-only gatherings for Black founders and select People of Color and LGBTQIA+ leaders.",
-        "Eligibility is reserved for select Premium members. Membership ensures shared context, trust, and care before anyone comes to the table."
-      ],
-      "inlineLink": { "label": "Learn about Blind Dinners", "href": "/blind-dinners" },
-      "theme": "paper"
-    },
-    {
-      "id": "premium-question",
-      "type": "feature",
-      "eyebrow": "FAQ",
-      "title": "Do I Need Premium to Work With Amanda?",
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
-        "alt": "Portrait in patterned textiles."
-      },
-      "layout": "image-left",
-      "body": [
-        "No.",
-        "Core members can book one-on-one office hours at the full rate and may inquire about consulting opportunities. Membership provides shared language and context that makes the work more effective.",
-        "Premium members receive closer access, discounted office hours, and earlier visibility into limited consulting availability."
-      ],
-      "theme": "light"
-    },
-    {
-      "id": "choosing-tier",
-      "type": "feature",
-      "eyebrow": "Membership",
-      "title": "Choosing a Tier",
-      "image": {
-        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-        "alt": "Portrait framed by soft light and layered textiles."
-      },
-      "layout": "image-right",
-      "body": [
-        "You can start with Core and upgrade to Premium at any time.",
-        "Some founders remain in Core for steady guidance. Others move into Premium when they want deeper access and closer proximity to Amanda’s thinking.",
-        "There is no expectation to over-engage. Membership is meant to support your work, not add pressure."
-      ],
-      "theme": "paper"
     },
     {
       "id": "invitation",
       "type": "closing",
       "eyebrow": "Invitation",
-      "title": "An Invitation",
+      "title": "Join The Decision Room",
       "body": [
-        "Cupcakes + Broccoli membership is an investment in how you think and how you build.",
-        "If you are looking for clarity, context, and guidance shaped by real experience working with Black founders, you are welcome here."
+        "If you want practical structure, sharper judgment, and consistent support as you build, this is for you."
       ],
       "ctas": [
-        { "label": "Join Membership", "href": "#membership-tiers", "variant": "primary" },
-        { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
+        {
+          "label": "Join The Decision Room",
+          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
+          "variant": "primary"
+        },
+        {
+          "label": "Member Login",
+          "href": "/login",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }

@@ -1,0 +1,97 @@
+{
+  "page": "thank-you-strategic-partnership",
+  "version": "2026-02-thank-you-strategic-partnership-v1",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "note": "Submitted",
+      "title": "Thanks for Applying",
+      "subhead": "Your Strategic Partnership application was received.",
+      "body": [
+        "We will follow up by email if there is a fit for next-step conversation."
+      ],
+      "theme": "light"
+    },
+    {
+      "id": "next",
+      "type": "closing",
+      "eyebrow": "Next",
+      "title": "Continue Exploring",
+      "body": [
+        "In the meantime, you can return to Work With Amanda or explore The Decision Room."
+      ],
+      "ctas": [
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "primary"
+        },
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "ghost"
+        }
+      ],
+      "theme": "ink"
+    }
+  ]
+}

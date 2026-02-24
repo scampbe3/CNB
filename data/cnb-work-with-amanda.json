@@ -1,27 +1,62 @@
 {
   "page": "work-with-amanda",
-  "version": "2026-01-work-with-amanda-v1",
+  "version": "2026-02-work-with-amanda-v2-two-offers",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -29,10 +64,10 @@
       "id": "hero",
       "type": "hero",
       "note": "Work With Amanda",
-      "title": "Strategic Guidance Led by Experience",
-      "subhead": "Clear thinking, grounded strategy, and forward motion.",
+      "title": "Two Ways to Work With Amanda",
+      "subhead": "Choose the engagement that matches your decision horizon.",
       "body": [
-        "This is not packaged consulting or generic advice. It is senior-level guidance shaped by years of corporate leadership and deep, hands-on work with Black-owned small businesses."
+        "Both offerings are founder-led and personally delivered by Amanda. Each is designed for Black founders navigating meaningful business decisions."
       ],
       "image": {
         "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 8.jpg",
@@ -41,22 +76,27 @@
       "theme": "light"
     },
     {
-      "id": "who-this-is-for",
+      "id": "business-counsel",
       "type": "feature",
-      "eyebrow": "Who This Is For",
-      "title": "Guidance For High-Stakes Decisions",
+      "eyebrow": "Offer One",
+      "title": "Business Counsel",
       "body": [
-        "This work is for Black founders who are navigating high-impact decisions without a trusted sounding board."
+        "Business Counsel is focused strategic guidance for founders who need immediate clarity on high-impact decisions.",
+        "Use this offering when you need clear priorities, direct feedback, and practical next steps."
       ],
-      "listVariant": "card-grid",
+      "listVariant": "card-stack",
       "list": [
-        "Are making high-impact decisions without a trusted sounding board",
-        "Feel stuck between vision and execution",
-        "Need clarity, prioritization, and momentum",
-        "Want direct, honest guidance rooted in real experience"
+        "Pricing and offer decisions",
+        "Positioning and narrative clarity",
+        "Prioritization and sequencing",
+        "Decision support during uncertainty"
       ],
-      "bodyAfter": [
-        "If you are looking for motivation or surface-level feedback, this may not be the right fit. If you want thoughtful partnership and direction, you are in the right place."
+      "ctas": [
+        {
+          "label": "Apply for Business Counsel",
+          "href": "/apply-business-counsel",
+          "variant": "primary"
+        }
       ],
       "image": {
         "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 3.jpg",
@@ -66,125 +106,86 @@
       "theme": "paper"
     },
     {
-      "id": "amanda-background",
+      "id": "strategic-partnership",
       "type": "feature",
-      "eyebrow": "Amanda’s Background",
-      "title": "A Dual Perspective",
-      "layoutVariant": "copy-columns",
-      "inlineImageAfter": 2,
+      "eyebrow": "Offer Two",
+      "title": "Strategic Partnership",
       "body": [
-        "Amanda Johnson has spent her career inside environments where the stakes are real.",
-        "She has led strategy and marketing work inside large organizations, partnered with senior executives, and owned initiatives tied directly to revenue, reputation, and growth. She understands how decisions are made, how power operates, and how ideas move from proposal to execution.",
-        "She has also worked closely with Black-owned small businesses navigating limited access, unclear systems, and uneven support. She understands what it means to build without a safety net.",
-        "That dual perspective shapes every engagement."
+        "Strategic Partnership is deeper support for founders building through growth phases, transitions, or sustained complexity.",
+        "Use this offering when you need an ongoing strategic partner across planning, execution, and accountability."
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Multi-month strategic planning",
+        "Operating cadence and decision architecture",
+        "Launch or transition support",
+        "Executive-level thought partnership"
+      ],
+      "ctas": [
+        {
+          "label": "Apply for Strategic Partnership",
+          "href": "/apply-strategic-partnership",
+          "variant": "primary"
+        }
+      ],
+      "image": {
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
+        "alt": "Amanda Johnson in a studio portrait with hand at chin."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "choosing-path",
+      "type": "feature",
+      "eyebrow": "How to Choose",
+      "title": "Pick the Right Entry Point",
+      "body": [
+        "Apply for Business Counsel if you need focused support on immediate decisions.",
+        "Apply for Strategic Partnership if you need sustained guidance across multiple decisions and execution cycles."
+      ],
+      "ctas": [
+        {
+          "label": "Business Counsel Application",
+          "href": "/apply-business-counsel",
+          "variant": "ghost"
+        },
+        {
+          "label": "Strategic Partnership Application",
+          "href": "/apply-strategic-partnership",
+          "variant": "primary"
+        }
       ],
       "inlineLink": {
-        "label": "Learn more about Amanda and the origin of Cupcakes + Broccoli",
-        "href": "/about"
+        "label": "Explore The Decision Room membership",
+        "href": "/membership"
       },
       "image": {
         "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 6.jpg",
         "alt": "Amanda Johnson in a close studio portrait."
       },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "how-amanda-works",
-      "type": "feature",
-      "eyebrow": "How Amanda Works",
-      "title": "A Strategic Partner, Not a Task-Taker",
-      "body": [
-        "Amanda works as a strategic partner, not a task-taker.",
-        "Her approach is collaborative, direct, and grounded in reality. She listens closely, asks the right questions, and helps founders make decisions they can stand behind.",
-        "People who work with Amanda often describe her as clear, detail-oriented, calm under pressure, and deeply invested in seeing work through execution.",
-        "She does not disappear after the idea. She stays with the work."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
-        "alt": "Amanda Johnson in a studio portrait, looking to the side."
-      },
       "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "what-working-together",
-      "type": "feature",
-      "eyebrow": "What Working Together Can Look Like",
-      "title": "Engagements Are Tailored",
-      "body": [
-        "Engagements are intentionally flexible and tailored to each founder’s needs. Work may include:"
-      ],
-      "listVariant": "card-grid",
-      "list": [
-        "Clarifying direction and priorities",
-        "Pressure-testing ideas and strategies",
-        "Translating vision into actionable plans",
-        "Navigating moments of transition or uncertainty",
-        "Acting as a trusted thought partner during growth or change"
-      ],
-      "bodyAfter": [
-        "This is consultative work shaped around context, not templates."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda_-_5_3500x4184.jpg",
-        "alt": "Amanda Johnson smiling in a bright studio portrait."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "membership-fit",
-      "type": "feature",
-      "eyebrow": "Membership and Consulting",
-      "title": "How This Fits With Membership",
-      "body": [
-        "Many founders begin their relationship with Cupcakes + Broccoli through Membership.",
-        "Membership provides access to tools, frameworks, shared learning, and ongoing context. Consulting builds on that foundation for founders who want deeper, more personalized support."
-      ],
-      "inlineLink": {
-        "label": "Explore Membership",
-        "href": "/membership"
-      },
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
-        "alt": "Amanda Johnson in a studio portrait with hand at chin."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "blind-dinners-ecosystem",
-      "type": "feature",
-      "eyebrow": "Blind Dinners and the Broader Ecosystem",
-      "title": "Trust and Shared Perspective",
-      "body": [
-        "Blind Dinners are part of the larger Cupcakes + Broccoli ecosystem.",
-        "They are invitation-based gatherings designed to foster trust, conversation, and shared perspective among Black founders. While not a consulting product, they often deepen relationships and reinforce community."
-      ],
-      "inlineLink": {
-        "label": "Learn about Blind Dinners",
-        "href": "/blind-dinners"
-      },
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 11.jpg",
-        "alt": "Amanda Johnson in a hooded studio portrait."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "getting-started",
+      "id": "closing",
       "type": "closing",
       "eyebrow": "Getting Started",
-      "title": "Request to Work With Amanda",
+      "title": "Apply to Work With Amanda",
       "body": [
-        "Amanda works with a limited number of founders at a time to ensure depth and care.",
-        "If you are interested in working together, the first step is to share where you are and what you are navigating. From there, we can determine whether it is a good fit."
+        "Applications are reviewed personally. If there is a fit, you will receive next steps by email."
       ],
       "ctas": [
-        { "label": "Request to Work With Amanda", "href": "/contact", "variant": "primary" },
-        { "label": "Learn How Cupcakes + Broccoli Works", "href": "/about", "variant": "ghost" }
+        {
+          "label": "Apply for Business Counsel",
+          "href": "/apply-business-counsel",
+          "variant": "primary"
+        },
+        {
+          "label": "Apply for Strategic Partnership",
+          "href": "/apply-strategic-partnership",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }

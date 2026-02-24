@@ -1,0 +1,137 @@
+{
+  "page": "apply-strategic-partnership",
+  "version": "2026-02-apply-strategic-partnership-v1",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "note": "Application",
+      "title": "Strategic Partnership Application",
+      "subhead": "Share context so we can assess long-range fit.",
+      "body": [
+        "Please complete the application form below. Responses are reviewed directly by Amanda."
+      ],
+      "theme": "light"
+    },
+    {
+      "id": "questions",
+      "type": "feature",
+      "eyebrow": "Required Fields",
+      "title": "Application Questions",
+      "body": [
+        "Please provide the following information in the form below."
+      ],
+      "form": {
+        "action": "https://formsubmit.co/amanda@cupcakesandbroccoli.com",
+        "redirectPath": "/thank-you-strategic-partnership",
+        "subject": "Strategic Partnership Application",
+        "submitLabel": "Submit Application",
+        "note": "You will be redirected after submission.",
+        "fields": [
+          {
+            "name": "name",
+            "label": "Name",
+            "type": "text",
+            "required": true,
+            "autocomplete": "name"
+          },
+          {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "name": "company_or_website",
+            "label": "Company or Website (Optional)",
+            "type": "text"
+          },
+          {
+            "name": "open_question",
+            "label": "What Strategic Challenge Are You Solving?",
+            "type": "textarea",
+            "required": true,
+            "rows": 6
+          }
+        ]
+      },
+      "theme": "paper"
+    },
+    {
+      "id": "closing",
+      "type": "closing",
+      "eyebrow": "After Submission",
+      "title": "Thank You",
+      "body": [
+        "After you submit, you should be redirected to the Strategic Partnership thank-you page."
+      ],
+      "ctas": [
+        {
+          "label": "Back to Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "ghost"
+        }
+      ],
+      "theme": "ink"
+    }
+  ]
+}

@@ -1,27 +1,62 @@
 {
   "page": "blind-dinners",
-  "version": "2026-01-blind-dinners-v1",
+  "version": "2026-02-blind-dinners-v2-membership-update",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -142,14 +177,18 @@
       "id": "membership-relationship",
       "type": "feature",
       "eyebrow": "Relationship to Membership",
-      "title": "Context, Continuity, and Alignment",
+      "title": "Relationship to The Decision Room",
       "body": [
         "Blind Dinners are part of the broader Cupcakes + Broccoli ecosystem.",
-        "Eligibility is reserved for select members, typically within the Premium tier.",
+        "Eligibility is reserved for members and invited participants aligned with the purpose of the room.",
         "Membership creates shared context, continuity, and alignment beyond a single evening."
       ],
       "ctas": [
-        { "label": "Explore Membership", "href": "/membership", "variant": "primary" }
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        }
       ],
       "image": {
         "src": "assets/images/additional_images/Blind Dinner 1 photos/334-IMG_5725.JPEG",
@@ -167,11 +206,11 @@
         "What happens at a Blind Dinner stays at the table.",
         "Stories may inspire reflection or future writing, but individual conversations are held with care and discretion. Privacy is foundational to the experience."
       ],
-            "image": {
+      "image": {
         "src": "assets/images/additional_images/Blind Dinner 1 photos/475-IMG_5974.JPEG",
         "alt": "A discreet and intimate Blind Dinner moment."
       },
-            "layout": "image-right",
+      "layout": "image-right",
       "theme": "paper"
     },
     {
@@ -181,11 +220,19 @@
       "title": "A Deeper Kind of Connection",
       "body": [
         "Blind Dinners are for people who value depth over visibility and connection over performance.",
-        "If this resonates, Cupcakes + Broccoli membership is the first step toward deeper participation."
+        "If this resonates, The Decision Room is the first step toward deeper participation."
       ],
       "ctas": [
-        { "label": "View Membership Options", "href": "/membership", "variant": "primary" },
-        { "label": "Learn About Cupcakes + Broccoli", "href": "/about", "variant": "ghost" }
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Learn About Cupcakes + Broccoli",
+          "href": "/about",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }

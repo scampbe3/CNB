@@ -1,0 +1,12 @@
+section,field,value,link,notes
+hero,Note,Application,,
+hero,Title,Business Counsel Application,,
+hero,Subhead,Share brief context so Amanda can evaluate fit.,,
+hero,Body 1,Please complete the application form below. Responses are reviewed directly by Amanda.,,
+questions,Eyebrow,Required Fields,,
+questions,Title,Application Questions,,
+questions,Body 1,Please provide the following information in the form below.,,
+closing,Eyebrow,After Submission,,
+closing,Title,Thank You,,
+closing,Body 1,"After you submit, you should be redirected to the Business Counsel thank-you page.",,
+closing,CTA 1,Back to Work With Amanda,/work-with-amanda,ghost

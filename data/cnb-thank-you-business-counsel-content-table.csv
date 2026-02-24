@@ -1,0 +1,10 @@
+section,field,value,link,notes
+hero,Note,Submitted,,
+hero,Title,Thanks for Applying,,
+hero,Subhead,Your Business Counsel application was received.,,
+hero,Body 1,We will follow up by email if there is a fit for next-step conversation.,,
+next,Eyebrow,Next,,
+next,Title,Continue Exploring,,
+next,Body 1,"In the meantime, you can return to Work With Amanda or explore The Decision Room.",,
+next,CTA 1,Work With Amanda,/work-with-amanda,primary
+next,CTA 2,Explore The Decision Room,/membership,ghost

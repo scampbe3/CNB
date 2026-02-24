@@ -1,27 +1,62 @@
 {
   "page": "learn",
-  "version": "2026-01-learn-v1",
+  "version": "2026-02-learn-v2-no-ai-ui",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -73,11 +108,11 @@
       "body": [
         "Some founders come here with a specific question.",
         "Others come when something feels stuck.",
-        "You can browse by topic or use the AI concierge to get oriented before going deeper."
+        "You can browse by topic, then use Decision Room prompt stacks for deeper guided thinking inside membership."
       ],
       "inlineLink": {
-        "label": "Ask a question using the AI concierge",
-        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3#ai"
+        "label": "Explore The Decision Room",
+        "href": "/membership"
       },
       "image": {
         "src": "assets/images/image-5.jpg",
@@ -96,8 +131,16 @@
         "Deeper tools and expanded frameworks are available through Membership, which helps keep the work thoughtful and well-supported."
       ],
       "ctas": [
-        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Browse Available Resources", "href": "/learn", "variant": "ghost" }
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Browse Available Resources",
+          "href": "/learn",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
@@ -136,7 +179,11 @@
         "If you are looking for practical guidance grounded in experience and care, you are welcome here."
       ],
       "ctas": [
-        { "label": "Start Learning", "href": "/learn", "variant": "primary" }
+        {
+          "label": "Start Learning",
+          "href": "/learn",
+          "variant": "primary"
+        }
       ],
       "theme": "ink"
     }

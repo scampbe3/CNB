@@ -195,6 +195,81 @@
     return withReveal(anchor);
   };
 
+  const resolveAbsoluteUrl = (value) => {
+    if (!value) return "";
+    try {
+      return new URL(String(value).trim(), window.location.origin).toString();
+    } catch (err) {
+      return "";
+    }
+  };
+
+  const appendHiddenField = (form, name, value) => {
+    if (!form || !name || value == null || value === "") return;
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = String(value);
+    form.appendChild(input);
+  };
+
+  const renderSectionForm = (config = {}) => {
+    const fields = Array.isArray(config.fields) ? config.fields : [];
+    if (!fields.length) return null;
+
+    const wrap = withReveal(createEl("div", "cnb-home-form-wrap"));
+    const form = createEl("form", "cnb-home-form");
+    form.method = "POST";
+    form.action = config.action || "https://formsubmit.co/amanda@cupcakesandbroccoli.com";
+    form.acceptCharset = "UTF-8";
+
+    const submitLabel = config.submitLabel || "Submit";
+    const redirectUrl = resolveAbsoluteUrl(config.redirectUrl || config.redirectPath);
+    appendHiddenField(form, "_next", redirectUrl);
+    appendHiddenField(form, "_subject", config.subject || "");
+    appendHiddenField(form, "_template", "table");
+    if (config.disableCaptcha !== false) appendHiddenField(form, "_captcha", "false");
+
+    fields.forEach((field) => {
+      if (!field || !field.name) return;
+      const type = (field.type || "text").toLowerCase();
+      const fieldWrap = createEl("label", "cnb-home-form-field");
+      const label = createEl("span", "cnb-home-form-label", field.label || field.name);
+      fieldWrap.appendChild(label);
+
+      const control =
+        type === "textarea"
+          ? document.createElement("textarea")
+          : document.createElement("input");
+
+      if (type !== "textarea") {
+        control.type = type;
+      } else {
+        control.rows = Number(field.rows) > 0 ? Number(field.rows) : 5;
+      }
+
+      control.name = field.name;
+      if (field.autocomplete) control.autocomplete = field.autocomplete;
+      if (field.placeholder) control.placeholder = field.placeholder;
+      if (field.required) control.required = true;
+      fieldWrap.appendChild(control);
+      form.appendChild(fieldWrap);
+    });
+
+    const actions = createEl("div", "cnb-home-form-actions");
+    const submit = createEl("button", "cnb-home-btn primary cnb-home-form-submit", submitLabel);
+    submit.type = "submit";
+    actions.appendChild(submit);
+    form.appendChild(actions);
+
+    if (config.note) {
+      form.appendChild(createEl("p", "cnb-home-form-note", config.note));
+    }
+
+    wrap.appendChild(form);
+    return wrap;
+  };
+
   const clamp01 = (value) => Math.min(1, Math.max(0, value));
 
   const shouldUseCors = (src) => {
@@ -421,6 +496,9 @@
     if (section.bodyAfter) {
       renderBody(section.bodyAfter, copy);
     }
+
+    const form = renderSectionForm(section.form);
+    if (form) copy.appendChild(form);
 
     const inlineLink = renderInlineLink(section.inlineLink);
     if (inlineLink) copy.appendChild(inlineLink);
