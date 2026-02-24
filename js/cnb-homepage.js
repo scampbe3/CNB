@@ -137,17 +137,40 @@
     listEl.classList.add(`is-${variant}`);
   };
 
+  // Keeps legacy join-link CTAs working as in-place Squarespace auth/join flows.
+  const AUTOJOIN_ANCHOR_MAP = {
+    "the-decision-room-link": {
+      planId: "b1aeb332-8054-4332-bfc1-8d07681a57f3",
+      optionId: "94c3937a-6e24-495c-b543-2192071b30cb",
+    },
+  };
+
+  const resolveJoinIdsFromHref = (href) => {
+    if (!href) return null;
+    try {
+      const parsed = new URL(String(href), window.location.origin);
+      const anchor = parsed.hash.replace(/^#/, "").trim().toLowerCase();
+      if (!anchor) return null;
+      return AUTOJOIN_ANCHOR_MAP[anchor] || null;
+    } catch (err) {
+      return null;
+    }
+  };
+
   const buildCta = (cta) => {
     const isModal = cta.behavior === "modal";
-    const hasJoin = Boolean(cta.joinPlanId && cta.joinPricingOptionId);
+    const hrefJoin = resolveJoinIdsFromHref(cta.href);
+    const joinPlanId = cta.joinPlanId || (hrefJoin && hrefJoin.planId) || "";
+    const joinPricingOptionId = cta.joinPricingOptionId || (hrefJoin && hrefJoin.optionId) || "";
+    const hasJoin = Boolean(joinPlanId && joinPricingOptionId);
     const el = document.createElement(isModal || hasJoin ? "button" : "a");
     el.className = `cnb-home-btn ${cta.variant || "primary"}`.trim();
     el.textContent = cta.label || "";
 
     if (hasJoin) {
       el.type = "button";
-      el.dataset.joinPlanId = cta.joinPlanId;
-      el.dataset.joinPricingOptionId = cta.joinPricingOptionId;
+      el.dataset.joinPlanId = joinPlanId;
+      el.dataset.joinPricingOptionId = joinPricingOptionId;
       el.dataset.joinSource = cta.joinSource || "MEMBER_AREA_BLOCK";
       el.addEventListener("click", (event) => {
         event.preventDefault();
@@ -156,13 +179,13 @@
           const source = cta.joinSource || "MEMBER_AREA_BLOCK";
           const meta =
             cta.joinMeta || {
-              pricingPlanId: cta.joinPlanId,
-              pricingOptions: [{ id: cta.joinPricingOptionId }],
+              pricingPlanId: joinPlanId,
+              pricingOptions: [{ id: joinPricingOptionId }],
               pricingType: "RECURRING",
               isPaywall: true,
-              firstPricingOptionId: cta.joinPricingOptionId,
+              firstPricingOptionId: joinPricingOptionId,
             };
-          api.joinPricingPlan(cta.joinPlanId, cta.joinPricingOptionId, "", false, source, meta);
+          api.joinPricingPlan(joinPlanId, joinPricingOptionId, "", false, source, meta);
         } else if (cta.href) {
           window.location.href = cta.href;
         }
