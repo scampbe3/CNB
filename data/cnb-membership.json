@@ -64,12 +64,9 @@
       "id": "hero",
       "type": "hero",
       "note": "Membership",
-      "title": "The Decision Room",
-      "subhead": "$39 per month",
-      "body": [
-        "The Decision Room is the membership for Black founders who want stronger decisions and steadier momentum.",
-        "No tiers. No layered access logic. You are either in the room or not."
-      ],
+      "title": "Explore Membership",
+      "subhead": "Steady guidance or deeper access, depending on where you are now.",
+      "body": [],
       "ctas": [
         {
           "label": "Join The Decision Room",
