@@ -852,6 +852,7 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 .cnb-home-section.is-layout-band-card .cnb-home-image {
   aspect-ratio: auto;
   width: 100%;
+  min-height: 0;
   margin: 0 auto;
   border-radius: var(--cnb-radius-lg);
 }

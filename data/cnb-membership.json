@@ -118,6 +118,7 @@
       "type": "feature",
       "eyebrow": "Join",
       "title": "Join The Decision Room",
+      "layoutVariant": "band-card",
       "body": [
         "The Decision Room is Amanda's membership for founders who need structured thinking and practical momentum.",
         "Instead of a public chatbot, members get prompt stacks, guided frameworks, and issue-based direction they can apply immediately."
