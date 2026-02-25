@@ -841,12 +841,23 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 }
 
 .cnb-home-section.is-layout-band-card .cnb-home-grid.split {
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr;
   gap: clamp(18px, 4vw, 36px);
 }
 
-.cnb-home-section.is-layout-band-card .cnb-home-media {
-  order: 0;
+.cnb-home-section.is-layout-band-card .cnb-home-grid.split .cnb-home-copy {
+  order: 1 !important;
+  margin-top: 0 !important;
+}
+
+.cnb-home-section.is-layout-band-card .cnb-home-grid.split .cnb-home-media {
+  order: 2 !important;
+}
+
+.cnb-home-section.is-layout-band-card .cnb-home-grid.split.is-reversed .cnb-home-media {
+  order: 2 !important;
 }
 
 .cnb-home-section.is-layout-band-card .cnb-home-image {
@@ -855,6 +866,13 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   min-height: 0;
   margin: 0 auto;
   border-radius: var(--cnb-radius-lg);
+}
+
+.cnb-home-section.is-layout-band-card .cnb-home-grid.split .cnb-home-image {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
 }
 
 .cnb-home-section.is-layout-band-card .cnb-home-copy {
@@ -872,6 +890,8 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
 }
 
 .cnb-home-section.is-layout-band-card .cnb-home-image img {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -1163,6 +1183,7 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  line-height: 1.2;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
@@ -1493,16 +1514,20 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   }
 
   .cnb-home-section.is-layout-band-card .cnb-home-image {
-    height: auto;
-    min-height: 0;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
     width: 100%;
     margin: 0;
   }
 
   .cnb-home-section.is-layout-band-card .cnb-home-image img {
+    display: block;
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
   }
 
   .cnb-home-section.is-layout-copy-columns .cnb-home-copy {
@@ -1640,6 +1665,10 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 
   .cnb-home-btn {
     width: 100%;
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1.2;
   }
 
   .cnb-site-title {
