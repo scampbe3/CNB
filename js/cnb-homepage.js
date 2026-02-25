@@ -512,7 +512,8 @@
     const sectionEl = buildSection(section, "cnb-home-feature");
     const inner = createEl("div", "cnb-home-inner");
     const grid = createEl("div", "cnb-home-grid split");
-    if (section.layout === "image-left") grid.classList.add("is-reversed");
+    const isBandCard = section.layoutVariant === "band-card";
+    if (section.layout === "image-left" && !isBandCard) grid.classList.add("is-reversed");
 
     const copy = createEl("div", "cnb-home-copy");
     const eyebrow = renderKicker(section.eyebrow, "cnb-home-eyebrow");
