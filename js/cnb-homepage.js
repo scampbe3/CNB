@@ -157,12 +157,24 @@
     }
   };
 
+  const isLoginHref = (href) => {
+    if (!href) return false;
+    try {
+      const parsed = new URL(String(href), window.location.origin);
+      const path = parsed.pathname.replace(/\/+$/, "");
+      return path === "/login" || path === "/account/login";
+    } catch (err) {
+      return false;
+    }
+  };
+
   const buildCta = (cta) => {
     const isModal = cta.behavior === "modal";
     const hrefJoin = resolveJoinIdsFromHref(cta.href);
     const joinPlanId = cta.joinPlanId || (hrefJoin && hrefJoin.planId) || "";
     const joinPricingOptionId = cta.joinPricingOptionId || (hrefJoin && hrefJoin.optionId) || "";
     const hasJoin = Boolean(joinPlanId && joinPricingOptionId);
+    const loginCta = !hasJoin && isLoginHref(cta.href);
     const el = document.createElement(isModal || hasJoin ? "button" : "a");
     el.className = `cnb-home-btn ${cta.variant || "primary"}`.trim();
     el.textContent = cta.label || "";
@@ -199,6 +211,7 @@
       if (cta.href) el.dataset.href = cta.href;
     } else if (cta.href) {
       el.href = cta.href;
+      if (loginCta) el.dataset.loginTrigger = "true";
     }
     return el;
   };
@@ -1218,6 +1231,7 @@
       loginLink.href = loginItem.href || "#";
       loginLink.textContent = loginItem.label || "";
       loginLink.className = "cnb-site-nav-button cnb-site-login";
+      if (isLoginHref(loginItem.href)) loginLink.dataset.loginTrigger = "true";
       if (loginItem.newWindow) loginLink.target = "_blank";
       if (loginItem.rel) loginLink.rel = loginItem.rel;
       navWrap.appendChild(loginLink);
@@ -1349,6 +1363,20 @@
         window.CNB.aiConcierge.open();
       } else if (trigger.dataset.href) {
         window.location.href = trigger.dataset.href;
+      }
+    });
+  };
+
+  const bindLoginTriggers = () => {
+    mount.addEventListener("click", (event) => {
+      const trigger = event.target.closest('[data-login-trigger="true"]');
+      if (!trigger) return;
+      const href = trigger.getAttribute("href") || trigger.dataset.href || "";
+      if (!isLoginHref(href)) return;
+      const api = window.UserAccountApi;
+      if (api && typeof api.signIn === "function") {
+        event.preventDefault();
+        api.signIn("MEMBER_AREA_BLOCK");
       }
     });
   };
@@ -1518,6 +1546,7 @@
       mount.appendChild(footer);
     }
     bindModalTriggers();
+    bindLoginTriggers();
     bindPromptFill();
     setupRevealObserver();
     syncMembershipJoinLinks();

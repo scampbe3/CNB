@@ -116,11 +116,11 @@
     {
       "id": "preview",
       "type": "feature",
-      "eyebrow": "Preview Content",
-      "title": "Public Preview, Member Depth",
+      "eyebrow": "Join",
+      "title": "Join The Decision Room",
       "body": [
-        "This page is the public sales page for The Decision Room.",
-        "You can preview the shape of the work here. Full content is available after login."
+        "The Decision Room is Amanda's membership for founders who need structured thinking and practical momentum.",
+        "Instead of a public chatbot, members get prompt stacks, guided frameworks, and issue-based direction they can apply immediately."
       ],
       "listVariant": "card-stack",
       "list": [
