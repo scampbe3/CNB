@@ -1550,6 +1550,16 @@
     hydrate(data);
   };
 
+  const cloneContentData = (data) =>
+    data ? JSON.parse(JSON.stringify(data)) : JSON.parse(JSON.stringify(defaultData));
+
+  const rerenderForResponsiveLayout = () => {
+    if (mount.dataset.cnbRenderedSrc !== jsonUrl) return;
+    const data = cloneContentData(window.CNB_LAST_CONTENT_DATA || window.CNB_HOME_DATA || defaultData);
+    mount.innerHTML = "";
+    hydrate(data);
+  };
+
   const fetchJson = (url) =>
     fetch(url, { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : null))
@@ -1715,5 +1725,20 @@
     safeHydrate(window.CNB_HOME_DATA);
   } else {
     safeHydrate(defaultData);
+  }
+
+  const mobileLayoutMedia = window.matchMedia("(max-width: 720px)");
+  let lastMobileLayout = mobileLayoutMedia.matches;
+  const handleMobileLayoutChange = () => {
+    const nextMobileLayout = mobileLayoutMedia.matches;
+    if (nextMobileLayout === lastMobileLayout) return;
+    lastMobileLayout = nextMobileLayout;
+    rerenderForResponsiveLayout();
+  };
+
+  if (typeof mobileLayoutMedia.addEventListener === "function") {
+    mobileLayoutMedia.addEventListener("change", handleMobileLayoutChange);
+  } else if (typeof mobileLayoutMedia.addListener === "function") {
+    mobileLayoutMedia.addListener(handleMobileLayoutChange);
   }
 })();
