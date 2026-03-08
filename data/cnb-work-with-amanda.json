@@ -1,6 +1,6 @@
 {
   "page": "work-with-amanda",
-  "version": "2026-02-work-with-amanda-v2-two-offers",
+  "version": "2026-03-08-work-with-amanda-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -64,32 +64,50 @@
       "id": "hero",
       "type": "hero",
       "note": "Work With Amanda",
-      "title": "Two Ways to Work With Amanda",
-      "subhead": "Choose the engagement that matches your decision horizon.",
+      "title": "Work with Amanda when the stakes are real.",
+      "subhead": "You are stuck on a decision and do not want opinions from ten different people. You want clarity.",
       "body": [
-        "Both offerings are founder-led and personally delivered by Amanda. Each is designed for Black founders navigating meaningful business decisions."
+        "Whether you need to solve one pressing problem or move through a major shift, the work is focused, direct, and designed to move something forward."
+      ],
+      "ctas": [
+        {
+          "label": "Apply for Business Counsel",
+          "href": "/apply-business-counsel",
+          "variant": "primary"
+        },
+        {
+          "label": "Apply to Work Together",
+          "href": "/apply-strategic-partnership",
+          "variant": "ghost"
+        }
       ],
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 3.webp",
-        "alt": "Amanda Johnson smiling in a studio portrait."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 3.jpg",
+        "alt": "Amanda Johnson in a studio portrait."
       },
       "theme": "light"
     },
     {
       "id": "business-counsel",
       "type": "feature",
-      "eyebrow": "Offer One",
-      "title": "Business Counsel",
+      "eyebrow": "Business Counsel",
+      "title": "One focused session. One real problem.",
       "body": [
-        "Business Counsel is focused strategic guidance for founders who need immediate clarity on high-impact decisions.",
-        "Use this offering when you need clear priorities, direct feedback, and practical next steps."
+        "$350 per session.",
+        "Business Counsel is for moments when something is keeping you up at night."
       ],
       "listVariant": "card-stack",
       "list": [
-        "Pricing and offer decisions",
-        "Positioning and narrative clarity",
-        "Prioritization and sequencing",
-        "Decision support during uncertainty"
+        "You are questioning your pricing and need a grounded outside read",
+        "You are considering a collaboration, partnership, or influencer deal and want to structure it properly",
+        "You are thinking about firing a client, hiring someone new, or making a structural shift",
+        "You are deciding whether to finally launch the idea you have been building on nights and weekends",
+        "You are stuck between two real options and need to choose"
+      ],
+      "bodyAfter": [
+        "What happens in the session: you explain the situation, we identify the real issue, we lay out your options clearly, we pressure-test the risks, and you leave knowing what to do next.",
+        "No ongoing commitment. No long contract. No vague advice. Just clarity.",
+        "Sessions are limited each month to ensure focus and depth."
       ],
       "ctas": [
         {
@@ -99,8 +117,8 @@
         }
       ],
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.webp",
-        "alt": "Amanda Johnson in a focused studio portrait."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
+        "alt": "Amanda Johnson in a close studio portrait."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -108,61 +126,59 @@
     {
       "id": "strategic-partnership",
       "type": "feature",
-      "eyebrow": "Offer Two",
-      "title": "Strategic Partnership",
+      "eyebrow": "Strategic Partnership",
+      "title": "For big moves that need serious alignment.",
       "body": [
-        "Strategic Partnership is deeper support for founders building through growth phases, transitions, or sustained complexity.",
-        "Use this offering when you need an ongoing strategic partner across planning, execution, and accountability."
+        "This is deeper work.",
+        "If you are preparing for a launch, growth phase, repositioning, or major shift, we can work together in a defined engagement."
       ],
       "listVariant": "card-stack",
       "list": [
-        "Multi-month strategic planning",
-        "Operating cadence and decision architecture",
-        "Launch or transition support",
-        "Executive-level thought partnership"
+        "Leading a rebrand of a core product or service that has outgrown its original look and message",
+        "Project managing a website rebuild so it reflects the business you have actually become",
+        "Designing a practical social media strategy for a small but serious team",
+        "Reviewing your product or service mix to decide what to cut, keep, or prioritize",
+        "Building a clear go-to-market plan for a new offering"
+      ],
+      "bodyAfter": [
+        "How it works: clear scope, defined timeline, focused objectives, and limited engagements.",
+        "This is not an open-ended retainer. It is structured work designed to move something forward.",
+        "If you are serious about leveling up your marketing, apply below."
       ],
       "ctas": [
         {
-          "label": "Apply for Strategic Partnership",
+          "label": "Apply to Work Together",
           "href": "/apply-strategic-partnership",
           "variant": "primary"
         }
       ],
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 4.webp",
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
         "alt": "Amanda Johnson in a studio portrait with hand at chin."
       },
       "layout": "image-left",
       "theme": "light"
     },
     {
-      "id": "choosing-path",
+      "id": "from-clients",
       "type": "feature",
-      "eyebrow": "How to Choose",
-      "title": "Pick the Right Entry Point",
+      "eyebrow": "From Clients",
+      "title": "What clients say about the work.",
       "body": [
-        "Apply for Business Counsel if you need focused support on immediate decisions.",
-        "Apply for Strategic Partnership if you need sustained guidance across multiple decisions and execution cycles."
+        "Clients consistently describe Amanda as sharp, direct, empathetic, and deeply invested in the work itself."
       ],
-      "ctas": [
-        {
-          "label": "Business Counsel Application",
-          "href": "/apply-business-counsel",
-          "variant": "ghost"
-        },
-        {
-          "label": "Strategic Partnership Application",
-          "href": "/apply-strategic-partnership",
-          "variant": "primary"
-        }
+      "listVariant": "card-stack",
+      "list": [
+        "\"She had some really stellar concepts... She knew how to hit the mark.\" - Joe Landry, Former Publisher, Men's Fashion & Lifestyle Magazine",
+        "\"Amanda is one of the most intelligent humans I have ever had the pleasure of working with... She really puts herself in the shoes of the other person.\" - Andres Toro, Fractional CMO & Marketing Consultant",
+        "\"She can build you out a roadmap that is not necessarily going to be like a short-term one-and-done project.\" - John McCourt, Communications & Social Impact Leader",
+        "\"She actually cares. She connects herself to the business... it is almost as if it is hers too.\" - Monique Kofsky, Founder & CEO, Product-Based Brand",
+        "\"I see her as like a partner in transformation.\" - Ashley Tsai, Analytics & Media Executive",
+        "\"The ROI is significant.\" - Vanessa Tiongson, Chief Marketing Officer"
       ],
-      "inlineLink": {
-        "label": "Explore The Decision Room membership",
-        "href": "/membership"
-      },
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 2.webp",
-        "alt": "Amanda Johnson in a close studio portrait."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 11.jpg",
+        "alt": "Amanda Johnson in a hooded studio portrait."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -170,10 +186,11 @@
     {
       "id": "closing",
       "type": "closing",
-      "eyebrow": "Getting Started",
-      "title": "Apply to Work With Amanda",
+      "eyebrow": "How To Start",
+      "title": "Choose the engagement that matches the move you need to make.",
       "body": [
-        "Applications are reviewed personally. If there is a fit, you will receive next steps by email."
+        "Business Counsel is right for one urgent decision that needs focused clarity.",
+        "Strategic Partnership is right for larger moves that need scope, alignment, and follow-through."
       ],
       "ctas": [
         {
@@ -182,7 +199,7 @@
           "variant": "primary"
         },
         {
-          "label": "Apply for Strategic Partnership",
+          "label": "Apply to Work Together",
           "href": "/apply-strategic-partnership",
           "variant": "ghost"
         }

@@ -1,6 +1,6 @@
 {
   "page": "thank-you-business-counsel",
-  "version": "2026-02-thank-you-business-counsel-v1",
+  "version": "2026-03-08-thank-you-business-counsel-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,21 +63,28 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Submitted",
-      "title": "Thanks for Applying",
-      "subhead": "Your Business Counsel application was received.",
+      "note": "Thank You",
+      "title": "You took a real step.",
+      "subhead": "That matters.",
       "body": [
-        "We will follow up by email if there is a fit for next-step conversation."
+        "If you submitted this application, it means something has been sitting with you: a decision, a tension, a move you know you need to make.",
+        "Good. That is exactly where this work begins.",
+        "Amanda will personally review your submission. If it is a strong fit, you will receive a payment link, a scheduling link, and a short confirmation note outlining what to prepare.",
+        "You can expect to hear back within 48 hours.",
+        "In the meantime, take a breath. You do not have to solve this alone.",
+        "When you meet, the focus will be on the real decision - not the surface noise, not the opinions, the real thing.",
+        "You will leave knowing what to do next.",
+        "Talk soon. - Amanda"
       ],
       "theme": "light"
     },
     {
       "id": "next",
       "type": "closing",
-      "eyebrow": "Next",
-      "title": "Continue Exploring",
+      "eyebrow": "Continue",
+      "title": "Return when you are ready.",
       "body": [
-        "In the meantime, you can return to Work With Amanda or explore The Decision Room."
+        "You can head back to Work With Amanda or read more about The Decision Room while you wait."
       ],
       "ctas": [
         {

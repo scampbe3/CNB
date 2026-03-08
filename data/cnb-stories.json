@@ -1,27 +1,62 @@
 {
   "page": "stories",
-  "version": "2026-01-stories-v1",
+  "version": "2026-03-08-stories-case-studies-refresh",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -29,148 +64,105 @@
       "id": "hero",
       "type": "hero",
       "note": "Stories",
-      "title": "Real Stories. Real Momentum.",
-      "subhead": "Experiences from Black founders building toward ownership.",
+      "title": "Real decisions. Real tension.",
+      "subhead": "We document the moments that change businesses.",
       "body": [
-        "Stories motivate when they are honest. We share stories to show what building actually looks like: the decisions, the uncertainty, the progress, and the moments that change direction.",
-        "These stories help us feel less alone and more confident in our next steps. They remind us that momentum is built over time."
+        "Each case study walks through the situation, the pressure, the options, the decision, and what happened next.",
+        "These are not highlight reels. They are honest breakdowns of how founders move forward."
       ],
       "image": {
-        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-        "alt": "Portrait framed by soft light and layered textiles."
+        "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
+        "alt": "Portrait of a founder in studio light."
       },
       "theme": "light"
     },
     {
-      "id": "stories-from-the-work",
+      "id": "case-study-format",
       "type": "feature",
-      "eyebrow": "Stories From the Work",
-      "title": "Experience Shared Honestly",
+      "eyebrow": "Case Studies",
+      "title": "What each case study shows.",
       "body": [
-        "Cupcakes + Broccoli is shaped by real people navigating real decisions.",
-        "Founders, collaborators, and Amanda reflect on what building actually looks like. The choices. The uncertainty. The moments that change direction.",
-        "These stories are not performance. They are perspective."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
-        "alt": "Chanel Dokun smiling in a studio portrait."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "what-youll-find",
-      "type": "feature",
-      "eyebrow": "What You Will Find Here",
-      "title": "Many Forms of Story",
-      "body": [
-        "Stories at Cupcakes + Broccoli take many forms. You may find:"
+        "These are the five moves every case study is built around:"
       ],
       "listVariant": "card-grid",
       "list": [
-        "Reflections by Amanda on ownership, work, and decision-making",
-        "Stories from Black founders navigating growth, transition, and uncertainty",
-        "Perspectives from collaborators who have worked closely with Amanda",
-        "Essays on building inside systems that were not designed for us"
-      ],
-      "bodyAfter": [
-        "Each story exists to offer clarity, not polish."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
-        "alt": "Chanel Dokun smiling against a bright background."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "why-stories-matter",
-      "type": "feature",
-      "eyebrow": "Why Stories Matter",
-      "title": "Context, Connection, Momentum",
-      "body": [
-        "Building can be isolating, especially when decisions are carried alone.",
-        "Stories help create context. They remind us that uncertainty is part of the work and that momentum is built over time.",
-        "They create connection without performance. This is where shared experience lives."
+        "The situation",
+        "The pressure",
+        "The options",
+        "The decision",
+        "What happened next"
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/289009491_567841984715267_3365790725858420719_n.jpg",
-        "alt": "Chanel Dokun in a close portrait."
+        "alt": "Close portrait of a founder."
       },
       "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "how-stories-connect",
+      "id": "honest-breakdowns",
       "type": "feature",
-      "eyebrow": "How Stories Connect to the Work",
-      "title": "Stories Inform the Platform",
+      "eyebrow": "What This Is",
+      "title": "Not the highlight reel.",
       "body": [
-        "Stories do not stand apart from the platform. They inform it.",
-        "Many stories connect directly to learning resources, consulting insights, member conversations, or Blind Dinners. Together, they add depth and perspective."
+        "The point is not to package success neatly. The point is to show what business actually feels like when the decision is real and the outcome matters.",
+        "That honesty is what makes the stories useful."
       ],
-      "inlineLink": {
-        "label": "Explore practical tools inspired by these stories",
-        "href": "/learn"
-      },
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun life coach.jpeg",
-        "alt": "Chanel Dokun in conversation with a laptop."
+        "alt": "Founder working at a table with a laptop."
       },
       "layout": "image-left",
       "theme": "light"
-    },
-    {
-      "id": "blind-dinners",
-      "type": "feature",
-      "eyebrow": "Blind Dinners and Shared Experience",
-      "title": "Connection That Continues",
-      "body": [
-        "Some stories grow out of real connection.",
-        "Blind Dinners are invitation-based gatherings where Black founders come together for honest conversation. While the dinners themselves are private, the reflections they inspire often live here."
-      ],
-      "inlineLink": {
-        "label": "Learn about Blind Dinners",
-        "href": "/blind-dinners"
-      },
-      "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
-        "alt": "Chanel Dokun portrait."
-      },
-      "layout": "image-right",
-      "theme": "paper"
     },
     {
       "id": "membership-access",
       "type": "feature",
-      "eyebrow": "Membership and Access",
-      "title": "Public Stories and Deeper Access",
+      "eyebrow": "The Decision Room",
+      "title": "Some stories are public. Some go deeper inside membership.",
       "body": [
-        "Some stories are shared publicly. Others are reserved for members.",
-        "Membership makes space for deeper reflection, trust, and care."
+        "Public stories give you a way into the thinking.",
+        "Inside The Decision Room, there is more room for reflection, supporting tools, and the kind of context that helps the lesson travel into your own work."
       ],
       "ctas": [
-        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Browse Stories", "href": "/stories", "variant": "ghost" }
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "ghost"
+        }
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0224.webp",
-        "alt": "Chanel Dokun portrait in studio lighting."
+        "alt": "Founder portrait in studio lighting."
       },
-      "layout": "image-left",
-      "theme": "light"
+      "layout": "image-right",
+      "theme": "paper"
     },
     {
       "id": "invitation",
       "type": "closing",
-      "eyebrow": "An Invitation",
-      "title": "Read the Stories",
+      "eyebrow": "What To Do With The Story",
+      "title": "Read for the decision, not the performance.",
       "body": [
-        "If you are looking for perfectly packaged success stories, this may not be the right place.",
-        "If you are looking for honesty, context, and shared experience from people building toward ownership, you are welcome here."
+        "If you are looking for polished success theater, this is not that.",
+        "If you are looking for honest decision-making you can learn from, you are in the right place."
       ],
       "ctas": [
-        { "label": "Read the Stories", "href": "/stories", "variant": "primary" }
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "primary"
+        },
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }

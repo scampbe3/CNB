@@ -1,6 +1,6 @@
 {
   "page": "cnb-home",
-  "version": "2026-02-homepage-v4-decision-room",
+  "version": "2026-03-08-homepage-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,194 +63,198 @@
     {
       "id": "hero",
       "type": "hero",
+      "note": "Cupcakes + Broccoli",
       "title": "Black ownership is Black survival, freedom and wealth.",
-      "subhead": "Cupcakes + Broccoli is a founder-led platform where Black entrepreneurs learn, build, and come together around ownership.",
+      "subhead": "We help Black founders build businesses that last.",
       "body": [
-        "Cupcakes + Broccoli brings together practical guidance, lived experience, and community to help Black founders move from idea to execution with confidence."
+        "Cupcakes + Broccoli is a place to get steady support, real guidance and clear direction as you build. If you are working on something that matters, you are in the right room."
       ],
-      "note": "This work is led by Amanda Johnson.",
       "ctas": [
         {
-          "label": "Explore The Decision Room",
+          "label": "Enter the Decision Room",
           "href": "/membership",
           "variant": "primary"
         },
         {
-          "label": "Learn More About Cupcakes + Broccoli",
-          "href": "/about",
-          "variant": "ghost"
-        }
-      ],
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
-        "alt": "Portrait of a woman in patterned textiles."
-      },
-      "layout": "image-right",
-      "theme": "light"
-    },
-    {
-      "id": "what",
-      "type": "feature",
-      "eyebrow": "What this is",
-      "title": "Built Around Experience",
-      "body": [
-        "Cupcakes + Broccoli is not a generic platform or content library. It is an ecosystem shaped by real experience and extended through community.",
-        "Everything here is designed to support clarity, confidence, and ownership over time."
-      ],
-      "inlineLink": {
-        "label": "Learn how Cupcakes + Broccoli works",
-        "href": "/about"
-      },
-      "image": {
-        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-        "alt": "Portrait framed by soft light and layered textiles."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "decision-room",
-      "type": "feature",
-      "eyebrow": "Membership",
-      "title": "Inside The Decision Room",
-      "layoutVariant": "band-card",
-      "body": [
-        "The Decision Room is Amanda's membership for founders who need structured thinking and practical momentum.",
-        "Instead of a public chatbot, members get prompt stacks, guided frameworks, and issue-based direction they can apply immediately."
-      ],
-      "ctas": [
-        {
-          "label": "Explore The Decision Room",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Member Login",
-          "href": "/login",
-          "variant": "ghost"
-        }
-      ],
-      "image": {
-        "src": "assets/images/additional_images_2/CLIENTS/cindy joseph/TheCeeSuite_TalentandDEIConsultancy.webp",
-        "alt": "Textile-inspired portrait detail."
-      },
-      "layout": "image-right",
-      "theme": "mist"
-    },
-    {
-      "id": "learn",
-      "type": "feature",
-      "eyebrow": "Learn",
-      "title": "Practical Learning You Can Use",
-      "body": [
-        "Learning at Cupcakes + Broccoli is built for application.",
-        "Inside the library you will find tools, frameworks, and stories that help founders make decisions and move work forward."
-      ],
-      "ctas": [
-        {
-          "label": "Explore Resources",
-          "href": "/learn",
-          "variant": "primary"
-        }
-      ],
-      "image": {
-        "src": "assets/images/1muriu-8-scaled.jpg",
-        "alt": "Portrait of a woman in a geometric patterned backdrop."
-      },
-      "layout": "image-right",
-      "theme": "light"
-    },
-    {
-      "id": "work",
-      "type": "feature",
-      "eyebrow": "Work With Amanda",
-      "title": "Guidance Led by Experience",
-      "body": [
-        "All consulting and advisory work at Cupcakes + Broccoli is led directly by Amanda Johnson.",
-        "This work draws on deep corporate experience and years spent advising Black-owned businesses navigating growth, uncertainty, and limited access to support.",
-        "This page outlines two direct offerings: Business Counsel and Strategic Partnership."
-      ],
-      "ctas": [
-        {
-          "label": "Work With Amanda",
+          "label": "Work With Us",
           "href": "/work-with-amanda",
           "variant": "ghost"
         }
       ],
       "image": {
-        "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
-        "alt": "Portrait of a woman with bold color styling."
+        "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
+        "alt": "Portrait layered with patterned textiles."
       },
-      "layout": "image-left",
       "theme": "light"
     },
     {
-      "id": "dinners",
+      "id": "decision-room",
       "type": "feature",
-      "eyebrow": "Blind Dinners",
-      "title": "Community at the Table",
+      "eyebrow": "The Decision Room",
+      "title": "For founders who want stronger support.",
       "body": [
-        "Blind Dinners are intimate, invitation-based gatherings hosted by Amanda Johnson for Black founders.",
-        "They are not networking events. They are moments of trust, perspective, and shared understanding."
+        "The Decision Room is a membership for people building real businesses.",
+        "Inside you will find:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Essays like \"Are You Underpricing, Overpricing or Just Uncomfortable?\"",
+        "Decision case studies that break down real founder moments step by step",
+        "Tools like a Pricing Reality Check worksheet, a Launch Readiness checklist, and a Partnership Red-Flag guide",
+        "An AI prompt stack on how to pressure-test AI thinking before you act, including copy-and-use prompts and a guide to spotting weak outputs",
+        "Access to live sessions where real business problems get worked through together"
+      ],
+      "bodyAfter": [
+        "No hustle culture. No shallow motivation. No pretending business is easy.",
+        "Just honest insight and practical direction you can use right away."
       ],
       "ctas": [
         {
-          "label": "Learn About Blind Dinners",
-          "href": "/blind-dinners",
-          "variant": "ghost"
+          "label": "Enter the Decision Room",
+          "href": "/membership",
+          "variant": "primary"
         }
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Portrait layered over a patterned textile background."
+        "alt": "Portrait framed by patterned textiles."
       },
       "layout": "image-right",
-      "theme": "light"
-    },
-    {
-      "id": "membership",
-      "type": "feature",
-      "eyebrow": "Membership",
-      "title": "The Decision Room",
-      "body": [
-        "One membership. One clear offer. The Decision Room is $39 per month.",
-        "Members get practical guidance, written prompt stacks, and structured support to make better decisions and move work forward."
-      ],
-      "ctas": [
-        {
-          "label": "Join The Decision Room",
-          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
-          "variant": "primary"
-        },
-        {
-          "label": "Member Login",
-          "href": "/login",
-          "variant": "ghost"
-        }
-      ],
-      "image": {
-        "src": "assets/images/african-digital-print-fabric.jpg",
-        "alt": "Colorful African print fabric pattern.",
-        "fit": "cover"
-      },
-      "layout": "image-left",
       "theme": "paper"
     },
     {
-      "id": "closing",
-      "type": "closing",
-      "eyebrow": "Closing",
-      "title": "Ownership Is a Practice",
+      "id": "business-counsel",
+      "type": "feature",
+      "eyebrow": "Business Counsel",
+      "title": "When you need to solve something now.",
       "body": [
-        "Cupcakes + Broccoli exists for Black founders who want to think clearly, build deliberately, and own what they create."
+        "Business Counsel is a focused session designed to help you work through a specific problem.",
+        "Maybe you are asking:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Should a beauty founder expand into wholesale or double down on direct-to-consumer?",
+        "How should a psychiatrist or dermatologist structure a possible influencer or celebrity collaboration?",
+        "Is it time for a freelance web developer to raise rates or walk away from a draining client?",
+        "Would launching a podcast actually help a CPA build authority, and how should it be positioned?",
+        "Should a Brooklyn wine shop and restaurant make a major menu shift or pursue a new partnership?"
+      ],
+      "bodyAfter": [
+        "Or it might be something else entirely.",
+        "We get to the heart of it quickly. You leave with a clear next move and a plan you can stand behind."
       ],
       "ctas": [
         {
-          "label": "Join The Decision Room",
-          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
+          "label": "Book Business Counsel",
+          "href": "/apply-business-counsel",
           "variant": "primary"
         }
       ],
+      "image": {
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
+        "alt": "Amanda Johnson smiling in a studio portrait."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "strategic-partnership",
+      "type": "feature",
+      "eyebrow": "Strategic Partnership",
+      "title": "For big moves.",
+      "body": [
+        "Some seasons require deeper work.",
+        "If you are preparing to launch, grow, reposition, or fix something that is not working, we can work together in a focused engagement."
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Leading the rebrand of a core beauty product that has outgrown its original look and messaging",
+        "Project managing a website rebuild so it reflects the business and supports sales",
+        "Designing a social media strategy for a small but serious team",
+        "Reviewing a brand's product mix to decide what to cut, keep, and prioritize",
+        "Building a go-to-market plan for a service-based founder introducing new offerings"
+      ],
+      "bodyAfter": [
+        "This is not an open-ended retainer.",
+        "It is structured work with a clear goal and timeline.",
+        "If you are ready to make a serious move, apply to work together."
+      ],
+      "ctas": [
+        {
+          "label": "Apply to Work Together",
+          "href": "/apply-strategic-partnership",
+          "variant": "primary"
+        }
+      ],
+      "image": {
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
+        "alt": "Amanda Johnson in a studio portrait with hand at chin."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "case-studies",
+      "type": "feature",
+      "eyebrow": "Case Studies",
+      "title": "Real life decisions. Not the highlight reel.",
+      "body": [
+        "Every business hits hard moments.",
+        "In our case studies, we break down:"
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "What the founder was facing",
+        "What options were on the table",
+        "What they chose",
+        "What changed after"
+      ],
+      "bodyAfter": [
+        "You will not find bragging.",
+        "You will find honesty."
+      ],
+      "ctas": [
+        {
+          "label": "Explore Case Studies",
+          "href": "/stories",
+          "variant": "primary"
+        }
+      ],
+      "image": {
+        "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
+        "alt": "Portrait of a founder in studio light."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "blind-dinners",
+      "type": "closing",
+      "eyebrow": "Blind Dinners",
+      "title": "Blind Dinners",
+      "body": [
+        "Small, invitation-only dinners Amanda hosts and cooks herself.",
+        "Guests do not know who else is coming until they arrive.",
+        "The room brings together founders, creatives, executives, and builders from different backgrounds to talk honestly about business, ownership, and navigating rooms that were not built for us."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "No panels.",
+        "No name tags.",
+        "Just real conversation around the table."
+      ],
+      "ctas": [
+        {
+          "label": "Learn More",
+          "href": "/blind-dinners",
+          "variant": "primary"
+        }
+      ],
+      "image": {
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
+        "alt": "Guests gathered around a dinner table."
+      },
+      "layout": "image-right",
       "theme": "ink"
     }
   ]

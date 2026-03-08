@@ -1,6 +1,6 @@
 {
   "page": "learn",
-  "version": "2026-02-learn-v2-no-ai-ui",
+  "version": "2026-03-08-learn-single-membership",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -64,11 +64,10 @@
       "id": "hero",
       "type": "hero",
       "note": "Learn",
-      "title": "Practical Learning for Real Decisions",
-      "subhead": "Learning at Cupcakes + Broccoli is designed to be used.",
+      "title": "Practical learning for real decisions.",
       "body": [
-        "The resources here are built to help Black founders make decisions, move work forward, and build with confidence.",
-        "This is practical guidance, grounded in real experience."
+        "The resources here are built to help founders make decisions, move work forward, and build with more confidence.",
+        "This is practical guidance grounded in real experience."
       ],
       "image": {
         "src": "assets/images/muriu-6-scaled.jpg",
@@ -79,23 +78,22 @@
     {
       "id": "what-youll-find",
       "type": "feature",
-      "eyebrow": "What You Will Find Here",
-      "title": "Tools, Frameworks, and Stories",
+      "eyebrow": "What You Will Find",
+      "title": "Tools, frameworks, and case studies shaped by real work.",
       "body": [
-        "The Learn section brings together tools, frameworks, and stories shaped by real founder work.",
-        "You will find:"
+        "The Learn section brings together practical resources drawn from the same questions founders bring into the work."
       ],
       "listVariant": "card-stack",
       "list": [
-        "Decision frameworks for pricing, positioning, and focus",
-        "Step-by-step guides for launching, restructuring, and scaling",
-        "Templates for proposals, scopes of work, and strategy documents",
-        "Case studies drawn from real situations",
-        "Essays and reflections that provide context and perspective"
+        "Essays that tackle real business tension",
+        "Decision case studies grounded in real founder moments",
+        "Practical worksheets and filters you can use immediately",
+        "Prompt stacks that help you use AI with more judgment",
+        "Resources that connect to live sessions, consulting, and stories"
       ],
       "image": {
-        "src": "assets/images/murius-7-scaled.jpg",
-        "alt": "Portrait with geometric patterned backdrop."
+        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
+        "alt": "Portrait framed by soft light and layered textiles."
       },
       "layout": "image-right",
       "theme": "paper"
@@ -103,20 +101,15 @@
     {
       "id": "how-to-use",
       "type": "feature",
-      "eyebrow": "How to Use This Section",
-      "title": "Start With a Question",
+      "eyebrow": "How To Use It",
+      "title": "Start with the real question in front of you.",
       "body": [
-        "Some founders come here with a specific question.",
-        "Others come when something feels stuck.",
-        "You can browse by topic, then use Decision Room prompt stacks for deeper guided thinking inside membership."
+        "Some founders arrive with a specific question. Others arrive when something feels stuck.",
+        "Either way, the goal is not passive consumption. The goal is to help you think more clearly and act with more confidence."
       ],
-      "inlineLink": {
-        "label": "Explore The Decision Room",
-        "href": "/membership"
-      },
       "image": {
         "src": "assets/images/image-5.jpg",
-        "alt": "Textile-inspired portrait detail."
+        "alt": "Patterned portrait detail."
       },
       "layout": "image-left",
       "theme": "light"
@@ -125,10 +118,61 @@
       "id": "access-membership",
       "type": "feature",
       "eyebrow": "Access and Membership",
-      "title": "Built for Public Access and Deeper Membership",
+      "title": "Public access with deeper support inside The Decision Room.",
       "body": [
         "A portion of the Learn library is available publicly.",
-        "Deeper tools and expanded frameworks are available through Membership, which helps keep the work thoughtful and well-supported."
+        "Deeper tools, prompt stacks, and guided resources live inside The Decision Room, where the work can go further with more context and care."
+      ],
+      "ctas": [
+        {
+          "label": "Explore The Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        }
+      ],
+      "image": {
+        "src": "assets/images/murius-7-scaled.jpg",
+        "alt": "Portrait layered over a geometric backdrop."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "learning-context",
+      "type": "feature",
+      "eyebrow": "Context",
+      "title": "The learning does not sit apart from the rest of the work.",
+      "body": [
+        "These resources connect to consulting work, member conversations, stories, and Blind Dinners.",
+        "The point is not consumption. The point is application."
+      ],
+      "ctas": [
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "primary"
+        },
+        {
+          "label": "Read the Stories",
+          "href": "/stories",
+          "variant": "ghost"
+        }
+      ],
+      "image": {
+        "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun life coach.jpeg",
+        "alt": "Founder working at a table with a laptop."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "invitation",
+      "type": "closing",
+      "eyebrow": "Invitation",
+      "title": "If you want more than inspiration, start here.",
+      "body": [
+        "If you are looking for shortcuts, this may not be the right place.",
+        "If you are looking for practical guidance grounded in experience and care, you are welcome here."
       ],
       "ctas": [
         {
@@ -137,52 +181,9 @@
           "variant": "primary"
         },
         {
-          "label": "Browse Available Resources",
-          "href": "/learn",
+          "label": "Read the Stories",
+          "href": "/stories",
           "variant": "ghost"
-        }
-      ],
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Portrait layered over a patterned textile background."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "learning-context",
-      "type": "feature",
-      "eyebrow": "Learning in Context",
-      "title": "Connected to the Work",
-      "body": [
-        "Learning at Cupcakes + Broccoli does not happen in isolation.",
-        "Many resources connect to consulting work, member conversations, Blind Dinners, and shared stories from the community. The goal is not consumption. It is application."
-      ],
-      "inlineLink": {
-        "label": "See how learning connects to real experiences",
-        "href": "/stories"
-      },
-      "image": {
-        "src": "assets/images/african-digital-print-fabric.jpg",
-        "alt": "Colorful African print fabric pattern."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "invitation",
-      "type": "closing",
-      "eyebrow": "An Invitation",
-      "title": "Start Learning",
-      "body": [
-        "If you are looking for shortcuts, this may not be the right place.",
-        "If you are looking for practical guidance grounded in experience and care, you are welcome here."
-      ],
-      "ctas": [
-        {
-          "label": "Start Learning",
-          "href": "/learn",
-          "variant": "primary"
         }
       ],
       "theme": "ink"

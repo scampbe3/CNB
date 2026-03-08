@@ -1,6 +1,6 @@
 {
   "page": "apply-business-counsel",
-  "version": "2026-02-apply-business-counsel-v1",
+  "version": "2026-03-08-apply-business-counsel-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,32 +63,33 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Application",
-      "title": "Business Counsel Application",
-      "subhead": "Share brief context so Amanda can evaluate fit.",
+      "note": "Business Counsel",
+      "title": "Apply",
+      "subhead": "Business Counsel is for one real decision that needs focused attention.",
       "body": [
-        "Please complete the application form below. Responses are reviewed directly by Amanda."
+        "Sessions are $350 and last approximately 75 minutes.",
+        "Before moving forward, please share what decision you are facing right now, and why it matters."
       ],
       "theme": "light"
     },
     {
       "id": "questions",
       "type": "feature",
-      "eyebrow": "Required Fields",
-      "title": "Application Questions",
+      "eyebrow": "Application",
+      "title": "Share the decision you are sitting with.",
       "body": [
-        "Please provide the following information in the form below."
+        "If it is a good fit, you will receive a payment link and scheduling link."
       ],
       "form": {
         "action": "https://formsubmit.co/amanda@cupcakesandbroccoli.com",
         "redirectPath": "/thank-you-business-counsel",
         "subject": "Business Counsel Application",
         "submitLabel": "Submit Application",
-        "note": "You will be redirected after submission.",
+        "note": "Amanda reviews each application personally.",
         "fields": [
           {
-            "name": "name",
-            "label": "Name",
+            "name": "full_name",
+            "label": "Full Name",
             "type": "text",
             "required": true,
             "autocomplete": "name"
@@ -102,15 +103,15 @@
           },
           {
             "name": "business_name",
-            "label": "Business Name (Optional)",
+            "label": "Business Name (optional)",
             "type": "text"
           },
           {
-            "name": "open_question",
-            "label": "What Are You Navigating Right Now?",
+            "name": "your_response",
+            "label": "What decision are you facing right now, and why does it matter?",
             "type": "textarea",
             "required": true,
-            "rows": 6
+            "rows": 7
           }
         ]
       },
@@ -119,17 +120,10 @@
     {
       "id": "closing",
       "type": "closing",
-      "eyebrow": "After Submission",
-      "title": "Thank You",
+      "eyebrow": "Next",
+      "title": "What happens after you submit.",
       "body": [
-        "After you submit, you should be redirected to the Business Counsel thank-you page."
-      ],
-      "ctas": [
-        {
-          "label": "Back to Work With Amanda",
-          "href": "/work-with-amanda",
-          "variant": "ghost"
-        }
+        "Applications are reviewed personally. If it is a strong fit, you will receive a payment link and a scheduling link."
       ],
       "theme": "ink"
     }

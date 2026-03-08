@@ -8,22 +8,24 @@
       classes: ["cnb-hero", "cnb-photo-panel", "cnb-photo-hero"],
     },
     {
-      ids: ["cnb-home-what", "cnb-what-we-do"],
-      classes: ["cnb-what", "cnb-photo-panel", "cnb-photo-what"],
+      ids: ["cnb-home-decision-room", "cnb-decision-room", "cnb-home-membership", "cnb-membership"],
+      classes: ["cnb-membership", "cnb-membership-texture"],
     },
-    { ids: ["cnb-home-ai", "cnb-ai-concierge"], classes: ["cnb-ai"] },
     {
-      ids: ["cnb-home-learn", "cnb-learn"],
+      ids: ["cnb-home-business-counsel", "cnb-business-counsel", "cnb-home-work", "cnb-work-with-amanda"],
+      classes: ["cnb-work", "cnb-photo-panel", "cnb-photo-work"],
+    },
+    {
+      ids: ["cnb-home-strategic-partnership", "cnb-strategic-partnership"],
+      classes: ["cnb-work", "cnb-photo-panel", "cnb-photo-work"],
+    },
+    {
+      ids: ["cnb-home-case-studies", "cnb-case-studies", "cnb-home-stories", "cnb-stories"],
       classes: ["cnb-learn", "cnb-photo-panel", "cnb-photo-learn"],
     },
     {
-      ids: ["cnb-home-work", "cnb-work-with-amanda"],
-      classes: ["cnb-work", "cnb-photo-panel", "cnb-photo-work"],
-    },
-    { ids: ["cnb-home-dinners", "cnb-blind-dinners"], classes: ["cnb-dinners", "cnb-dinners-texture"] },
-    {
-      ids: ["cnb-home-membership", "cnb-membership"],
-      classes: ["cnb-membership", "cnb-membership-texture"],
+      ids: ["cnb-home-dinners", "cnb-blind-dinners"],
+      classes: ["cnb-dinners", "cnb-dinners-texture"],
     },
     { ids: ["cnb-home-closing", "cnb-closing"], classes: ["cnb-closing"] },
   ];
@@ -96,40 +98,6 @@
     if (buttons[1]) buttons[1].classList.add("cnb-btn-secondary");
   }
 
-  function wireAiConcierge(section) {
-    if (!section) return;
-
-    let triggers = Array.from(section.querySelectorAll(".sqs-block-button-element"));
-    if (!triggers.length) {
-      const fallback = section.querySelector(
-        "a[href=\"#cnb-home-ai\"], a[href=\"#cnb-ai-concierge\"], a[href=\"#cnb-ai\"]"
-      );
-      if (fallback) triggers = [fallback];
-    }
-
-    triggers.forEach((trigger) => {
-      if (trigger.dataset.cnbAiWired) return;
-      trigger.dataset.cnbAiWired = "true";
-      trigger.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (window.CNB && window.CNB.aiConcierge && typeof window.CNB.aiConcierge.open === "function") {
-          window.CNB.aiConcierge.open();
-        }
-      });
-    });
-
-    const form = section.querySelector("form");
-    if (form && !form.dataset.cnbAiWired) {
-      form.dataset.cnbAiWired = "true";
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        if (window.CNB && window.CNB.aiConcierge && typeof window.CNB.aiConcierge.open === "function") {
-          window.CNB.aiConcierge.open();
-        }
-      });
-    }
-  }
-
   function revealOnScroll() {
     const items = Array.from(document.querySelectorAll("[data-reveal]"));
     if (!items.length) return;
@@ -162,8 +130,7 @@
   function init() {
     let found = false;
     let heroSection = null;
-    let membershipSection = null;
-    let aiSection = null;
+    let decisionRoomSection = null;
 
     SECTION_CONFIG.forEach((config) => {
       const section = claimSection(config.ids, config.classes);
@@ -173,11 +140,13 @@
         if (config.ids.indexOf("cnb-home-hero") >= 0 || config.ids.indexOf("cnb-hero") >= 0) {
           heroSection = section;
         }
-        if (config.ids.indexOf("cnb-home-membership") >= 0 || config.ids.indexOf("cnb-membership") >= 0) {
-          membershipSection = section;
-        }
-        if (config.ids.indexOf("cnb-home-ai") >= 0 || config.ids.indexOf("cnb-ai-concierge") >= 0) {
-          aiSection = section;
+        if (
+          config.ids.indexOf("cnb-home-decision-room") >= 0 ||
+          config.ids.indexOf("cnb-decision-room") >= 0 ||
+          config.ids.indexOf("cnb-home-membership") >= 0 ||
+          config.ids.indexOf("cnb-membership") >= 0
+        ) {
+          decisionRoomSection = section;
         }
       }
     });
@@ -188,8 +157,7 @@
     if (heroSection) document.body.classList.add("cnb-home");
 
     markSecondaryButton(heroSection);
-    markSecondaryButton(membershipSection);
-    wireAiConcierge(aiSection);
+    markSecondaryButton(decisionRoomSection);
     revealOnScroll();
   }
 

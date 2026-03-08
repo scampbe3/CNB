@@ -20,11 +20,11 @@
 
   const SECTION_MAP = {
     Hero: "hero",
-    "What This Is": "what",
-    "AI Concierge": "ai",
-    Learn: "learn",
-    "Work With Amanda": "work",
-    "Blind Dinners": "dinners",
+    "The Decision Room": "decision-room",
+    "Business Counsel": "business-counsel",
+    "Strategic Partnership": "strategic-partnership",
+    "Case Studies": "case-studies",
+    "Blind Dinners": "blind-dinners",
     Membership: "membership",
     Closing: "closing",
   };
@@ -492,6 +492,12 @@
     } else {
       renderBody(section.body, copy);
     }
+
+    const inlineLink = renderInlineLink(section.inlineLink);
+    if (inlineLink) copy.appendChild(inlineLink);
+
+    const ctas = renderCtas(section.ctas);
+    if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-hero-media");
     const image = renderImage(section.image, { sectionEl });
@@ -1442,19 +1448,6 @@
     observer.observe(document.body, { childList: true, subtree: true });
   };
 
-  const bindPromptFill = () => {
-    mount.addEventListener("click", (event) => {
-      const promptButton = event.target.closest(".cnb-ai-prompt");
-      if (!promptButton) return;
-      const panel = promptButton.closest(".cnb-ai-panel");
-      if (!panel) return;
-      const textarea = panel.querySelector(".cnb-ai-textarea");
-      if (!textarea) return;
-      textarea.value = promptButton.dataset.prompt || promptButton.textContent || "";
-      textarea.focus();
-    });
-  };
-
   const setupRevealObserver = () => {
     const sections = Array.from(mount.querySelectorAll(".cnb-home-section"));
     if (!("IntersectionObserver" in window)) {
@@ -1476,59 +1469,6 @@
     sections.forEach((section) => observer.observe(section));
   };
 
-  const syncMembershipJoinLinks = () => {
-    if (!document.body.classList.contains("cnb-page-membership")) return;
-    const compareBtn = mount.querySelector(
-      '.cnb-home-btn[href^="#membership-tiers"], .cnb-home-btn[href="#membership-tiers"]'
-    );
-    const targetHref = compareBtn ? compareBtn.getAttribute("href") : "#membership-tiers";
-    const joinButtons = Array.from(mount.querySelectorAll(".cnb-home-btn")).filter((btn) => {
-      const label = (btn.textContent || "").trim().toLowerCase();
-      return label === "join membership";
-    });
-    joinButtons.forEach((btn) => {
-      if (btn.tagName.toLowerCase() !== "a") return;
-      btn.setAttribute("href", targetHref);
-    });
-  };
-
-  const syncLearnAiLink = () => {
-    if (!document.body.classList.contains("cnb-page-learn")) return;
-    const targetHref = "https://www.cupcakesandbroccoli.com/new-page-test-3#ai";
-    const link = mount.querySelector(".cnb-inline-link");
-    if (!link) return;
-    const text = (link.textContent || "").trim().toLowerCase();
-    if (text === "ask a question using the ai concierge") {
-      link.setAttribute("href", targetHref);
-    }
-  };
-
-  const getStickyHeaderOffset = () => {
-    const header = mount.querySelector(".cnb-site-header") || document.querySelector(".cnb-site-header");
-    if (!header) return 0;
-    const style = window.getComputedStyle(header);
-    if (style.position !== "fixed" && style.position !== "sticky") return 0;
-    return header.getBoundingClientRect().height + 16;
-  };
-
-  const jumpToTargetSection = () => {
-    const hash = (window.location.hash || "").replace("#", "").trim().toLowerCase();
-    if (!hash) return;
-    const targetHash = hash === "ai-concierge" ? "ai" : hash;
-    if (targetHash !== "ai") return;
-
-    const scrollToAi = () => {
-      const section = mount.querySelector("#ai") || mount.querySelector("#ai-concierge");
-      if (!section) return;
-      const top = Math.max(0, section.getBoundingClientRect().top + window.scrollY - getStickyHeaderOffset());
-      window.scrollTo({ top, behavior: "auto" });
-    };
-
-    [0, 120, 300, 700, 1200].forEach((delay) => {
-      window.setTimeout(scrollToAi, delay);
-    });
-  };
-
   const hydrate = (data) => {
     document.body.classList.add("cnb-homepage-active", "cnb-page-active");
     if (data && data.page) {
@@ -1548,15 +1488,7 @@
     }
     bindModalTriggers();
     bindLoginTriggers();
-    bindPromptFill();
     setupRevealObserver();
-    syncMembershipJoinLinks();
-    syncLearnAiLink();
-    jumpToTargetSection();
-    if (!window.__cnbHashJumpWired) {
-      window.__cnbHashJumpWired = true;
-      window.addEventListener("hashchange", jumpToTargetSection);
-    }
   };
 
   const safeHydrate = (data) => {

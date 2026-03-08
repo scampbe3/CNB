@@ -1,6 +1,6 @@
 {
   "page": "blind-dinners",
-  "version": "2026-02-blind-dinners-v2-membership-update",
+  "version": "2026-03-08-blind-dinners-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -64,174 +64,84 @@
       "id": "hero",
       "type": "hero",
       "note": "Blind Dinners",
-      "title": "An Invitation to a Seat at the Table",
-      "subhead": "Blind Dinners are intimate, invitation-only gatherings hosted by Amanda Johnson.",
+      "title": "Where titles fade and people have real talk.",
       "body": [
-        "They are designed for people who carry responsibility, influence, and vision, often without many places to put it down.",
-        "These dinners create space for honesty, depth, and connection among people who understand what it means to build, lead, and decide.",
-        "This is not an event. It is a gathering."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/cover_20426-IMG_5910.JPEG",
-        "alt": "Photo from a Blind Dinner gathering."
-      },
-      "theme": "light"
-    },
-    {
-      "id": "who-is-at-the-table",
-      "type": "feature",
-      "eyebrow": "Who Is at the Table",
-      "title": "A Curated Mix of Guests",
-      "body": [
-        "Blind Dinners bring together a carefully curated mix of guests, including:"
-      ],
-      "listVariant": "card-stack",
-      "list": [
-        "Business owners and founders",
-        "Influencers and cultural leaders",
-        "Actors, directors, and creatives",
-        "Educators and thought leaders",
-        "Attorneys, real estate professionals, and operators"
-      ],
-      "bodyAfter": [
-        "The table is intentionally Black, alongside other People of Color and LGBTQIA+ guests.",
-        "Guests are invited because of how they think, how they move through the world, and how they hold responsibility, not because of follower count or title alone."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/342-IMG_5733.JPEG",
-        "alt": "Guests in conversation at a Blind Dinner."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "what-its-like",
-      "type": "feature",
-      "eyebrow": "What a Blind Dinner Is Like",
-      "title": "Conversation Over Performance",
-      "body": [
-        "Guests do not arrive to pitch, perform, or promote.",
-        "They arrive to listen, share, and be in conversation. Phones are put away. The evening unfolds slowly, with room for laughter, vulnerability, and reflection.",
-        "Conversation moves where it needs to go. Everyone comes in as themselves. Everyone leaves having been seen."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/433-IMG_5918.JPEG",
-        "alt": "Conversation unfolding during a Blind Dinner evening."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "about-the-food",
-      "type": "feature",
-      "eyebrow": "About the Food",
-      "title": "Home Cooked, Served With Care",
-      "layoutVariant": "band-card",
-      "body": [
-        "The food served at Blind Dinners is home cooked by Amanda.",
-        "Amanda is not a chef. She cooks because cooking is how she creates care and belonging.",
-        "Meals are prepared thoughtfully and served family-style. The food is not about spectacle. It is about warmth, generosity, and the feeling of being welcomed into someone’s home."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/499-IMG_6013.JPEG",
-        "alt": "A Blind Dinner table and meal prepared with care."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "why-it-exists",
-      "type": "feature",
-      "eyebrow": "Why Blind Dinners Exist",
-      "title": "Relief From Performance",
-      "body": [
-        "Leadership can be isolating.",
-        "Blind Dinners exist because there are few spaces where people with influence can be human without explanation.",
-        "These gatherings offer relief from performance and space for truth. They are intentionally small so that trust can form and conversation can deepen."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
-        "alt": "An intimate moment from a Blind Dinner gathering."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "how-hosted",
-      "type": "feature",
-      "eyebrow": "How Blind Dinners Are Hosted",
-      "title": "Curated, Private, Limited by Design",
-      "body": [
-        "Blind Dinners are hosted personally by Amanda Johnson.",
-        "Each guest list is curated with care. The balance of voices at the table matters.",
-        "Dinners are hosted in private settings and are limited by design. Because of this, Blind Dinners are not open to the public and cannot be requested directly."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/193-IMG_5191.JPEG",
-        "alt": "A private Blind Dinner setting."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "membership-relationship",
-      "type": "feature",
-      "eyebrow": "Relationship to Membership",
-      "title": "Relationship to The Decision Room",
-      "body": [
-        "Blind Dinners are part of the broader Cupcakes + Broccoli ecosystem.",
-        "Eligibility is reserved for members and invited participants aligned with the purpose of the room.",
-        "Membership creates shared context, continuity, and alignment beyond a single evening."
-      ],
-      "ctas": [
-        {
-          "label": "Explore The Decision Room",
-          "href": "/membership",
-          "variant": "primary"
-        }
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/334-IMG_5725.JPEG",
-        "alt": "Guests building connection at a Blind Dinner."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "privacy-trust",
-      "type": "feature",
-      "eyebrow": "Privacy and Trust",
-      "title": "Discretion Is Foundational",
-      "body": [
-        "What happens at a Blind Dinner stays at the table.",
-        "Stories may inspire reflection or future writing, but individual conversations are held with care and discretion. Privacy is foundational to the experience."
+        "Blind Dinners are small, invitation-only gatherings Amanda hosts and cooks herself.",
+        "Guests do not know who else is attending until they arrive.",
+        "The room brings together founders, creatives, executives, and builders from different backgrounds to talk honestly about business, ownership, and navigating rooms that were not built for us."
       ],
       "image": {
         "src": "assets/images/additional_images/Blind Dinner 1 photos/475-IMG_5974.JPEG",
-        "alt": "A discreet and intimate Blind Dinner moment."
+        "alt": "Guests sharing a meal at a long table."
+      },
+      "theme": "light"
+    },
+    {
+      "id": "what-it-is",
+      "type": "feature",
+      "eyebrow": "The Room",
+      "title": "Hosted at home, built for honest conversation.",
+      "body": [
+        "Blind Dinners are intimate by design. They are not events built for visibility. They are rooms built for trust."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/334-IMG_5725.JPEG",
+        "alt": "A plated dish prepared for a dinner guest."
       },
       "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "invitation",
-      "type": "closing",
-      "eyebrow": "An Invitation",
-      "title": "A Deeper Kind of Connection",
+      "id": "who-comes",
+      "type": "feature",
+      "eyebrow": "Who Comes",
+      "title": "Founders, creatives, executives, and builders in one room.",
       "body": [
-        "Blind Dinners are for people who value depth over visibility and connection over performance.",
-        "If this resonates, The Decision Room is the first step toward deeper participation."
+        "The mix matters. Different backgrounds create better conversation, sharper perspective, and a different kind of honesty."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/433-IMG_5918.JPEG",
+        "alt": "A dinner guest serving food to the table."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "how-it-works",
+      "type": "feature",
+      "eyebrow": "Format",
+      "title": "No panels. No speakers. No networking scripts.",
+      "body": [
+        "There are no panels, no speakers, and no name tags.",
+        "Just real conversation around the table."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "Private by design",
+        "Conversation over performance",
+        "Shared perspective over surface networking"
+      ],
+      "image": {
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/499-IMG_6013.JPEG",
+        "alt": "Guests in candid conversation at a candlelit dinner."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "relationship-to-membership",
+      "type": "closing",
+      "eyebrow": "The Decision Room",
+      "title": "Thoughtful invitations start with shared context.",
+      "body": [
+        "Invitations are extended thoughtfully and intentionally.",
+        "If you are interested in future invitations, The Decision Room is the first place to begin building shared language, trust, and alignment."
       ],
       "ctas": [
         {
           "label": "Explore The Decision Room",
           "href": "/membership",
           "variant": "primary"
-        },
-        {
-          "label": "Learn About Cupcakes + Broccoli",
-          "href": "/about",
-          "variant": "ghost"
         }
       ],
       "theme": "ink"

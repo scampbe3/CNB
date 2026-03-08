@@ -1,6 +1,6 @@
 {
   "page": "thank-you-strategic-partnership",
-  "version": "2026-02-thank-you-strategic-partnership-v1",
+  "version": "2026-03-08-thank-you-strategic-partnership-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,21 +63,26 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Submitted",
-      "title": "Thanks for Applying",
-      "subhead": "Your Strategic Partnership application was received.",
+      "note": "Thank You",
+      "title": "I am excited you reached out.",
       "body": [
-        "We will follow up by email if there is a fit for next-step conversation."
+        "If you submitted this, it means you are thinking seriously about your next move. That matters.",
+        "Strategic Partnership is designed for moments when something meaningful is shifting - a launch, a rebuild, a new chapter, work that deserves focus.",
+        "Amanda will personally review what you shared and reach out to schedule a 15-minute conversation. That call helps determine fit, scope, and timing.",
+        "You can expect to hear back within 3 business days.",
+        "If the work moves forward, it will be structured, intentional, and built around a clear outcome.",
+        "Thank you for trusting Amanda with what you are building.",
+        "Talk soon. - Amanda"
       ],
       "theme": "light"
     },
     {
       "id": "next",
       "type": "closing",
-      "eyebrow": "Next",
-      "title": "Continue Exploring",
+      "eyebrow": "Continue",
+      "title": "Return when you are ready.",
       "body": [
-        "In the meantime, you can return to Work With Amanda or explore The Decision Room."
+        "You can head back to Work With Amanda or read more about The Decision Room while you wait."
       ],
       "ctas": [
         {

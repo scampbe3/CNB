@@ -1,27 +1,62 @@
 {
   "page": "about",
-  "version": "2026-01-about-v1",
+  "version": "2026-03-08-about-feb-language",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
     "logoAlt": "Cupcakes + Broccoli logo",
     "nav": [
-      { "label": "Home", "href": "https://www.cupcakesandbroccoli.com/new-page-test-3" },
-      { "label": "About", "href": "/about" },
-      { "label": "Work With Amanda", "href": "/work-with-amanda" },
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Stories", "href": "/stories" },
-      { "label": "Blind Dinners", "href": "/blind-dinners" },
-      { "label": "Membership", "href": "/membership" },
-      { "label": "Login", "href": "/login", "variant": "button" }
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
     ]
   },
   "footer": {
     "company": "Cupcakes + Broccoli, LLC",
     "email": "amanda@cupcakesandbroccoli.com",
     "social": [
-      { "label": "Instagram", "href": "https://www.instagram.com", "newWindow": true, "rel": "noopener" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com", "newWindow": true, "rel": "noopener" }
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
     ]
   },
   "sections": [
@@ -29,183 +64,91 @@
       "id": "hero",
       "type": "hero",
       "note": "About",
-      "title": "This Is a Founder-Led Practice",
-      "subhead": "Cupcakes + Broccoli is led by Amanda Johnson.",
+      "title": "Built for founders building inside systems not built for them.",
       "body": [
-        "It is not a generic platform or a faceless subscription product. It is a founder-led practice built around experience, judgment, and care. Membership, consulting, learning, and Blind Dinners all flow from that center.",
-        "People do not come here for hype.",
-        "They come for clarity."
+        "Cupcakes + Broccoli exists for founders who need steady thinking, structural awareness, and support grounded in real experience inside complex institutions and real businesses."
       ],
-      "inlineLink": {
-        "label": "Learn how Membership works",
-        "href": "/membership"
-      },
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 8.jpg",
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 4.jpg",
+        "alt": "Amanda Johnson in a studio portrait."
+      },
+      "theme": "light"
+    },
+    {
+      "id": "about-amanda",
+      "type": "feature",
+      "eyebrow": "About Amanda",
+      "title": "Amanda Johnson",
+      "body": [
+        "Amanda Johnson began her career at NBC News, working inside the network newsroom at 30 Rockefeller Plaza in New York.",
+        "After earning a degree in Industrial Engineering from Cornell University and a Master's in Broadcast Journalism from Syracuse University, she joined NBC, producing live national segments, covering presidential campaigns, and operating inside one of the most demanding environments in network news.",
+        "That newsroom foundation shaped how she thinks: quickly, structurally, and with clarity under pressure.",
+        "She later earned her MBA in Marketing from NYU Stern.",
+        "From there, her work expanded into executive marketing and brand leadership across media, beauty, and consumer brands. She has led large cross-channel campaigns, managed significant operating budgets, relaunched global brand platforms, built revenue-driving strategies for established companies and emerging ventures, raised multimillion-dollar sponsorships, helped scale startups, and advised teams navigating high-stakes growth and change.",
+        "She understands how large institutions think because she has operated inside them."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
         "alt": "Amanda Johnson smiling in a studio portrait."
       },
-      "theme": "light"
-    },
-    {
-      "id": "who-amanda-is",
-      "type": "feature",
-      "eyebrow": "Who Amanda Is",
-      "title": "A Career Inside Complex Systems",
-      "body": [
-        "Amanda Johnson has spent her career inside complex systems where decisions matter.",
-        "She has led strategy and marketing work inside major organizations and advised senior leaders on initiatives tied to revenue, reputation, and growth. She understands how power moves and how decisions actually get made.",
-        "She has also worked closely with Black-owned small businesses navigating limited access and unclear rules. She understands what it means to build without a safety net.",
-        "Cupcakes + Broccoli lives at the intersection of those two realities."
-      ],
-      "inlineLink": {
-        "label": "Work directly with Amanda",
-        "href": "/work-with-amanda"
-      },
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 6.jpg",
-        "alt": "Amanda Johnson in a close studio portrait."
-      },
       "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "how-amanda-works",
+      "id": "about-cupcakes-broccoli",
       "type": "feature",
-      "eyebrow": "How Amanda Works",
-      "title": "Structure Where There Is Chaos",
+      "eyebrow": "About Cupcakes + Broccoli",
+      "title": "Structure, support, and strategic clarity for founders.",
       "body": [
-        "People who work with Amanda describe a consistent pattern.",
-        "She listens closely.",
-        "She does the work.",
-        "She stays through execution.",
-        "She brings structure where there is chaos and momentum where things feel stuck. This approach shapes everything at Cupcakes + Broccoli."
-      ],
-      "inlineLink": {
-        "label": "See how this shows up in practice",
-        "href": "/stories"
-      },
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
-        "alt": "Amanda Johnson in a studio portrait, looking to the side."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "why-cnb-exists",
-      "type": "feature",
-      "eyebrow": "Why Cupcakes + Broccoli Exists",
-      "title": "Ownership Is the Strategy",
-      "body": [
-        "Cupcakes + Broccoli was created after a series of professional and personal inflection points.",
-        "After years inside corporate environments, Amanda experienced workplace harm, public undermining, and termination. She challenged that experience through formal channels and lost. What followed was uncertainty and the realization that institutional stability is often fragile, especially for Black women.",
-        "At the same time, personal loss reshaped how she thought about time, work, and ownership.",
-        "Cupcakes + Broccoli exists because relying on systems that were not built for us is not a strategy.",
-        "Ownership is."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0224.webp",
-        "alt": "Chanel Dokun portrait in studio lighting."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "what-cnb-is",
-      "type": "feature",
-      "eyebrow": "What Cupcakes + Broccoli Is",
-      "title": "A Membership-Based Ecosystem",
-      "body": [
-        "Cupcakes + Broccoli is a membership-based ecosystem centered on guidance, learning, and community.",
-        "It includes:"
+        "Cupcakes + Broccoli is for founders building inside systems that were not built for them: corporate systems, capital systems, and media systems.",
+        "Inside institutions, strategy is reviewed, risks are tested, and decisions are rarely made alone. Outside them, founders are expected to move fast and absorb the consequences.",
+        "This work gives founders access to that same level of structure and strategic support.",
+        "It blends creativity with discipline, vision with structure, and ambition with operational clarity.",
+        "The work takes different forms:"
       ],
       "listVariant": "card-grid",
       "list": [
-        "Practical tools and decision frameworks",
-        "An AI concierge built around real founder questions",
-        "Consulting led directly by Amanda",
-        "Stories from founders and collaborators",
-        "Invitation-based Blind Dinners"
+        "The Decision Room",
+        "Business Counsel",
+        "Strategic Partnership",
+        "Blind Dinners"
       ],
       "bodyAfter": [
-        "This is not about hustle or constant growth. It is about building something sustainable, on purpose."
-      ],
-      "ctas": [
-        { "label": "Explore Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Browse Resources", "href": "/learn", "variant": "ghost" }
-      ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda_-_5_3500x4184.jpg",
-        "alt": "Amanda Johnson smiling in a bright studio portrait."
-      },
-      "layout": "image-left",
-      "theme": "light"
-    },
-    {
-      "id": "blind-dinners",
-      "type": "feature",
-      "eyebrow": "Blind Dinners",
-      "title": "A Core Expression of the Work",
-      "body": [
-        "Blind Dinners are a core expression of this work.",
-        "They are small, invitation-based gatherings hosted by Amanda for Black founders. They are not networking events or panels. They are moments of trust and shared perspective.",
-        "Blind Dinners are intentionally limited and available to select members."
-      ],
-      "ctas": [
-        { "label": "Learn about Blind Dinners", "href": "/blind-dinners", "variant": "ghost" }
+        "Different formats. Same foundation."
       ],
       "image": {
         "src": "assets/images/additional_images/Blind Dinner 1 photos/433-IMG_5918.JPEG",
-        "alt": "Guests in conversation at a Blind Dinner."
-      },
-      "layout": "image-right",
-      "theme": "paper"
-    },
-    {
-      "id": "what-the-name-means",
-      "type": "feature",
-      "eyebrow": "What the Name Means",
-      "title": "Joy and Discipline",
-      "layoutVariant": "ink-interlude",
-      "body": [
-        "Cupcakes + Broccoli is about balance.",
-        "Joy and discipline.",
-        "Creativity and rigor.",
-        "Vision and execution.",
-        "You cannot live on cupcakes alone.",
-        "You also cannot thrive on broccoli alone.",
-        "This platform exists to help founders hold both."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/b198dea0-e06c-41da-8ca6-9c52724cbc11.JPEG",
-        "alt": "Blind Dinner group table under string lights."
+        "alt": "Guests talking across a shared table."
       },
       "layout": "image-left",
-      "theme": "ink"
-    },
-    {
-      "id": "name-means-image",
-      "type": "feature",
-      "layoutVariant": "image-band",
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
-        "alt": "Blind Dinner table with guests gathered."
-      },
       "theme": "light"
     },
     {
-      "id": "invitation",
+      "id": "what-this-is-about",
       "type": "closing",
-      "eyebrow": "An Invitation",
-      "title": "You Are Welcome Here",
+      "eyebrow": "What This Is About",
+      "title": "Ownership builds leverage, options, and long-term stability.",
       "body": [
-        "Cupcakes + Broccoli is for Black founders who want to think clearly, build deliberately, and own what they create.",
-        "If you are looking for quick wins or surface-level motivation, this may not be the right place.",
-        "If you are looking for clarity, honesty, and a community grounded in real experience, you are welcome here."
+        "Building something that lasts requires steady thinking, structural awareness, and the confidence to move through systems that were not designed for you.",
+        "This is the work."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "Ownership builds leverage.",
+        "Ownership builds options.",
+        "Ownership builds long-term stability."
       ],
       "ctas": [
-        { "label": "Join Membership", "href": "/membership", "variant": "primary" },
-        { "label": "Read Founder Stories", "href": "/stories", "variant": "ghost" }
+        {
+          "label": "Enter the Decision Room",
+          "href": "/membership",
+          "variant": "primary"
+        },
+        {
+          "label": "Work With Amanda",
+          "href": "/work-with-amanda",
+          "variant": "ghost"
+        }
       ],
       "theme": "ink"
     }

@@ -1,6 +1,6 @@
 {
   "page": "membership",
-  "version": "2026-02-membership-v2-decision-room",
+  "version": "2026-03-08-membership-decision-room-single-offer",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -64,12 +64,18 @@
       "id": "hero",
       "type": "hero",
       "note": "Membership",
-      "title": "Explore Membership",
-      "subhead": "Steady guidance or deeper access, depending on where you are now.",
-      "body": [],
+      "title": "$39 per month",
+      "subhead": "or $390 per year (2 months free)",
+      "body": [
+        "A membership for people building something real.",
+        "If you have a full-time job and a business idea you will not stop thinking about, this is for you.",
+        "If you are building a side project at night and trying to take it seriously, this is for you.",
+        "If you already run a company with employees and revenue and want sharper thinking around your next move, this is for you.",
+        "Whether you are early, established, or somewhere in between, the Decision Room gives you a steady place to think and build."
+      ],
       "ctas": [
         {
-          "label": "Join The Decision Room",
+          "label": "Enter the Decision Room",
           "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
           "variant": "primary"
         },
@@ -80,82 +86,156 @@
         }
       ],
       "image": {
-        "src": "assets/images/additional_images_2/Thandiwe-Muriu-Camo - Google Search/Thandiwe_Muriu.jpg",
-        "alt": "Portrait in patterned textiles."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 4.jpg",
+        "alt": "Amanda Johnson in a white studio portrait."
       },
       "theme": "light"
     },
     {
-      "id": "what-it-includes",
+      "id": "whats-inside",
       "type": "feature",
-      "eyebrow": "What You Get",
-      "title": "Structured Guidance You Can Use",
+      "eyebrow": "What's Inside",
+      "title": "A preview of the support inside The Decision Room.",
       "body": [
-        "Membership includes practical support designed for real business decisions."
-      ],
-      "listVariant": "card-grid",
-      "list": [
-        "Written prompt stacks for high-stakes founder decisions",
-        "Guided frameworks you can apply immediately",
-        "Curated resources, essays, and implementation tools",
-        "Periodic issue-based direction inside the membership portal"
-      ],
-      "bodyAfter": [
-        "Everything is built to support clearer thinking and better execution over time."
+        "This page is the public front door to the membership. What follows is a clear look at the kinds of tools, essays, case studies, and guided thinking members receive."
       ],
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 4.webp",
-        "alt": "Portrait with geometric patterned backdrop."
+        "src": "assets/images/murius-7-scaled.jpg",
+        "alt": "Portrait layered over a geometric backdrop."
       },
       "layout": "image-right",
       "theme": "paper"
     },
     {
-      "id": "preview",
+      "id": "essays",
       "type": "feature",
-      "eyebrow": "Join",
-      "title": "Join The Decision Room",
-      "layoutVariant": "band-card",
+      "eyebrow": "Essays",
+      "title": "Essays that tackle real situations.",
       "body": [
-        "The Decision Room is Amanda's membership for founders who need structured thinking and practical momentum.",
-        "Instead of a public chatbot, members get prompt stacks, guided frameworks, and issue-based direction they can apply immediately."
+        "Not theory. Real tension."
       ],
       "listVariant": "card-stack",
       "list": [
-        "Preview excerpts and sample prompts",
-        "Membership overview and orientation",
-        "Clear next-step path into the portal"
-      ],
-      "ctas": [
-        {
-          "label": "Join The Decision Room",
-          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
-          "variant": "primary"
-        },
-        {
-          "label": "Login to Continue",
-          "href": "/login",
-          "variant": "ghost"
-        }
+        "\"You are Not Undercharging. You are Avoiding Conflict.\"",
+        "\"Your Product Is Not Stalled. Your Offer Is Confusing.\"",
+        "\"Stop Asking Instagram. Make the Decision.\"",
+        "\"You Do Not Need a Rebrand. You Need a Revenue Plan.\""
       ],
       "image": {
-        "src": "assets/images/additional_images_2/CLIENTS/cindy joseph/TheCeeSuite_TalentandDEIConsultancy.webp",
-        "alt": "Textile-inspired portrait detail."
+        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
+        "alt": "Portrait framed by soft light and layered textiles."
       },
-      "layout": "image-right",
+      "layout": "image-left",
       "theme": "light"
     },
     {
-      "id": "invitation",
-      "type": "closing",
-      "eyebrow": "Invitation",
-      "title": "Join The Decision Room",
+      "id": "decision-case-studies",
+      "type": "feature",
+      "eyebrow": "Decision Case Studies",
+      "title": "Real founder moments, broken down step by step.",
       "body": [
-        "If you want practical structure, sharper judgment, and consistent support as you build, this is for you."
+        "We walk through real founder moments step by step.",
+        "For example:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "A CPA deciding whether launching a podcast would actually build authority or just drain time",
+        "A dermatologist navigating a potential celebrity collaboration and how to price it",
+        "A small product brand debating wholesale versus doubling down on direct-to-consumer",
+        "A service-based founder considering whether to fire their biggest but most exhausting client"
+      ],
+      "bodyAfter": [
+        "Each case study breaks down what was happening, what was at risk, what options were on the table, what was chosen, and what changed."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
+        "alt": "Portrait of a founder in conversation."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "practical-tools",
+      "type": "feature",
+      "eyebrow": "Tools",
+      "title": "Practical tools you will actually use.",
+      "body": [
+        "Not templates for the sake of templates."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "A Pricing Reality Check worksheet",
+        "A \"Should I Launch This?\" decision filter",
+        "A Partnership Red-Flag checklist",
+        "A Product Mix Audit to decide what to cut, keep, or prioritize"
+      ],
+      "image": {
+        "src": "assets/images/image-5.jpg",
+        "alt": "Patterned portrait detail."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "ai-done-properly",
+      "type": "feature",
+      "eyebrow": "AI, Done Properly",
+      "title": "Prompt stacks, examples, and judgment.",
+      "body": [
+        "Including prompt stacks like \"Is This AI Advice Actually Sound or Just Confident?\"",
+        "You will get:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Copy-and-use prompts",
+        "How to know when AI is wrong",
+        "Clear examples of where AI is helpful",
+        "Clear examples of where you still need judgment"
+      ],
+      "bodyAfter": [
+        "No tech hype. Just practical use."
+      ],
+      "image": {
+        "src": "assets/images/butler-7.jpg",
+        "alt": "Portrait with bold color styling."
+      },
+      "layout": "image-right",
+      "theme": "paper"
+    },
+    {
+      "id": "live-sessions",
+      "type": "feature",
+      "eyebrow": "Live Sessions",
+      "title": "Regular conversations about real business questions.",
+      "body": [
+        "These are regular live conversations where real business questions get worked through together.",
+        "Not webinars. Not panels. Working sessions."
+      ],
+      "image": {
+        "src": "assets/images/muriu-6-scaled.jpg",
+        "alt": "Portrait framed by soft light."
+      },
+      "layout": "image-left",
+      "theme": "light"
+    },
+    {
+      "id": "who-this-is-for",
+      "type": "closing",
+      "eyebrow": "Who This Is For",
+      "title": "Steady support for people building without a safety net.",
+      "body": [
+        "The Decision Room is for people who:"
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "Are building without a safety net",
+        "Do not have an advisory board",
+        "Want steady support without ego",
+        "Care about ownership long term"
       ],
       "ctas": [
         {
-          "label": "Join The Decision Room",
+          "label": "Enter the Decision Room",
           "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
           "variant": "primary"
         },

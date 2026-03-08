@@ -1,12 +1,18 @@
- {
-  "columns": ["section", "field", "value", "link", "notes"],
+{
+  "columns": [
+    "section",
+    "field",
+    "value",
+    "link",
+    "notes"
+  ],
   "rows": [
     {
       "section": "Hero",
-      "field": "Kicker",
-      "value": "",
+      "field": "Note",
+      "value": "Cupcakes + Broccoli",
       "link": "",
-      "notes": "Remove from hero"
+      "notes": ""
     },
     {
       "section": "Hero",
@@ -18,36 +24,29 @@
     {
       "section": "Hero",
       "field": "Subhead",
-      "value": "Cupcakes + Broccoli is a founder-led platform where Black entrepreneurs learn, build, and come together around ownership.",
+      "value": "We help Black founders build businesses that last.",
       "link": "",
       "notes": ""
     },
     {
       "section": "Hero",
       "field": "Body 1",
-      "value": "Cupcakes + Broccoli brings together practical guidance, lived experience, and community to help Black founders move from idea to execution with confidence.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Hero",
-      "field": "Note",
-      "value": "This work is led by Amanda Johnson.",
+      "value": "Cupcakes + Broccoli is a place to get steady support, real guidance and clear direction as you build. If you are working on something that matters, you are in the right room.",
       "link": "",
       "notes": ""
     },
     {
       "section": "Hero",
       "field": "CTA 1",
-      "value": "Join Membership",
+      "value": "Enter the Decision Room",
       "link": "/membership",
       "notes": "primary"
     },
     {
       "section": "Hero",
       "field": "CTA 2",
-      "value": "Learn More About Cupcakes + Broccoli",
-      "link": "/about",
+      "value": "Work With Us",
+      "link": "/work-with-amanda",
       "notes": "ghost"
     },
     {
@@ -55,203 +54,371 @@
       "field": "Image",
       "value": "assets/images/Thandiwe-Muriu-Ascension.jpg",
       "link": "",
-      "notes": "Portrait of a woman in patterned textiles."
+      "notes": "Portrait layered with patterned textiles."
     },
     {
-      "section": "What This Is",
+      "section": "The Decision Room",
       "field": "Eyebrow",
-      "value": "What this is",
+      "value": "The Decision Room",
       "link": "",
       "notes": ""
     },
     {
-      "section": "What This Is",
+      "section": "The Decision Room",
       "field": "Title",
-      "value": "Built Around Experience",
+      "value": "For founders who want stronger support.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "What This Is",
+      "section": "The Decision Room",
       "field": "Body 1",
-      "value": "Cupcakes + Broccoli is not a generic platform or content library. It is an ecosystem shaped by real experience and extended through community.",
+      "value": "The Decision Room is a membership for people building real businesses.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "What This Is",
+      "section": "The Decision Room",
       "field": "Body 2",
-      "value": "Everything here is designed to support clarity, confidence, and ownership over time.",
+      "value": "Inside you will find:",
       "link": "",
       "notes": ""
     },
     {
-      "section": "What This Is",
-      "field": "Inline link",
-      "value": "Learn how Cupcakes + Broccoli works",
-      "link": "/about",
-      "notes": ""
-    },
-    {
-      "section": "What This Is",
-      "field": "Image",
-      "value": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-      "link": "",
-      "notes": "Portrait framed by soft light and layered textiles."
-    },
-    {
-      "section": "AI Concierge",
-      "field": "Eyebrow",
-      "value": "AI concierge",
+      "section": "The Decision Room",
+      "field": "Body After 1",
+      "value": "No hustle culture. No shallow motivation. No pretending business is easy.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Title",
-      "value": "Ask What You Are Actually Stuck On",
+      "section": "The Decision Room",
+      "field": "Body After 2",
+      "value": "Just honest insight and practical direction you can use right away.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Body 1",
-      "value": "The Cupcakes + Broccoli AI concierge helps you think through real decisions.",
+      "section": "The Decision Room",
+      "field": "List 1",
+      "value": "Essays like \"Are You Underpricing, Overpricing or Just Uncomfortable?\"",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Body 2",
-      "value": "Ask questions in your own words and receive guidance shaped by lived experience, cultural context, and the full Cupcakes + Broccoli ecosystem. This tool is designed to help you get oriented, gain clarity, and decide what to focus on next. Premium members receive unlimited access to deeper responses trained on the full Cupcakes + Broccoli library.",
+      "section": "The Decision Room",
+      "field": "List 2",
+      "value": "Decision case studies that break down real founder moments step by step",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "CTA",
-      "value": "Ask a question",
-      "link": "#ai-concierge",
-      "notes": "accent, modal"
-    },
-    {
-      "section": "AI Concierge",
-      "field": "Prompt 1",
-      "value": "How do I price my work without undercutting myself?",
+      "section": "The Decision Room",
+      "field": "List 3",
+      "value": "Tools like a Pricing Reality Check worksheet, a Launch Readiness checklist, and a Partnership Red-Flag guide",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Prompt 2",
-      "value": "What should I focus on before launching?",
+      "section": "The Decision Room",
+      "field": "List 4",
+      "value": "An AI prompt stack on how to pressure-test AI thinking before you act, including copy-and-use prompts and a guide to spotting weak outputs",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Prompt 3",
-      "value": "How do I know when it is time to leave my job?",
+      "section": "The Decision Room",
+      "field": "List 5",
+      "value": "Access to live sessions where real business problems get worked through together",
       "link": "",
       "notes": ""
     },
     {
-      "section": "AI Concierge",
-      "field": "Prompt 4",
-      "value": "What does sustainable growth actually look like?",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Learn",
-      "field": "Eyebrow",
-      "value": "Learn",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Learn",
-      "field": "Title",
-      "value": "Practical Learning You Can Use",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Learn",
-      "field": "Body 1",
-      "value": "Learning at Cupcakes + Broccoli is built for application.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Learn",
-      "field": "Body 2",
-      "value": "Inside the library you will find tools, frameworks, and stories that help founders make decisions and move work forward.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Learn",
-      "field": "CTA",
-      "value": "Explore Resources",
-      "link": "/learn",
+      "section": "The Decision Room",
+      "field": "CTA 1",
+      "value": "Enter the Decision Room",
+      "link": "/membership",
       "notes": "primary"
     },
     {
-      "section": "Learn",
+      "section": "The Decision Room",
       "field": "Image",
-      "value": "assets/images/1muriu-8-scaled.jpg",
+      "value": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
       "link": "",
-      "notes": "Portrait of a woman in a geometric patterned backdrop."
+      "notes": "Portrait framed by patterned textiles."
     },
     {
-      "section": "Work With Amanda",
+      "section": "Business Counsel",
       "field": "Eyebrow",
-      "value": "Work With Amanda",
+      "value": "Business Counsel",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Work With Amanda",
+      "section": "Business Counsel",
       "field": "Title",
-      "value": "Guidance Led by Experience",
+      "value": "When you need to solve something now.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Work With Amanda",
+      "section": "Business Counsel",
       "field": "Body 1",
-      "value": "All consulting and advisory work at Cupcakes + Broccoli is led directly by Amanda Johnson.",
+      "value": "Business Counsel is a focused session designed to help you work through a specific problem.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Work With Amanda",
+      "section": "Business Counsel",
       "field": "Body 2",
-      "value": "This work draws on deep corporate experience and years spent advising Black-owned businesses navigating growth, uncertainty, and limited access to support.",
+      "value": "Maybe you are asking:",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Work With Amanda",
-      "field": "Body 3",
-      "value": "Premium members receive access to discounted one-on-one Zoom office hours for focused decision-making.",
+      "section": "Business Counsel",
+      "field": "Body After 1",
+      "value": "Or it might be something else entirely.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Work With Amanda",
-      "field": "CTA",
-      "value": "Work With Amanda",
-      "link": "/work-with-amanda",
-      "notes": "ghost"
+      "section": "Business Counsel",
+      "field": "Body After 2",
+      "value": "We get to the heart of it quickly. You leave with a clear next move and a plan you can stand behind.",
+      "link": "",
+      "notes": ""
     },
     {
-      "section": "Work With Amanda",
+      "section": "Business Counsel",
+      "field": "List 1",
+      "value": "Should a beauty founder expand into wholesale or double down on direct-to-consumer?",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Business Counsel",
+      "field": "List 2",
+      "value": "How should a psychiatrist or dermatologist structure a possible influencer or celebrity collaboration?",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Business Counsel",
+      "field": "List 3",
+      "value": "Is it time for a freelance web developer to raise rates or walk away from a draining client?",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Business Counsel",
+      "field": "List 4",
+      "value": "Would launching a podcast actually help a CPA build authority, and how should it be positioned?",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Business Counsel",
+      "field": "List 5",
+      "value": "Should a Brooklyn wine shop and restaurant make a major menu shift or pursue a new partnership?",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Business Counsel",
+      "field": "CTA 1",
+      "value": "Book Business Counsel",
+      "link": "/apply-business-counsel",
+      "notes": "primary"
+    },
+    {
+      "section": "Business Counsel",
       "field": "Image",
-      "value": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+      "value": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
       "link": "",
-      "notes": "Portrait of a woman with bold color styling."
+      "notes": "Amanda Johnson smiling in a studio portrait."
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Eyebrow",
+      "value": "Strategic Partnership",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Title",
+      "value": "For big moves.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Body 1",
+      "value": "Some seasons require deeper work.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Body 2",
+      "value": "If you are preparing to launch, grow, reposition, or fix something that is not working, we can work together in a focused engagement.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Body After 1",
+      "value": "This is not an open-ended retainer.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Body After 2",
+      "value": "It is structured work with a clear goal and timeline.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Body After 3",
+      "value": "If you are ready to make a serious move, apply to work together.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "List 1",
+      "value": "Leading the rebrand of a core beauty product that has outgrown its original look and messaging",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "List 2",
+      "value": "Project managing a website rebuild so it reflects the business and supports sales",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "List 3",
+      "value": "Designing a social media strategy for a small but serious team",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "List 4",
+      "value": "Reviewing a brand's product mix to decide what to cut, keep, and prioritize",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "List 5",
+      "value": "Building a go-to-market plan for a service-based founder introducing new offerings",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "CTA 1",
+      "value": "Apply to Work Together",
+      "link": "/apply-strategic-partnership",
+      "notes": "primary"
+    },
+    {
+      "section": "Strategic Partnership",
+      "field": "Image",
+      "value": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
+      "link": "",
+      "notes": "Amanda Johnson in a studio portrait with hand at chin."
+    },
+    {
+      "section": "Case Studies",
+      "field": "Eyebrow",
+      "value": "Case Studies",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "Title",
+      "value": "Real life decisions. Not the highlight reel.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "Body 1",
+      "value": "Every business hits hard moments.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "Body 2",
+      "value": "In our case studies, we break down:",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "Body After 1",
+      "value": "You will not find bragging.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "Body After 2",
+      "value": "You will find honesty.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "List 1",
+      "value": "What the founder was facing",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "List 2",
+      "value": "What options were on the table",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "List 3",
+      "value": "What they chose",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "List 4",
+      "value": "What changed after",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Case Studies",
+      "field": "CTA 1",
+      "value": "Explore Case Studies",
+      "link": "/stories",
+      "notes": "primary"
+    },
+    {
+      "section": "Case Studies",
+      "field": "Image",
+      "value": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
+      "link": "",
+      "notes": "Portrait of a founder in studio light."
     },
     {
       "section": "Blind Dinners",
@@ -263,128 +430,65 @@
     {
       "section": "Blind Dinners",
       "field": "Title",
-      "value": "Community at the Table",
+      "value": "Blind Dinners",
       "link": "",
       "notes": ""
     },
     {
       "section": "Blind Dinners",
       "field": "Body 1",
-      "value": "Blind Dinners are intimate, invitation-based gatherings hosted by Amanda Johnson for Black founders.",
+      "value": "Small, invitation-only dinners Amanda hosts and cooks herself.",
       "link": "",
       "notes": ""
     },
     {
       "section": "Blind Dinners",
       "field": "Body 2",
-      "value": "They are not networking events. They are moments of trust, perspective, and shared understanding.",
+      "value": "Guests do not know who else is coming until they arrive.",
       "link": "",
       "notes": ""
     },
     {
       "section": "Blind Dinners",
-      "field": "CTA",
-      "value": "Learn About Blind Dinners",
-      "link": "/blind-dinners",
-      "notes": "ghost"
-    },
-    {
-      "section": "Blind Dinners",
-      "field": "Image",
-      "value": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-      "link": "",
-      "notes": "Portrait layered over a patterned textile background."
-    },
-    {
-      "section": "Membership",
-      "field": "Eyebrow",
-      "value": "Membership",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Membership",
-      "field": "Title",
-      "value": "Membership That Grows With You",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Membership",
-      "field": "Body 1",
-      "value": "Cupcakes + Broccoli membership gives Black founders access to tools, frameworks, and guidance shaped by real experience.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Membership",
-      "field": "Body 2",
-      "value": "Some members come for clarity.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Membership",
       "field": "Body 3",
-      "value": "Others come for structure.",
+      "value": "The room brings together founders, creatives, executives, and builders from different backgrounds to talk honestly about business, ownership, and navigating rooms that were not built for us.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Membership",
-      "field": "Body 4",
-      "value": "Premium members come because they want to stay close to the work.",
+      "section": "Blind Dinners",
+      "field": "List 1",
+      "value": "No panels.",
       "link": "",
       "notes": ""
     },
     {
-      "section": "Membership",
+      "section": "Blind Dinners",
+      "field": "List 2",
+      "value": "No name tags.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
+      "field": "List 3",
+      "value": "Just real conversation around the table.",
+      "link": "",
+      "notes": ""
+    },
+    {
+      "section": "Blind Dinners",
       "field": "CTA 1",
-      "value": "Join Membership",
-      "link": "/membership",
+      "value": "Learn More",
+      "link": "/blind-dinners",
       "notes": "primary"
     },
     {
-      "section": "Membership",
-      "field": "CTA 2",
-      "value": "Compare Membership Options",
-      "link": "/membership",
-      "notes": "ghost"
-    },
-    {
-      "section": "Membership",
+      "section": "Blind Dinners",
       "field": "Image",
-      "value": "assets/images/african-digital-print-fabric.jpg",
+      "value": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
       "link": "",
-      "notes": "Colorful African print fabric pattern."
-    },
-    {
-      "section": "Closing",
-      "field": "Eyebrow",
-      "value": "Closing",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Closing",
-      "field": "Title",
-      "value": "Ownership Is a Practice",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Closing",
-      "field": "Body 1",
-      "value": "Cupcakes + Broccoli exists for Black founders who want to think clearly, build deliberately, and own what they create.",
-      "link": "",
-      "notes": ""
-    },
-    {
-      "section": "Closing",
-      "field": "CTA",
-      "value": "Explore Membership",
-      "link": "/membership",
-      "notes": "primary"
+      "notes": "Guests gathered around a dinner table."
     }
   ]
 }
