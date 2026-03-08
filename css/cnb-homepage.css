@@ -921,6 +921,38 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     height: 100%;
     object-fit: cover;
   }
+
+  body.cnb-page-about #what-this-is-about .cnb-home-copy,
+  body.cnb-page-work-with-amanda #closing .cnb-home-copy,
+  body.cnb-page-learn #invitation .cnb-home-copy,
+  body.cnb-page-stories #invitation .cnb-home-copy,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-copy,
+  body.cnb-page-membership #who-this-is-for .cnb-home-copy {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  body.cnb-page-about #what-this-is-about .cnb-home-body,
+  body.cnb-page-work-with-amanda #closing .cnb-home-body,
+  body.cnb-page-learn #invitation .cnb-home-body,
+  body.cnb-page-stories #invitation .cnb-home-body,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-body,
+  body.cnb-page-membership #who-this-is-for .cnb-home-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.cnb-page-about #what-this-is-about .cnb-home-cta-row,
+  body.cnb-page-work-with-amanda #closing .cnb-home-cta-row,
+  body.cnb-page-learn #invitation .cnb-home-cta-row,
+  body.cnb-page-stories #invitation .cnb-home-cta-row,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-cta-row,
+  body.cnb-page-membership #who-this-is-for .cnb-home-cta-row,
+  body.cnb-page-cnb-home #blind-dinners .cnb-home-cta-row {
+    justify-content: center;
+  }
 }
 
 .cnb-home-section.is-layout-copy-columns .cnb-home-grid.split {
