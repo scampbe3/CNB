@@ -934,6 +934,17 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     text-align: center;
   }
 
+  body.cnb-page-about #what-this-is-about .cnb-home-list.is-card-grid,
+  body.cnb-page-work-with-amanda #closing .cnb-home-list.is-card-grid,
+  body.cnb-page-learn #invitation .cnb-home-list.is-card-grid,
+  body.cnb-page-stories #invitation .cnb-home-list.is-card-grid,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-list.is-card-grid,
+  body.cnb-page-membership #who-this-is-for .cnb-home-list.is-card-grid {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   body.cnb-page-about #what-this-is-about .cnb-home-body,
   body.cnb-page-work-with-amanda #closing .cnb-home-body,
   body.cnb-page-learn #invitation .cnb-home-body,
@@ -1540,6 +1551,31 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
+  body.cnb-page-about #what-this-is-about .cnb-home-copy,
+  body.cnb-page-work-with-amanda #closing .cnb-home-copy,
+  body.cnb-page-learn #invitation .cnb-home-copy,
+  body.cnb-page-stories #invitation .cnb-home-copy,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-copy,
+  body.cnb-page-membership #who-this-is-for .cnb-home-copy {
+    text-align: center;
+  }
+
+  body.cnb-page-about #what-this-is-about .cnb-home-body,
+  body.cnb-page-work-with-amanda #closing .cnb-home-body,
+  body.cnb-page-learn #invitation .cnb-home-body,
+  body.cnb-page-stories #invitation .cnb-home-body,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-body,
+  body.cnb-page-membership #who-this-is-for .cnb-home-body,
+  body.cnb-page-about #what-this-is-about .cnb-home-list.is-card-grid,
+  body.cnb-page-work-with-amanda #closing .cnb-home-list.is-card-grid,
+  body.cnb-page-learn #invitation .cnb-home-list.is-card-grid,
+  body.cnb-page-stories #invitation .cnb-home-list.is-card-grid,
+  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-list.is-card-grid,
+  body.cnb-page-membership #who-this-is-for .cnb-home-list.is-card-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .cnb-site-header {
     height: auto;
     min-height: var(--cnb-header-height);
