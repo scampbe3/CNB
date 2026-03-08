@@ -70,8 +70,8 @@
         "This is practical guidance grounded in real experience."
       ],
       "image": {
-        "src": "assets/images/muriu-6-scaled.jpg",
-        "alt": "Portrait framed by soft light."
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 8.jpg",
+        "alt": "Amanda Johnson in a studio portrait."
       },
       "theme": "light"
     },
@@ -92,11 +92,12 @@
         "Resources that connect to live sessions, consulting, and stories"
       ],
       "image": {
-        "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-        "alt": "Portrait framed by soft light and layered textiles."
+        "src": "assets/images/additional_images_3/be rooted 2.webp",
+        "alt": "Journals and stationery laid out on a table."
       },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "notes": "Journals and stationery laid out on a table."
     },
     {
       "id": "how-to-use",
@@ -108,11 +109,12 @@
         "Either way, the goal is not passive consumption. The goal is to help you think more clearly and act with more confidence."
       ],
       "image": {
-        "src": "assets/images/image-5.jpg",
-        "alt": "Patterned portrait detail."
+        "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
+        "alt": "Founder writing in a notebook during a working session."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "notes": "Founder writing in a notebook during a working session."
     },
     {
       "id": "access-membership",
@@ -131,11 +133,12 @@
         }
       ],
       "image": {
-        "src": "assets/images/murius-7-scaled.jpg",
-        "alt": "Portrait layered over a geometric backdrop."
+        "src": "assets/images/additional_images_2/Blind Dinner 2/Cupcakes_20&_20Broccoli_20LLC_20033.JPG",
+        "alt": "Two people in a focused conversation on a couch."
       },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "notes": "Two people in a focused conversation on a couch."
     },
     {
       "id": "learning-context",
@@ -159,11 +162,12 @@
         }
       ],
       "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun life coach.jpeg",
-        "alt": "Founder working at a table with a laptop."
+        "src": "assets/images/additional_images_2/CLIENTS/elizabeth abunaw/image.webp",
+        "alt": "Founder standing in a produce workspace."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "notes": "Founder standing in a produce workspace."
     },
     {
       "id": "invitation",

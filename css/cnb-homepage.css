@@ -1109,6 +1109,10 @@ body.cnb-page-stories #what-youll-find .cnb-home-image img {
   object-position: 80% center;
 }
 
+body.cnb-page-membership #decision-case-studies .cnb-home-image img {
+  object-position: 72% center;
+}
+
 body.cnb-page-blind-dinners #why-it-exists .cnb-home-image img {
   object-position: 60% center;
 }

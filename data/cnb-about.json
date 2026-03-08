@@ -117,11 +117,12 @@
         "Different formats. Same foundation."
       ],
       "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/433-IMG_5918.JPEG",
-        "alt": "Guests talking across a shared table."
+        "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun life coach.jpeg",
+        "alt": "Founder in conversation with a laptop during a strategy session."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "notes": "Founder in conversation with a laptop during a strategy session."
     },
     {
       "id": "what-this-is-about",
