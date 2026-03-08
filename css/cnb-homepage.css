@@ -1568,7 +1568,7 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 
   .cnb-home-image.is-inline img {
     width: 100%;
-    height: auto !important;
+    height: 100% !important;
     max-height: none !important;
     object-fit: cover;
   }
