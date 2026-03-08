@@ -922,36 +922,6 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     object-fit: cover;
   }
 
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-grid.split {
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-    align-items: start;
-  }
-
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-copy {
-    display: contents;
-  }
-
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-eyebrow,
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-title {
-    grid-column: 1 / -1;
-    justify-self: start;
-    text-align: left;
-  }
-
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-media {
-    grid-column: 1;
-    grid-row: 3;
-    align-self: start;
-  }
-
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-body,
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-list,
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-cta-row,
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-inline-link,
-  body.cnb-page-about #about-cupcakes-broccoli .cnb-home-caption {
-    grid-column: 2;
-  }
-
   body.cnb-page-about #what-this-is-about .cnb-home-copy,
   body.cnb-page-work-with-amanda #closing .cnb-home-copy,
   body.cnb-page-learn #invitation .cnb-home-copy,
