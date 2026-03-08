@@ -113,6 +113,20 @@
     if (inlineImage) parent.appendChild(inlineImage);
   };
 
+  const getInlineImageAfter = (section) => {
+    if (!section || !section.image) return null;
+    if (Number.isFinite(section.inlineImageAfter)) {
+      return Math.max(1, Math.floor(section.inlineImageAfter));
+    }
+    const mobileOnlyAfter = Number.isFinite(section.mobileInlineImageAfter)
+      ? Math.max(1, Math.floor(section.mobileInlineImageAfter))
+      : null;
+    if (mobileOnlyAfter && window.matchMedia("(max-width: 720px)").matches) {
+      return mobileOnlyAfter;
+    }
+    return null;
+  };
+
   const renderList = (items, className = "cnb-home-list") => {
     if (!items || !items.length) return null;
     const list = withReveal(createEl("ul", className));
@@ -487,8 +501,14 @@
       copy.appendChild(subhead);
     }
 
-    if (section.inlineImageAfter) {
-      renderBodyWithInlineImage(section.body, copy, sectionEl, section);
+    const inlineImageAfter = getInlineImageAfter(section);
+    if (inlineImageAfter) {
+      renderBodyWithInlineImage(
+        section.body,
+        copy,
+        sectionEl,
+        { ...section, inlineImageAfter }
+      );
     } else {
       renderBody(section.body, copy);
     }
@@ -500,7 +520,7 @@
     if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-hero-media");
-    const image = renderImage(section.image, { sectionEl });
+    const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
     if (image) {
       media.appendChild(image);
       grid.append(copy, media);
@@ -528,7 +548,17 @@
     const title = withReveal(createEl("h2", "cnb-home-title", section.title || ""));
     copy.appendChild(title);
 
-    renderBody(section.body, copy);
+    const inlineImageAfter = getInlineImageAfter(section);
+    if (inlineImageAfter) {
+      renderBodyWithInlineImage(
+        section.body,
+        copy,
+        sectionEl,
+        { ...section, inlineImageAfter }
+      );
+    } else {
+      renderBody(section.body, copy);
+    }
 
     const list = renderList(section.list, "cnb-home-list");
     if (list) {
@@ -550,7 +580,7 @@
     if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-media");
-    const image = section.inlineImageAfter ? null : renderImage(section.image, { sectionEl });
+    const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
     if (image) media.appendChild(image);
 
     if (image) {
@@ -1100,7 +1130,17 @@
     const title = withReveal(createEl("h2", "cnb-home-title", section.title || ""));
     copy.appendChild(title);
 
-    renderBody(section.body, copy);
+    const inlineImageAfter = getInlineImageAfter(section);
+    if (inlineImageAfter) {
+      renderBodyWithInlineImage(
+        section.body,
+        copy,
+        sectionEl,
+        { ...section, inlineImageAfter }
+      );
+    } else {
+      renderBody(section.body, copy);
+    }
 
     const panel = createEl("div", "cnb-ai-panel");
     const label = withReveal(createEl("div", "cnb-ai-label", section.panelLabel || "Example prompts"));
@@ -1152,7 +1192,17 @@
     const title = withReveal(createEl("h2", "cnb-home-title", section.title || ""));
     copy.appendChild(title);
 
-    renderBody(section.body, copy);
+    const inlineImageAfter = getInlineImageAfter(section);
+    if (inlineImageAfter) {
+      renderBodyWithInlineImage(
+        section.body,
+        copy,
+        sectionEl,
+        { ...section, inlineImageAfter }
+      );
+    } else {
+      renderBody(section.body, copy);
+    }
 
     const list = renderList(section.list, "cnb-home-list");
     if (list) {
@@ -1167,7 +1217,7 @@
       const grid = createEl("div", "cnb-home-grid split");
       if (section.layout === "image-left") grid.classList.add("is-reversed");
       const media = createEl("div", "cnb-home-media");
-      const image = renderImage(section.image, { sectionEl });
+      const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
       if (image) media.appendChild(image);
       if (image) {
         grid.append(copy, media);

@@ -85,7 +85,8 @@
         "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
         "alt": "Portrait layered with patterned textiles."
       },
-      "theme": "light"
+      "theme": "light",
+      "mobileInlineImageAfter": 1
     },
     {
       "id": "decision-room",
@@ -120,7 +121,8 @@
         "alt": "Portrait framed by patterned textiles."
       },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "mobileInlineImageAfter": 1
     },
     {
       "id": "business-counsel",
@@ -155,7 +157,8 @@
         "alt": "Amanda Johnson smiling in a studio portrait."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "mobileInlineImageAfter": 1
     },
     {
       "id": "strategic-partnership",
@@ -191,7 +194,8 @@
         "alt": "Amanda Johnson in a studio portrait with hand at chin."
       },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "mobileInlineImageAfter": 1
     },
     {
       "id": "case-studies",
@@ -225,7 +229,8 @@
         "alt": "Portrait of a founder in studio light."
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "mobileInlineImageAfter": 1
     },
     {
       "id": "blind-dinners",
@@ -255,7 +260,8 @@
         "alt": "Guests gathered around a dinner table."
       },
       "layout": "image-right",
-      "theme": "ink"
+      "theme": "ink",
+      "mobileInlineImageAfter": 1
     }
   ]
 }

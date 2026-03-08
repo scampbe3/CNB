@@ -1555,6 +1555,20 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
+  body.cnb-page-cnb-home .cnb-home-image.is-inline {
+    width: 100%;
+    margin: 18px 0 22px;
+  }
+
+  body.cnb-page-cnb-home #blind-dinners .cnb-home-copy {
+    text-align: center;
+  }
+
+  body.cnb-page-cnb-home #blind-dinners .cnb-home-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   body.cnb-page-about #what-this-is-about .cnb-home-copy,
   body.cnb-page-work-with-amanda #closing .cnb-home-copy,
   body.cnb-page-learn #invitation .cnb-home-copy,
