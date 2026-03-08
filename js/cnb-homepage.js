@@ -115,14 +115,18 @@
 
   const getInlineImageAfter = (section) => {
     if (!section || !section.image) return null;
+    const isMobile = window.matchMedia("(max-width: 720px)").matches;
     if (Number.isFinite(section.inlineImageAfter)) {
       return Math.max(1, Math.floor(section.inlineImageAfter));
     }
     const mobileOnlyAfter = Number.isFinite(section.mobileInlineImageAfter)
       ? Math.max(1, Math.floor(section.mobileInlineImageAfter))
       : null;
-    if (mobileOnlyAfter && window.matchMedia("(max-width: 720px)").matches) {
+    if (mobileOnlyAfter && isMobile) {
       return mobileOnlyAfter;
+    }
+    if (isMobile && Array.isArray(section.body) && section.body.length) {
+      return 1;
     }
     return null;
   };

@@ -1555,9 +1555,18 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
-  body.cnb-page-cnb-home .cnb-home-image.is-inline {
+  .cnb-home-image.is-inline {
     width: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
     margin: 18px 0 22px;
+  }
+
+  .cnb-home-image.is-inline img {
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
   }
 
   body.cnb-page-cnb-home #blind-dinners .cnb-home-copy {
