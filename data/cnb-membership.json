@@ -1,6 +1,6 @@
 {
   "page": "membership",
-  "version": "2026-03-08-membership-decision-room-single-offer",
+  "version": "2026-03-19-membership-decision-room-doc-refresh",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -64,18 +64,18 @@
       "id": "hero",
       "type": "hero",
       "note": "Membership",
-      "title": "$39 per month",
-      "subhead": "or $390 per year (2 months free)",
+      "title": "The Decision Room",
+      "subhead": "$39 per month or $390 per year (2 months free)",
       "body": [
-        "A membership for people building something real.",
-        "If you have a full-time job and a business idea you will not stop thinking about, this is for you.",
-        "If you are building a side project at night and trying to take it seriously, this is for you.",
-        "If you already run a company with employees and revenue and want sharper thinking around your next move, this is for you.",
-        "Whether you are early, established, or somewhere in between, the Decision Room gives you a steady place to think and build."
+        "A private room for Black founders building at every level.",
+        "If you are an established CEO who wants sharper insight and serious Black operators around you, this is for you.",
+        "If you run a growing business and want better tools and better judgment around your next move, this is for you.",
+        "If you're early and shaping your idea, this is for you.",
+        "This is where Black ownership gets sharper."
       ],
       "ctas": [
         {
-          "label": "Enter the Decision Room",
+          "label": "Join The Decision Room",
           "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
           "variant": "primary"
         },
@@ -94,10 +94,18 @@
     {
       "id": "whats-inside",
       "type": "feature",
-      "eyebrow": "What's Inside",
-      "title": "A preview of the support inside The Decision Room.",
+      "eyebrow": "What Membership Includes",
+      "title": "Inside The Decision Room you get:",
       "body": [
-        "This page is the public front door to the membership. What follows is a clear look at the kinds of tools, essays, case studies, and guided thinking members receive."
+        "Community. Structure. Access."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "Live Working Sessions",
+        "A Private Founder Channel",
+        "Priority Access to Blind Dinners",
+        "A growing Decision Tool Library",
+        "A clear pathway to one-on-one Business Counsel"
       ],
       "image": {
         "src": "assets/images/murius-7-scaled.jpg",
@@ -109,17 +117,21 @@
     {
       "id": "essays",
       "type": "feature",
-      "eyebrow": "Essays",
-      "title": "Essays that tackle real situations.",
+      "eyebrow": "Inside The Decision Room",
+      "title": "Live Working Sessions",
       "body": [
-        "Not theory. Real tension."
+        "Members-only sessions where real business decisions get worked through in real time.",
+        "Not panels. Not lectures."
       ],
       "listVariant": "card-stack",
       "list": [
-        "\"You are Not Undercharging. You are Avoiding Conflict.\"",
-        "\"Your Product Is Not Stalled. Your Offer Is Confusing.\"",
-        "\"Stop Asking Instagram. Make the Decision.\"",
-        "\"You Do Not Need a Rebrand. You Need a Revenue Plan.\""
+        "Founders bring real questions.",
+        "We walk through the tradeoffs.",
+        "We pressure-test the options.",
+        "You see how serious decisions are framed and made."
+      ],
+      "bodyAfter": [
+        "If you ever want that level of focus on your situation alone, that's what Business Counsel is for."
       ],
       "image": {
         "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
@@ -131,21 +143,20 @@
     {
       "id": "decision-case-studies",
       "type": "feature",
-      "eyebrow": "Decision Case Studies",
-      "title": "Real founder moments, broken down step by step.",
+      "eyebrow": "Inside The Decision Room",
+      "title": "Private Founder Channel",
       "body": [
-        "We walk through real founder moments step by step.",
-        "For example:"
+        "A private space for Black founders inside the room.",
+        "Small. Intentional. Serious."
       ],
       "listVariant": "card-stack",
       "list": [
-        "A CPA deciding whether launching a podcast would actually build authority or just drain time",
-        "A dermatologist navigating a potential celebrity collaboration and how to price it",
-        "A small product brand debating wholesale versus doubling down on direct-to-consumer",
-        "A service-based founder considering whether to fire their biggest but most exhausting client"
+        "Quick questions",
+        "Sanity checks",
+        "Honest conversations"
       ],
       "bodyAfter": [
-        "Each case study breaks down what was happening, what was at risk, what options were on the table, what was chosen, and what changed."
+        "This is your bench when you don't have one."
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
@@ -157,17 +168,11 @@
     {
       "id": "practical-tools",
       "type": "feature",
-      "eyebrow": "Tools",
-      "title": "Practical tools you will actually use.",
+      "eyebrow": "Inside The Decision Room",
+      "title": "Priority Access to Blind Dinners",
       "body": [
-        "Not templates for the sake of templates."
-      ],
-      "listVariant": "card-grid",
-      "list": [
-        "A Pricing Reality Check worksheet",
-        "A \"Should I Launch This?\" decision filter",
-        "A Partnership Red-Flag checklist",
-        "A Product Mix Audit to decide what to cut, keep, or prioritize"
+        "Members receive priority consideration for future Blind Dinners.",
+        "The room doesn't only live online."
       ],
       "image": {
         "src": "assets/images/image-5.jpg",
@@ -179,21 +184,25 @@
     {
       "id": "ai-done-properly",
       "type": "feature",
-      "eyebrow": "AI, Done Properly",
-      "title": "Prompt stacks, examples, and judgment.",
+      "eyebrow": "Decision Tool Library",
+      "title": "This is where structure lives.",
       "body": [
-        "Including prompt stacks like \"Is This AI Advice Actually Sound or Just Confident?\"",
-        "You will get:"
+        "These tools are built to help you work through your own numbers, your own offers, and your own decisions.",
+        "Inside the library you'll find:"
       ],
       "listVariant": "card-stack",
       "list": [
-        "Copy-and-use prompts",
-        "How to know when AI is wrong",
-        "Clear examples of where AI is helpful",
-        "Clear examples of where you still need judgment"
+        "Pricing Reality Check",
+        "Should I Launch This? Checklist",
+        "Vendor & Partnership Checklist",
+        "Capital Fit & Funding Decisions",
+        "AI: When to Use It. When Not To.",
+        "Real Life Decisions"
       ],
       "bodyAfter": [
-        "No tech hype. Just practical use."
+        "This is not about chasing money. It's about understanding what money will require from you.",
+        "AI should support your thinking, not replace it.",
+        "You don't just see outcomes. You see how decisions are made."
       ],
       "image": {
         "src": "assets/images/butler-7.jpg",
@@ -205,11 +214,19 @@
     {
       "id": "live-sessions",
       "type": "feature",
-      "eyebrow": "Live Sessions",
-      "title": "Regular conversations about real business questions.",
+      "eyebrow": "Business Counsel",
+      "title": "When You Want One-on-One Time",
       "body": [
-        "These are regular live conversations where real business questions get worked through together.",
-        "Not webinars. Not panels. Working sessions."
+        "Membership gives you structure and community.",
+        "Sometimes you want focused time.",
+        "Business Counsel is available when you want one decision examined closely."
+      ],
+      "listVariant": "card-grid",
+      "list": [
+        "One session",
+        "One real problem",
+        "Your numbers",
+        "Your context"
       ],
       "image": {
         "src": "assets/images/muriu-6-scaled.jpg",
@@ -221,21 +238,15 @@
     {
       "id": "who-this-is-for",
       "type": "closing",
-      "eyebrow": "Who This Is For",
-      "title": "Steady support for people building without a safety net.",
+      "eyebrow": "Membership",
+      "title": "Join The Decision Room",
       "body": [
-        "The Decision Room is for people who:"
-      ],
-      "listVariant": "card-grid",
-      "list": [
-        "Are building without a safety net",
-        "Do not have an advisory board",
-        "Want steady support without ego",
-        "Care about ownership long term"
+        "If you're serious about building something that lasts, come inside.",
+        "$39 per month or $390 per year (2 months free)"
       ],
       "ctas": [
         {
-          "label": "Enter the Decision Room",
+          "label": "Join The Decision Room",
           "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
           "variant": "primary"
         },
