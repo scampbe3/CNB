@@ -1,6 +1,6 @@
 {
   "page": "membership",
-  "version": "2026-03-19-membership-decision-room-doc-refresh",
+  "version": "2026-03-19-membership-decision-room-tools-refresh",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -99,7 +99,7 @@
       "body": [
         "Community. Structure. Access."
       ],
-      "listVariant": "card-grid",
+      "listVariant": "card-stack",
       "list": [
         "Live Working Sessions",
         "A Private Founder Channel",
@@ -175,10 +175,10 @@
         "The room doesn't only live online."
       ],
       "image": {
-        "src": "assets/images/image-5.jpg",
-        "alt": "Patterned portrait detail."
+        "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
+        "alt": "Guests gathered around a dinner table."
       },
-      "layout": "image-left",
+      "layout": "image-right",
       "theme": "light"
     },
     {
@@ -187,28 +187,182 @@
       "eyebrow": "Decision Tool Library",
       "title": "This is where structure lives.",
       "body": [
-        "These tools are built to help you work through your own numbers, your own offers, and your own decisions.",
-        "Inside the library you'll find:"
-      ],
-      "listVariant": "card-stack",
-      "list": [
-        "Pricing Reality Check",
-        "Should I Launch This? Checklist",
-        "Vendor & Partnership Checklist",
-        "Capital Fit & Funding Decisions",
-        "AI: When to Use It. When Not To.",
-        "Real Life Decisions"
-      ],
-      "bodyAfter": [
-        "This is not about chasing money. It's about understanding what money will require from you.",
-        "AI should support your thinking, not replace it.",
-        "You don't just see outcomes. You see how decisions are made."
+        "These tools are built to help you work through your own numbers, your own offers, and your own decisions."
       ],
       "image": {
         "src": "assets/images/butler-7.jpg",
         "alt": "Portrait with bold color styling."
       },
+      "layout": "image-left",
+      "theme": "paper"
+    },
+    {
+      "id": "pricing-reality-check",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "Pricing Reality Check",
+      "body": [
+        "Run the math before fear runs you.",
+        "If you sell shampoo and conditioner sets for $28 and raise them to $32, what actually happens if you lose a few customers?",
+        "Most founders never calculate it.",
+        "Inside the full worksheet, you'll walk through:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "What happens to your revenue if you raise your price",
+        "How many sales you could lose and still make more money",
+        "Whether hesitation is about the market or about fear",
+        "How to communicate a price shift calmly"
+      ],
+      "bodyAfter": [
+        "Small pricing decisions compound."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 10.jpg",
+        "alt": "Amanda Johnson seated in a studio portrait."
+      },
       "layout": "image-right",
+      "theme": "light"
+    },
+    {
+      "id": "should-i-launch-this",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "Should I Launch This? Checklist",
+      "body": [
+        "Excitement is not a launch plan.",
+        "Before adding a new service, product, or offering, this checklist helps you slow down and ask:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Will this make money",
+        "Do you have time to support it",
+        "Is your offer clear",
+        "What are you giving up by launching now"
+      ],
+      "bodyAfter": [
+        "Most failed launches skipped this step."
+      ],
+      "image": {
+        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
+        "alt": "Colorful portrait against patterned fabric."
+      },
+      "layout": "image-left",
+      "theme": "paper"
+    },
+    {
+      "id": "vendor-partnership-checklist",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "Vendor & Partnership Checklist",
+      "body": [
+        "Before signing anything, pause.",
+        "Maybe a retailer wants to carry your product.",
+        "Maybe an influencer wants a revenue split.",
+        "Maybe a manufacturer offers better pricing.",
+        "This tool helps you think through:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Who controls pricing and promotion",
+        "How money is actually split",
+        "Who owns the customer relationship",
+        "What happens if things don't go as planned"
+      ],
+      "bodyAfter": [
+        "One bad agreement can stall a business."
+      ],
+      "image": {
+        "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
+        "alt": "Founder portrait in studio light."
+      },
+      "layout": "image-right",
+      "theme": "light"
+    },
+    {
+      "id": "capital-fit-funding-decisions",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "Capital Fit & Funding Decisions",
+      "body": [
+        "Access to capital changes everything.",
+        "But not all money is good money.",
+        "Inside this section you'll find:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "A Capital Fit Checklist to decide if you even need outside funding",
+        "A Funding Readiness Worksheet before you apply",
+        "A curated list of grants and funding programs for Black founders",
+        "Clear notes on who each opportunity is actually for",
+        "Real breakdowns of what debt and equity truly cost"
+      ],
+      "bodyAfter": [
+        "This is not about chasing money.",
+        "It's about understanding what money will require from you."
+      ],
+      "image": {
+        "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+        "alt": "Detailed portrait with layered color and texture."
+      },
+      "layout": "image-left",
+      "theme": "paper"
+    },
+    {
+      "id": "ai-when-to-use-it",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "AI: When to Use It. When Not To.",
+      "body": [
+        "AI can save time.",
+        "AI can also cost you money if you trust it blindly.",
+        "Inside you'll get:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "Copy-and-use prompts",
+        "Ways to double-check AI responses",
+        "Clear examples of when AI helps",
+        "Clear examples of when you still need judgment"
+      ],
+      "bodyAfter": [
+        "AI should support your thinking, not replace it."
+      ],
+      "image": {
+        "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg",
+        "alt": "Editorial portrait with bold pattern and color."
+      },
+      "layout": "image-right",
+      "theme": "light"
+    },
+    {
+      "id": "real-life-decisions",
+      "type": "feature",
+      "eyebrow": "Decision Tool Library",
+      "title": "Real Life Decisions",
+      "body": [
+        "We break down real founder situations step by step.",
+        "Not highlight reels. Not theory.",
+        "Real decisions with real stakes.",
+        "For example:"
+      ],
+      "listVariant": "card-stack",
+      "list": [
+        "A founder raising prices and risking customer loss",
+        "A CEO evaluating a partnership that requires giving up control",
+        "A service provider walking away from a draining client",
+        "A hairdresser deciding whether to open her own salon",
+        "A beauty brand choosing whether to accept a large retail order"
+      ],
+      "bodyAfter": [
+        "You don't just see outcomes.",
+        "You see how decisions are made."
+      ],
+      "image": {
+        "src": "assets/images/1muriu-8-scaled.jpg",
+        "alt": "Portrait framed by high-contrast patterns."
+      },
+      "layout": "image-left",
       "theme": "paper"
     },
     {
@@ -221,7 +375,7 @@
         "Sometimes you want focused time.",
         "Business Counsel is available when you want one decision examined closely."
       ],
-      "listVariant": "card-grid",
+      "listVariant": "card-stack",
       "list": [
         "One session",
         "One real problem",
@@ -232,7 +386,7 @@
         "src": "assets/images/muriu-6-scaled.jpg",
         "alt": "Portrait framed by soft light."
       },
-      "layout": "image-left",
+      "layout": "image-right",
       "theme": "light"
     },
     {

@@ -794,6 +794,11 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   grid-template-columns: 1fr;
 }
 
+body.cnb-page-membership #whats-inside .cnb-home-list.is-card-grid,
+body.cnb-page-membership #whats-inside .cnb-home-list.is-card-stack {
+  grid-template-columns: 1fr;
+}
+
 .cnb-home-list.is-card-stack {
   grid-template-columns: 1fr;
 }
@@ -945,15 +950,47 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
     margin-right: auto;
   }
 
-  body.cnb-page-about #what-this-is-about .cnb-home-body,
-  body.cnb-page-work-with-amanda #closing .cnb-home-body,
-  body.cnb-page-learn #invitation .cnb-home-body,
-  body.cnb-page-stories #invitation .cnb-home-body,
-  body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-body,
-  body.cnb-page-membership #who-this-is-for .cnb-home-body {
-    margin-left: auto;
-    margin-right: auto;
-  }
+body.cnb-page-about #what-this-is-about .cnb-home-body,
+body.cnb-page-work-with-amanda #closing .cnb-home-body,
+body.cnb-page-learn #invitation .cnb-home-body,
+body.cnb-page-stories #invitation .cnb-home-body,
+body.cnb-page-blind-dinners #relationship-to-membership .cnb-home-body,
+body.cnb-page-membership #who-this-is-for .cnb-home-body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-grid.split {
+  grid-template-columns: 1fr;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-copy {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-media {
+  order: 2;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-image {
+  width: min(100%, 920px);
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+body.cnb-page-membership #practical-tools .cnb-home-image img {
+  height: 100%;
+  object-fit: cover;
+}
 
   body.cnb-page-about #what-this-is-about .cnb-home-cta-row,
   body.cnb-page-work-with-amanda #closing .cnb-home-cta-row,
