@@ -872,6 +872,58 @@
   const looksLikeUrl = (value) =>
     /^(?:https?:\/\/|\/|#|mailto:|tel:|www\.)/i.test(String(value || "").trim());
 
+  const normalizeFieldName = (field) =>
+    String(field || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+
+  const isVisibilityField = (field) =>
+    /^(show section\??|enabled|visible|show)$/i.test(String(field || "").trim());
+
+  const isDisplayOrderField = (field) =>
+    /^(display order|order|sort order)$/i.test(String(field || "").trim());
+
+  const parseSectionVisibility = (value) => {
+    const normalized = normalizeFieldName(value);
+    if (!normalized) return true;
+    return !["false", "no", "0", "off", "hide", "hidden", "disabled"].includes(normalized);
+  };
+
+  const parseDisplayOrder = (value) => {
+    const parsed = Number(String(value || "").trim());
+    return Number.isFinite(parsed) ? parsed : null;
+  };
+
+  const applySectionControls = (page) => {
+    if (!page || !Array.isArray(page.sections)) return page;
+
+    page.sections = page.sections
+      .map((section, index) => {
+        const jsonDisplayOrder = parseDisplayOrder(section.displayOrder);
+        const order = Number.isFinite(section._cmsDisplayOrder)
+          ? section._cmsDisplayOrder
+          : jsonDisplayOrder !== null
+          ? jsonDisplayOrder
+          : (index + 1) * 10;
+        const enabled =
+          typeof section._cmsEnabled === "boolean"
+            ? section._cmsEnabled
+            : section.enabled !== false;
+
+        return { section, index, order, enabled };
+      })
+      .filter(({ enabled }) => enabled)
+      .sort((a, b) => a.order - b.order || a.index - b.index)
+      .map(({ section }) => {
+        delete section._cmsDisplayOrder;
+        delete section._cmsEnabled;
+        return section;
+      });
+
+    return page;
+  };
+
   const applyRowsToPage = (page, rows) => {
     const byId = {};
     (page.sections || []).forEach((section) => {
@@ -901,9 +953,21 @@
       const directMatch = Object.keys(byId).find((id) => id.toLowerCase() === normalized);
       sectionId = directMatch || "";
     }
-    if (!sectionId) return;
+      if (!sectionId) return;
       if (!updates[sectionId]) updates[sectionId] = {};
       const bucket = updates[sectionId];
+
+      if (isVisibilityField(field)) {
+        bucket.enabled = parseSectionVisibility(value);
+        bucket.hasEnabled = true;
+        return;
+      }
+
+      if (isDisplayOrderField(field)) {
+        const displayOrder = parseDisplayOrder(value);
+        if (displayOrder !== null) bucket.displayOrder = displayOrder;
+        return;
+      }
 
       if (/^Body\s*\d+/i.test(field)) {
         const idx = Number(field.replace(/\D+/g, "")) || 1;
@@ -1014,6 +1078,9 @@
       const section = byId[sectionId];
       if (!section) return;
       const data = updates[sectionId];
+
+      if (data.hasEnabled) section._cmsEnabled = data.enabled;
+      if (Number.isFinite(data.displayOrder)) section._cmsDisplayOrder = data.displayOrder;
 
       ["title", "subhead", "note", "eyebrow", "panelLabel"].forEach((key) => {
         if (key in data) section[key] = data[key];
@@ -1547,7 +1614,7 @@
 
   const safeHydrate = (data) => {
     if (mount.dataset.cnbRenderedSrc !== jsonUrl) return;
-    hydrate(data);
+    hydrate(applySectionControls(data || defaultData));
   };
 
   const cloneContentData = (data) =>
