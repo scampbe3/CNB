@@ -115,6 +115,9 @@
 
   const getInlineImageAfter = (section) => {
     if (!section || !section.image) return null;
+    if (Array.isArray(section.images) && section.images.filter((image) => image && image.src).length > 1) {
+      return null;
+    }
     const isMobile = window.matchMedia("(max-width: 720px)").matches;
     if (Number.isFinite(section.inlineImageAfter)) {
       return Math.max(1, Math.floor(section.inlineImageAfter));
@@ -437,6 +440,107 @@
     return figure;
   };
 
+  const getSectionImages = (section) => {
+    if (!section) return [];
+    const images = Array.isArray(section.images) ? section.images.filter((image) => image && image.src) : [];
+    if (images.length) return images;
+    return section.image && section.image.src ? [section.image] : [];
+  };
+
+  const renderLinkedImage = (image, options = {}) => {
+    const figure = renderImage(image, options);
+    if (!figure || !image || !image.href) return figure;
+    const anchor = createEl("a", "cnb-cms-image-link");
+    anchor.href = String(image.href);
+    anchor.appendChild(figure);
+    return anchor;
+  };
+
+  const renderImageCollection = (images, options = {}) => {
+    const validImages = (images || []).filter((image) => image && image.src);
+    if (!validImages.length) return null;
+    if (validImages.length === 1) return renderLinkedImage(validImages[0], options);
+
+    const gallery = createEl("div", "cnb-cms-gallery");
+    validImages.forEach((image) => {
+      const imageEl = renderLinkedImage(image, options);
+      if (imageEl) gallery.appendChild(imageEl);
+    });
+    return gallery;
+  };
+
+  const renderCmsBlocks = (blocks, parent, sectionEl) => {
+    const items = Array.isArray(blocks) ? blocks : [];
+    let index = 0;
+
+    while (index < items.length) {
+      const block = items[index] || {};
+      const value = block.value || block.label || "";
+
+      if (block.type === "image" || block.type === "editor-note") {
+        index += 1;
+        continue;
+      }
+
+      if (block.type === "list-item") {
+        const listItems = [];
+        while (index < items.length && items[index] && items[index].type === "list-item") {
+          if (items[index].value) listItems.push(items[index].value);
+          index += 1;
+        }
+        const list = renderList(listItems, "cnb-home-list cnb-cms-list");
+        if (list) parent.appendChild(list);
+        continue;
+      }
+
+      if (block.type === "button") {
+        const buttons = [];
+        while (index < items.length && items[index] && items[index].type === "button") {
+          const item = items[index];
+          if (item.label || item.value) {
+            buttons.push({
+              label: item.label || item.value,
+              href: item.href || "",
+              variant: item.variant,
+              behavior: item.behavior,
+            });
+          }
+          index += 1;
+        }
+        const ctas = renderCtas(buttons);
+        if (ctas) parent.appendChild(ctas);
+        continue;
+      }
+
+      let element = null;
+      if (block.type === "eyebrow") {
+        element = renderKicker(value, "cnb-home-eyebrow");
+      } else if (block.type === "title") {
+        element = withReveal(createEl("h2", "cnb-home-title", value));
+      } else if (block.type === "heading") {
+        element = withReveal(createEl("h3", "cnb-cms-heading", value));
+      } else if (block.type === "subhead") {
+        element = withReveal(createEl("p", "cnb-home-subhead", value));
+      } else if (block.type === "paragraph") {
+        element = withReveal(createEl("p", "cnb-home-body", value));
+      } else if (block.type === "note") {
+        element = withReveal(createEl("p", "cnb-cms-note", value));
+      } else if (block.type === "quote") {
+        const quote = withReveal(createEl("figure", "cnb-cms-quote"));
+        quote.appendChild(createEl("blockquote", "cnb-cms-quote-text", value));
+        if (block.attribution) {
+          quote.appendChild(createEl("figcaption", "cnb-cms-quote-attribution", block.attribution));
+        }
+        element = quote;
+      }
+
+      if (element && value) parent.appendChild(element);
+      index += 1;
+    }
+
+    if (sectionEl) applyRevealDelays(sectionEl);
+  };
+
   const applyRevealDelays = (sectionEl) => {
     const revealNodes = sectionEl.querySelectorAll("[data-reveal]");
     revealNodes.forEach((node, index) => {
@@ -451,7 +555,7 @@
     const sectionEl = createEl("section", classes.join(" ").trim());
     if (section.id) sectionEl.id = section.id;
     if (section.theme) sectionEl.dataset.theme = section.theme;
-    if (section.image) {
+    if (getSectionImages(section).length) {
       sectionEl.dataset.hasImage = "true";
       const layout = section.layout === "image-left" ? "image-left" : "image-right";
       sectionEl.dataset.textSide = layout === "image-left" ? "right" : "left";
@@ -523,10 +627,14 @@
     const ctas = renderCtas(section.ctas);
     if (ctas) copy.appendChild(ctas);
 
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+
     const media = createEl("div", "cnb-home-hero-media");
-    const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
-    if (image) {
-      media.appendChild(image);
+    const imageCollection = inlineImageAfter
+      ? null
+      : renderImageCollection(getSectionImages(section), { sectionEl });
+    if (imageCollection) {
+      media.appendChild(imageCollection);
       grid.append(copy, media);
     } else {
       grid.append(copy);
@@ -574,6 +682,8 @@
       renderBody(section.bodyAfter, copy);
     }
 
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+
     const form = renderSectionForm(section.form);
     if (form) copy.appendChild(form);
 
@@ -584,10 +694,12 @@
     if (ctas) copy.appendChild(ctas);
 
     const media = createEl("div", "cnb-home-media");
-    const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
-    if (image) media.appendChild(image);
+    const imageCollection = inlineImageAfter
+      ? null
+      : renderImageCollection(getSectionImages(section), { sectionEl });
+    if (imageCollection) media.appendChild(imageCollection);
 
-    if (image) {
+    if (imageCollection) {
       grid.append(copy, media);
     } else {
       grid.append(copy);
@@ -895,6 +1007,114 @@
     return Number.isFinite(parsed) ? parsed : null;
   };
 
+  const CMS_LAYOUT_ALIASES = {
+    text: "text",
+    "text only": "text",
+    "image left": "image-left",
+    "image-left": "image-left",
+    "image right": "image-right",
+    "image-right": "image-right",
+    "centered cta": "centered-cta",
+    "centered call to action": "centered-cta",
+    "centered-cta": "centered-cta",
+    quote: "quote",
+    testimonial: "quote",
+    gallery: "gallery",
+  };
+
+  const normalizeCmsLayout = (value) => {
+    const normalized = normalizeFieldName(value).replace(/_/g, "-");
+    return CMS_LAYOUT_ALIASES[normalized] || "";
+  };
+
+  const isFlexibleContentField = (field) =>
+    /^(content mode|cms mode)$/i.test(String(field || "").trim());
+
+  const isSectionLayoutField = (field) =>
+    /^(section layout|layout template)$/i.test(String(field || "").trim());
+
+  const isSectionThemeField = (field) =>
+    /^(section theme|color theme|theme)$/i.test(String(field || "").trim());
+
+  const isFlexibleContentValue = (value) =>
+    /^(flexible|sheet|sheet authoritative|editable structure)$/i.test(String(value || "").trim());
+
+  const slugifySectionId = (value) =>
+    String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "custom-section";
+
+  const resolveSectionId = (sectionName, byId) => {
+    const exactMap = SECTION_MAP[sectionName];
+    if (exactMap && byId[exactMap]) return exactMap;
+
+    const normalized = String(sectionName || "").trim().toLowerCase();
+    const mappedKey = Object.keys(SECTION_MAP).find((key) => key.toLowerCase() === normalized);
+    if (mappedKey && byId[SECTION_MAP[mappedKey]]) return SECTION_MAP[mappedKey];
+
+    return Object.keys(byId).find((id) => id.toLowerCase() === normalized) || "";
+  };
+
+  const createUniqueSectionId = (sectionName, byId) => {
+    const base = slugifySectionId(sectionName);
+    let candidate = base;
+    let suffix = 2;
+    while (byId[candidate]) {
+      candidate = `${base}-${suffix}`;
+      suffix += 1;
+    }
+    return candidate;
+  };
+
+  const parseCtaNotes = (notes) => {
+    const normalized = String(notes || "").toLowerCase();
+    const out = {};
+    if (normalized.includes("primary")) out.variant = "primary";
+    if (normalized.includes("ghost")) out.variant = "ghost";
+    if (normalized.includes("accent")) out.variant = "accent";
+    if (normalized.includes("modal")) out.behavior = "modal";
+    return out;
+  };
+
+  const getCmsBlockType = (field) => {
+    const normalized = normalizeFieldName(field).replace(/\s+\d+$/, "");
+    if (/^editor note$/.test(normalized)) return "editor-note";
+    if (/^(eyebrow|kicker)$/.test(normalized)) return "eyebrow";
+    if (/^(title|heading)$/.test(normalized)) return normalized === "title" ? "title" : "heading";
+    if (/^subhead$/.test(normalized)) return "subhead";
+    if (/^(paragraph|body|body after)$/.test(normalized)) return "paragraph";
+    if (/^(list|list item)$/.test(normalized)) return "list-item";
+    if (/^quote$/.test(normalized)) return "quote";
+    if (/^image$/.test(normalized)) return "image";
+    if (/^(button|cta)$/.test(normalized)) return "button";
+    if (/^note$/.test(normalized)) return "note";
+    return "";
+  };
+
+  const buildCmsBlock = (field, value, link, notes) => {
+    const type = getCmsBlockType(field);
+    if (!type || type === "editor-note") return null;
+
+    const block = { type, value: String(value || "") };
+    if (type === "image") {
+      if (!block.value.trim()) return null;
+      block.src = block.value;
+      block.alt = String(notes || "");
+      if (link) block.href = String(link);
+    } else if (type === "button") {
+      if (!block.value.trim()) return null;
+      block.label = block.value;
+      block.href = String(link || "");
+      Object.assign(block, parseCtaNotes(notes));
+    } else if (type === "quote") {
+      if (!block.value.trim()) return null;
+      block.attribution = String(notes || "");
+    }
+    return block;
+  };
+
   const applySectionControls = (page) => {
     if (!page || !Array.isArray(page.sections)) return page;
 
@@ -930,6 +1150,63 @@
       if (section.id) byId[section.id] = section;
     });
 
+    const sectionRows = new Map();
+    rows.forEach((row) => {
+      const sectionName = String(row.section || "").trim();
+      if (!sectionName) return;
+      if (!sectionRows.has(sectionName)) sectionRows.set(sectionName, []);
+      sectionRows.get(sectionName).push(row);
+    });
+
+    const sectionNameToId = new Map();
+    sectionRows.forEach((groupRows, sectionName) => {
+      let sectionId = resolveSectionId(sectionName, byId);
+      const layoutRow = groupRows.find((row) => isSectionLayoutField(row.field));
+      const layout = layoutRow ? normalizeCmsLayout(layoutRow.value) : "";
+
+      if (!sectionId && layout) {
+        sectionId = createUniqueSectionId(sectionName, byId);
+        const themeRow = groupRows.find((row) => isSectionThemeField(row.field));
+        const section = {
+          id: sectionId,
+          type: "custom",
+          cmsLayout: layout,
+          blocks: [],
+          theme: String((themeRow && themeRow.value) || "paper").trim().toLowerCase() || "paper",
+        };
+        page.sections = page.sections || [];
+        page.sections.push(section);
+        byId[sectionId] = section;
+      }
+
+      if (!sectionId) return;
+      sectionNameToId.set(sectionName, sectionId);
+
+      const section = byId[sectionId];
+      const contentModeRow = groupRows.find((row) => isFlexibleContentField(row.field));
+      const isAuthoritative =
+        section.type === "custom" ||
+        (contentModeRow && isFlexibleContentValue(contentModeRow.value));
+
+      if (isAuthoritative && section.type !== "custom") {
+        [
+          "note",
+          "title",
+          "subhead",
+          "eyebrow",
+          "body",
+          "bodyAfter",
+          "list",
+          "ctas",
+          "image",
+          "images",
+          "inlineLink",
+          "cmsBlocks",
+        ].forEach((key) => delete section[key]);
+      }
+      section._cmsContentAuthoritative = isAuthoritative;
+    });
+
     const updates = {};
 
     rows.forEach((row) => {
@@ -947,15 +1224,11 @@
         link = "";
         notes = "";
       }
-    let sectionId = SECTION_MAP[sectionName];
-    if (!sectionId) {
-      const normalized = String(sectionName).trim().toLowerCase();
-      const directMatch = Object.keys(byId).find((id) => id.toLowerCase() === normalized);
-      sectionId = directMatch || "";
-    }
+      const sectionId = sectionNameToId.get(String(sectionName).trim()) || resolveSectionId(sectionName, byId);
       if (!sectionId) return;
       if (!updates[sectionId]) updates[sectionId] = {};
       const bucket = updates[sectionId];
+      const section = byId[sectionId];
 
       if (isVisibilityField(field)) {
         bucket.enabled = parseSectionVisibility(value);
@@ -966,6 +1239,32 @@
       if (isDisplayOrderField(field)) {
         const displayOrder = parseDisplayOrder(value);
         if (displayOrder !== null) bucket.displayOrder = displayOrder;
+        return;
+      }
+
+      if (isFlexibleContentField(field)) {
+        bucket.contentAuthoritative = isFlexibleContentValue(value);
+        return;
+      }
+
+      if (isSectionLayoutField(field)) {
+        const layout = normalizeCmsLayout(value);
+        if (layout) bucket.cmsLayout = layout;
+        return;
+      }
+
+      if (isSectionThemeField(field)) {
+        if (value) bucket.theme = String(value).trim().toLowerCase();
+        return;
+      }
+
+      if (section && section.type === "custom") {
+        const block = buildCmsBlock(field, value, link, notes);
+        if (block) {
+          if (!bucket.blocks) bucket.blocks = [];
+          bucket.blocks.push(block);
+        }
+        bucket.hasBlocks = true;
         return;
       }
 
@@ -1044,8 +1343,24 @@
         return;
       }
 
-      if (/^Image/i.test(field)) {
-        bucket.image = { src: value, alt: notes };
+      if (/^Image\s*\d*$/i.test(field)) {
+        const idxMatch = field.match(/\d+/);
+        if (!bucket.images) bucket.images = {};
+        if (!bucket.nextImageIndex) bucket.nextImageIndex = 1;
+        const idx = idxMatch ? Number(idxMatch[0]) : bucket.nextImageIndex;
+        bucket.nextImageIndex = Math.max(bucket.nextImageIndex, idx + 1);
+        bucket.images[idx] = { src: value, alt: notes, href: link };
+        bucket.hasImages = true;
+        return;
+      }
+
+      if (/^(Heading|Paragraph|Quote|Button|List Item|Editor Note)\s*\d*$/i.test(field)) {
+        const block = buildCmsBlock(field, value, link, notes);
+        if (block) {
+          if (!bucket.cmsBlocks) bucket.cmsBlocks = [];
+          bucket.cmsBlocks.push(block);
+        }
+        bucket.hasCmsBlocks = true;
         return;
       }
 
@@ -1082,16 +1397,36 @@
       if (data.hasEnabled) section._cmsEnabled = data.enabled;
       if (Number.isFinite(data.displayOrder)) section._cmsDisplayOrder = data.displayOrder;
 
+      if (data.contentAuthoritative) section._cmsContentAuthoritative = true;
+      if (data.cmsLayout) section.cmsLayout = data.cmsLayout;
+      if (data.theme) section.theme = data.theme;
+
+      if (section.type === "custom") {
+        section.blocks = data.hasBlocks ? data.blocks || [] : [];
+        return;
+      }
+
       ["title", "subhead", "note", "eyebrow", "panelLabel"].forEach((key) => {
         if (key in data) section[key] = data[key];
       });
 
       if (data.inlineLink) section.inlineLink = data.inlineLink;
-      if (data.image && data.image.src) {
-        section.image = section.image || {};
-        section.image.src = data.image.src;
-        if (data.image.alt) section.image.alt = data.image.alt;
+
+      if (data.hasImages) {
+        const images = Object.keys(data.images || {})
+          .sort((a, b) => Number(a) - Number(b))
+          .map((key) => data.images[key])
+          .filter((image) => image && image.src);
+        if (images.length) {
+          section.image = images[0];
+          section.images = images;
+        } else {
+          delete section.image;
+          delete section.images;
+        }
       }
+
+      if (data.hasCmsBlocks) section.cmsBlocks = data.cmsBlocks || [];
 
       if (data.hasBody) {
         const body = Object.keys(data.body || {})
@@ -1178,6 +1513,10 @@
           };
         });
       }
+    });
+
+    (page.sections || []).forEach((section) => {
+      delete section._cmsContentAuthoritative;
     });
 
     return page;
@@ -1281,16 +1620,20 @@
       copy.appendChild(list);
     }
 
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+
     const ctas = renderCtas(section.ctas);
     if (ctas) copy.appendChild(ctas);
 
-    if (section.image) {
+    if (getSectionImages(section).length) {
       const grid = createEl("div", "cnb-home-grid split");
       if (section.layout === "image-left") grid.classList.add("is-reversed");
       const media = createEl("div", "cnb-home-media");
-      const image = inlineImageAfter ? null : renderImage(section.image, { sectionEl });
-      if (image) media.appendChild(image);
-      if (image) {
+      const imageCollection = inlineImageAfter
+        ? null
+        : renderImageCollection(getSectionImages(section), { sectionEl });
+      if (imageCollection) media.appendChild(imageCollection);
+      if (imageCollection) {
         grid.append(copy, media);
       } else {
         grid.append(copy);
@@ -1298,6 +1641,45 @@
       inner.appendChild(grid);
     } else {
       inner.appendChild(copy);
+    }
+
+    sectionEl.appendChild(inner);
+    applyRevealDelays(sectionEl);
+    return sectionEl;
+  };
+
+  const renderCustom = (section) => {
+    const layout = normalizeCmsLayout(section.cmsLayout) || "text";
+    const sectionEl = buildSection(section, `cnb-home-custom is-cms-layout-${layout}`);
+    const inner = createEl("div", "cnb-home-inner");
+    const copy = createEl("div", "cnb-home-copy cnb-cms-copy");
+    const blocks = Array.isArray(section.blocks) ? section.blocks : [];
+    const imageBlocks = blocks
+      .filter((block) => block && block.type === "image" && (block.src || block.value))
+      .map((block) => ({
+        src: block.src || block.value,
+        alt: block.alt || "",
+        href: block.href || "",
+      }));
+
+    renderCmsBlocks(blocks, copy, sectionEl);
+
+    const media = createEl("div", "cnb-home-media cnb-cms-media");
+    const imageCollection = renderImageCollection(imageBlocks, { sectionEl });
+    if (imageCollection) {
+      sectionEl.dataset.hasImage = "true";
+      media.appendChild(imageCollection);
+    }
+
+    if (layout === "image-left" || layout === "image-right") {
+      const grid = createEl("div", "cnb-home-grid split cnb-cms-grid");
+      if (layout === "image-left") grid.classList.add("is-reversed");
+      if (imageCollection) grid.append(copy, media);
+      else grid.append(copy);
+      inner.appendChild(grid);
+    } else {
+      inner.appendChild(copy);
+      if (imageCollection) inner.appendChild(media);
     }
 
     sectionEl.appendChild(inner);
@@ -1469,6 +1851,8 @@
 
   const renderSection = (section) => {
     switch (section.type) {
+      case "custom":
+        return renderCustom(section);
       case "hero":
         return renderHero(section);
       case "ai":
@@ -1700,6 +2084,17 @@
     }
     return merged;
   };
+
+  if (window.CNB_CMS_TEST_MODE) {
+    window.CNB_CMS_INTERNALS = {
+      rowsFromCsv,
+      applyRowsToPage,
+      applySectionControls,
+      normalizeCmsLayout,
+      renderSection,
+    };
+    return;
+  }
 
   if (jsonUrl && isCsvUrl(jsonUrl)) {
     window.CNB_LAST_CONTENT_URL = jsonUrl;
