@@ -1853,6 +1853,22 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   justify-content: center;
 }
 
+.cnb-home-custom.is-cms-layout-image-left .cnb-cms-list.is-card-grid,
+.cnb-home-custom.is-cms-layout-image-right .cnb-cms-list.is-card-grid {
+  grid-template-columns: 1fr;
+}
+
+.cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list,
+.cnb-home-custom.is-cms-layout-quote .cnb-cms-list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list.is-card-grid li,
+.cnb-home-custom.is-cms-layout-quote .cnb-cms-list.is-card-grid li {
+  text-align: center;
+}
+
 .cnb-cms-heading {
   margin: clamp(24px, 4vw, 42px) 0 12px;
   font-family: var(--cnb-serif);

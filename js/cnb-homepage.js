@@ -151,10 +151,45 @@
     return list;
   };
 
+  const CMS_LIST_VARIANT_ALIASES = {
+    "card grid": "card-grid",
+    "cards grid": "card-grid",
+    "boxed grid": "card-grid",
+    "card-grid": "card-grid",
+    "card stack": "card-stack",
+    "cards stacked": "card-stack",
+    "boxed stack": "card-stack",
+    "card-stack": "card-stack",
+    numbered: "numbered",
+    pills: "pill-grid",
+    "pill grid": "pill-grid",
+    "pill-grid": "pill-grid",
+    simple: "simple",
+  };
+
+  const normalizeCmsListVariant = (value) => {
+    const normalized = String(value || "").trim().toLowerCase().replace(/_/g, "-");
+    return CMS_LIST_VARIANT_ALIASES[normalized] || "";
+  };
+
+  const getDefaultCmsListVariant = (section) => {
+    const layout = String((section && section.cmsLayout) || "")
+      .trim()
+      .toLowerCase()
+      .replace(/_/g, "-");
+    return layout === "centered cta" || layout === "centered-cta" ||
+      layout === "quote" || layout === "gallery"
+      ? "card-grid"
+      : "card-stack";
+  };
+
   const applyListVariant = (listEl, section) => {
     if (!listEl || !section) return;
-    const variant = section.listVariant || section.listStyle || section.listLayout;
-    if (!variant) return;
+    const configuredVariant = section.listVariant || section.listStyle || section.listLayout;
+    const variant =
+      normalizeCmsListVariant(configuredVariant) ||
+      (section.type === "custom" || section.cmsLayout ? getDefaultCmsListVariant(section) : "");
+    if (!variant || variant === "simple") return;
     listEl.classList.add(`is-${variant}`);
   };
 
@@ -469,7 +504,7 @@
     return gallery;
   };
 
-  const renderCmsBlocks = (blocks, parent, sectionEl) => {
+  const renderCmsBlocks = (blocks, parent, sectionEl, section) => {
     const items = Array.isArray(blocks) ? blocks : [];
     let index = 0;
 
@@ -489,7 +524,10 @@
           index += 1;
         }
         const list = renderList(listItems, "cnb-home-list cnb-cms-list");
-        if (list) parent.appendChild(list);
+        if (list) {
+          applyListVariant(list, section);
+          parent.appendChild(list);
+        }
         continue;
       }
 
@@ -627,7 +665,7 @@
     const ctas = renderCtas(section.ctas);
     if (ctas) copy.appendChild(ctas);
 
-    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl, section);
 
     const media = createEl("div", "cnb-home-hero-media");
     const imageCollection = inlineImageAfter
@@ -682,7 +720,7 @@
       renderBody(section.bodyAfter, copy);
     }
 
-    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl, section);
 
     const form = renderSectionForm(section.form);
     if (form) copy.appendChild(form);
@@ -1036,6 +1074,9 @@
   const isSectionThemeField = (field) =>
     /^(section theme|color theme|theme)$/i.test(String(field || "").trim());
 
+  const isSectionListStyleField = (field) =>
+    /^(list style|list treatment|list variant)$/i.test(String(field || "").trim());
+
   const isFlexibleContentValue = (value) =>
     /^(flexible|sheet|sheet authoritative|editable structure)$/i.test(String(value || "").trim());
 
@@ -1115,6 +1156,15 @@
     return block;
   };
 
+  const normalizeCustomCmsBlocks = (blocks) => {
+    const normalized = Array.isArray(blocks) ? blocks.map((block) => ({ ...block })) : [];
+    if (normalized.some((block) => block && block.type === "title")) return normalized;
+
+    const firstHeading = normalized.find((block) => block && block.type === "heading");
+    if (firstHeading) firstHeading.type = "title";
+    return normalized;
+  };
+
   const applySectionControls = (page) => {
     if (!page || !Array.isArray(page.sections)) return page;
 
@@ -1167,6 +1217,7 @@
       if (!sectionId && layout) {
         sectionId = createUniqueSectionId(sectionName, byId);
         const themeRow = groupRows.find((row) => isSectionThemeField(row.field));
+        const listStyleRow = groupRows.find((row) => isSectionListStyleField(row.field));
         const section = {
           id: sectionId,
           type: "custom",
@@ -1174,6 +1225,9 @@
           blocks: [],
           theme: String((themeRow && themeRow.value) || "paper").trim().toLowerCase() || "paper",
         };
+        section.listVariant =
+          normalizeCmsListVariant(listStyleRow && listStyleRow.value) ||
+          getDefaultCmsListVariant(section);
         page.sections = page.sections || [];
         page.sections.push(section);
         byId[sectionId] = section;
@@ -1255,6 +1309,12 @@
 
       if (isSectionThemeField(field)) {
         if (value) bucket.theme = String(value).trim().toLowerCase();
+        return;
+      }
+
+      if (isSectionListStyleField(field)) {
+        const listVariant = normalizeCmsListVariant(value);
+        if (listVariant) bucket.listVariant = listVariant;
         return;
       }
 
@@ -1354,7 +1414,10 @@
         return;
       }
 
-      if (/^(Heading|Paragraph|Quote|Button|List Item|Editor Note)\s*\d*$/i.test(field)) {
+      if (
+        /^(Heading|Paragraph|Quote|Button|List Item|Editor Note)\s*\d*$/i.test(field) ||
+        /^(Title|Eyebrow|Kicker|Subhead|Note)\s+\d+$/i.test(field)
+      ) {
         const block = buildCmsBlock(field, value, link, notes);
         if (block) {
           if (!bucket.cmsBlocks) bucket.cmsBlocks = [];
@@ -1400,9 +1463,11 @@
       if (data.contentAuthoritative) section._cmsContentAuthoritative = true;
       if (data.cmsLayout) section.cmsLayout = data.cmsLayout;
       if (data.theme) section.theme = data.theme;
+      if (data.listVariant) section.listVariant = data.listVariant;
 
       if (section.type === "custom") {
-        section.blocks = data.hasBlocks ? data.blocks || [] : [];
+        if (!section.listVariant) section.listVariant = getDefaultCmsListVariant(section);
+        section.blocks = normalizeCustomCmsBlocks(data.hasBlocks ? data.blocks || [] : []);
         return;
       }
 
@@ -1620,7 +1685,7 @@
       copy.appendChild(list);
     }
 
-    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl);
+    if (section.cmsBlocks) renderCmsBlocks(section.cmsBlocks, copy, sectionEl, section);
 
     const ctas = renderCtas(section.ctas);
     if (ctas) copy.appendChild(ctas);
@@ -1662,7 +1727,7 @@
         href: block.href || "",
       }));
 
-    renderCmsBlocks(blocks, copy, sectionEl);
+    renderCmsBlocks(blocks, copy, sectionEl, section);
 
     const media = createEl("div", "cnb-home-media cnb-cms-media");
     const imageCollection = renderImageCollection(imageBlocks, { sectionEl });
@@ -2091,6 +2156,7 @@
       applyRowsToPage,
       applySectionControls,
       normalizeCmsLayout,
+      normalizeCmsListVariant,
       renderSection,
     };
     return;
