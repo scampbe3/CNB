@@ -1841,18 +1841,10 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 /* Sheet-authored sections opt into these styles; legacy sections are unchanged. */
-.cnb-home-custom .cnb-cms-copy {
-  width: min(100%, 820px);
-}
-
-.cnb-home-custom.is-cms-layout-text .cnb-cms-copy,
 .cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-copy,
 .cnb-home-custom.is-cms-layout-quote .cnb-cms-copy {
+  max-width: 920px;
   margin-inline: auto;
-}
-
-.cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-copy,
-.cnb-home-custom.is-cms-layout-quote .cnb-cms-copy {
   text-align: center;
 }
 
@@ -1944,10 +1936,6 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
-  .cnb-home-custom .cnb-cms-copy {
-    width: 100%;
-  }
-
   .cnb-cms-gallery,
   .cnb-home-custom.is-cms-layout-gallery .cnb-cms-gallery {
     grid-template-columns: 1fr;
