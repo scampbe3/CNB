@@ -1873,6 +1873,14 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   margin-right: auto;
 }
 
+.cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list:not(.is-card-grid):not(.is-card-stack):not(.is-numbered):not(.is-pill-grid),
+.cnb-home-custom.is-cms-layout-quote .cnb-cms-list:not(.is-card-grid):not(.is-card-stack):not(.is-numbered):not(.is-pill-grid) {
+  width: fit-content;
+  max-width: min(100%, 70ch);
+  justify-items: start;
+  text-align: left;
+}
+
 .cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list.is-card-grid li,
 .cnb-home-custom.is-cms-layout-quote .cnb-cms-list.is-card-grid li {
   text-align: center;
@@ -1961,6 +1969,19 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
+  .cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list.is-pill-grid,
+  .cnb-home-custom.is-cms-layout-quote .cnb-cms-list.is-pill-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: none;
+  }
+
+  .cnb-home-custom.is-cms-layout-centered-cta .cnb-cms-list.is-pill-grid li,
+  .cnb-home-custom.is-cms-layout-quote .cnb-cms-list.is-pill-grid li {
+    width: 100%;
+    min-width: 0;
+  }
+
   .cnb-cms-gallery,
   .cnb-home-custom.is-cms-layout-gallery .cnb-cms-gallery {
     grid-template-columns: 1fr;
