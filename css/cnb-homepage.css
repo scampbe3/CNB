@@ -1857,6 +1857,14 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   text-align: center;
 }
 
+.cnb-home-custom.is-cms-layout-centered-cta .cnb-home-body,
+.cnb-home-custom.is-cms-layout-centered-cta .cnb-home-subhead,
+.cnb-home-custom.is-cms-layout-quote .cnb-home-body,
+.cnb-home-custom.is-cms-layout-quote .cnb-home-subhead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cnb-home-custom.is-cms-layout-centered-cta .cnb-home-cta-row,
 .cnb-home-custom.is-cms-layout-quote .cnb-home-cta-row {
   justify-content: center;
