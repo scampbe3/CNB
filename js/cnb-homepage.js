@@ -954,16 +954,40 @@
       });
   };
 
-  const deriveGvizUrl = (csvUrl) => {
+  const C_B_WORKBOOK_ID =
+    window.CNB_WORKBOOK_ID ||
+    window.CNB_SHEET_ID ||
+    "1HdRNoXtoiZed0tcqXC4VmIuArNeEMFUocRTheTEM0VM";
+
+  const withFreshnessToken = (sourceUrl, token = Date.now()) => {
+    if (!sourceUrl) return "";
+    try {
+      const url = new URL(sourceUrl, window.location.href);
+      url.searchParams.set("_cnb", String(token));
+      return url.toString();
+    } catch (err) {
+      const separator = sourceUrl.includes("?") ? "&" : "?";
+      return `${sourceUrl}${separator}_cnb=${encodeURIComponent(String(token))}`;
+    }
+  };
+
+  const deriveGvizUrl = (csvUrl, token = Date.now()) => {
     if (!csvUrl) return "";
-    if (/\/gviz\/tq/i.test(csvUrl)) return csvUrl;
     try {
       const url = new URL(csvUrl, window.location.href);
-      url.pathname = url.pathname.replace(/\/pub\/?$/i, "/gviz/tq");
-      url.searchParams.set("tqx", "out:json");
-      url.searchParams.delete("output");
-      url.searchParams.delete("single");
-      return url.toString();
+      if (/\/gviz\/tq/i.test(url.pathname)) {
+        return withFreshnessToken(url.toString(), token);
+      }
+
+      const gid = url.searchParams.get("gid");
+      if (!C_B_WORKBOOK_ID || !gid) return "";
+
+      const gvizUrl = new URL(
+        `https://docs.google.com/spreadsheets/d/${encodeURIComponent(C_B_WORKBOOK_ID)}/gviz/tq`
+      );
+      gvizUrl.searchParams.set("gid", gid);
+      gvizUrl.searchParams.set("tqx", "out:json");
+      return withFreshnessToken(gvizUrl.toString(), token);
     } catch (err) {
       return "";
     }
@@ -2153,6 +2177,9 @@
   if (window.CNB_CMS_TEST_MODE) {
     window.CNB_CMS_INTERNALS = {
       rowsFromCsv,
+      rowsFromGviz,
+      deriveGvizUrl,
+      withFreshnessToken,
       applyRowsToPage,
       applySectionControls,
       normalizeCmsLayout,
@@ -2165,13 +2192,18 @@
   if (jsonUrl && isCsvUrl(jsonUrl)) {
     window.CNB_LAST_CONTENT_URL = jsonUrl;
     const isGoogleSheetCsv = /docs\.google\.com\/spreadsheets/i.test(jsonUrl);
-    const gvizUrl = isGoogleSheetCsv ? deriveGvizUrl(jsonUrl) : "";
+    const freshnessToken = Date.now();
+    const gvizUrl = isGoogleSheetCsv ? deriveGvizUrl(jsonUrl, freshnessToken) : "";
+    const csvUrl = isGoogleSheetCsv
+      ? withFreshnessToken(jsonUrl, freshnessToken)
+      : jsonUrl;
+    window.CNB_LAST_CONTENT_REQUESTS = { gviz: gvizUrl, csv: csvUrl };
     const loadGvizRows = gvizUrl
       ? loadGviz(gvizUrl)
           .then((payload) => rowsFromGviz(payload))
           .catch(() => null)
       : Promise.resolve(null);
-    const loadCsvRows = fetchText(jsonUrl)
+    const loadCsvRows = fetchText(csvUrl)
       .then((csvText) => (csvText ? rowsFromCsv(csvText) : null))
       .catch(() => null);
     const loadBase = fallbackUrl ? fetchJson(fallbackUrl) : Promise.resolve(defaultData);
