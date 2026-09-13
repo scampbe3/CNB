@@ -1238,6 +1238,67 @@ body.cnb-page-work-with-amanda :is(
   object-fit: cover;
 }
 
+/* Keep each engagement summary directly beneath its corresponding image. */
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  grid-template-areas:
+    "eyebrow media"
+    "title media"
+    ". body";
+  row-gap: 14px;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-copy {
+  display: contents;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-eyebrow {
+  grid-area: eyebrow;
+  align-self: end;
+  margin-bottom: 0;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-title {
+  grid-area: title;
+  align-self: start;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-media {
+  grid-area: media;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-body {
+  grid-area: body;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: center;
+}
+
 /* Give archival engagements a focused, centered editorial presentation. */
 body.cnb-page-work-with-amanda :is(
   #engagement-upstream,
@@ -1782,6 +1843,20 @@ body.cnb-page-work-with-amanda #engagement-butter-lye :is(
 }
 
 @media (max-width: 720px) {
+  body.cnb-page-work-with-amanda :is(
+    #from-clients,
+    #engagement-blooming-haus,
+    #engagement-biolage-raw
+  ) .cnb-home-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "media"
+      "body";
+    gap: 18px;
+  }
+
   body.cnb-page-work-with-amanda :is(
     #engagement-upstream,
     #engagement-butter-lye,
