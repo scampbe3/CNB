@@ -967,39 +967,41 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
     grid-column: 1 / -1;
   }
 
-  body.cnb-page-blind-dinners #hero,
   body.cnb-page-blind-dinners #who-comes {
     grid-column: 1;
   }
 
-  body.cnb-page-blind-dinners #what-it-is,
   body.cnb-page-blind-dinners #how-it-works {
     grid-column: 2;
   }
 
-  body.cnb-page-blind-dinners :is(#hero, #what-it-is, #who-comes, #how-it-works) {
+  body.cnb-page-blind-dinners :is(#who-comes, #how-it-works) {
     display: flex;
     align-items: center;
     min-width: 0;
   }
 
-  body.cnb-page-blind-dinners :is(#hero, #what-it-is, #who-comes, #how-it-works) .cnb-home-inner {
+  body.cnb-page-blind-dinners :is(#who-comes, #how-it-works) .cnb-home-inner {
     width: 100%;
   }
 
-  body.cnb-page-blind-dinners :is(#hero .cnb-home-grid.hero, #what-it-is .cnb-home-grid.split, #who-comes .cnb-home-grid.split, #how-it-works .cnb-home-grid.split) {
+  body.cnb-page-blind-dinners :is(#who-comes .cnb-home-grid.split, #how-it-works .cnb-home-grid.split) {
     grid-template-columns: minmax(0, 1fr);
     text-align: center;
   }
 
-  body.cnb-page-blind-dinners :is(#hero, #what-it-is, #who-comes, #how-it-works) :is(.cnb-home-copy, .cnb-home-media) {
+  body.cnb-page-blind-dinners :is(#who-comes, #how-it-works) :is(.cnb-home-copy, .cnb-home-media) {
     width: min(100%, 520px);
     margin-inline: auto;
   }
 }
 
-body.cnb-page-blind-dinners #dinner-gallery-1 .cnb-cms-heading {
-  text-align: center;
+#dinner-gallery-1 :is(.cnb-home-title, .cnb-cms-heading) {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
 }
 
 .cnb-home-list.is-card-stack {
