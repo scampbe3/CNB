@@ -17,10 +17,21 @@ const manifest = await readJson(path.join(out, 'image-manifest.json'));
 const patch = await readJson(path.join(out, 'sheet-patch.json'));
 assert.equal(patch.workbook, baseline.workbook);
 const report = { testedAt: new Date().toISOString(), pages: [], images: manifest.length, replacements: manifest.filter(m => m.replaced).length };
-const safetyFiles = ['js/cnb-homepage.js', 'js/cnb-loader.js', 'js/cnb-site-footer.js', 'css/cnb-homepage.css'];
+const safetyFiles = ['js/cnb-homepage.js', 'js/cnb-loader.js', 'js/cnb-site-footer.js'];
 for (const file of safetyFiles) {
   const original = execFileSync('git', ['show', `ffc1fd5:${file}`], { cwd: root });
   assert.equal((await fs.readFile(path.join(root, file), 'utf8')).replaceAll('\r\n', '\n'), original.toString().replaceAll('\r\n', '\n'), file);
+}
+const homepageCss = await fs.readFile(path.join(root, 'css/cnb-homepage.css'), 'utf8');
+for (const rule of [
+  '#experience-television .cnb-home-image img',
+  '#experience-global-marketing .cnb-home-image img',
+  '#experience-entrepreneurship .cnb-home-image img',
+  '#experience-teaching .cnb-home-image img',
+  '#business-counsel .cnb-home-image',
+  '#strategic-partnership .cnb-home-image',
+]) {
+  assert.ok(homepageCss.includes(rule), `Missing homepage image adjustment: ${rule}`);
 }
 for (const tab of baseline.tabs.filter(t => !pages.some(p => p.key === t.key))) {
   for (const suffix of ['.json', '-content-table.csv']) {

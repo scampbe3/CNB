@@ -1171,6 +1171,29 @@ body.cnb-page-about #what-cnb-is .cnb-home-image img {
   object-position: 30% center;
 }
 
+/* Keep Amanda in frame when landscape experience photos use the portrait card crop. */
+body.cnb-page-cnb-home #experience-television .cnb-home-image img {
+  object-position: right center;
+}
+
+body.cnb-page-cnb-home #experience-global-marketing .cnb-home-image img {
+  object-position: left center;
+}
+
+body.cnb-page-cnb-home #experience-entrepreneurship .cnb-home-image img {
+  object-position: 30% center;
+}
+
+body.cnb-page-cnb-home #experience-teaching .cnb-home-image img {
+  object-position: 18% center;
+}
+
+/* These homepage features use landscape photography, so their frames should too. */
+body.cnb-page-cnb-home #business-counsel .cnb-home-image,
+body.cnb-page-cnb-home #strategic-partnership .cnb-home-image {
+  aspect-ratio: 3 / 2;
+}
+
 .cnb-home-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
