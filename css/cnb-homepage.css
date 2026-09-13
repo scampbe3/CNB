@@ -836,18 +836,38 @@ body.cnb-page-membership #whats-inside :is(
 }
 
 body.cnb-page-membership #hero .cnb-home-hero-note {
-  justify-self: center;
   text-align: center;
 }
 
+body.cnb-page-membership #hero .cnb-home-hero-top {
+  align-items: center;
+}
+
 body.cnb-page-membership #hero .cnb-home-hero-media {
-  width: min(100%, 430px);
+  width: min(100%, 360px);
   margin: 0 auto;
 }
 
+body.cnb-page-membership #hero .cnb-home-image {
+  min-height: 0;
+  aspect-ratio: 2 / 3;
+}
+
+body.cnb-page-membership #hero .cnb-home-image img[data-fit="contain"] {
+  object-fit: cover;
+}
+
 body.cnb-page-membership #whats-inside .cnb-home-list {
-  width: min(100%, 720px);
-  text-align: left;
+  width: 100%;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+body.cnb-page-membership #whats-inside .cnb-home-list li {
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 16px;
 }
 
 .cnb-home-list.is-card-stack {
