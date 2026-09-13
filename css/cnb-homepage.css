@@ -1205,6 +1205,15 @@ body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
   object-fit: contain;
 }
 
+/* Keep lower-resolution archival images crisp by displaying them more modestly. */
+body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
+body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
+body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
+  width: 78%;
+  min-height: 0;
+  margin-inline: auto;
+}
+
 .cnb-home-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -1639,6 +1648,12 @@ body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
 }
 
 @media (max-width: 720px) {
+  body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
+  body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
+  body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
+    width: 88%;
+  }
+
   .cnb-home-image.is-inline {
     width: 100%;
     min-height: 0;
