@@ -967,6 +967,10 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
     grid-column: 1 / -1;
   }
 
+  body.cnb-page-blind-dinners #hero .cnb-home-hero-media {
+    order: -1;
+  }
+
   body.cnb-page-blind-dinners #who-comes {
     grid-column: 1;
   }
