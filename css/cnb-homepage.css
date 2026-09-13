@@ -1194,6 +1194,17 @@ body.cnb-page-cnb-home #strategic-partnership .cnb-home-image {
   aspect-ratio: 3 / 2;
 }
 
+/* Match the Work With Amanda frames to the supplied engagement photography. */
+body.cnb-page-work-with-amanda #business-counsel .cnb-home-image,
+body.cnb-page-work-with-amanda #from-clients .cnb-home-image {
+  aspect-ratio: 16 / 9;
+}
+
+body.cnb-page-work-with-amanda #engagement-blooming-haus .cnb-home-image img,
+body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
+  object-fit: contain;
+}
+
 .cnb-home-caption {
   font-size: 12px;
   letter-spacing: 0.08em;
