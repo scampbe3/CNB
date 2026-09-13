@@ -808,6 +808,48 @@ body.cnb-page-membership #whats-inside .cnb-home-list.is-card-stack {
   grid-template-columns: 1fr;
 }
 
+body.cnb-page-membership #hero .cnb-home-grid.hero,
+body.cnb-page-membership #whats-inside .cnb-home-grid.split {
+  grid-template-columns: minmax(0, 1fr);
+  text-align: center;
+}
+
+body.cnb-page-membership #hero .cnb-home-copy,
+body.cnb-page-membership #whats-inside .cnb-home-copy {
+  width: min(100%, 820px);
+  margin-inline: auto;
+}
+
+body.cnb-page-membership #hero :is(
+  .cnb-home-title,
+  .cnb-home-subhead,
+  .cnb-home-body
+),
+body.cnb-page-membership #whats-inside :is(
+  .cnb-home-title,
+  .cnb-home-subhead,
+  .cnb-home-body,
+  .cnb-home-list
+) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.cnb-page-membership #hero .cnb-home-hero-note {
+  justify-self: center;
+  text-align: center;
+}
+
+body.cnb-page-membership #hero .cnb-home-hero-media {
+  width: min(100%, 430px);
+  margin: 0 auto;
+}
+
+body.cnb-page-membership #whats-inside .cnb-home-list {
+  width: min(100%, 720px);
+  text-align: left;
+}
+
 .cnb-home-list.is-card-stack {
   grid-template-columns: 1fr;
 }
