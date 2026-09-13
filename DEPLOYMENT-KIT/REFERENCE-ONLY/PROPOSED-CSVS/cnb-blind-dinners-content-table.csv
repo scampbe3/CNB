@@ -1,0 +1,80 @@
+section,field,value,link,notes
+hero,Show Section?,Yes,,
+hero,Display Order,10,,
+hero,Note,The Blind Dinner,,
+hero,Title,Sometimes the most important table isn't the one you're invited to.,,
+hero,Body 1,,,
+hero,Body 2,,,
+hero,Body 3,,,
+hero,Image,assets/images/phase1a/blind-dinners-hero-image.webp,,The Blind Dinner gathering
+what-it-is,Show Section?,Yes,,
+what-it-is,Display Order,20,,
+what-it-is,Eyebrow,,,
+what-it-is,Title,The Blind Dinner,,
+what-it-is,Body 1,"The Blind Dinner is an intentionally curated gathering of accomplished strangers who come together for an evening of honest conversation, genuine connection and unexpected possibility.",,
+what-it-is,Image,assets/images/phase1a/blind-dinners-what-it-is-image.webp,,A dish prepared for The Blind Dinner
+who-comes,Show Section?,Yes,,
+who-comes,Display Order,30,,
+who-comes,Eyebrow,,,
+who-comes,Title,Guests come as strangers.,,
+who-comes,Body 1,"They leave as collaborators, trusted advisors and lifelong friends.",,
+who-comes,Image,assets/images/phase1a/blind-dinners-who-comes-image.webp,,Guests at The Blind Dinner
+how-it-works,Show Section?,Yes,,
+how-it-works,Display Order,40,,
+how-it-works,Eyebrow,,,
+how-it-works,Title,By invitation only.,,
+how-it-works,Body 1,,,
+how-it-works,Body 2,,,
+how-it-works,List 1,,,
+how-it-works,List 2,,,
+how-it-works,List 3,,,
+how-it-works,Image,assets/images/phase1a/blind-dinners-how-it-works-image.webp,,Conversation at The Blind Dinner
+relationship-to-membership,Show Section?,No,,
+relationship-to-membership,Display Order,50,,Lower numbers appear first.
+relationship-to-membership,Eyebrow,The Decision Room,,
+relationship-to-membership,Title,Thoughtful invitations start with shared context.,,
+relationship-to-membership,Body 1,Invitations are extended thoughtfully and intentionally.,,
+relationship-to-membership,Body 2,"If you are interested in future invitations, The Decision Room is the first place to begin building shared language, trust, and alignment.",,
+relationship-to-membership,CTA 1,Explore The Decision Room,/membership,primary
+hero,Content Mode,Flexible,,
+hero,Subhead,It's the one you build yourself.,,
+what-it-is,Content Mode,Flexible,,
+who-comes,Content Mode,Flexible,,
+how-it-works,Content Mode,Flexible,,
+dinner-gallery-1,Display Order,50,,
+dinner-gallery-1,Show Section?,Yes,,
+dinner-gallery-1,Content Mode,Flexible,,
+dinner-gallery-1,Section Layout,Gallery,,
+dinner-gallery-1,Section Theme,paper,,
+dinner-gallery-1,List Style,Card Stack,,
+dinner-gallery-1,Title,The Blind Dinner,,
+dinner-gallery-1,Image 1,assets/images/phase1a/blind-dinners-dinner-gallery-1-image-1.webp,,Moments from The Blind Dinner
+dinner-gallery-1,Image 2,assets/images/phase1a/blind-dinners-dinner-gallery-1-image-2.webp,,Moments from The Blind Dinner
+dinner-gallery-1,Image 3,assets/images/phase1a/blind-dinners-dinner-gallery-1-image-3.webp,,Moments from The Blind Dinner
+dinner-gallery-2,Display Order,51,,
+dinner-gallery-2,Show Section?,Yes,,
+dinner-gallery-2,Content Mode,Flexible,,
+dinner-gallery-2,Section Layout,Gallery,,
+dinner-gallery-2,Section Theme,paper,,
+dinner-gallery-2,List Style,Card Stack,,
+dinner-gallery-2,Image 1,assets/images/phase1a/blind-dinners-dinner-gallery-2-image-1.webp,,Moments from The Blind Dinner
+dinner-gallery-2,Image 2,assets/images/phase1a/blind-dinners-dinner-gallery-2-image-2.webp,,Moments from The Blind Dinner
+dinner-gallery-2,Image 3,assets/images/phase1a/blind-dinners-dinner-gallery-2-image-3.webp,,Moments from The Blind Dinner
+dinner-gallery-3,Display Order,52,,
+dinner-gallery-3,Show Section?,Yes,,
+dinner-gallery-3,Content Mode,Flexible,,
+dinner-gallery-3,Section Layout,Gallery,,
+dinner-gallery-3,Section Theme,paper,,
+dinner-gallery-3,List Style,Card Stack,,
+dinner-gallery-3,Image 1,assets/images/phase1a/blind-dinners-dinner-gallery-3-image-1.webp,,Moments from The Blind Dinner
+dinner-gallery-3,Image 2,assets/images/phase1a/blind-dinners-dinner-gallery-3-image-2.webp,,Moments from The Blind Dinner
+dinner-gallery-3,Image 3,assets/images/phase1a/blind-dinners-dinner-gallery-3-image-3.webp,,Moments from The Blind Dinner
+dinner-gallery-4,Display Order,53,,
+dinner-gallery-4,Show Section?,Yes,,
+dinner-gallery-4,Content Mode,Flexible,,
+dinner-gallery-4,Section Layout,Gallery,,
+dinner-gallery-4,Section Theme,paper,,
+dinner-gallery-4,List Style,Card Stack,,
+dinner-gallery-4,Image 1,assets/images/phase1a/blind-dinners-dinner-gallery-4-image-1.webp,,Moments from The Blind Dinner
+dinner-gallery-4,Image 2,assets/images/phase1a/blind-dinners-dinner-gallery-4-image-2.webp,,Moments from The Blind Dinner
+dinner-gallery-4,Image 3,assets/images/phase1a/blind-dinners-dinner-gallery-4-image-3.webp,,Moments from The Blind Dinner

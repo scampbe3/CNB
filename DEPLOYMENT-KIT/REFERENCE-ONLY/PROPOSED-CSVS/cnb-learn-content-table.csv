@@ -1,0 +1,58 @@
+section,field,value,link,notes
+hero,Show Section?,Yes,,
+hero,Display Order,10,,
+hero,Note,Library,,
+hero,Title,Ideas worth thinking about.,,
+hero,Body 1,"A searchable collection of essays, AI prompts, decision briefs and business cases exploring better questions, better decisions and the future of work.",,
+hero,Body 2,"Browse by topic, search for something specific or discover something you weren't looking for.",,
+hero,Image,assets/images/phase1a/learn-hero-image.webp,,Amanda Johnson in the Library
+what-youll-find,Show Section?,Yes,,
+what-youll-find,Display Order,20,,
+what-youll-find,Eyebrow,Browse by topic,,
+what-youll-find,Title,The Library,,
+what-youll-find,Body 1,Library preview: searchable resources will be added in the next implementation stage.,,
+what-youll-find,List 1,All,,
+what-youll-find,List 2,Essays,,
+what-youll-find,List 3,Decision Briefs,,
+what-youll-find,List 4,AI Prompts,,
+what-youll-find,List 5,Case Studies,,
+what-youll-find,Image,,,
+how-to-use,Show Section?,No,,
+how-to-use,Display Order,30,,Lower numbers appear first.
+how-to-use,Eyebrow,How To Use It,,
+how-to-use,Title,Start with the real question in front of you.,,
+how-to-use,Body 1,Some founders arrive with a specific question. Others arrive when something feels stuck.,,
+how-to-use,Body 2,"Either way, the goal is not passive consumption. The goal is to help you think more clearly and act with more confidence.",,
+how-to-use,Image,assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp,,Founder writing in a notebook during a working session.
+access-membership,Show Section?,Yes,,
+access-membership,Display Order,30,,
+access-membership,Eyebrow,Access,,
+access-membership,Title,Public / Decision Room Members,,
+access-membership,Body 1,,,
+access-membership,Body 2,,,
+access-membership,CTA 1,Explore The Decision Room,/membership,primary
+access-membership,Image,,,
+learning-context,Show Section?,No,,
+learning-context,Display Order,50,,Lower numbers appear first.
+learning-context,Eyebrow,Context,,
+learning-context,Title,The learning does not sit apart from the rest of the work.,,
+learning-context,Body 1,"These resources connect to consulting work, member conversations, stories, and Blind Dinners.",,
+learning-context,Body 2,The point is not consumption. The point is application.,,
+learning-context,CTA 1,Work With Amanda,/work-with-amanda,primary
+learning-context,CTA 2,Read the Stories,/stories,ghost
+learning-context,Image,assets/images/additional_images_2/CLIENTS/elizabeth abunaw/image.webp,,Founder standing in a produce workspace.
+invitation,Show Section?,No,,
+invitation,Display Order,60,,Lower numbers appear first.
+invitation,Eyebrow,Invitation,,
+invitation,Title,"If you want more than inspiration, start here.",,
+invitation,Body 1,"If you are looking for shortcuts, this may not be the right place.",,
+invitation,Body 2,"If you are looking for practical guidance grounded in experience and care, you are welcome here.",,
+invitation,CTA 1,Explore The Decision Room,/membership,primary
+invitation,CTA 2,Read the Stories,/stories,ghost
+hero,Content Mode,Flexible,,
+what-youll-find,Content Mode,Flexible,,
+what-youll-find,List 6,Videos,,
+what-youll-find,List 7,Speaking,,
+what-youll-find,List 8,The Decision Room (Members),,
+access-membership,Content Mode,Flexible,,
+access-membership,CTA 2,Member area preview,/member-home,ghost
