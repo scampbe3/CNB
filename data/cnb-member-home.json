@@ -1,0 +1,149 @@
+{
+  "page": "member-home",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "theme": "light",
+      "title": "Welcome back.",
+      "subhead": "What decision are you thinking through today?",
+      "note": "The Decision Room - Member Area Preview",
+      "image": {
+        "src": "assets/images/phase1a/member-home-hero-image.webp",
+        "alt": "The Decision Room member area artwork",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/member-home-hero-image.webp",
+          "alt": "The Decision Room member area artwork",
+          "href": ""
+        }
+      ],
+      "body": [
+        "The member area is being prepared. This is a public preview, not an active sign-in or a private member space."
+      ],
+      "ctas": [
+        {
+          "label": "Explore Membership with Amanda",
+          "href": "mailto:amanda@cupcakesandbroccoli.com?subject=The%20Decision%20Room",
+          "variant": "primary"
+        }
+      ],
+      "enabled": true,
+      "displayOrder": 10
+    },
+    {
+      "id": "the-library",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "The Library"
+        },
+        {
+          "type": "paragraph",
+          "value": "Explore essays, decision briefs, AI prompts and member resources."
+        },
+        {
+          "type": "button",
+          "value": "Open Library",
+          "label": "Open Library",
+          "href": "/learn",
+          "variant": "primary"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 20
+    },
+    {
+      "id": "in-the-room",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "In the Room"
+        },
+        {
+          "type": "paragraph",
+          "value": "One of the greatest strengths of The Decision Room is the women inside it."
+        },
+        {
+          "type": "paragraph",
+          "value": "Search by profession, education, location or sorority to discover members you may want to meet, learn from or simply get to know."
+        },
+        {
+          "type": "paragraph",
+          "value": "Coming next: member search, profiles and saved resources. No member information is displayed or collected in this preview."
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 30
+    }
+  ],
+  "version": "2026-09-12-phase1a-content"
+}

@@ -1,0 +1,257 @@
+{
+  "page": "speaking-education",
+  "header": {
+    "title": "Cupcakes + Broccoli",
+    "logo": "assets/images/cb-icon-white.png",
+    "logoAlt": "Cupcakes + Broccoli logo",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "https://www.cupcakesandbroccoli.com/new-page-test-3"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work With Amanda",
+        "href": "/work-with-amanda"
+      },
+      {
+        "label": "Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Stories",
+        "href": "/stories"
+      },
+      {
+        "label": "Blind Dinners",
+        "href": "/blind-dinners"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      },
+      {
+        "label": "Login",
+        "href": "/login",
+        "variant": "button"
+      }
+    ]
+  },
+  "footer": {
+    "company": "Cupcakes + Broccoli, LLC",
+    "email": "amanda@cupcakesandbroccoli.com",
+    "social": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com",
+        "newWindow": true,
+        "rel": "noopener"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com",
+        "newWindow": true,
+        "rel": "noopener"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "theme": "light",
+      "title": "Preparing people for the decisions that matter.",
+      "note": "Speaking & Education",
+      "body": [
+        "Business is more than a career. It's a framework for solving problems, recognizing opportunities and building a life with intention."
+      ],
+      "ctas": [
+        {
+          "label": "Download CV",
+          "href": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-education-cv.pdf",
+          "variant": "primary"
+        },
+        {
+          "label": "Download Teaching Philosophy",
+          "href": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-teaching-philosophy.pdf",
+          "variant": "ghost"
+        }
+      ],
+      "enabled": true,
+      "displayOrder": 10
+    },
+    {
+      "id": "teaching-philosophy",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Teaching Philosophy"
+        },
+        {
+          "type": "paragraph",
+          "value": "In an age where information is abundant and AI can generate answers in seconds, I believe the greatest competitive advantage isn't knowing more. It's developing the judgment to ask better questions, recognize opportunities and make thoughtful decisions."
+        },
+        {
+          "type": "paragraph",
+          "value": "Whether I'm teaching university students, facilitating executive workshops or speaking at conferences, my goal is to connect theory with practice through discussion, current events and real-world business cases."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/speaking-education-teaching-philosophy-image.webp",
+          "src": "assets/images/phase1a/speaking-education-teaching-philosophy-image.webp",
+          "alt": "Amanda speaking on stage"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 20
+    },
+    {
+      "id": "speaking-topics",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Speaking Topics"
+        },
+        {
+          "type": "list-item",
+          "value": "Artificial Intelligence"
+        },
+        {
+          "type": "list-item",
+          "value": "Marketing Strategy"
+        },
+        {
+          "type": "list-item",
+          "value": "Brand Strategy"
+        },
+        {
+          "type": "list-item",
+          "value": "Strategic Decision-Making"
+        },
+        {
+          "type": "list-item",
+          "value": "Entrepreneurship"
+        },
+        {
+          "type": "list-item",
+          "value": "Executive Leadership"
+        },
+        {
+          "type": "list-item",
+          "value": "Journalism & Media"
+        },
+        {
+          "type": "list-item",
+          "value": "Storytelling & Communications"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 30
+    },
+    {
+      "id": "what-people-say",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "What People Say"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 40
+    },
+    {
+      "id": "testimonial-john",
+      "type": "custom",
+      "cmsLayout": "image-left",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "John McCourt"
+        },
+        {
+          "type": "quote",
+          "value": "I am the executive I am today because she taught me how to think.",
+          "attribution": "John McCourt, Senior Vice President, Social Impact, Weber Shandwick"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/speaking-education-testimonial-john-image.webp",
+          "src": "assets/images/phase1a/speaking-education-testimonial-john-image.webp",
+          "alt": "John McCourt"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 41
+    },
+    {
+      "id": "testimonial-leon",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Leon Wiles"
+        },
+        {
+          "type": "quote",
+          "value": "Amanda has the unique ability to connect academic concepts with real-world business experience, helping students understand not just what works, but why it works.",
+          "attribution": "Leon Wiles, Educational Consultant; Former Chief Diversity Officer, Clemson University; Former Vice Chancellor for Student & Diversity Affairs, University of South Carolina Upstate"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/speaking-education-testimonial-leon-image.webp",
+          "src": "assets/images/phase1a/speaking-education-testimonial-leon-image.webp",
+          "alt": "Leon Wiles"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 42
+    },
+    {
+      "id": "testimonial-joe",
+      "type": "custom",
+      "cmsLayout": "image-left",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Joe Valentino"
+        },
+        {
+          "type": "quote",
+          "value": "Amanda is a natural communicator who understands how to connect authentically with people.",
+          "attribution": "Joe Valentino, Executive Vice President, Commercial Growth, Strategic Partnerships, Board Director & Strategic Advisor, equalpride"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/speaking-education-testimonial-joe-image.webp",
+          "src": "assets/images/phase1a/speaking-education-testimonial-joe-image.webp",
+          "alt": "Joe Valentino"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 43
+    }
+  ],
+  "version": "2026-09-12-phase1a-content"
+}
