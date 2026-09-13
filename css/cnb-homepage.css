@@ -1219,14 +1219,15 @@ body.cnb-page-work-with-amanda :is(
   #engagement-butter-lye,
   #engagement-gilead-sciences
 ) .cnb-cms-grid {
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "title title"
-    "media eyebrow"
-    "media body";
-  column-gap: clamp(44px, 7vw, 100px);
-  row-gap: 14px;
+    "eyebrow"
+    "title"
+    "media"
+    "body";
+  row-gap: clamp(18px, 3vw, 30px);
   align-items: center;
+  text-align: center;
 }
 
 body.cnb-page-work-with-amanda :is(
@@ -1245,7 +1246,7 @@ body.cnb-page-work-with-amanda :is(
   grid-area: title;
   width: 100%;
   max-width: none;
-  margin: 0 auto clamp(28px, 5vw, 56px);
+  margin: 0 auto clamp(18px, 3vw, 28px);
   text-align: center;
   font-size: clamp(52px, 6vw, 88px);
   line-height: 0.98;
@@ -1257,9 +1258,8 @@ body.cnb-page-work-with-amanda :is(
   #engagement-gilead-sciences
 ) .cnb-home-eyebrow {
   grid-area: eyebrow;
-  align-self: end;
-  margin: 0 0 6px;
-  text-align: left;
+  margin: 0;
+  text-align: center;
 }
 
 body.cnb-page-work-with-amanda :is(
@@ -1268,10 +1268,9 @@ body.cnb-page-work-with-amanda :is(
   #engagement-gilead-sciences
 ) .cnb-home-body {
   grid-area: body;
-  align-self: start;
   max-width: 34ch;
-  margin: 0;
-  text-align: left;
+  margin: 0 auto;
+  text-align: center;
 }
 
 body.cnb-page-work-with-amanda :is(
@@ -1291,14 +1290,6 @@ body.cnb-page-work-with-amanda :is(
   #engagement-gilead-sciences
 ) .cnb-cms-media {
   grid-area: media;
-}
-
-body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-cms-grid {
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  grid-template-areas:
-    "title title"
-    "eyebrow media"
-    "body media";
 }
 
 body.cnb-page-work-with-amanda #engagement-butter-lye {
@@ -1766,10 +1757,10 @@ body.cnb-page-work-with-amanda #engagement-butter-lye :is(
   body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-cms-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-      "title"
       "eyebrow"
-      "body"
-      "media";
+      "title"
+      "media"
+      "body";
     gap: 18px;
   }
 
@@ -1798,7 +1789,7 @@ body.cnb-page-work-with-amanda #engagement-butter-lye :is(
     #engagement-butter-lye,
     #engagement-gilead-sciences
   ) .cnb-cms-media {
-    margin-top: 16px;
+    margin-top: 0;
   }
 
   .cnb-home-image.is-inline {
