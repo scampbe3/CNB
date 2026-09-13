@@ -1327,6 +1327,7 @@ body.cnb-page-work-with-amanda :is(
   #engagement-biolage-raw
 ) .cnb-home-media {
   grid-area: media;
+  align-self: end;
 }
 
 body.cnb-page-work-with-amanda :is(
