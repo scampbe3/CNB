@@ -1205,13 +1205,83 @@ body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
   object-fit: contain;
 }
 
-/* Keep lower-resolution archival images crisp by displaying them more modestly. */
-body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
-body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
-body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
-  width: min(60%, 280px);
-  min-height: 0;
+/* Give archival engagements a focused, centered editorial presentation. */
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) .cnb-home-inner {
+  max-width: 900px;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) .cnb-cms-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 52px);
+  text-align: center;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) .cnb-cms-copy {
+  max-width: 760px;
   margin-inline: auto;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) :is(.cnb-home-title, .cnb-home-body, .cnb-home-subhead) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) .cnb-home-title {
+  max-width: 13ch;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-upstream,
+  #engagement-butter-lye,
+  #engagement-gilead-sciences
+) .cnb-home-image {
+  width: min(100%, 420px);
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+}
+
+body.cnb-page-work-with-amanda #engagement-butter-lye {
+  background: radial-gradient(110% 130% at 50% -20%, rgba(255, 255, 255, 0.13), transparent 58%), #14110f;
+  color: #fff;
+}
+
+body.cnb-page-work-with-amanda #engagement-butter-lye::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 70%);
+  opacity: 0.55;
+}
+
+body.cnb-page-work-with-amanda #engagement-butter-lye::after {
+  display: none;
+}
+
+body.cnb-page-work-with-amanda #engagement-butter-lye :is(
+  .cnb-home-title,
+  .cnb-home-body,
+  .cnb-home-subhead,
+  .cnb-home-eyebrow
+) {
+  color: #fff;
 }
 
 .cnb-home-caption {
@@ -1648,12 +1718,6 @@ body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
 }
 
 @media (max-width: 720px) {
-  body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
-  body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
-  body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
-    width: min(72%, 280px);
-  }
-
   .cnb-home-image.is-inline {
     width: 100%;
     min-height: 0;
