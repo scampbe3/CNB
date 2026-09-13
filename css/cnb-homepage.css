@@ -1209,7 +1209,7 @@ body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
 body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
 body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
 body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
-  width: 78%;
+  width: min(60%, 280px);
   min-height: 0;
   margin-inline: auto;
 }
@@ -1651,7 +1651,7 @@ body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
   body.cnb-page-work-with-amanda #engagement-upstream .cnb-home-image,
   body.cnb-page-work-with-amanda #engagement-butter-lye .cnb-home-image,
   body.cnb-page-work-with-amanda #engagement-gilead-sciences .cnb-home-image {
-    width: 88%;
+    width: min(72%, 280px);
   }
 
   .cnb-home-image.is-inline {
