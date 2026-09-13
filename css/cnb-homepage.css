@@ -912,6 +912,53 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
   color: rgb(var(--cnb-section-accent-rgb, 200, 106, 98));
 }
 
+@media (min-width: 901px) {
+  body.cnb-page-membership .cnb-home-root {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.cnb-page-membership .cnb-site-header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  body.cnb-page-membership #hero {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  body.cnb-page-membership #whats-inside {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  body.cnb-page-membership #who-this-is-for {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  body.cnb-page-membership :is(#whats-inside, #who-this-is-for) {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  body.cnb-page-membership :is(#whats-inside, #who-this-is-for) .cnb-home-inner {
+    width: 100%;
+  }
+
+  body.cnb-page-membership .cnb-footer-gap {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  body.cnb-page-membership .cnb-site-footer {
+    grid-column: 1 / -1;
+    grid-row: 5;
+  }
+}
+
 .cnb-home-list.is-card-stack {
   grid-template-columns: 1fr;
 }
