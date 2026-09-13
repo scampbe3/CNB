@@ -43,7 +43,7 @@ Wide photos placed in existing tall slots use neutral padding to preserve the fu
 - `baseline.json` is a read-only snapshot of all 11 live tabs plus their original GitHub fallback content.
 - `sheet-patch.json` describes individual C/D/E changes by existing section/field identity, plus appended rows. Existing A/B identities and row order are retained.
 - Existing tab IDs, published source URLs, page keys and the five columns `section,field,value,link,notes` are unchanged.
-- `sheet-apply-packaged.gs` is for a **new temporary standalone Apps Script project**, never a replacement for the existing C+B Tools script.
+- `sheet-apply-packaged.gs` is the compact version 2 updater for a **new temporary standalone Apps Script project**, never a replacement for the existing C+B Tools script. It normalizes checkbox booleans, preserves checkbox types, performs bulk reads, and downloads its immutable patch from commit `57dedcf`.
 - `cnbPhase1aPreview()` performs no writes. It rejects changed target values, duplicate identities and formulas in target cells. Unrelated new edits are left alone.
 - `cnbPhase1aPrepareNewPages()` prepares only the two new tabs and reports their real GIDs and mount snippets. Existing-page content must not be applied until those new pages are connected and verified.
 - `cnbPhase1aApply()` writes only approved target cells and appends new rows. Existing formatting, row heights, notes, validations and schema are not reformatted. New rows inherit existing formatting where possible. Reapplying the same patch is a no-op.

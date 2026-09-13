@@ -1,6 +1,6 @@
 // C+B Phase 1A guarded Sheet updater, version 2.
 // Paste this into a NEW standalone Apps Script project. Do not replace C+B Tools.
-const CNB_PHASE1A_PATCH_URL = 'https://raw.githubusercontent.com/scampbe3/CNB/7f89781/docs/phase1a/sheet-patch.json';
+const CNB_PHASE1A_PATCH_URL = 'https://raw.githubusercontent.com/scampbe3/CNB/57dedcf/docs/phase1a/sheet-patch.json';
 const CNB_PHASE1A_PUBLISHED = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub';
 const CNB_PHASE1A_COLUMNS = ['section', 'field', 'value', 'link', 'notes'];
 

@@ -15,22 +15,25 @@ This folder contains the items needed for the remaining Google Sheets and Square
 
 ### Google Sheets
 
-Use `GOOGLE-SHEETS/sheet-apply-packaged.gs` in a **new temporary standalone Apps Script project**. Do not paste it over the existing C+B Tools script attached to the Sheet.
+Use `GOOGLE-SHEETS/sheet-apply-v2.gs` in a **new temporary standalone Apps Script project**. Do not paste it over the existing C+B Tools script attached to the Sheet. Version 2 replaces the original updater, which incorrectly compared Google checkbox booleans with CSV text and could report false conflicts.
 
-The script contains the complete, guarded content update. It uses the existing five columns exactly as they are:
+The script downloads the tested, immutable content patch from GitHub and performs the guarded update. It uses the existing five columns exactly as they are:
 
 `section | field | value | link | notes`
 
-It does not import or replace entire tabs. It checks the current target values before changing them, refuses to overwrite conflicting edits or formulas, leaves unrelated edits alone, preserves the existing section/field identifiers, and appends new rows without reformatting existing rows.
+It does not import or replace entire tabs. It checks the current target values before changing them, refuses to overwrite conflicting edits or formulas, leaves unrelated edits alone, preserves the existing section/field identifiers, retains checkbox data types, and appends new rows without reformatting existing rows.
+
+The downloaded `C + B Content - Content.csv` was checked against the saved baseline: all 82 rows match exactly, with the expected five columns and no duplicate section/field identities. A Google CSV download contains only the selected `Content` tab, not every workbook tab, so the preview still safely checks the other affected tabs online.
 
 Run these functions in order:
 
 1. `cnbPhase1aPreview()`
-2. Read the execution log. This first function makes no changes.
-3. `cnbPhase1aPrepareNewPages()`
-4. Read the execution log and record the two new GIDs and generated mount snippets for `speaking-education` and `member-home`.
-5. Complete and verify the two Squarespace pages described below.
-6. Keep the Sheet idle, rerun `cnbPhase1aPreview()`, then run `cnbPhase1aApply()`.
+2. On the first run, Google will ask you to authorize access to the workbook and the commit-pinned patch URL. Select **Review permissions**, choose the account that owns or can edit the C+B Sheet, and allow the requested access. If Google shows an unverified-app screen for your own new script, open **Advanced** and continue to that project.
+3. Read the execution log. This first function makes no changes. A successful run ends with `PREVIEW PASSED. Nothing was written.`
+4. `cnbPhase1aPrepareNewPages()`
+5. Read the execution log and record the two new GIDs and generated mount snippets for `speaking-education` and `member-home`.
+6. Complete and verify the two Squarespace pages described below.
+7. Keep the Sheet idle, rerun `cnbPhase1aPreview()`, then run `cnbPhase1aApply()`.
 
 Do not use the CSV files as import files. They are included under `REFERENCE-ONLY` only so the final proposed rows can be inspected easily. Importing a whole CSV could destroy formatting or overwrite newer Sheet work.
 
