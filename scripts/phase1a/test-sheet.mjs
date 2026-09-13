@@ -10,7 +10,10 @@ const script = await fs.readFile(path.join(root, 'scripts/phase1a/sheet-apply.gs
 function fixture() {
   const writes = [], formats = [];
   class Sheet {
-    constructor(name, id, rows) { this.name = name; this.id = id; this.values = structuredClone(rows); this.formulas = new Map(); }
+    constructor(name, id, rows) {
+      this.name = name; this.id = id; this.values = structuredClone(rows);
+      this.formulas = new Map(); this.validations = new Map();
+    }
     getSheetId() { return this.id; }
     getDataRange() {
       return {
@@ -33,12 +36,23 @@ function fixture() {
         setValue: value => { sheet.values[row - 1][col - 1] = value; writes.push([sheet.name, row, col]); },
         setValues: values => {
           values.forEach((r, y) => r.forEach((v, x) => {
+            const rule = sheet.validations.get(`${row + y},${col + x}`);
+            if (rule && !rule.has(String(v))) throw new Error(`Validation rejected ${sheet.name}!${row + y},${col + x}`);
             sheet.values[row + y - 1] ||= [];
             sheet.values[row + y - 1][col + x - 1] = v;
             writes.push([sheet.name, row + y, col + x]);
           }));
         },
-        copyTo: (target, options) => { assert.equal(options.formatOnly, true); formats.push([target.sheet.name, target.row]); },
+        clearDataValidations: () => {
+          for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) sheet.validations.delete(`${row + y},${col + x}`);
+          return sheet.getRange(row, col, height, width);
+        },
+        copyTo: (target, options) => {
+          assert.equal(options.formatOnly, true); formats.push([target.sheet.name, target.row]);
+          // Simulate the restrictive inherited section dropdown that caused the live A85 error.
+          const allowed = new Set(target.sheet.values.slice(1).map(r => String(r[0])).filter(Boolean));
+          target.sheet.validations.set(`${target.row},1`, allowed);
+        },
       };
     }
   }
@@ -98,4 +112,27 @@ for (const [tab, row] of applied.formats) {
 applied.writes.length = 0;
 applied.context.cnbPhase1aApply();
 assert.equal(applied.writes.length, 0, 'Reapplication is idempotent');
+
+// Reproduce the live recovery state: all existing Content cells updated and
+// only the first appended row written before A85 validation stopped the run.
+const partial = fixture();
+partial.context.cnbPhase1aPrepareNewPages();
+const contentPlan = patch.tabs.find(tab => tab.tab === 'Content');
+const contentSheet = partial.book.getSheetByName('Content');
+for (const change of contentPlan.changes) {
+  const rowIndex = contentSheet.values.findIndex(row => row[0] === change.section && row[1] === change.field);
+  const columnIndex = columns.indexOf(change.column);
+  contentSheet.values[rowIndex][columnIndex] = columnIndex === 2 && change.field === 'Show Section?'
+    ? String(change.after).toUpperCase() === 'TRUE' : change.after;
+}
+const firstAddition = contentPlan.additions[0];
+contentSheet.values.push(columns.map(column => column === 'value' && firstAddition.field === 'Show Section?'
+  ? String(firstAddition[column]).toUpperCase() === 'TRUE' : firstAddition[column]));
+partial.context.cnbPhase1aApply();
+for (const tab of patch.tabs) {
+  const expected = await readJson(path.join(out, `proposed/${tab.key}.json`));
+  assert.deepEqual(partial.book.getSheetByName(tab.tab).values.map(row => row.map(comparable)),
+    [columns, ...expected.map(r => columns.map(c => r[c]))].map(row => row.map(comparable)),
+    `Partial-state recovery for ${tab.tab}`);
+}
 console.log('PASS: read-only preview, conflict rejection, formula protection, targeted writes, untouched-tab preservation, append-only formatting.');

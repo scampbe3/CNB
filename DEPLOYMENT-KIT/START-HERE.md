@@ -4,9 +4,10 @@ This folder contains the items needed for the remaining Google Sheets and Square
 
 ## Current Safety State
 
-- Production `main` has not changed.
-- The live Google Sheet has not changed.
-- Squarespace has not changed.
+- Production `main` now contains the asset-only release `cef8baa`; the optimized images, PDFs and two new-page fallbacks are available.
+- The live `Content` tab is partially updated through row 84. Other existing content tabs remain at the saved baseline.
+- The `speaking-education` and `member-home` tabs contain their complete prepared rows.
+- The two matching Squarespace pages and Code Blocks are present and their page keys/GIDs have been verified.
 - GitHub backup branch: `backup/cnb-before-phase1a-2026-09-12`.
 - Tested implementation branch: `implementation/cnb-phase1a-content`.
 - Local preview: `http://127.0.0.1:4178` while the preview process is running.
@@ -15,7 +16,7 @@ This folder contains the items needed for the remaining Google Sheets and Square
 
 ### Google Sheets
 
-Use `GOOGLE-SHEETS/sheet-apply-v2.gs` in a **new temporary standalone Apps Script project**. Do not paste it over the existing C+B Tools script attached to the Sheet. Version 2 replaces the original updater, which incorrectly compared Google checkbox booleans with CSV text and could report false conflicts.
+Use `GOOGLE-SHEETS/sheet-apply-v3-resume.gs` in the **same temporary standalone Apps Script project**. Replace all of the previous updater code; do not paste it over the existing C+B Tools script attached to the Sheet. Version 3 retains the checkbox fix and clears inherited dropdown validation before appending custom section rows.
 
 The script downloads the tested, immutable content patch from GitHub and performs the guarded update. It uses the existing five columns exactly as they are:
 
@@ -25,28 +26,29 @@ It does not import or replace entire tabs. It checks the current target values b
 
 The downloaded `C + B Content - Content.csv` was checked against the saved baseline: all 82 rows match exactly, with the expected five columns and no duplicate section/field identities. A Google CSV download contains only the selected `Content` tab, not every workbook tab, so the preview still safely checks the other affected tabs online.
 
-Run these functions in order:
+Because the two new tabs and Squarespace pages are already prepared, resume with:
 
 1. `cnbPhase1aPreview()`
 2. On the first run, Google will ask you to authorize access to the workbook and the commit-pinned patch URL. Select **Review permissions**, choose the account that owns or can edit the C+B Sheet, and allow the requested access. If Google shows an unverified-app screen for your own new script, open **Advanced** and continue to that project.
 3. Read the execution log. This first function makes no changes. A successful run ends with `PREVIEW PASSED. Nothing was written.`
-4. `cnbPhase1aPrepareNewPages()`
-5. Read the execution log and record the two new GIDs and generated mount snippets for `speaking-education` and `member-home`.
-6. Complete and verify the two Squarespace pages described below.
-7. Keep the Sheet idle, rerun `cnbPhase1aPreview()`, then run `cnbPhase1aApply()`.
+4. Keep the Sheet idle and run `cnbPhase1aApply()`.
+
+Do **not** run `cnbPhase1aPrepareNewPages()` again. The `speaking-education` tab (`gid=563353691`) and `member-home` tab (`gid=455000318`) already contain their complete data, and their Squarespace Code Blocks have been verified.
+
+The previous application stopped during the `Content` tab: existing Content cells were updated and `Hero / Content Mode / Flexible` was appended at row 84. Version 3 recognizes those completed changes and resumes at row 85 without duplicating row 84.
 
 Do not use the CSV files as import files. They are included under `REFERENCE-ONLY` only so the final proposed rows can be inspected easily. Importing a whole CSV could destroy formatting or overwrite newer Sheet work.
 
 ### Squarespace
 
-Create two pages under **Not Linked**:
+These two pages have already been created under **Not Linked**:
 
 - Navigation title: `Speaking & Education`; URL slug: `speaking-education`
 - Navigation title: `Member Home`; URL slug: `member-home`
 
-For each page, add one Code Block. Open `SQUARESPACE/speaking-education-code-block.html` or `SQUARESPACE/member-home-code-block.html`, replace only `REPLACE_WITH_GID`, then paste the complete snippet into the page's Code Block.
+No further Squarespace change is needed to resume the Sheet update. The saved snippets remain available for reference.
 
-The GIDs are produced in the execution log by `cnbPhase1aPrepareNewPages()`. Do not use a tab name in place of a GID and do not alter the published workbook URL.
+The verified GIDs are `563353691` for `speaking-education` and `455000318` for `member-home`.
 
 The `member-home` page is only a front-end preview. Leave it under Not Linked. It does not authenticate visitors, collect credentials, expose profiles, or grant access to private content.
 
@@ -56,10 +58,10 @@ Do not change the existing Code Blocks on the other Squarespace pages. Their cur
 
 The implementation is split into two commits so the assets can become publicly available before the Sheet begins referring to them:
 
-1. Release commit `cef8baa` first. It contains the optimized images, PDFs, and fallback files for the two new pages.
-2. Verify that the public asset URLs work and complete the two new Sheet tabs and Squarespace Code Blocks.
-3. Apply the guarded Sheet update.
-4. Release commit `a5f8203` for the updated fallback content and deployment records.
+1. Completed: release asset commit `cef8baa` and verify the public assets.
+2. Completed: prepare the two new Sheet tabs and Squarespace Code Blocks.
+3. Current: resume the guarded Sheet update with `sheet-apply-v3-resume.gs`.
+4. Remaining after live verification: release the matching updated fallback content.
 
 The site loader tracks GitHub `main`; merging the entire implementation branch before coordinating the Sheet update can briefly combine new fallback content with old Sheet content. Use the order above rather than uploading GitHub files manually one by one.
 

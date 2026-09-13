@@ -148,6 +148,10 @@ function cnbPhase1aAppend_(workbook, sheet, plan) {
     const sameField = plan.values.findIndex((row, rowIndex) => rowIndex > 0 && row[1] === addition.field);
     (sameField > 0 ? sheet.getRange(sameField + 1, 1, 1, 5) : donor.getRange(2, 1, 1, 5))
       .copyTo(target, { formatOnly: true });
+    // Copying row presentation can also inherit a restrictive dropdown from a
+    // blank row. The CMS itself clears inherited validation before adding a
+    // custom section; do the same here, then let C+B Tools rebuild dropdowns.
+    target.clearDataValidations();
     target.setValues([CNB_PHASE1A_COLUMNS.map(column =>
       column === 'value' ? cnbPhase1aCellValue_(addition.field, addition[column]) : addition[column]
     )]);
