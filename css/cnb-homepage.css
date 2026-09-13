@@ -1188,10 +1188,6 @@ body.cnb-page-cnb-home #experience-teaching .cnb-home-image img {
   object-position: 18% center;
 }
 
-body.cnb-page-cnb-home #blind-dinners .cnb-home-image img {
-  object-position: 70% center;
-}
-
 /* These homepage features use landscape photography, so their frames should too. */
 body.cnb-page-cnb-home #business-counsel .cnb-home-image,
 body.cnb-page-cnb-home #strategic-partnership .cnb-home-image {
