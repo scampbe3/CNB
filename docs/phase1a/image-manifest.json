@@ -322,13 +322,13 @@
     "source": "CONSULTING PAGE PHOTOS/Gilead MAIN.png",
     "replaced": null,
     "output": "assets/images/phase1a/work-with-amanda-engagement-gilead-sciences-image.webp",
-    "width": 431,
-    "height": 232,
+    "width": 1724,
+    "height": 928,
     "fit": "contain",
     "sourceHash": "30b409c19e97abcf050331eee726a5c105429ddeafd2a826f170ab8e9ea1e0ed",
     "sourceBytes": 159929,
-    "bytes": 7286,
-    "sha256": "785d02cd30bc06498827f574752046258ce00e2de490edf1e61cde1fa319cd52"
+    "bytes": 48184,
+    "sha256": "1ccc6b7753eef1a3eaaa69eadeb3d7246b282278679bf739999bdb691c2e51f8"
   },
   {
     "page": "work-with-amanda",
@@ -337,13 +337,13 @@
     "source": "CONSULTING PAGE PHOTOS/Butter & Lye MAIN.png",
     "replaced": null,
     "output": "assets/images/phase1a/work-with-amanda-engagement-butter-lye-image.webp",
-    "width": 411,
-    "height": 188,
+    "width": 1644,
+    "height": 752,
     "fit": "contain",
     "sourceHash": "c84265e6bdd256ff4352726f150a55d7695f820183a04c668e554176ec096d00",
     "sourceBytes": 117773,
-    "bytes": 3506,
-    "sha256": "9cbf0fff509b0ce975dad7faeee216419a01e7ff62b15019b093748ed2938619"
+    "bytes": 25742,
+    "sha256": "d3fe4a51dc329184f47662756c630eb0995fd992fec0f5ab80d539b8bf516dad"
   },
   {
     "page": "work-with-amanda",
@@ -352,13 +352,13 @@
     "source": "CONSULTING PAGE PHOTOS/Upstream MAIN.jpg",
     "replaced": null,
     "output": "assets/images/phase1a/work-with-amanda-engagement-upstream-image.webp",
-    "width": 381,
-    "height": 214,
+    "width": 1524,
+    "height": 856,
     "fit": "contain",
     "sourceHash": "cae9d1a25acd21c7cf7f3105bd725b1bf380644fc60d1e5e37a742c741a4afda",
     "sourceBytes": 28221,
-    "bytes": 13296,
-    "sha256": "ba83e334bb9898aa0504e0a8228d3fdca5a8ae6c928771a6dbb47fbddd9540cb"
+    "bytes": 85734,
+    "sha256": "dd157afe61a02498c89bb54ece45d64dbb390003bec359a230e04a85fb6dba62"
   },
   {
     "page": "speaking-education",
