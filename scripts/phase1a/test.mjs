@@ -28,6 +28,7 @@ for (const rule of [
   '#experience-global-marketing .cnb-home-image img',
   '#experience-entrepreneurship .cnb-home-image img',
   '#experience-teaching .cnb-home-image img',
+  '#blind-dinners .cnb-home-image img',
   '#business-counsel .cnb-home-image',
   '#strategic-partnership .cnb-home-image',
 ]) {
