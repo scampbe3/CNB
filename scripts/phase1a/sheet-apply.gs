@@ -119,7 +119,10 @@ function cnbPhase1aWrite_(workbook, plans) {
       });
       sheet.getRange(1, 3, content.length, 3).setValues(content);
     }
-    if (plan.additions.length) cnbPhase1aAppend_(workbook, sheet, plan);
+    if (plan.additions.length) {
+      cnbPhase1aAppend_(workbook, sheet, plan);
+      cnbPhase1aRefreshValidation_(sheet);
+    }
     if (!plan.sheet) {
       const url = CNB_PHASE1A_PUBLISHED + '?gid=' + sheet.getSheetId() + '&single=true&output=csv';
       console.log('NEW PAGE GID: ' + plan.tab.key + ' = ' + sheet.getSheetId());
@@ -161,6 +164,45 @@ function cnbPhase1aAppend_(workbook, sheet, plan) {
 function cnbPhase1aCellValue_(field, value) {
   if (field === 'Show Section?') return cnbPhase1aComparable_(value) === 'TRUE';
   return value;
+}
+
+function cnbPhase1aRefreshValidation_(sheet) {
+  const bodyRows = Math.max(sheet.getMaxRows() - 1, sheet.getLastRow() - 1, 1);
+  const usedRows = sheet.getRange(2, 1, Math.max(sheet.getLastRow() - 1, 1), 2).getValues();
+  const sections = cnbPhase1aUnique_(usedRows.map(row => row[0]));
+  const standardFields = ['Show Section?', 'Display Order', 'Content Mode', 'Section Layout', 'Section Theme',
+    'List Style', 'Eyebrow', 'Title', 'Subhead', 'Heading', 'Paragraph', 'List Item', 'Image', 'Quote',
+    'Button', 'Note', 'Editor Note'];
+  const fields = cnbPhase1aUnique_(standardFields.concat(usedRows.map(row => row[1])));
+  sheet.getRange(2, 1, bodyRows, 1).setDataValidation(SpreadsheetApp.newDataValidation()
+    .requireValueInList(sections, true).setAllowInvalid(false).build());
+  sheet.getRange(2, 2, bodyRows, 1).setDataValidation(SpreadsheetApp.newDataValidation()
+    .requireValueInList(fields, true).setAllowInvalid(false).build());
+
+  const valueRange = sheet.getRange(2, 3, bodyRows, 1);
+  valueRange.clearDataValidations();
+  const rules = {
+    'Show Section?': SpreadsheetApp.newDataValidation().requireCheckbox().setAllowInvalid(false).build(),
+    'Display Order': SpreadsheetApp.newDataValidation().requireNumberBetween(0, 10000).setAllowInvalid(false).build(),
+    'Content Mode': SpreadsheetApp.newDataValidation().requireValueInList(['Flexible'], true).setAllowInvalid(false).build(),
+    'Section Layout': SpreadsheetApp.newDataValidation().requireValueInList(['Text Only', 'Image Left', 'Image Right', 'Centered CTA', 'Quote', 'Gallery'], true).setAllowInvalid(false).build(),
+    'Section Theme': SpreadsheetApp.newDataValidation().requireValueInList(['light', 'paper', 'mist', 'ink'], true).setAllowInvalid(false).build(),
+    'List Style': SpreadsheetApp.newDataValidation().requireValueInList(['Card Stack', 'Card Grid', 'Numbered', 'Pills', 'Simple'], true).setAllowInvalid(false).build(),
+  };
+  usedRows.forEach((row, index) => {
+    const rule = rules[String(row[1]).trim()];
+    if (rule) sheet.getRange(index + 2, 3).setDataValidation(rule);
+  });
+}
+
+function cnbPhase1aUnique_(values) {
+  const seen = {};
+  return values.reduce((result, value) => {
+    const text = String(value || '').trim();
+    const key = text.toLowerCase();
+    if (text && !seen[key]) { seen[key] = true; result.push(text); }
+    return result;
+  }, []);
 }
 
 function cnbPhase1aComparable_(value) {

@@ -33,6 +33,8 @@ function fixture() {
         getA1Notation: () => `${String.fromCharCode(64 + col)}${row}`,
         getFormula: () => sheet.formulas.get(`${row},${col}`) || '',
         getValue: () => sheet.values[row - 1]?.[col - 1] ?? '',
+        getValues: () => Array.from({ length: height }, (_, y) =>
+          Array.from({ length: width }, (_, x) => sheet.values[row + y - 1]?.[col + x - 1] ?? '')),
         setValue: value => { sheet.values[row - 1][col - 1] = value; writes.push([sheet.name, row, col]); },
         setValues: values => {
           values.forEach((r, y) => r.forEach((v, x) => {
@@ -45,6 +47,12 @@ function fixture() {
         },
         clearDataValidations: () => {
           for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) sheet.validations.delete(`${row + y},${col + x}`);
+          return sheet.getRange(row, col, height, width);
+        },
+        setDataValidation: rule => {
+          for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+            sheet.validations.set(`${row + y},${col + x}`, rule.allowed || null);
+          }
           return sheet.getRange(row, col, height, width);
         },
         copyTo: (target, options) => {
@@ -66,7 +74,19 @@ function fixture() {
   };
   const context = {
     UrlFetchApp: { fetch: () => ({ getResponseCode: () => 200, getContentText: () => JSON.stringify(patch) }) },
-    SpreadsheetApp: { openById: id => { assert.equal(id, baseline.workbook); return book; }, flush() {} },
+    SpreadsheetApp: {
+      openById: id => { assert.equal(id, baseline.workbook); return book; }, flush() {},
+      newDataValidation: () => {
+        const builder = {
+          allowed: null,
+          requireValueInList(values) { this.allowed = new Set(values.map(String)); return this; },
+          requireCheckbox() { this.allowed = new Set(['true', 'false']); return this; },
+          requireNumberBetween() { return this; }, setAllowInvalid() { return this; },
+          build() { return { allowed: this.allowed }; },
+        };
+        return builder;
+      },
+    },
     LockService: { getScriptLock: () => ({ waitLock() {}, releaseLock() {} }) }, console: { log() {} } };
   vm.createContext(context); vm.runInContext(script, context);
   return { context, book, sheets, writes, formats };
