@@ -1,6 +1,6 @@
 section,field,value,link,notes
 hero,Display Order,10,,
-hero,Show Section?,Yes,,
+hero,Show Section?,TRUE,,
 hero,Content Mode,Flexible,,
 hero,Title,Welcome back.,,
 hero,Note,The Decision Room - Member Area Preview,,
@@ -9,7 +9,7 @@ hero,Body 1,"The member area is being prepared. This is a public preview, not an
 hero,CTA 1,Explore Membership with Amanda,mailto:amanda@cupcakesandbroccoli.com?subject=The%20Decision%20Room,primary
 hero,Image,assets/images/phase1a/member-home-hero-image.webp,,The Decision Room member area artwork
 the-library,Display Order,20,,
-the-library,Show Section?,Yes,,
+the-library,Show Section?,TRUE,,
 the-library,Content Mode,Flexible,,
 the-library,Section Layout,Text Only,,
 the-library,Section Theme,paper,,
@@ -18,7 +18,7 @@ the-library,Title,The Library,,
 the-library,Paragraph 1,"Explore essays, decision briefs, AI prompts and member resources.",,
 the-library,Button 1,Open Library,/learn,primary
 in-the-room,Display Order,30,,
-in-the-room,Show Section?,Yes,,
+in-the-room,Show Section?,TRUE,,
 in-the-room,Content Mode,Flexible,,
 in-the-room,Section Layout,Text Only,,
 in-the-room,Section Theme,paper,,

@@ -2,7 +2,7 @@
   {
     "section": "hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -51,7 +51,7 @@
   {
     "section": "what-youll-find",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -128,7 +128,7 @@
   {
     "section": "how-to-use",
     "field": "Show Section?",
-    "value": "No",
+    "value": "FALSE",
     "link": "",
     "notes": ""
   },
@@ -177,7 +177,7 @@
   {
     "section": "access-membership",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -233,7 +233,7 @@
   {
     "section": "learning-context",
     "field": "Show Section?",
-    "value": "No",
+    "value": "FALSE",
     "link": "",
     "notes": ""
   },
@@ -296,7 +296,7 @@
   {
     "section": "invitation",
     "field": "Show Section?",
-    "value": "No",
+    "value": "FALSE",
     "link": "",
     "notes": ""
   },

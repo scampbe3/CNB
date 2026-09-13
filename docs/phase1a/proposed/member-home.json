@@ -9,7 +9,7 @@
   {
     "section": "hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -72,7 +72,7 @@
   {
     "section": "the-library",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -135,7 +135,7 @@
   {
     "section": "in-the-room",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },

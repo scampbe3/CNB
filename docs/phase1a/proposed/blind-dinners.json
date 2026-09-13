@@ -2,7 +2,7 @@
   {
     "section": "hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -58,7 +58,7 @@
   {
     "section": "what-it-is",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -100,7 +100,7 @@
   {
     "section": "who-comes",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -142,7 +142,7 @@
   {
     "section": "how-it-works",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -212,7 +212,7 @@
   {
     "section": "relationship-to-membership",
     "field": "Show Section?",
-    "value": "No",
+    "value": "FALSE",
     "link": "",
     "notes": ""
   },
@@ -303,7 +303,7 @@
   {
     "section": "dinner-gallery-1",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -373,7 +373,7 @@
   {
     "section": "dinner-gallery-2",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -436,7 +436,7 @@
   {
     "section": "dinner-gallery-3",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -499,7 +499,7 @@
   {
     "section": "dinner-gallery-4",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },

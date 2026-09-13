@@ -98,7 +98,7 @@ for (const spec of pages) {
       if (!controlFields.test(r.field) && !/^Editor Note/.test(r.field)) r.value = r.link = r.notes = '';
     }
     set(name, 'Display Order', sec.order);
-    set(name, 'Show Section?', 'Yes');
+    set(name, 'Show Section?', 'TRUE');
     set(name, 'Content Mode', 'Flexible');
     if (sec.custom) {
       set(name, 'Section Layout', sec.layout);
@@ -130,7 +130,7 @@ for (const spec of pages) {
       }
     }
   }
-  for (const name of spec.hide || []) set(name, 'Show Section?', 'No');
+  for (const name of spec.hide || []) set(name, 'Show Section?', 'FALSE');
   const changes = [], additions = [];
   for (const r of rows) {
     const before = originalRows.get(rowKey(r));

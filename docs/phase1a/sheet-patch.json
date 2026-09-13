@@ -11,13 +11,6 @@
         {
           "section": "Hero",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "Hero",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -112,13 +105,6 @@
           "column": "notes",
           "before": "Portrait layered with patterned textiles.",
           "after": "Amanda Johnson"
-        },
-        {
-          "section": "The Decision Room",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "The Decision Room",
@@ -256,13 +242,6 @@
         {
           "section": "Business Counsel",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "Business Counsel",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -385,13 +364,6 @@
           "column": "notes",
           "before": "Amanda Johnson smiling in a studio portrait.",
           "after": "Amanda Johnson consulting"
-        },
-        {
-          "section": "Strategic Partnership",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "Strategic Partnership",
@@ -529,13 +501,6 @@
         {
           "section": "Case Studies",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "Case Studies",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -651,13 +616,6 @@
           "column": "notes",
           "before": "Portrait of a founder in studio light.",
           "after": "Amanda Johnson in the Library"
-        },
-        {
-          "section": "Blind Dinners",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "Blind Dinners",
@@ -783,7 +741,7 @@
         {
           "section": "selected-experience",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -846,7 +804,7 @@
         {
           "section": "experience-television",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -916,7 +874,7 @@
         {
           "section": "experience-publishing",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -986,7 +944,7 @@
         {
           "section": "experience-global-marketing",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1056,7 +1014,7 @@
         {
           "section": "experience-consulting",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1126,7 +1084,7 @@
         {
           "section": "experience-entrepreneurship",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1196,7 +1154,7 @@
         {
           "section": "experience-teaching",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1266,7 +1224,7 @@
         {
           "section": "testimonials",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1315,7 +1273,7 @@
         {
           "section": "testimonial-john",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1378,7 +1336,7 @@
         {
           "section": "testimonial-ashley",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1441,7 +1399,7 @@
         {
           "section": "testimonial-monique",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -1523,13 +1481,6 @@
       "gid": 1124001858,
       "create": false,
       "changes": [
-        {
-          "section": "hero",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
         {
           "section": "hero",
           "field": "Show Section?",
@@ -1620,13 +1571,6 @@
           "column": "notes",
           "before": "Amanda Johnson in a studio portrait.",
           "after": "Amanda Johnson"
-        },
-        {
-          "section": "business-counsel",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "business-counsel",
@@ -1771,13 +1715,6 @@
         {
           "section": "strategic-partnership",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "strategic-partnership",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -1918,13 +1855,6 @@
         {
           "section": "from-clients",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "from-clients",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -2019,13 +1949,6 @@
           "column": "notes",
           "before": "Amanda Johnson in a hooded studio portrait.",
           "after": "Matrix Professional selected engagement"
-        },
-        {
-          "section": "closing",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "closing",
@@ -2165,7 +2088,7 @@
         {
           "section": "engagement-blooming-haus",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2235,7 +2158,7 @@
         {
           "section": "engagement-biolage-raw",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2305,7 +2228,7 @@
         {
           "section": "engagement-gilead-sciences",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2375,7 +2298,7 @@
         {
           "section": "engagement-butter-lye",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2445,7 +2368,7 @@
         {
           "section": "engagement-upstream",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2524,7 +2447,7 @@
         {
           "section": "hero",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2580,7 +2503,7 @@
         {
           "section": "teaching-philosophy",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2650,7 +2573,7 @@
         {
           "section": "speaking-topics",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2755,7 +2678,7 @@
         {
           "section": "what-people-say",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2804,7 +2727,7 @@
         {
           "section": "testimonial-john",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2867,7 +2790,7 @@
         {
           "section": "testimonial-leon",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2930,7 +2853,7 @@
         {
           "section": "testimonial-joe",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -2994,13 +2917,6 @@
         {
           "section": "hero",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "hero",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -3053,13 +2969,6 @@
           "column": "notes",
           "before": "Amanda Johnson in a studio portrait.",
           "after": "Amanda Johnson in the Library"
-        },
-        {
-          "section": "what-youll-find",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "what-youll-find",
@@ -3150,7 +3059,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "how-to-use",
@@ -3158,13 +3067,6 @@
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
-        },
-        {
-          "section": "access-membership",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "access-membership",
@@ -3234,7 +3136,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "learning-context",
@@ -3248,7 +3150,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "invitation",
@@ -3319,13 +3221,6 @@
         {
           "section": "hero",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "hero",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -3389,13 +3284,6 @@
         {
           "section": "what-it-is",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "what-it-is",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -3445,13 +3333,6 @@
         {
           "section": "who-comes",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "who-comes",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -3497,13 +3378,6 @@
           "column": "notes",
           "before": "A dinner guest serving food to the table.",
           "after": "Guests at The Blind Dinner"
-        },
-        {
-          "section": "how-it-works",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "how-it-works",
@@ -3587,7 +3461,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "relationship-to-membership",
@@ -3643,7 +3517,7 @@
         {
           "section": "dinner-gallery-1",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -3713,7 +3587,7 @@
         {
           "section": "dinner-gallery-2",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -3776,7 +3650,7 @@
         {
           "section": "dinner-gallery-3",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -3839,7 +3713,7 @@
         {
           "section": "dinner-gallery-4",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -3900,13 +3774,6 @@
       "gid": 500345497,
       "create": false,
       "changes": [
-        {
-          "section": "hero",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
         {
           "section": "hero",
           "field": "Show Section?",
@@ -4036,13 +3903,6 @@
         {
           "section": "whats-inside",
           "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
-        },
-        {
-          "section": "whats-inside",
-          "field": "Show Section?",
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
@@ -4129,7 +3989,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "essays",
@@ -4143,7 +4003,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "decision-case-studies",
@@ -4157,7 +4017,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "practical-tools",
@@ -4171,7 +4031,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "ai-done-properly",
@@ -4185,7 +4045,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "pricing-reality-check",
@@ -4199,7 +4059,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "should-i-launch-this",
@@ -4213,7 +4073,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "vendor-partnership-checklist",
@@ -4227,7 +4087,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "capital-fit-funding-decisions",
@@ -4241,7 +4101,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "ai-when-to-use-it",
@@ -4255,7 +4115,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "real-life-decisions",
@@ -4269,7 +4129,7 @@
           "field": "Show Section?",
           "column": "value",
           "before": "TRUE",
-          "after": "No"
+          "after": "FALSE"
         },
         {
           "section": "live-sessions",
@@ -4277,13 +4137,6 @@
           "column": "notes",
           "before": "Uncheck to hide this section.",
           "after": ""
-        },
-        {
-          "section": "who-this-is-for",
-          "field": "Show Section?",
-          "column": "value",
-          "before": "TRUE",
-          "after": "Yes"
         },
         {
           "section": "who-this-is-for",
@@ -4418,7 +4271,7 @@
         {
           "section": "hero",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -4481,7 +4334,7 @@
         {
           "section": "the-library",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },
@@ -4544,7 +4397,7 @@
         {
           "section": "in-the-room",
           "field": "Show Section?",
-          "value": "Yes",
+          "value": "TRUE",
           "link": "",
           "notes": ""
         },

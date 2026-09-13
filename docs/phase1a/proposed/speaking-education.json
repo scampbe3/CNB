@@ -9,7 +9,7 @@
   {
     "section": "hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -65,7 +65,7 @@
   {
     "section": "teaching-philosophy",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -135,7 +135,7 @@
   {
     "section": "speaking-topics",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -240,7 +240,7 @@
   {
     "section": "what-people-say",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -289,7 +289,7 @@
   {
     "section": "testimonial-john",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -352,7 +352,7 @@
   {
     "section": "testimonial-leon",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -415,7 +415,7 @@
   {
     "section": "testimonial-joe",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },

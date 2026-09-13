@@ -2,7 +2,7 @@
   {
     "section": "Hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -65,7 +65,7 @@
   {
     "section": "The Decision Room",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -170,7 +170,7 @@
   {
     "section": "Business Counsel",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -275,7 +275,7 @@
   {
     "section": "Strategic Partnership",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -387,7 +387,7 @@
   {
     "section": "Case Studies",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -485,7 +485,7 @@
   {
     "section": "Blind Dinners",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -590,7 +590,7 @@
   {
     "section": "selected-experience",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -653,7 +653,7 @@
   {
     "section": "experience-television",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -723,7 +723,7 @@
   {
     "section": "experience-publishing",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -793,7 +793,7 @@
   {
     "section": "experience-global-marketing",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -863,7 +863,7 @@
   {
     "section": "experience-consulting",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -933,7 +933,7 @@
   {
     "section": "experience-entrepreneurship",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -1003,7 +1003,7 @@
   {
     "section": "experience-teaching",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -1073,7 +1073,7 @@
   {
     "section": "testimonials",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -1122,7 +1122,7 @@
   {
     "section": "testimonial-john",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -1185,7 +1185,7 @@
   {
     "section": "testimonial-ashley",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -1248,7 +1248,7 @@
   {
     "section": "testimonial-monique",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },

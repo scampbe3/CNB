@@ -2,7 +2,7 @@
   {
     "section": "hero",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -65,7 +65,7 @@
   {
     "section": "business-counsel",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -177,7 +177,7 @@
   {
     "section": "strategic-partnership",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -289,7 +289,7 @@
   {
     "section": "from-clients",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -373,7 +373,7 @@
   {
     "section": "closing",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -471,7 +471,7 @@
   {
     "section": "engagement-blooming-haus",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -541,7 +541,7 @@
   {
     "section": "engagement-biolage-raw",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -611,7 +611,7 @@
   {
     "section": "engagement-gilead-sciences",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -681,7 +681,7 @@
   {
     "section": "engagement-butter-lye",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
@@ -751,7 +751,7 @@
   {
     "section": "engagement-upstream",
     "field": "Show Section?",
-    "value": "Yes",
+    "value": "TRUE",
     "link": "",
     "notes": ""
   },
