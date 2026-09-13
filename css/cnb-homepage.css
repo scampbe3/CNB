@@ -1200,9 +1200,42 @@ body.cnb-page-work-with-amanda #from-clients .cnb-home-image {
   aspect-ratio: 16 / 9;
 }
 
-body.cnb-page-work-with-amanda #engagement-blooming-haus .cnb-home-image img,
-body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image img {
-  object-fit: contain;
+body.cnb-page-work-with-amanda :is(
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-cms-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-eyebrow {
+  order: -1;
+}
+
+body.cnb-page-work-with-amanda #engagement-blooming-haus .cnb-home-image {
+  min-height: 0;
+  aspect-ratio: 816 / 678;
+}
+
+body.cnb-page-work-with-amanda #engagement-biolage-raw .cnb-home-image {
+  min-height: 0;
+  aspect-ratio: 1600 / 739;
+}
+
+body.cnb-page-work-with-amanda #from-clients .cnb-home-image {
+  min-height: 0;
+  aspect-ratio: 2.05 / 1;
+}
+
+body.cnb-page-work-with-amanda :is(
+  #from-clients,
+  #engagement-blooming-haus,
+  #engagement-biolage-raw
+) .cnb-home-image img {
+  object-fit: cover;
 }
 
 /* Give archival engagements a focused, centered editorial presentation. */
