@@ -1,6 +1,6 @@
 {
   "page": "learn",
-  "version": "2026-03-08-learn-single-membership",
+  "version": "2026-09-12-phase1a-content",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,41 +63,52 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Learn",
-      "title": "Practical learning for real decisions.",
-      "body": [
-        "The resources here are built to help founders make decisions, move work forward, and build with more confidence.",
-        "This is practical guidance grounded in real experience."
-      ],
+      "theme": "light",
+      "title": "Ideas worth thinking about.",
+      "note": "Library",
       "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 8.jpg",
-        "alt": "Amanda Johnson in a studio portrait."
+        "src": "assets/images/phase1a/learn-hero-image.webp",
+        "alt": "Amanda Johnson in the Library",
+        "href": ""
       },
-      "theme": "light"
+      "images": [
+        {
+          "src": "assets/images/phase1a/learn-hero-image.webp",
+          "alt": "Amanda Johnson in the Library",
+          "href": ""
+        }
+      ],
+      "body": [
+        "A searchable collection of essays, AI prompts, decision briefs and business cases exploring better questions, better decisions and the future of work.",
+        "Browse by topic, search for something specific or discover something you weren't looking for."
+      ],
+      "enabled": true,
+      "displayOrder": 10
     },
     {
       "id": "what-youll-find",
       "type": "feature",
-      "eyebrow": "What You Will Find",
-      "title": "Tools, frameworks, and case studies shaped by real work.",
-      "body": [
-        "The Learn section brings together practical resources drawn from the same questions founders bring into the work."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Essays that tackle real business tension",
-        "Decision case studies grounded in real founder moments",
-        "Practical worksheets and filters you can use immediately",
-        "Prompt stacks that help you use AI with more judgment",
-        "Resources that connect to live sessions, consulting, and stories"
-      ],
-      "image": {
-        "src": "assets/images/additional_images_3/be rooted 2.webp",
-        "alt": "Journals and stationery laid out on a table."
-      },
       "layout": "image-right",
       "theme": "paper",
-      "notes": "Journals and stationery laid out on a table."
+      "notes": "Journals and stationery laid out on a table.",
+      "title": "The Library",
+      "eyebrow": "Browse by topic",
+      "body": [
+        "Library preview: searchable resources will be added in the next implementation stage."
+      ],
+      "list": [
+        "All",
+        "Essays",
+        "Decision Briefs",
+        "AI Prompts",
+        "Case Studies",
+        "Videos",
+        "Speaking",
+        "The Decision Room (Members)"
+      ],
+      "enabled": true,
+      "displayOrder": 20
     },
     {
       "id": "how-to-use",
@@ -110,35 +121,45 @@
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
-        "alt": "Founder writing in a notebook during a working session."
+        "alt": "Founder writing in a notebook during a working session.",
+        "href": ""
       },
       "layout": "image-left",
       "theme": "light",
-      "notes": "Founder writing in a notebook during a working session."
+      "notes": "Founder writing in a notebook during a working session.",
+      "images": [
+        {
+          "src": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
+          "alt": "Founder writing in a notebook during a working session.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 30
     },
     {
       "id": "access-membership",
       "type": "feature",
-      "eyebrow": "Access and Membership",
-      "title": "Public access with deeper support inside The Decision Room.",
-      "body": [
-        "A portion of the Learn library is available publicly.",
-        "Deeper tools, prompt stacks, and guided resources live inside The Decision Room, where the work can go further with more context and care."
-      ],
+      "layout": "image-right",
+      "theme": "paper",
+      "notes": "Two people in a focused conversation on a couch.",
+      "title": "Public / Decision Room Members",
+      "eyebrow": "Access",
+      "body": [],
       "ctas": [
         {
           "label": "Explore The Decision Room",
           "href": "/membership",
           "variant": "primary"
+        },
+        {
+          "label": "Member area preview",
+          "href": "/member-home",
+          "variant": "ghost"
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images_2/Blind Dinner 2/Cupcakes_20&_20Broccoli_20LLC_20033.JPG",
-        "alt": "Two people in a focused conversation on a couch."
-      },
-      "layout": "image-right",
-      "theme": "paper",
-      "notes": "Two people in a focused conversation on a couch."
+      "enabled": true,
+      "displayOrder": 30
     },
     {
       "id": "learning-context",
@@ -163,11 +184,21 @@
       ],
       "image": {
         "src": "assets/images/additional_images_2/CLIENTS/elizabeth abunaw/image.webp",
-        "alt": "Founder standing in a produce workspace."
+        "alt": "Founder standing in a produce workspace.",
+        "href": ""
       },
       "layout": "image-left",
       "theme": "light",
-      "notes": "Founder standing in a produce workspace."
+      "notes": "Founder standing in a produce workspace.",
+      "images": [
+        {
+          "src": "assets/images/additional_images_2/CLIENTS/elizabeth abunaw/image.webp",
+          "alt": "Founder standing in a produce workspace.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 50
     },
     {
       "id": "invitation",
@@ -190,7 +221,9 @@
           "variant": "ghost"
         }
       ],
-      "theme": "ink"
+      "theme": "ink",
+      "enabled": false,
+      "displayOrder": 60
     }
   ]
 }

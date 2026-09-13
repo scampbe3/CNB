@@ -1,0 +1,142 @@
+{
+  "testedAt": "2026-09-13T04:56:20.875Z",
+  "pages": [
+    {
+      "key": "homepage",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 17,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 17,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "work-with-amanda",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 10,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 10,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "speaking-education",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 7,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 7,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "learn",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "blind-dinners",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 8,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 8,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "membership",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    },
+    {
+      "key": "member-home",
+      "viewports": [
+        {
+          "width": 1440,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        },
+        {
+          "width": 390,
+          "sections": 3,
+          "errors": 0,
+          "brokenImages": 0,
+          "fallbackParity": true
+        }
+      ]
+    }
+  ],
+  "images": 47,
+  "replacements": 16,
+  "totalSourceBytes": 151625986,
+  "totalOutputBytes": 11233113
+}

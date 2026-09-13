@@ -1,0 +1,814 @@
+[
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "Consulting",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "Executive strategy for organizations navigating change.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Subhead",
+    "value": "Fractional Chief Marketing Officer • Marketing Transformation • Strategic Advisory",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "CTA 1",
+    "value": "Download CV",
+    "link": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-consulting-cv.pdf",
+    "notes": "primary"
+  },
+  {
+    "section": "hero",
+    "field": "CTA 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-hero-image.webp",
+    "link": "",
+    "notes": "Amanda Johnson"
+  },
+  {
+    "section": "business-counsel",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Eyebrow",
+    "value": "American Express",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Title",
+    "value": "Building cultural relevance through authentic storytelling.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Body 1",
+    "value": "#ExpressYourSelfie campaign during Pride.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Body After 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-business-counsel-image.webp",
+    "link": "",
+    "notes": "American Express selected engagement"
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Display Order",
+    "value": "31",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Eyebrow",
+    "value": "Out100 Gala",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Title",
+    "value": "Transforming an awards show into a year-round marketing platform.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Body 1",
+    "value": "$2.5M+ in advertising and sponsorship revenue.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Body After 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-strategic-partnership-image.webp",
+    "link": "",
+    "notes": "Out100 Gala selected engagement"
+  },
+  {
+    "section": "from-clients",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Display Order",
+    "value": "32",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Eyebrow",
+    "value": "Matrix Professional",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Title",
+    "value": "Leading digital transformation across more than 40 countries.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Body 1",
+    "value": "Global strategy. Local execution.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "List 6",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-from-clients-image.webp",
+    "link": "",
+    "notes": "Matrix Professional selected engagement"
+  },
+  {
+    "section": "closing",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Title",
+    "value": "Selected Engagements",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Body 1",
+    "value": "A selection of work spanning media, healthcare, technology, beauty and consumer brands.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "CTA 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "closing",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "business-counsel",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "strategic-partnership",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "from-clients",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Display Order",
+    "value": "33",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Title",
+    "value": "Helping the founders become the face of a global luxury brand.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Eyebrow",
+    "value": "Blooming Haus",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Paragraph 1",
+    "value": "Fractional Chief Marketing Officer.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-blooming-haus",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-engagement-blooming-haus-image.webp",
+    "link": "",
+    "notes": "Blooming Haus selected engagement"
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Display Order",
+    "value": "34",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Title",
+    "value": "Launching a new brand inside one of beauty's most iconic portfolios.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Eyebrow",
+    "value": "Biolage RAW",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Paragraph 1",
+    "value": "Global launch strategy and campaign development.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-biolage-raw",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-engagement-biolage-raw-image.webp",
+    "link": "",
+    "notes": "Biolage RAW selected engagement"
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Display Order",
+    "value": "35",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Title",
+    "value": "Turning complex healthcare topics into human stories.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Eyebrow",
+    "value": "Gilead Sciences",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Paragraph 1",
+    "value": "Documentary-style branded content.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-gilead-sciences",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-engagement-gilead-sciences-image.webp",
+    "link": "",
+    "notes": "Gilead Sciences selected engagement"
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Display Order",
+    "value": "36",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Title",
+    "value": "Building a premium brand from the ground up.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Eyebrow",
+    "value": "Butter & Lye",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Paragraph 1",
+    "value": "Brand strategy, positioning and transformation.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-butter-lye",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-engagement-butter-lye-image.webp",
+    "link": "",
+    "notes": "Butter & Lye selected engagement"
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Display Order",
+    "value": "37",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Title",
+    "value": "Keeping an industry moving forward during a global shutdown.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Eyebrow",
+    "value": "Upstream",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Paragraph 1",
+    "value": "Virtual event strategy during COVID-19.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "engagement-upstream",
+    "field": "Image",
+    "value": "assets/images/phase1a/work-with-amanda-engagement-upstream-image.webp",
+    "link": "",
+    "notes": "Upstream selected engagement"
+  }
+]

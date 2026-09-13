@@ -1,0 +1,1325 @@
+[
+  {
+    "section": "Hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Note",
+    "value": "Amanda Johnson.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Title",
+    "value": "People pay me to tell them the truth.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Subhead",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Body 1",
+    "value": "I've spent more than two decades helping leaders make better decisions. My career has taken me from television newsrooms to magazine publishing, global brands, entrepreneurship and higher education. Every chapter has shaped how I solve problems, ask better questions and help others navigate complexity.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "CTA 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-hero-image.webp",
+    "link": "",
+    "notes": "Amanda Johnson"
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Display Order",
+    "value": "21",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Eyebrow",
+    "value": "Engineering taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Title",
+    "value": "...how to solve problems.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Body 1",
+    "value": "Engineering taught me to break complexity into manageable parts, think systematically and build solutions that last.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-the-decision-room-image.webp",
+    "link": "",
+    "notes": "Amanda at her Cornell graduation"
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Display Order",
+    "value": "40",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Eyebrow",
+    "value": "Consulting",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Title",
+    "value": "Executive strategy for organizations navigating change.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Body 1",
+    "value": "Fractional Chief Marketing Officer. Marketing transformation. Strategic advisory.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Body 2",
+    "value": "When the next decision matters most.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Business Counsel",
+    "field": "CTA 1",
+    "value": "Explore Consulting",
+    "link": "/work-with-amanda",
+    "notes": "primary"
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-business-counsel-image.webp",
+    "link": "",
+    "notes": "Amanda Johnson consulting"
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Display Order",
+    "value": "50",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Eyebrow",
+    "value": "Speaking & Education",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Title",
+    "value": "Preparing people for the decisions that matter.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Body 1",
+    "value": "Business is more than a career. It's a way of thinking. It's a framework for solving problems, recognizing opportunities and building a life with intention.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Body After 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "List 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "CTA 1",
+    "value": "Explore Speaking & Education",
+    "link": "/speaking-education",
+    "notes": "primary"
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-strategic-partnership-image.webp",
+    "link": "",
+    "notes": "Amanda speaking to an audience"
+  },
+  {
+    "section": "Case Studies",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Display Order",
+    "value": "60",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Eyebrow",
+    "value": "Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Title",
+    "value": "My thinking, in writing.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Body 1",
+    "value": "Essays, AI prompts, decision briefs and business cases for people who believe better questions lead to better decisions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Body After 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Body After 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "List 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "CTA 1",
+    "value": "Explore the Library",
+    "link": "/learn",
+    "notes": "primary"
+  },
+  {
+    "section": "Case Studies",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-case-studies-image.webp",
+    "link": "",
+    "notes": "Amanda Johnson in the Library"
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Display Order",
+    "value": "70",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Eyebrow",
+    "value": "The Blind Dinner",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Title",
+    "value": "We didn't ask for a seat at the table.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Body 1",
+    "value": "We built our own.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Body 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "CTA 1",
+    "value": "Discover The Blind Dinner",
+    "link": "/blind-dinners",
+    "notes": "primary"
+  },
+  {
+    "section": "Blind Dinners",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-blind-dinners-image.webp",
+    "link": "",
+    "notes": "Guests gathered at The Blind Dinner"
+  },
+  {
+    "section": "Hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Title",
+    "value": "Selected Experience",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "selected-experience",
+    "field": "Paragraph 1",
+    "value": "Every chapter changed the way I think about business. Today, I bring those perspectives together to help leaders make better decisions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "The Decision Room",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Display Order",
+    "value": "22",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Title",
+    "value": "...how to stay calm under pressure.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Eyebrow",
+    "value": "Television taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Paragraph 1",
+    "value": "In the newsroom, every deadline mattered. I learned to make decisions quickly, earn trust under pressure and tell stories that informed millions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-television",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-television-image.webp",
+    "link": "",
+    "notes": "Amanda at the NBC anchor desk"
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Display Order",
+    "value": "23",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Title",
+    "value": "...that stories shape culture.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Eyebrow",
+    "value": "Publishing taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Paragraph 1",
+    "value": "Working in magazine publishing showed me how ideas influence conversations, build communities and inspire people to act.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-publishing",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-publishing-image.webp",
+    "link": "",
+    "notes": "Out100 magazine cover featuring Barack Obama"
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Display Order",
+    "value": "24",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Title",
+    "value": "...how ideas scale.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Eyebrow",
+    "value": "Global marketing taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Paragraph 1",
+    "value": "Leading global marketing initiatives taught me how to build brands across countries, cultures and audiences without losing what makes them meaningful.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-global-marketing",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-global-marketing-image.webp",
+    "link": "",
+    "notes": "Amanda speaking on a global stage"
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Display Order",
+    "value": "25",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Title",
+    "value": "...that the best answers begin with better questions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Eyebrow",
+    "value": "Consulting taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Paragraph 1",
+    "value": "My job isn't to have all the solutions. It's to uncover what's getting in the way, challenge assumptions and help leaders move forward with clarity and confidence.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-consulting",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-consulting-image.webp",
+    "link": "",
+    "notes": "Amanda consulting"
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Display Order",
+    "value": "26",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Title",
+    "value": "...that ownership changes everything.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Eyebrow",
+    "value": "Entrepreneurship taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Paragraph 1",
+    "value": "Building a bootstrapped company taught me to embrace uncertainty, make decisions with limited resources and create opportunities instead of waiting for them.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-entrepreneurship",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-entrepreneurship-image.webp",
+    "link": "",
+    "notes": "Amanda as an entrepreneur"
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Display Order",
+    "value": "27",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Title",
+    "value": "...that the goal isn't to have all the answers.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Eyebrow",
+    "value": "Teaching taught me...",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Paragraph 1",
+    "value": "The best educators don't simply share knowledge. They help people develop the judgment, confidence and curiosity to think for themselves.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "experience-teaching",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-experience-teaching-image.webp",
+    "link": "",
+    "notes": "Amanda speaking on a panel"
+  },
+  {
+    "section": "testimonials",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonials",
+    "field": "Title",
+    "value": "The people I've worked with say it best.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Display Order",
+    "value": "31",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Section Layout",
+    "value": "Image Left",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Title",
+    "value": "John McCourt",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Quote 1",
+    "value": "I am the executive I am today because she taught me how to think.",
+    "link": "",
+    "notes": "John McCourt, Senior Vice President, Social Impact, Weber Shandwick"
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-testimonial-john-image.webp",
+    "link": "",
+    "notes": "John McCourt"
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Display Order",
+    "value": "32",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Title",
+    "value": "Ashley Tsai",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Quote 1",
+    "value": "Amanda was a partner in transformation.",
+    "link": "",
+    "notes": "Ashley Tsai, Managing Director, Analytics, mSix&Partners (now T&Pm, WPP)"
+  },
+  {
+    "section": "testimonial-ashley",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-testimonial-ashley-image.webp",
+    "link": "",
+    "notes": "Ashley Tsai"
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Display Order",
+    "value": "33",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Section Layout",
+    "value": "Image Left",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Title",
+    "value": "Monique Kofsky",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Quote 1",
+    "value": "She has the same level of care and dedication that I would expect from myself. With Amanda, it's almost as if the business is hers too.",
+    "link": "",
+    "notes": "Monique Kofsky, Founder & CEO, Butter & Lye"
+  },
+  {
+    "section": "testimonial-monique",
+    "field": "Image",
+    "value": "assets/images/phase1a/homepage-testimonial-monique-image.webp",
+    "link": "",
+    "notes": "Monique Kofsky"
+  },
+  {
+    "section": "Business Counsel",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Strategic Partnership",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "Case Studies",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  }
+]

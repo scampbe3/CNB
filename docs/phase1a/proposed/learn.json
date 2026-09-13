@@ -1,0 +1,401 @@
+[
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "Ideas worth thinking about.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "A searchable collection of essays, AI prompts, decision briefs and business cases exploring better questions, better decisions and the future of work.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 2",
+    "value": "Browse by topic, search for something specific or discover something you weren't looking for.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/learn-hero-image.webp",
+    "link": "",
+    "notes": "Amanda Johnson in the Library"
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Eyebrow",
+    "value": "Browse by topic",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Title",
+    "value": "The Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Body 1",
+    "value": "Library preview: searchable resources will be added in the next implementation stage.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 1",
+    "value": "All",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 2",
+    "value": "Essays",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 3",
+    "value": "Decision Briefs",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 4",
+    "value": "AI Prompts",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 5",
+    "value": "Case Studies",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Image",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "how-to-use",
+    "field": "Eyebrow",
+    "value": "How To Use It",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Title",
+    "value": "Start with the real question in front of you.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Body 1",
+    "value": "Some founders arrive with a specific question. Others arrive when something feels stuck.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Body 2",
+    "value": "Either way, the goal is not passive consumption. The goal is to help you think more clearly and act with more confidence.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-to-use",
+    "field": "Image",
+    "value": "assets/images/additional_images/chanel dokun - story individual/maryclairephoto_chanel_3.22-0143.webp",
+    "link": "",
+    "notes": "Founder writing in a notebook during a working session."
+  },
+  {
+    "section": "access-membership",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Eyebrow",
+    "value": "Access",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Title",
+    "value": "Public / Decision Room Members",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "CTA 1",
+    "value": "Explore The Decision Room",
+    "link": "/membership",
+    "notes": "primary"
+  },
+  {
+    "section": "access-membership",
+    "field": "Image",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "Display Order",
+    "value": "50",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "learning-context",
+    "field": "Eyebrow",
+    "value": "Context",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "Title",
+    "value": "The learning does not sit apart from the rest of the work.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "Body 1",
+    "value": "These resources connect to consulting work, member conversations, stories, and Blind Dinners.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "Body 2",
+    "value": "The point is not consumption. The point is application.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "learning-context",
+    "field": "CTA 1",
+    "value": "Work With Amanda",
+    "link": "/work-with-amanda",
+    "notes": "primary"
+  },
+  {
+    "section": "learning-context",
+    "field": "CTA 2",
+    "value": "Read the Stories",
+    "link": "/stories",
+    "notes": "ghost"
+  },
+  {
+    "section": "learning-context",
+    "field": "Image",
+    "value": "assets/images/additional_images_2/CLIENTS/elizabeth abunaw/image.webp",
+    "link": "",
+    "notes": "Founder standing in a produce workspace."
+  },
+  {
+    "section": "invitation",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "invitation",
+    "field": "Display Order",
+    "value": "60",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "invitation",
+    "field": "Eyebrow",
+    "value": "Invitation",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "invitation",
+    "field": "Title",
+    "value": "If you want more than inspiration, start here.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "invitation",
+    "field": "Body 1",
+    "value": "If you are looking for shortcuts, this may not be the right place.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "invitation",
+    "field": "Body 2",
+    "value": "If you are looking for practical guidance grounded in experience and care, you are welcome here.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "invitation",
+    "field": "CTA 1",
+    "value": "Explore The Decision Room",
+    "link": "/membership",
+    "notes": "primary"
+  },
+  {
+    "section": "invitation",
+    "field": "CTA 2",
+    "value": "Read the Stories",
+    "link": "/stories",
+    "notes": "ghost"
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 6",
+    "value": "Videos",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 7",
+    "value": "Speaking",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-youll-find",
+    "field": "List 8",
+    "value": "The Decision Room (Members)",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "access-membership",
+    "field": "CTA 2",
+    "value": "Member area preview",
+    "link": "/member-home",
+    "notes": "ghost"
+  }
+]

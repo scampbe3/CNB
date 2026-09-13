@@ -1,0 +1,198 @@
+[
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "Welcome back.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "The Decision Room - Member Area Preview",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Subhead",
+    "value": "What decision are you thinking through today?",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "The member area is being prepared. This is a public preview, not an active sign-in or a private member space.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "CTA 1",
+    "value": "Explore Membership with Amanda",
+    "link": "mailto:amanda@cupcakesandbroccoli.com?subject=The%20Decision%20Room",
+    "notes": "primary"
+  },
+  {
+    "section": "hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/member-home-hero-image.webp",
+    "link": "",
+    "notes": "The Decision Room member area artwork"
+  },
+  {
+    "section": "the-library",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Title",
+    "value": "The Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Paragraph 1",
+    "value": "Explore essays, decision briefs, AI prompts and member resources.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "the-library",
+    "field": "Button 1",
+    "value": "Open Library",
+    "link": "/learn",
+    "notes": "primary"
+  },
+  {
+    "section": "in-the-room",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Title",
+    "value": "In the Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Paragraph 1",
+    "value": "One of the greatest strengths of The Decision Room is the women inside it.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Paragraph 2",
+    "value": "Search by profession, education, location or sorority to discover members you may want to meet, learn from or simply get to know.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "in-the-room",
+    "field": "Paragraph 3",
+    "value": "Coming next: member search, profiles and saved resources. No member information is displayed or collected in this preview.",
+    "link": "",
+    "notes": ""
+  }
+]

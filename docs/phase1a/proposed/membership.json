@@ -1,0 +1,1185 @@
+[
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "A private advisory community for Black women.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Subhead",
+    "value": "Think of it as your personal board of directors.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 4",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 5",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "CTA 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "CTA 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/membership-hero-image.avif",
+    "link": "",
+    "notes": "The Decision Room artwork"
+  },
+  {
+    "section": "whats-inside",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Title",
+    "value": "The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 1",
+    "value": "Monthly advisory boards.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 2",
+    "value": "Private community.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 3",
+    "value": "Confidential discussions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 4",
+    "value": "Curated introductions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 5",
+    "value": "The Library.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Image",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "essays",
+    "field": "Eyebrow",
+    "value": "Inside The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Title",
+    "value": "Live Working Sessions",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Body 1",
+    "value": "Members-only sessions where real business decisions get worked through in real time.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Body 2",
+    "value": "Not panels. Not lectures.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "List 1",
+    "value": "Founders bring real questions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "List 2",
+    "value": "We walk through the tradeoffs.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "List 3",
+    "value": "We pressure-test the options.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "List 4",
+    "value": "You see how serious decisions are framed and made.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Body After 1",
+    "value": "If you ever want that level of focus on your situation alone, that's what Business Counsel is for.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "essays",
+    "field": "Image",
+    "value": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
+    "link": "",
+    "notes": "Portrait framed by soft light and layered textiles."
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Display Order",
+    "value": "40",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Eyebrow",
+    "value": "Inside The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Title",
+    "value": "Private Founder Channel",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Body 1",
+    "value": "A private space for Black founders inside the room.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Body 2",
+    "value": "Small. Intentional. Serious.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "List 1",
+    "value": "Quick questions",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "List 2",
+    "value": "Sanity checks",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "List 3",
+    "value": "Honest conversations",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Body After 1",
+    "value": "This is your bench when you don't have one.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "decision-case-studies",
+    "field": "Image",
+    "value": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
+    "link": "",
+    "notes": "Portrait of a founder in conversation."
+  },
+  {
+    "section": "practical-tools",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "practical-tools",
+    "field": "Display Order",
+    "value": "50",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "practical-tools",
+    "field": "Eyebrow",
+    "value": "Inside The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "practical-tools",
+    "field": "Title",
+    "value": "Priority Access to Blind Dinners",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "practical-tools",
+    "field": "Body 1",
+    "value": "Members receive priority consideration for future Blind Dinners.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "practical-tools",
+    "field": "Body 2",
+    "value": "The room doesn't only live online.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "practical-tools",
+    "field": "Image",
+    "value": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
+    "link": "",
+    "notes": "Guests gathered around a dinner table."
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Display Order",
+    "value": "60",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Title",
+    "value": "This is where structure lives.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Body 1",
+    "value": "These tools are built to help you work through your own numbers, your own offers, and your own decisions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-done-properly",
+    "field": "Image",
+    "value": "assets/images/butler-7.jpg",
+    "link": "",
+    "notes": "Portrait with bold color styling."
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Display Order",
+    "value": "70",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Title",
+    "value": "Pricing Reality Check",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Body 1",
+    "value": "Run the math before fear runs you.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Body 2",
+    "value": "If you sell shampoo and conditioner sets for $28 and raise them to $32, what actually happens if you lose a few customers?",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Body 3",
+    "value": "Most founders never calculate it.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Body 4",
+    "value": "Inside the full worksheet, you'll walk through:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "List 1",
+    "value": "What happens to your revenue if you raise your price",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "List 2",
+    "value": "How many sales you could lose and still make more money",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "List 3",
+    "value": "Whether hesitation is about the market or about fear",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "List 4",
+    "value": "How to communicate a price shift calmly",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Body After 1",
+    "value": "Small pricing decisions compound.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "pricing-reality-check",
+    "field": "Image",
+    "value": "assets/images/additional_images/amanda professional photos of her/Amanda - 10.jpg",
+    "link": "",
+    "notes": "Amanda Johnson seated in a studio portrait."
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Display Order",
+    "value": "80",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Title",
+    "value": "Should I Launch This? Checklist",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Body 1",
+    "value": "Excitement is not a launch plan.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Body 2",
+    "value": "Before adding a new service, product, or offering, this checklist helps you slow down and ask:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "List 1",
+    "value": "Will this make money",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "List 2",
+    "value": "Do you have time to support it",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "List 3",
+    "value": "Is your offer clear",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "List 4",
+    "value": "What are you giving up by launching now",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Body After 1",
+    "value": "Most failed launches skipped this step.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "should-i-launch-this",
+    "field": "Image",
+    "value": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
+    "link": "",
+    "notes": "Colorful portrait against patterned fabric."
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Display Order",
+    "value": "90",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Title",
+    "value": "Vendor & Partnership Checklist",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body 1",
+    "value": "Before signing anything, pause.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body 2",
+    "value": "Maybe a retailer wants to carry your product.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body 3",
+    "value": "Maybe an influencer wants a revenue split.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body 4",
+    "value": "Maybe a manufacturer offers better pricing.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body 5",
+    "value": "This tool helps you think through:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "List 1",
+    "value": "Who controls pricing and promotion",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "List 2",
+    "value": "How money is actually split",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "List 3",
+    "value": "Who owns the customer relationship",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "List 4",
+    "value": "What happens if things don't go as planned",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Body After 1",
+    "value": "One bad agreement can stall a business.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "vendor-partnership-checklist",
+    "field": "Image",
+    "value": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
+    "link": "",
+    "notes": "Founder portrait in studio light."
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Display Order",
+    "value": "100",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Title",
+    "value": "Capital Fit & Funding Decisions",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Body 1",
+    "value": "Access to capital changes everything.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Body 2",
+    "value": "But not all money is good money.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Body 3",
+    "value": "Inside this section you'll find:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "List 1",
+    "value": "A Capital Fit Checklist to decide if you even need outside funding",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "List 2",
+    "value": "A Funding Readiness Worksheet before you apply",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "List 3",
+    "value": "A curated list of grants and funding programs for Black founders",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "List 4",
+    "value": "Clear notes on who each opportunity is actually for",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "List 5",
+    "value": "Real breakdowns of what debt and equity truly cost",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Body After 1",
+    "value": "This is not about chasing money.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Body After 2",
+    "value": "It's about understanding what money will require from you.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "capital-fit-funding-decisions",
+    "field": "Image",
+    "value": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+    "link": "",
+    "notes": "Detailed portrait with layered color and texture."
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Display Order",
+    "value": "110",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Title",
+    "value": "AI: When to Use It. When Not To.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Body 1",
+    "value": "AI can save time.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Body 2",
+    "value": "AI can also cost you money if you trust it blindly.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Body 3",
+    "value": "Inside you'll get:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "List 1",
+    "value": "Copy-and-use prompts",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "List 2",
+    "value": "Ways to double-check AI responses",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "List 3",
+    "value": "Clear examples of when AI helps",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "List 4",
+    "value": "Clear examples of when you still need judgment",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Body After 1",
+    "value": "AI should support your thinking, not replace it.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "ai-when-to-use-it",
+    "field": "Image",
+    "value": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg",
+    "link": "",
+    "notes": "Editorial portrait with bold pattern and color."
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Display Order",
+    "value": "120",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Eyebrow",
+    "value": "Decision Tool Library",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Title",
+    "value": "Real Life Decisions",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body 1",
+    "value": "We break down real founder situations step by step.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body 2",
+    "value": "Not highlight reels. Not theory.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body 3",
+    "value": "Real decisions with real stakes.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body 4",
+    "value": "For example:",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "List 1",
+    "value": "A founder raising prices and risking customer loss",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "List 2",
+    "value": "A CEO evaluating a partnership that requires giving up control",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "List 3",
+    "value": "A service provider walking away from a draining client",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "List 4",
+    "value": "A hairdresser deciding whether to open her own salon",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "List 5",
+    "value": "A beauty brand choosing whether to accept a large retail order",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body After 1",
+    "value": "You don't just see outcomes.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Body After 2",
+    "value": "You see how decisions are made.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "real-life-decisions",
+    "field": "Image",
+    "value": "assets/images/1muriu-8-scaled.jpg",
+    "link": "",
+    "notes": "Portrait framed by high-contrast patterns."
+  },
+  {
+    "section": "live-sessions",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Display Order",
+    "value": "130",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "live-sessions",
+    "field": "Eyebrow",
+    "value": "Business Counsel",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Title",
+    "value": "When You Want One-on-One Time",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Body 1",
+    "value": "Membership gives you structure and community.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Body 2",
+    "value": "Sometimes you want focused time.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Body 3",
+    "value": "Business Counsel is available when you want one decision examined closely.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "List 1",
+    "value": "One session",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "List 2",
+    "value": "One real problem",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "List 3",
+    "value": "Your numbers",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "List 4",
+    "value": "Your context",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "live-sessions",
+    "field": "Image",
+    "value": "assets/images/muriu-6-scaled.jpg",
+    "link": "",
+    "notes": "Portrait framed by soft light."
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Title",
+    "value": "Membership is intentionally limited.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "CTA 1",
+    "value": "Explore Membership with Amanda",
+    "link": "mailto:amanda@cupcakesandbroccoli.com?subject=The%20Decision%20Room",
+    "notes": "primary"
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "CTA 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "whats-inside",
+    "field": "List 6",
+    "value": "Invitation-only dinners.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-this-is-for",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  }
+]

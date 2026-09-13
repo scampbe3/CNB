@@ -1,6 +1,6 @@
 {
   "page": "cnb-home",
-  "version": "2026-03-08-homepage-feb-language",
+  "version": "2026-09-12-phase1a-content",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,205 +63,489 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Cupcakes + Broccoli",
-      "title": "Black ownership is Black survival, freedom and wealth.",
-      "subhead": "We help Black founders build businesses that last.",
-      "body": [
-        "Cupcakes + Broccoli is a place to get steady support, real guidance and clear direction as you build. If you are working on something that matters, you are in the right room."
-      ],
-      "ctas": [
+      "theme": "light",
+      "mobileInlineImageAfter": 1,
+      "title": "People pay me to tell them the truth.",
+      "subhead": "",
+      "note": "Amanda Johnson.",
+      "image": {
+        "src": "assets/images/phase1a/homepage-hero-image.webp",
+        "alt": "Amanda Johnson",
+        "href": ""
+      },
+      "images": [
         {
-          "label": "Enter the Decision Room",
-          "href": "/membership",
-          "variant": "primary"
-        },
-        {
-          "label": "Work With Us",
-          "href": "/work-with-amanda",
-          "variant": "ghost"
+          "src": "assets/images/phase1a/homepage-hero-image.webp",
+          "alt": "Amanda Johnson",
+          "href": ""
         }
       ],
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Ascension.jpg",
-        "alt": "Portrait layered with patterned textiles."
-      },
-      "theme": "light",
-      "mobileInlineImageAfter": 1
+      "body": [
+        "I've spent more than two decades helping leaders make better decisions. My career has taken me from television newsrooms to magazine publishing, global brands, entrepreneurship and higher education. Every chapter has shaped how I solve problems, ask better questions and help others navigate complexity."
+      ],
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 10
     },
     {
       "id": "decision-room",
       "type": "feature",
-      "eyebrow": "The Decision Room",
-      "title": "For founders who want stronger support.",
-      "body": [
-        "The Decision Room is a membership for people building real businesses.",
-        "Inside you will find:"
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Essays like \"Are You Underpricing, Overpricing or Just Uncomfortable?\"",
-        "Decision case studies that break down real founder moments step by step",
-        "Tools like a Pricing Reality Check worksheet, a Launch Readiness checklist, and a Partnership Red-Flag guide",
-        "An AI prompt stack on how to pressure-test AI thinking before you act, including copy-and-use prompts and a guide to spotting weak outputs",
-        "Access to live sessions where real business problems get worked through together"
-      ],
-      "bodyAfter": [
-        "No hustle culture. No shallow motivation. No pretending business is easy.",
-        "Just honest insight and practical direction you can use right away."
-      ],
-      "ctas": [
-        {
-          "label": "Enter the Decision Room",
-          "href": "/membership",
-          "variant": "primary"
-        }
-      ],
-      "image": {
-        "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Portrait framed by patterned textiles."
-      },
       "layout": "image-right",
       "theme": "paper",
-      "mobileInlineImageAfter": 1
+      "mobileInlineImageAfter": 1,
+      "title": "...how to solve problems.",
+      "eyebrow": "Engineering taught me...",
+      "image": {
+        "src": "assets/images/phase1a/homepage-the-decision-room-image.webp",
+        "alt": "Amanda at her Cornell graduation",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/homepage-the-decision-room-image.webp",
+          "alt": "Amanda at her Cornell graduation",
+          "href": ""
+        }
+      ],
+      "body": [
+        "Engineering taught me to break complexity into manageable parts, think systematically and build solutions that last."
+      ],
+      "bodyAfter": [],
+      "list": [],
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 21
     },
     {
       "id": "business-counsel",
       "type": "feature",
-      "eyebrow": "Business Counsel",
-      "title": "When you need to solve something now.",
-      "body": [
-        "Business Counsel is a focused session designed to help you work through a specific problem.",
-        "Maybe you are asking:"
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Should a beauty founder expand into wholesale or double down on direct-to-consumer?",
-        "How should a psychiatrist or dermatologist structure a possible influencer or celebrity collaboration?",
-        "Is it time for a freelance web developer to raise rates or walk away from a draining client?",
-        "Would launching a podcast actually help a CPA build authority, and how should it be positioned?",
-        "Should a Brooklyn wine shop and restaurant make a major menu shift or pursue a new partnership?"
+      "layout": "image-left",
+      "theme": "light",
+      "mobileInlineImageAfter": 1,
+      "title": "Executive strategy for organizations navigating change.",
+      "eyebrow": "Consulting",
+      "image": {
+        "src": "assets/images/phase1a/homepage-business-counsel-image.webp",
+        "alt": "Amanda Johnson consulting",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/homepage-business-counsel-image.webp",
+          "alt": "Amanda Johnson consulting",
+          "href": ""
+        }
       ],
-      "bodyAfter": [
-        "Or it might be something else entirely.",
-        "We get to the heart of it quickly. You leave with a clear next move and a plan you can stand behind."
+      "body": [
+        "Fractional Chief Marketing Officer. Marketing transformation. Strategic advisory.",
+        "When the next decision matters most."
       ],
+      "bodyAfter": [],
+      "list": [],
       "ctas": [
         {
-          "label": "Book Business Counsel",
-          "href": "/apply-business-counsel",
+          "label": "Explore Consulting",
+          "href": "/work-with-amanda",
           "variant": "primary"
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
-        "alt": "Amanda Johnson smiling in a studio portrait."
-      },
-      "layout": "image-left",
-      "theme": "light",
-      "mobileInlineImageAfter": 1
+      "enabled": true,
+      "displayOrder": 40
     },
     {
       "id": "strategic-partnership",
       "type": "feature",
-      "eyebrow": "Strategic Partnership",
-      "title": "For big moves.",
-      "body": [
-        "Some seasons require deeper work.",
-        "If you are preparing to launch, grow, reposition, or fix something that is not working, we can work together in a focused engagement."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Leading the rebrand of a core beauty product that has outgrown its original look and messaging",
-        "Project managing a website rebuild so it reflects the business and supports sales",
-        "Designing a social media strategy for a small but serious team",
-        "Reviewing a brand's product mix to decide what to cut, keep, and prioritize",
-        "Building a go-to-market plan for a service-based founder introducing new offerings"
+      "layout": "image-right",
+      "theme": "paper",
+      "mobileInlineImageAfter": 1,
+      "title": "Preparing people for the decisions that matter.",
+      "eyebrow": "Speaking & Education",
+      "image": {
+        "src": "assets/images/phase1a/homepage-strategic-partnership-image.webp",
+        "alt": "Amanda speaking to an audience",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/homepage-strategic-partnership-image.webp",
+          "alt": "Amanda speaking to an audience",
+          "href": ""
+        }
       ],
-      "bodyAfter": [
-        "This is not an open-ended retainer.",
-        "It is structured work with a clear goal and timeline.",
-        "If you are ready to make a serious move, apply to work together."
+      "body": [
+        "Business is more than a career. It's a way of thinking. It's a framework for solving problems, recognizing opportunities and building a life with intention."
       ],
+      "bodyAfter": [],
+      "list": [],
       "ctas": [
         {
-          "label": "Apply to Work Together",
-          "href": "/apply-strategic-partnership",
+          "label": "Explore Speaking & Education",
+          "href": "/speaking-education",
           "variant": "primary"
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
-        "alt": "Amanda Johnson in a studio portrait with hand at chin."
-      },
-      "layout": "image-right",
-      "theme": "paper",
-      "mobileInlineImageAfter": 1
+      "enabled": true,
+      "displayOrder": 50
     },
     {
       "id": "case-studies",
       "type": "feature",
-      "eyebrow": "Case Studies",
-      "title": "Real life decisions. Not the highlight reel.",
-      "body": [
-        "Every business hits hard moments.",
-        "In our case studies, we break down:"
-      ],
       "listVariant": "card-grid",
-      "list": [
-        "What the founder was facing",
-        "What options were on the table",
-        "What they chose",
-        "What changed after"
+      "layout": "image-left",
+      "theme": "light",
+      "mobileInlineImageAfter": 1,
+      "title": "My thinking, in writing.",
+      "eyebrow": "Library",
+      "image": {
+        "src": "assets/images/phase1a/homepage-case-studies-image.webp",
+        "alt": "Amanda Johnson in the Library",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/homepage-case-studies-image.webp",
+          "alt": "Amanda Johnson in the Library",
+          "href": ""
+        }
       ],
-      "bodyAfter": [
-        "You will not find bragging.",
-        "You will find honesty."
+      "body": [
+        "Essays, AI prompts, decision briefs and business cases for people who believe better questions lead to better decisions."
       ],
+      "bodyAfter": [],
+      "list": [],
       "ctas": [
         {
-          "label": "Explore Case Studies",
-          "href": "/stories",
+          "label": "Explore the Library",
+          "href": "/learn",
           "variant": "primary"
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
-        "alt": "Portrait of a founder in studio light."
-      },
-      "layout": "image-left",
-      "theme": "light",
-      "mobileInlineImageAfter": 1
+      "enabled": true,
+      "displayOrder": 60
     },
     {
       "id": "blind-dinners",
       "type": "closing",
-      "eyebrow": "Blind Dinners",
-      "title": "Blind Dinners",
-      "body": [
-        "Small, invitation-only dinners Amanda hosts and cooks herself.",
-        "Guests do not know who else is coming until they arrive.",
-        "The room brings together founders, creatives, executives, and builders from different backgrounds to talk honestly about business, ownership, and navigating rooms that were not built for us."
-      ],
       "listVariant": "card-grid",
-      "list": [
-        "No panels.",
-        "No name tags.",
-        "Just real conversation around the table."
+      "layout": "image-right",
+      "theme": "ink",
+      "mobileInlineImageAfter": 1,
+      "title": "We didn't ask for a seat at the table.",
+      "eyebrow": "The Blind Dinner",
+      "image": {
+        "src": "assets/images/phase1a/homepage-blind-dinners-image.webp",
+        "alt": "Guests gathered at The Blind Dinner",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/homepage-blind-dinners-image.webp",
+          "alt": "Guests gathered at The Blind Dinner",
+          "href": ""
+        }
       ],
+      "body": [
+        "We built our own."
+      ],
+      "list": [],
       "ctas": [
         {
-          "label": "Learn More",
+          "label": "Discover The Blind Dinner",
           "href": "/blind-dinners",
           "variant": "primary"
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
-        "alt": "Guests gathered around a dinner table."
-      },
-      "layout": "image-right",
-      "theme": "ink",
-      "mobileInlineImageAfter": 1
+      "enabled": true,
+      "displayOrder": 70
+    },
+    {
+      "id": "selected-experience",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Selected Experience"
+        },
+        {
+          "type": "paragraph",
+          "value": "Every chapter changed the way I think about business. Today, I bring those perspectives together to help leaders make better decisions."
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 20
+    },
+    {
+      "id": "experience-television",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...how to stay calm under pressure."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Television taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "In the newsroom, every deadline mattered. I learned to make decisions quickly, earn trust under pressure and tell stories that informed millions."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-television-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-television-image.webp",
+          "alt": "Amanda at the NBC anchor desk"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 22
+    },
+    {
+      "id": "experience-publishing",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...that stories shape culture."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Publishing taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "Working in magazine publishing showed me how ideas influence conversations, build communities and inspire people to act."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-publishing-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-publishing-image.webp",
+          "alt": "Out100 magazine cover featuring Barack Obama"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 23
+    },
+    {
+      "id": "experience-global-marketing",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...how ideas scale."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Global marketing taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "Leading global marketing initiatives taught me how to build brands across countries, cultures and audiences without losing what makes them meaningful."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-global-marketing-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-global-marketing-image.webp",
+          "alt": "Amanda speaking on a global stage"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 24
+    },
+    {
+      "id": "experience-consulting",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...that the best answers begin with better questions."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Consulting taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "My job isn't to have all the solutions. It's to uncover what's getting in the way, challenge assumptions and help leaders move forward with clarity and confidence."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-consulting-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-consulting-image.webp",
+          "alt": "Amanda consulting"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 25
+    },
+    {
+      "id": "experience-entrepreneurship",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...that ownership changes everything."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Entrepreneurship taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "Building a bootstrapped company taught me to embrace uncertainty, make decisions with limited resources and create opportunities instead of waiting for them."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-entrepreneurship-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-entrepreneurship-image.webp",
+          "alt": "Amanda as an entrepreneur"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 26
+    },
+    {
+      "id": "experience-teaching",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "...that the goal isn't to have all the answers."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Teaching taught me..."
+        },
+        {
+          "type": "paragraph",
+          "value": "The best educators don't simply share knowledge. They help people develop the judgment, confidence and curiosity to think for themselves."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-experience-teaching-image.webp",
+          "src": "assets/images/phase1a/homepage-experience-teaching-image.webp",
+          "alt": "Amanda speaking on a panel"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 27
+    },
+    {
+      "id": "testimonials",
+      "type": "custom",
+      "cmsLayout": "text",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "The people I've worked with say it best."
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 30
+    },
+    {
+      "id": "testimonial-john",
+      "type": "custom",
+      "cmsLayout": "image-left",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "John McCourt"
+        },
+        {
+          "type": "quote",
+          "value": "I am the executive I am today because she taught me how to think.",
+          "attribution": "John McCourt, Senior Vice President, Social Impact, Weber Shandwick"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-testimonial-john-image.webp",
+          "src": "assets/images/phase1a/homepage-testimonial-john-image.webp",
+          "alt": "John McCourt"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 31
+    },
+    {
+      "id": "testimonial-ashley",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Ashley Tsai"
+        },
+        {
+          "type": "quote",
+          "value": "Amanda was a partner in transformation.",
+          "attribution": "Ashley Tsai, Managing Director, Analytics, mSix&Partners (now T&Pm, WPP)"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-testimonial-ashley-image.webp",
+          "src": "assets/images/phase1a/homepage-testimonial-ashley-image.webp",
+          "alt": "Ashley Tsai"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 32
+    },
+    {
+      "id": "testimonial-monique",
+      "type": "custom",
+      "cmsLayout": "image-left",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Monique Kofsky"
+        },
+        {
+          "type": "quote",
+          "value": "She has the same level of care and dedication that I would expect from myself. With Amanda, it's almost as if the business is hers too.",
+          "attribution": "Monique Kofsky, Founder & CEO, Butter & Lye"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/homepage-testimonial-monique-image.webp",
+          "src": "assets/images/phase1a/homepage-testimonial-monique-image.webp",
+          "alt": "Monique Kofsky"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 33
     }
   ]
 }

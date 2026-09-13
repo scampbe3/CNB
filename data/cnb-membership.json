@@ -1,6 +1,6 @@
 {
   "page": "membership",
-  "version": "2026-03-19-membership-decision-room-tools-refresh",
+  "version": "2026-09-12-phase1a-content",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,56 +63,46 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Membership",
-      "title": "The Decision Room",
-      "subhead": "$39 per month or $390 per year (2 months free)",
-      "body": [
-        "A private room for Black founders building at every level.",
-        "If you are an established CEO who wants sharper insight and serious Black operators around you, this is for you.",
-        "If you run a growing business and want better tools and better judgment around your next move, this is for you.",
-        "If you're early and shaping your idea, this is for you.",
-        "This is where Black ownership gets sharper."
-      ],
-      "ctas": [
+      "theme": "light",
+      "title": "A private advisory community for Black women.",
+      "subhead": "Think of it as your personal board of directors.",
+      "note": "The Decision Room",
+      "image": {
+        "src": "assets/images/phase1a/membership-hero-image.avif",
+        "alt": "The Decision Room artwork",
+        "href": ""
+      },
+      "images": [
         {
-          "label": "Join The Decision Room",
-          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
-          "variant": "primary"
-        },
-        {
-          "label": "Member Login",
-          "href": "/login",
-          "variant": "ghost"
+          "src": "assets/images/phase1a/membership-hero-image.avif",
+          "alt": "The Decision Room artwork",
+          "href": ""
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 4.jpg",
-        "alt": "Amanda Johnson in a white studio portrait."
-      },
-      "theme": "light"
+      "body": [],
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 10
     },
     {
       "id": "whats-inside",
       "type": "feature",
-      "eyebrow": "What Membership Includes",
-      "title": "Inside The Decision Room you get:",
-      "body": [
-        "Community. Structure. Access."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Live Working Sessions",
-        "A Private Founder Channel",
-        "Priority Access to Blind Dinners",
-        "A growing Decision Tool Library",
-        "A clear pathway to one-on-one Business Counsel"
-      ],
-      "image": {
-        "src": "assets/images/murius-7-scaled.jpg",
-        "alt": "Portrait layered over a geometric backdrop."
-      },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "title": "The Decision Room",
+      "eyebrow": "",
+      "body": [],
+      "list": [
+        "Monthly advisory boards.",
+        "Private community.",
+        "Confidential discussions.",
+        "Curated introductions.",
+        "The Library.",
+        "Invitation-only dinners."
+      ],
+      "enabled": true,
+      "displayOrder": 20
     },
     {
       "id": "essays",
@@ -135,10 +125,20 @@
       ],
       "image": {
         "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
-        "alt": "Portrait framed by soft light and layered textiles."
+        "alt": "Portrait framed by soft light and layered textiles.",
+        "href": ""
       },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/Giana-De-Dier_Particularidades-de-una-tierra-prometida5-scaled.jpg",
+          "alt": "Portrait framed by soft light and layered textiles.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 30
     },
     {
       "id": "decision-case-studies",
@@ -160,10 +160,20 @@
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
-        "alt": "Portrait of a founder in conversation."
+        "alt": "Portrait of a founder in conversation.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "images": [
+        {
+          "src": "assets/images/additional_images/chanel dokun - story individual/chanel dokun.jpg",
+          "alt": "Portrait of a founder in conversation.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 40
     },
     {
       "id": "practical-tools",
@@ -176,10 +186,20 @@
       ],
       "image": {
         "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
-        "alt": "Guests gathered around a dinner table."
+        "alt": "Guests gathered around a dinner table.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/additional_images/Blind Dinner 1 photos/444-IMG_5940.JPEG",
+          "alt": "Guests gathered around a dinner table.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 50
     },
     {
       "id": "ai-done-properly",
@@ -191,10 +211,20 @@
       ],
       "image": {
         "src": "assets/images/butler-7.jpg",
-        "alt": "Portrait with bold color styling."
+        "alt": "Portrait with bold color styling.",
+        "href": ""
       },
       "layout": "image-left",
-      "theme": "paper"
+      "theme": "paper",
+      "images": [
+        {
+          "src": "assets/images/butler-7.jpg",
+          "alt": "Portrait with bold color styling.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 60
     },
     {
       "id": "pricing-reality-check",
@@ -219,10 +249,20 @@
       ],
       "image": {
         "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 10.jpg",
-        "alt": "Amanda Johnson seated in a studio portrait."
+        "alt": "Amanda Johnson seated in a studio portrait.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 10.jpg",
+          "alt": "Amanda Johnson seated in a studio portrait.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 70
     },
     {
       "id": "should-i-launch-this",
@@ -245,10 +285,20 @@
       ],
       "image": {
         "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
-        "alt": "Colorful portrait against patterned fabric."
+        "alt": "Colorful portrait against patterned fabric.",
+        "href": ""
       },
       "layout": "image-left",
-      "theme": "paper"
+      "theme": "paper",
+      "images": [
+        {
+          "src": "assets/images/Thandiwe-Muriu-Camo-16.jpg",
+          "alt": "Colorful portrait against patterned fabric.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 80
     },
     {
       "id": "vendor-partnership-checklist",
@@ -274,10 +324,20 @@
       ],
       "image": {
         "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
-        "alt": "Founder portrait in studio light."
+        "alt": "Founder portrait in studio light.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/additional_images/chanel dokun - story individual/Chanel-Dokun.jpeg",
+          "alt": "Founder portrait in studio light.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 90
     },
     {
       "id": "capital-fit-funding-decisions",
@@ -303,10 +363,20 @@
       ],
       "image": {
         "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
-        "alt": "Detailed portrait with layered color and texture."
+        "alt": "Detailed portrait with layered color and texture.",
+        "href": ""
       },
       "layout": "image-left",
-      "theme": "paper"
+      "theme": "paper",
+      "images": [
+        {
+          "src": "assets/images/Butler-Indi-10Det1-1920x1438.jpg",
+          "alt": "Detailed portrait with layered color and texture.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 100
     },
     {
       "id": "ai-when-to-use-it",
@@ -330,10 +400,20 @@
       ],
       "image": {
         "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg",
-        "alt": "Editorial portrait with bold pattern and color."
+        "alt": "Editorial portrait with bold pattern and color.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/s_E521675FD7161C8DBA81737FF2977B200D5AF776D94CCDE084483E84D1E6E5D1_1716565825286_04-Discord.jpg",
+          "alt": "Editorial portrait with bold pattern and color.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 110
     },
     {
       "id": "real-life-decisions",
@@ -360,10 +440,20 @@
       ],
       "image": {
         "src": "assets/images/1muriu-8-scaled.jpg",
-        "alt": "Portrait framed by high-contrast patterns."
+        "alt": "Portrait framed by high-contrast patterns.",
+        "href": ""
       },
       "layout": "image-left",
-      "theme": "paper"
+      "theme": "paper",
+      "images": [
+        {
+          "src": "assets/images/1muriu-8-scaled.jpg",
+          "alt": "Portrait framed by high-contrast patterns.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 120
     },
     {
       "id": "live-sessions",
@@ -384,33 +474,37 @@
       ],
       "image": {
         "src": "assets/images/muriu-6-scaled.jpg",
-        "alt": "Portrait framed by soft light."
+        "alt": "Portrait framed by soft light.",
+        "href": ""
       },
       "layout": "image-right",
-      "theme": "light"
+      "theme": "light",
+      "images": [
+        {
+          "src": "assets/images/muriu-6-scaled.jpg",
+          "alt": "Portrait framed by soft light.",
+          "href": ""
+        }
+      ],
+      "enabled": false,
+      "displayOrder": 130
     },
     {
       "id": "who-this-is-for",
       "type": "closing",
-      "eyebrow": "Membership",
-      "title": "Join The Decision Room",
-      "body": [
-        "If you're serious about building something that lasts, come inside.",
-        "$39 per month or $390 per year (2 months free)"
-      ],
+      "theme": "ink",
+      "title": "Membership is intentionally limited.",
+      "eyebrow": "",
+      "body": [],
       "ctas": [
         {
-          "label": "Join The Decision Room",
-          "href": "https://www.cupcakesandbroccoli.com/join?autojoin=1#the-decision-room-link",
+          "label": "Explore Membership with Amanda",
+          "href": "mailto:amanda@cupcakesandbroccoli.com?subject=The%20Decision%20Room",
           "variant": "primary"
-        },
-        {
-          "label": "Member Login",
-          "href": "/login",
-          "variant": "ghost"
         }
       ],
-      "theme": "ink"
+      "enabled": true,
+      "displayOrder": 30
     }
   ]
 }

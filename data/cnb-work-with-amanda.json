@@ -1,6 +1,6 @@
 {
   "page": "work-with-amanda",
-  "version": "2026-03-08-work-with-amanda-feb-language",
+  "version": "2026-09-12-phase1a-content",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,148 +63,275 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Work With Amanda",
-      "title": "Work with Amanda when the stakes are real.",
-      "subhead": "You are stuck on a decision and do not want opinions from ten different people. You want clarity.",
-      "body": [
-        "Whether you need to solve one pressing problem or move through a major shift, the work is focused, direct, and designed to move something forward."
-      ],
-      "ctas": [
+      "theme": "light",
+      "title": "Executive strategy for organizations navigating change.",
+      "subhead": "Fractional Chief Marketing Officer • Marketing Transformation • Strategic Advisory",
+      "note": "Consulting",
+      "image": {
+        "src": "assets/images/phase1a/work-with-amanda-hero-image.webp",
+        "alt": "Amanda Johnson",
+        "href": ""
+      },
+      "images": [
         {
-          "label": "Apply for Business Counsel",
-          "href": "/apply-business-counsel",
-          "variant": "primary"
-        },
-        {
-          "label": "Apply to Work Together",
-          "href": "/apply-strategic-partnership",
-          "variant": "ghost"
+          "src": "assets/images/phase1a/work-with-amanda-hero-image.webp",
+          "alt": "Amanda Johnson",
+          "href": ""
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 3.jpg",
-        "alt": "Amanda Johnson in a studio portrait."
-      },
-      "theme": "light"
+      "body": [],
+      "ctas": [
+        {
+          "label": "Download CV",
+          "href": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-consulting-cv.pdf",
+          "variant": "primary"
+        }
+      ],
+      "enabled": true,
+      "displayOrder": 10
     },
     {
       "id": "business-counsel",
       "type": "feature",
-      "eyebrow": "Business Counsel",
-      "title": "One focused session. One real problem.",
-      "body": [
-        "$350 per session.",
-        "Business Counsel is for moments when something is keeping you up at night."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "You are questioning your pricing and need a grounded outside read",
-        "You are considering a collaboration, partnership, or influencer deal and want to structure it properly",
-        "You are thinking about firing a client, hiring someone new, or making a structural shift",
-        "You are deciding whether to finally launch the idea you have been building on nights and weekends",
-        "You are stuck between two real options and need to choose"
-      ],
-      "bodyAfter": [
-        "What happens in the session: you explain the situation, we identify the real issue, we lay out your options clearly, we pressure-test the risks, and you leave knowing what to do next.",
-        "No ongoing commitment. No long contract. No vague advice. Just clarity.",
-        "Sessions are limited each month to ensure focus and depth."
-      ],
-      "ctas": [
+      "layout": "image-right",
+      "theme": "paper",
+      "title": "Building cultural relevance through authentic storytelling.",
+      "eyebrow": "American Express",
+      "image": {
+        "src": "assets/images/phase1a/work-with-amanda-business-counsel-image.webp",
+        "alt": "American Express selected engagement",
+        "href": ""
+      },
+      "images": [
         {
-          "label": "Apply for Business Counsel",
-          "href": "/apply-business-counsel",
-          "variant": "primary"
+          "src": "assets/images/phase1a/work-with-amanda-business-counsel-image.webp",
+          "alt": "American Express selected engagement",
+          "href": ""
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 5.jpg",
-        "alt": "Amanda Johnson in a close studio portrait."
-      },
-      "layout": "image-right",
-      "theme": "paper"
+      "body": [
+        "#ExpressYourSelfie campaign during Pride."
+      ],
+      "bodyAfter": [],
+      "list": [],
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 30
     },
     {
       "id": "strategic-partnership",
       "type": "feature",
-      "eyebrow": "Strategic Partnership",
-      "title": "For big moves that need serious alignment.",
-      "body": [
-        "This is deeper work.",
-        "If you are preparing for a launch, growth phase, repositioning, or major shift, we can work together in a defined engagement."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "Leading a rebrand of a core product or service that has outgrown its original look and message",
-        "Project managing a website rebuild so it reflects the business you have actually become",
-        "Designing a practical social media strategy for a small but serious team",
-        "Reviewing your product or service mix to decide what to cut, keep, or prioritize",
-        "Building a clear go-to-market plan for a new offering"
-      ],
-      "bodyAfter": [
-        "How it works: clear scope, defined timeline, focused objectives, and limited engagements.",
-        "This is not an open-ended retainer. It is structured work designed to move something forward.",
-        "If you are serious about leveling up your marketing, apply below."
-      ],
-      "ctas": [
+      "layout": "image-left",
+      "theme": "light",
+      "title": "Transforming an awards show into a year-round marketing platform.",
+      "eyebrow": "Out100 Gala",
+      "image": {
+        "src": "assets/images/phase1a/work-with-amanda-strategic-partnership-image.webp",
+        "alt": "Out100 Gala selected engagement",
+        "href": ""
+      },
+      "images": [
         {
-          "label": "Apply to Work Together",
-          "href": "/apply-strategic-partnership",
-          "variant": "primary"
+          "src": "assets/images/phase1a/work-with-amanda-strategic-partnership-image.webp",
+          "alt": "Out100 Gala selected engagement",
+          "href": ""
         }
       ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 7.jpg",
-        "alt": "Amanda Johnson in a studio portrait with hand at chin."
-      },
-      "layout": "image-left",
-      "theme": "light"
+      "body": [
+        "$2.5M+ in advertising and sponsorship revenue."
+      ],
+      "bodyAfter": [],
+      "list": [],
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 31
     },
     {
       "id": "from-clients",
       "type": "feature",
-      "eyebrow": "From Clients",
-      "title": "What clients say about the work.",
-      "body": [
-        "Clients consistently describe Amanda as sharp, direct, empathetic, and deeply invested in the work itself."
-      ],
       "listVariant": "card-stack",
-      "list": [
-        "\"She had some really stellar concepts... She knew how to hit the mark.\" - Joe Landry, Former Publisher, Men's Fashion & Lifestyle Magazine",
-        "\"Amanda is one of the most intelligent humans I have ever had the pleasure of working with... She really puts herself in the shoes of the other person.\" - Andres Toro, Fractional CMO & Marketing Consultant",
-        "\"She can build you out a roadmap that is not necessarily going to be like a short-term one-and-done project.\" - John McCourt, Communications & Social Impact Leader",
-        "\"She actually cares. She connects herself to the business... it is almost as if it is hers too.\" - Monique Kofsky, Founder & CEO, Product-Based Brand",
-        "\"I see her as like a partner in transformation.\" - Ashley Tsai, Analytics & Media Executive",
-        "\"The ROI is significant.\" - Vanessa Tiongson, Chief Marketing Officer"
-      ],
-      "image": {
-        "src": "assets/images/additional_images/amanda professional photos of her/Amanda - 11.jpg",
-        "alt": "Amanda Johnson in a hooded studio portrait."
-      },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "title": "Leading digital transformation across more than 40 countries.",
+      "eyebrow": "Matrix Professional",
+      "image": {
+        "src": "assets/images/phase1a/work-with-amanda-from-clients-image.webp",
+        "alt": "Matrix Professional selected engagement",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/work-with-amanda-from-clients-image.webp",
+          "alt": "Matrix Professional selected engagement",
+          "href": ""
+        }
+      ],
+      "body": [
+        "Global strategy. Local execution."
+      ],
+      "list": [],
+      "enabled": true,
+      "displayOrder": 32
     },
     {
       "id": "closing",
       "type": "closing",
-      "eyebrow": "How To Start",
-      "title": "Choose the engagement that matches the move you need to make.",
+      "theme": "ink",
+      "title": "Selected Engagements",
+      "eyebrow": "",
       "body": [
-        "Business Counsel is right for one urgent decision that needs focused clarity.",
-        "Strategic Partnership is right for larger moves that need scope, alignment, and follow-through."
+        "A selection of work spanning media, healthcare, technology, beauty and consumer brands."
       ],
-      "ctas": [
+      "ctas": [],
+      "enabled": true,
+      "displayOrder": 20
+    },
+    {
+      "id": "engagement-blooming-haus",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
         {
-          "label": "Apply for Business Counsel",
-          "href": "/apply-business-counsel",
-          "variant": "primary"
+          "type": "title",
+          "value": "Helping the founders become the face of a global luxury brand."
         },
         {
-          "label": "Apply to Work Together",
-          "href": "/apply-strategic-partnership",
-          "variant": "ghost"
+          "type": "eyebrow",
+          "value": "Blooming Haus"
+        },
+        {
+          "type": "paragraph",
+          "value": "Fractional Chief Marketing Officer."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/work-with-amanda-engagement-blooming-haus-image.webp",
+          "src": "assets/images/phase1a/work-with-amanda-engagement-blooming-haus-image.webp",
+          "alt": "Blooming Haus selected engagement"
         }
       ],
-      "theme": "ink"
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 33
+    },
+    {
+      "id": "engagement-biolage-raw",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Launching a new brand inside one of beauty's most iconic portfolios."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Biolage RAW"
+        },
+        {
+          "type": "paragraph",
+          "value": "Global launch strategy and campaign development."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/work-with-amanda-engagement-biolage-raw-image.webp",
+          "src": "assets/images/phase1a/work-with-amanda-engagement-biolage-raw-image.webp",
+          "alt": "Biolage RAW selected engagement"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 34
+    },
+    {
+      "id": "engagement-gilead-sciences",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Turning complex healthcare topics into human stories."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Gilead Sciences"
+        },
+        {
+          "type": "paragraph",
+          "value": "Documentary-style branded content."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/work-with-amanda-engagement-gilead-sciences-image.webp",
+          "src": "assets/images/phase1a/work-with-amanda-engagement-gilead-sciences-image.webp",
+          "alt": "Gilead Sciences selected engagement"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 35
+    },
+    {
+      "id": "engagement-butter-lye",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Building a premium brand from the ground up."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Butter & Lye"
+        },
+        {
+          "type": "paragraph",
+          "value": "Brand strategy, positioning and transformation."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/work-with-amanda-engagement-butter-lye-image.webp",
+          "src": "assets/images/phase1a/work-with-amanda-engagement-butter-lye-image.webp",
+          "alt": "Butter & Lye selected engagement"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 36
+    },
+    {
+      "id": "engagement-upstream",
+      "type": "custom",
+      "cmsLayout": "image-right",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "Keeping an industry moving forward during a global shutdown."
+        },
+        {
+          "type": "eyebrow",
+          "value": "Upstream"
+        },
+        {
+          "type": "paragraph",
+          "value": "Virtual event strategy during COVID-19."
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/work-with-amanda-engagement-upstream-image.webp",
+          "src": "assets/images/phase1a/work-with-amanda-engagement-upstream-image.webp",
+          "alt": "Upstream selected engagement"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 37
     }
   ]
 }

@@ -1,0 +1,555 @@
+[
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "The Blind Dinner",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "Sometimes the most important table isn't the one you're invited to.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Image",
+    "value": "assets/images/phase1a/blind-dinners-hero-image.webp",
+    "link": "",
+    "notes": "The Blind Dinner gathering"
+  },
+  {
+    "section": "what-it-is",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Title",
+    "value": "The Blind Dinner",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Body 1",
+    "value": "The Blind Dinner is an intentionally curated gathering of accomplished strangers who come together for an evening of honest conversation, genuine connection and unexpected possibility.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Image",
+    "value": "assets/images/phase1a/blind-dinners-what-it-is-image.webp",
+    "link": "",
+    "notes": "A dish prepared for The Blind Dinner"
+  },
+  {
+    "section": "who-comes",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Title",
+    "value": "Guests come as strangers.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Body 1",
+    "value": "They leave as collaborators, trusted advisors and lifelong friends.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Image",
+    "value": "assets/images/phase1a/blind-dinners-who-comes-image.webp",
+    "link": "",
+    "notes": "Guests at The Blind Dinner"
+  },
+  {
+    "section": "how-it-works",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Display Order",
+    "value": "40",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Eyebrow",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Title",
+    "value": "By invitation only.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Body 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Body 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "List 1",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "List 2",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "List 3",
+    "value": "",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Image",
+    "value": "assets/images/phase1a/blind-dinners-how-it-works-image.webp",
+    "link": "",
+    "notes": "Conversation at The Blind Dinner"
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Show Section?",
+    "value": "No",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Display Order",
+    "value": "50",
+    "link": "",
+    "notes": "Lower numbers appear first."
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Eyebrow",
+    "value": "The Decision Room",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Title",
+    "value": "Thoughtful invitations start with shared context.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Body 1",
+    "value": "Invitations are extended thoughtfully and intentionally.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "Body 2",
+    "value": "If you are interested in future invitations, The Decision Room is the first place to begin building shared language, trust, and alignment.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "relationship-to-membership",
+    "field": "CTA 1",
+    "value": "Explore The Decision Room",
+    "link": "/membership",
+    "notes": "primary"
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Subhead",
+    "value": "It's the one you build yourself.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-it-is",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "who-comes",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "how-it-works",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Display Order",
+    "value": "50",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Section Layout",
+    "value": "Gallery",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Title",
+    "value": "The Blind Dinner",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Image 1",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-1.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Image 2",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-2.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-1",
+    "field": "Image 3",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-3.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Display Order",
+    "value": "51",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Section Layout",
+    "value": "Gallery",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Image 1",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-1.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Image 2",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-2.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-2",
+    "field": "Image 3",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-3.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Display Order",
+    "value": "52",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Section Layout",
+    "value": "Gallery",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Image 1",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-1.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Image 2",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-2.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-3",
+    "field": "Image 3",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-3.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Display Order",
+    "value": "53",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Section Layout",
+    "value": "Gallery",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Image 1",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-1.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Image 2",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-2.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  },
+  {
+    "section": "dinner-gallery-4",
+    "field": "Image 3",
+    "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-3.webp",
+    "link": "",
+    "notes": "Moments from The Blind Dinner"
+  }
+]

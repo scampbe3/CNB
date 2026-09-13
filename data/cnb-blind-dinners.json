@@ -1,6 +1,6 @@
 {
   "page": "blind-dinners",
-  "version": "2026-03-08-blind-dinners-feb-language",
+  "version": "2026-09-12-phase1a-content",
   "header": {
     "title": "Cupcakes + Broccoli",
     "logo": "assets/images/cb-icon-white.png",
@@ -63,70 +63,100 @@
     {
       "id": "hero",
       "type": "hero",
-      "note": "Blind Dinners",
-      "title": "Where titles fade and people have real talk.",
-      "body": [
-        "Blind Dinners are small, invitation-only gatherings Amanda hosts and cooks herself.",
-        "Guests do not know who else is attending until they arrive.",
-        "The room brings together founders, creatives, executives, and builders from different backgrounds to talk honestly about business, ownership, and navigating rooms that were not built for us."
-      ],
+      "theme": "light",
+      "title": "Sometimes the most important table isn't the one you're invited to.",
+      "subhead": "It's the one you build yourself.",
+      "note": "The Blind Dinner",
       "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/475-IMG_5974.JPEG",
-        "alt": "Guests sharing a meal at a long table."
+        "src": "assets/images/phase1a/blind-dinners-hero-image.webp",
+        "alt": "The Blind Dinner gathering",
+        "href": ""
       },
-      "theme": "light"
+      "images": [
+        {
+          "src": "assets/images/phase1a/blind-dinners-hero-image.webp",
+          "alt": "The Blind Dinner gathering",
+          "href": ""
+        }
+      ],
+      "body": [],
+      "enabled": true,
+      "displayOrder": 10
     },
     {
       "id": "what-it-is",
       "type": "feature",
-      "eyebrow": "The Room",
-      "title": "Hosted at home, built for honest conversation.",
-      "body": [
-        "Blind Dinners are intimate by design. They are not events built for visibility. They are rooms built for trust."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/334-IMG_5725.JPEG",
-        "alt": "A plated dish prepared for a dinner guest."
-      },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "title": "The Blind Dinner",
+      "eyebrow": "",
+      "image": {
+        "src": "assets/images/phase1a/blind-dinners-what-it-is-image.webp",
+        "alt": "A dish prepared for The Blind Dinner",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/blind-dinners-what-it-is-image.webp",
+          "alt": "A dish prepared for The Blind Dinner",
+          "href": ""
+        }
+      ],
+      "body": [
+        "The Blind Dinner is an intentionally curated gathering of accomplished strangers who come together for an evening of honest conversation, genuine connection and unexpected possibility."
+      ],
+      "enabled": true,
+      "displayOrder": 20
     },
     {
       "id": "who-comes",
       "type": "feature",
-      "eyebrow": "Who Comes",
-      "title": "Founders, creatives, executives, and builders in one room.",
-      "body": [
-        "The mix matters. Different backgrounds create better conversation, sharper perspective, and a different kind of honesty."
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/433-IMG_5918.JPEG",
-        "alt": "A dinner guest serving food to the table."
-      },
       "layout": "image-left",
-      "theme": "light"
+      "theme": "light",
+      "title": "Guests come as strangers.",
+      "eyebrow": "",
+      "image": {
+        "src": "assets/images/phase1a/blind-dinners-who-comes-image.webp",
+        "alt": "Guests at The Blind Dinner",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/blind-dinners-who-comes-image.webp",
+          "alt": "Guests at The Blind Dinner",
+          "href": ""
+        }
+      ],
+      "body": [
+        "They leave as collaborators, trusted advisors and lifelong friends."
+      ],
+      "enabled": true,
+      "displayOrder": 30
     },
     {
       "id": "how-it-works",
       "type": "feature",
-      "eyebrow": "Format",
-      "title": "No panels. No speakers. No networking scripts.",
-      "body": [
-        "There are no panels, no speakers, and no name tags.",
-        "Just real conversation around the table."
-      ],
       "listVariant": "card-grid",
-      "list": [
-        "Private by design",
-        "Conversation over performance",
-        "Shared perspective over surface networking"
-      ],
-      "image": {
-        "src": "assets/images/additional_images/Blind Dinner 1 photos/499-IMG_6013.JPEG",
-        "alt": "Guests in candid conversation at a candlelit dinner."
-      },
       "layout": "image-right",
-      "theme": "paper"
+      "theme": "paper",
+      "title": "By invitation only.",
+      "eyebrow": "",
+      "image": {
+        "src": "assets/images/phase1a/blind-dinners-how-it-works-image.webp",
+        "alt": "Conversation at The Blind Dinner",
+        "href": ""
+      },
+      "images": [
+        {
+          "src": "assets/images/phase1a/blind-dinners-how-it-works-image.webp",
+          "alt": "Conversation at The Blind Dinner",
+          "href": ""
+        }
+      ],
+      "body": [],
+      "list": [],
+      "enabled": true,
+      "displayOrder": 40
     },
     {
       "id": "relationship-to-membership",
@@ -144,7 +174,129 @@
           "variant": "primary"
         }
       ],
-      "theme": "ink"
+      "theme": "ink",
+      "enabled": false,
+      "displayOrder": 50
+    },
+    {
+      "id": "dinner-gallery-1",
+      "type": "custom",
+      "cmsLayout": "gallery",
+      "blocks": [
+        {
+          "type": "title",
+          "value": "The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-1.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-1.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-2.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-2.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-3.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-1-image-3.webp",
+          "alt": "Moments from The Blind Dinner"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 50
+    },
+    {
+      "id": "dinner-gallery-2",
+      "type": "custom",
+      "cmsLayout": "gallery",
+      "blocks": [
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-1.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-1.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-2.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-2.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-3.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-2-image-3.webp",
+          "alt": "Moments from The Blind Dinner"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 51
+    },
+    {
+      "id": "dinner-gallery-3",
+      "type": "custom",
+      "cmsLayout": "gallery",
+      "blocks": [
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-1.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-1.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-2.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-2.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-3.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-3-image-3.webp",
+          "alt": "Moments from The Blind Dinner"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 52
+    },
+    {
+      "id": "dinner-gallery-4",
+      "type": "custom",
+      "cmsLayout": "gallery",
+      "blocks": [
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-1.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-1.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-2.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-2.webp",
+          "alt": "Moments from The Blind Dinner"
+        },
+        {
+          "type": "image",
+          "value": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-3.webp",
+          "src": "assets/images/phase1a/blind-dinners-dinner-gallery-4-image-3.webp",
+          "alt": "Moments from The Blind Dinner"
+        }
+      ],
+      "theme": "paper",
+      "listVariant": "card-stack",
+      "enabled": true,
+      "displayOrder": 53
     }
   ]
 }

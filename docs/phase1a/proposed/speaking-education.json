@@ -1,0 +1,471 @@
+[
+  {
+    "section": "hero",
+    "field": "Display Order",
+    "value": "10",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Title",
+    "value": "Preparing people for the decisions that matter.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Note",
+    "value": "Speaking & Education",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "Body 1",
+    "value": "Business is more than a career. It's a framework for solving problems, recognizing opportunities and building a life with intention.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "hero",
+    "field": "CTA 1",
+    "value": "Download CV",
+    "link": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-education-cv.pdf",
+    "notes": "primary"
+  },
+  {
+    "section": "hero",
+    "field": "CTA 2",
+    "value": "Download Teaching Philosophy",
+    "link": "https://cdn.jsdelivr.net/gh/scampbe3/CNB@main/assets/docs/phase1a/amanda-johnson-teaching-philosophy.pdf",
+    "notes": "ghost"
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Display Order",
+    "value": "20",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Title",
+    "value": "Teaching Philosophy",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Paragraph 1",
+    "value": "In an age where information is abundant and AI can generate answers in seconds, I believe the greatest competitive advantage isn't knowing more. It's developing the judgment to ask better questions, recognize opportunities and make thoughtful decisions.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Paragraph 2",
+    "value": "Whether I'm teaching university students, facilitating executive workshops or speaking at conferences, my goal is to connect theory with practice through discussion, current events and real-world business cases.",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "teaching-philosophy",
+    "field": "Image",
+    "value": "assets/images/phase1a/speaking-education-teaching-philosophy-image.webp",
+    "link": "",
+    "notes": "Amanda speaking on stage"
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Display Order",
+    "value": "30",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "Title",
+    "value": "Speaking Topics",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 1",
+    "value": "Artificial Intelligence",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 2",
+    "value": "Marketing Strategy",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 3",
+    "value": "Brand Strategy",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 4",
+    "value": "Strategic Decision-Making",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 5",
+    "value": "Entrepreneurship",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 6",
+    "value": "Executive Leadership",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 7",
+    "value": "Journalism & Media",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "speaking-topics",
+    "field": "List Item 8",
+    "value": "Storytelling & Communications",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Display Order",
+    "value": "40",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Section Layout",
+    "value": "Text Only",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "what-people-say",
+    "field": "Title",
+    "value": "What People Say",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Display Order",
+    "value": "41",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Section Layout",
+    "value": "Image Left",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Title",
+    "value": "John McCourt",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Quote 1",
+    "value": "I am the executive I am today because she taught me how to think.",
+    "link": "",
+    "notes": "John McCourt, Senior Vice President, Social Impact, Weber Shandwick"
+  },
+  {
+    "section": "testimonial-john",
+    "field": "Image",
+    "value": "assets/images/phase1a/speaking-education-testimonial-john-image.webp",
+    "link": "",
+    "notes": "John McCourt"
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Display Order",
+    "value": "42",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Section Layout",
+    "value": "Image Right",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Title",
+    "value": "Leon Wiles",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Quote 1",
+    "value": "Amanda has the unique ability to connect academic concepts with real-world business experience, helping students understand not just what works, but why it works.",
+    "link": "",
+    "notes": "Leon Wiles, Educational Consultant; Former Chief Diversity Officer, Clemson University; Former Vice Chancellor for Student & Diversity Affairs, University of South Carolina Upstate"
+  },
+  {
+    "section": "testimonial-leon",
+    "field": "Image",
+    "value": "assets/images/phase1a/speaking-education-testimonial-leon-image.webp",
+    "link": "",
+    "notes": "Leon Wiles"
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Display Order",
+    "value": "43",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Show Section?",
+    "value": "Yes",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Content Mode",
+    "value": "Flexible",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Section Layout",
+    "value": "Image Left",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Section Theme",
+    "value": "paper",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "List Style",
+    "value": "Card Stack",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Title",
+    "value": "Joe Valentino",
+    "link": "",
+    "notes": ""
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Quote 1",
+    "value": "Amanda is a natural communicator who understands how to connect authentically with people.",
+    "link": "",
+    "notes": "Joe Valentino, Executive Vice President, Commercial Growth, Strategic Partnerships, Board Director & Strategic Advisor, equalpride"
+  },
+  {
+    "section": "testimonial-joe",
+    "field": "Image",
+    "value": "assets/images/phase1a/speaking-education-testimonial-joe-image.webp",
+    "link": "",
+    "notes": "Joe Valentino"
+  }
+]

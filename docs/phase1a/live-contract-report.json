@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "new-page-test-3",
+    "gid": 1699360495,
+    "mount": "<div data-cnb-home-root>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=1699360495&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "about",
+    "gid": 679707562,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"About\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=679707562&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=679707562&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "membership",
+    "gid": 500345497,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"membership\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=500345497&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=500345497&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "work-with-amanda",
+    "gid": 1124001858,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"work-with-amanda\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=1124001858&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=1124001858&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "learn",
+    "gid": 370763382,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"learn\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=370763382&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=370763382&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "blind-dinners",
+    "gid": 146642427,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"blind-dinners\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=146642427&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=146642427&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "stories",
+    "gid": 429327426,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"stories\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=429327426&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=429327426&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "apply-business-counsel",
+    "gid": 35334212,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"apply-business-counsel\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=35334212&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=35334212&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "apply-strategic-partnership",
+    "gid": 532129066,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"apply-strategic-partnership\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=532129066&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=532129066&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "thank-you-business-counsel",
+    "gid": 739690775,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"thank-you-business-counsel\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=739690775&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=739690775&single=true&output=csv",
+    "changedSinceBaseline": false
+  },
+  {
+    "slug": "thank-you-strategic-partnership",
+    "gid": 1359088875,
+    "mount": "<div\n  data-cnb-home-root\n  data-cnb-page=\"thank-you-strategic-partnership\"\n  data-cnb-src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=1359088875&single=true&output=csv\"\n>",
+    "connection": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSLEkKnYnuBnC6T_dS2MAaW5jpJVh3SRHiAo-3vpNUqq1aj5SPmbQY-lrEeEVleHyhQlsoYOE0_S0WS/pub?gid=1359088875&single=true&output=csv",
+    "changedSinceBaseline": false
+  }
+]
