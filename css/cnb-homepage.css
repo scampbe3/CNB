@@ -971,6 +971,19 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
     order: -1;
   }
 
+  body.cnb-page-blind-dinners #hero {
+    --cnb-blind-dinner-hero-gap: clamp(26px, 4.8vw, 80px);
+  }
+
+  body.cnb-page-blind-dinners #hero .cnb-home-grid.hero {
+    gap: var(--cnb-blind-dinner-hero-gap);
+  }
+
+  body.cnb-page-blind-dinners #hero .cnb-home-hero-top {
+    width: calc((100% - var(--cnb-blind-dinner-hero-gap)) * 0.425);
+    margin-left: calc((100% - var(--cnb-blind-dinner-hero-gap)) * 0.575 + var(--cnb-blind-dinner-hero-gap));
+  }
+
   body.cnb-page-blind-dinners #who-comes {
     grid-column: 1;
   }
