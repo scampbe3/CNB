@@ -1,6 +1,6 @@
 # C+B Member Portal Architecture and Implementation Plan
 
-Status: implemented locally; hosted integration and launch acceptance pending
+Status: deployed to isolated staging; Google/email integration and client launch acceptance pending
 
 Primary product source: `Website Language.pdf`, pages 7-9
 

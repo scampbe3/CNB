@@ -538,29 +538,25 @@ async function perform(form: FormData): Promise<FormState> {
         .from("editorial-images")
         .upload(path, bytes, { contentType: "image/webp" }),
     );
-    const inserted = await db
-      .from("editorial_media")
-      .insert({
-        id: assetId,
-        path,
-        name: file.name.slice(0, 180),
-        alt,
-        bytes: bytes.length,
-        width: info.width,
-        height: info.height,
-      });
+    const inserted = await db.from("editorial_media").insert({
+      id: assetId,
+      path,
+      name: file.name.slice(0, 180),
+      alt,
+      bytes: bytes.length,
+      width: info.width,
+      height: info.height,
+    });
     if (inserted.error) {
       await db.storage.from("editorial-images").remove([path]);
       checked(inserted);
     }
     checked(
-      await db
-        .from("audit_events")
-        .insert({
-          actor_id: user.id,
-          action: "admin-media-upload",
-          target: assetId,
-        }),
+      await db.from("audit_events").insert({
+        actor_id: user.id,
+        action: "admin-media-upload",
+        target: assetId,
+      }),
     );
     revalidatePath("/admin/media");
     return { success: `Image uploaded. Image Asset ID: ${assetId}` };

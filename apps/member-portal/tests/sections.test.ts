@@ -1,6 +1,20 @@
 import { expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import vm from "node:vm";
+it("local and staging Auth allow email login while blocking public registration", () => {
+  for (const path of [
+    "../../supabase/config.toml",
+    "../../supabase/staging/supabase/config.toml",
+  ]) {
+    const config = readFileSync(path, "utf8");
+    expect(config.match(/\[auth\]([\s\S]*?)\[auth.email\]/)?.[1]).toContain(
+      "enable_signup = false",
+    );
+    expect(config.match(/\[auth.email\]([\s\S]*?)(?:\n\[|$)/)?.[1]).toContain(
+      "enable_signup = true",
+    );
+  }
+});
 import {
   pageSectionSchema,
   validatePageSections,

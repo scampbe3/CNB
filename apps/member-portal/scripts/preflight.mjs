@@ -81,6 +81,23 @@ if (!failures && process.argv.includes("--online")) {
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
     { auth: { persistSession: false } },
   );
+  const authSettingsResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_SUPABASE_URL}/auth/v1/settings`,
+    { headers: { apikey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY } },
+  );
+  const authSettings = await authSettingsResponse.json();
+  check(
+    authSettingsResponse.ok && authSettings.disable_signup === true,
+    "Public Auth signup is disabled",
+  );
+  check(
+    authSettingsResponse.ok && authSettings.external?.email === true,
+    "Email login provider remains enabled",
+  );
+  check(
+    authSettingsResponse.ok && authSettings.external?.anonymous_users === false,
+    "Anonymous Auth is disabled",
+  );
   const delivery = await db
     .from("email_outbox")
     .select("id,delivery_payload,needs_review,next_attempt_at,skipped_at", {

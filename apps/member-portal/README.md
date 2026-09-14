@@ -4,6 +4,8 @@ An additive Next.js application for The Decision Room. Squarespace remains the p
 
 ## Start here
 
+Staging login: https://cnb-member-portal.vercel.app/login. Vercel and Supabase are connected; Google publishing, sender configuration and the first real administrator invitation are still pending. The fixed local-demo credentials do not work on staging.
+
 - Deployment and acceptance: [Operations](../../docs/member-portal-operations.md).
 - Amanda's editorial workflow: [Content guide](../../docs/member-portal-content-guide.md).
 - Product scope and implementation differences: [Architecture](../../docs/architecture.md).
@@ -53,7 +55,7 @@ Open `http://127.0.0.1:4190/login`. Use `member@example.test` with password `fix
 
 Playwright runs the real Next.js UI and server actions against an isolated HTTP fixture on loopback. It verifies desktop/mobile flows, navigation, forms, bookmarks, RSVP and automated accessibility checks. Its simulated Auth provider is **test-only**; nothing in the app enables fixture authentication. No actual invitation emails are sent by these tests.
 
-Hosted invitation/reset emails, Storage signed URLs, Google permissions, production DNS and real concurrent network traffic require the staging acceptance pass in the operations guide. Credentials for those services were not available during implementation.
+Hosted password login, active-session checks, directory privacy, admin isolation and suspension were exercised with temporary synthetic identities, which were removed afterward. Hosted invitation/reset delivery, private uploads/signed URLs, Google permissions, production DNS and real concurrent network traffic still require the acceptance pass in the operations guide.
 
 ## No automatic public-site cutover
 

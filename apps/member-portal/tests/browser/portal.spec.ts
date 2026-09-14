@@ -114,7 +114,7 @@ test("published section composition preserves controls and puts mobile images af
       fullPage: true,
     });
     await page.goto("/directory?cms_preview=1");
-  await expect(page.getByRole("main").getByRole("alert")).toContainText(
+    await expect(page.getByRole("main").getByRole("alert")).toContainText(
       "Workbook preview unavailable.",
     );
   } finally {
