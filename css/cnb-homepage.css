@@ -1046,9 +1046,7 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
 
   body.cnb-page-learn #hero .cnb-home-grid.hero {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "title"
-      "media";
+    grid-template-areas: "title";
     gap: 14px;
     text-align: center;
   }
@@ -1064,7 +1062,7 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
   }
 
   body.cnb-page-learn #hero .cnb-home-hero-media {
-    grid-area: media;
+    grid-area: 3 / 1;
     width: min(100%, 720px);
     margin: 0 auto clamp(12px, 2vw, 24px);
   }
@@ -1073,6 +1071,14 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
     grid-column: 1;
     width: min(100%, 780px);
     margin-inline: auto;
+  }
+
+  body.cnb-page-learn #hero .cnb-home-body:nth-of-type(1) {
+    grid-row: 2;
+  }
+
+  body.cnb-page-learn #hero .cnb-home-body:nth-of-type(2) {
+    grid-row: 4;
   }
 }
 
