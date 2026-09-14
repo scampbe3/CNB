@@ -1,0 +1,32 @@
+name: Member Portal
+on:
+  pull_request:
+    paths: ['apps/member-portal/**', 'supabase/**', 'js/cnb-homepage.js', '.github/workflows/member-portal.yml']
+  push:
+    paths: ['apps/member-portal/**', 'supabase/**', 'js/cnb-homepage.js', '.github/workflows/member-portal.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: apps/member-portal
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/member-portal/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: member-portal-browser-results
+          path: apps/member-portal/test-results
+          retention-days: 7

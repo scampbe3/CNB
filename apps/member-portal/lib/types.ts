@@ -1,0 +1,91 @@
+export type Profile = {
+  user_id: string;
+  display_name: string;
+  title: string;
+  company: string;
+  bio: string;
+  city: string;
+  region: string;
+  country: string;
+  avatar_path: string | null;
+  directory_visible: boolean;
+  onboarding_complete: boolean;
+};
+export type Term = {
+  id: string;
+  kind: string;
+  label: string;
+  parent_id: string | null;
+  active: boolean;
+  display_order: number;
+};
+export type Resource = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  body: string;
+  type: string;
+  access: string;
+  status: string;
+  author: string;
+  published_at: string | null;
+  topics: string[];
+  image: string | null;
+  image_alt: string;
+  file_asset_id: string | null;
+  external_url: string | null;
+  display_order: number;
+};
+export type Event = {
+  id: string;
+  type: string;
+  title: string;
+  description: string;
+  starts_at: string;
+  ends_at: string;
+  timezone: string;
+  capacity: number;
+  status: string;
+  location_label: string;
+  image: string | null;
+};
+export type DirectoryMember = Profile & {
+  tags: Pick<Term, "id" | "label" | "kind">[];
+  total: number;
+};
+export type Thread = {
+  id: string;
+  author_id: string;
+  title: string;
+  body: string;
+  status: string;
+  pinned: boolean;
+  created_at: string;
+  author_name: string;
+  author_avatar_path: string | null;
+  reply_count: number;
+  appreciation_count: number;
+  saved: boolean;
+  appreciated: boolean;
+  total: number;
+};
+export type DiscussionReply = {
+  id: string;
+  thread_id: string;
+  author_id: string;
+  author_name: string;
+  author_avatar_path: string | null;
+  body: string;
+  parent_id: string | null;
+  created_at: string;
+  edited_at: string | null;
+};
+export type Intro = {
+  id: string;
+  requester_id: string;
+  target_id: string;
+  context: string;
+  status: string;
+  created_at: string;
+};

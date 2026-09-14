@@ -1,0 +1,17 @@
+node_modules/
+.local/
+.next/
+.next-demo/
+.next-e2e/
+.next-build/
+.env*
+!.env.example
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.vercel/
+cms-templates/portal-starter.zip
+
+.vercel
+.env*

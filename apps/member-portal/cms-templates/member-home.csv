@@ -1,0 +1,12 @@
+section,field,value,link,notes
+hero,Title,Welcome back.,,
+hero,Note,The Decision Room,,
+hero,Subhead,What decision are you thinking through today?,,
+hero,Image,,,Optional approved public HTTPS image URL; leave empty to use the bundled artwork.
+hero,Image Alt,The Decision Room member artwork,,
+the-library,Title,The Library,,
+the-library,Paragraph 1,"Explore essays, decision briefs, AI prompts and member resources.",,
+the-library,Button 1,Open Library,/library,
+in-the-room,Title,In the Room,,
+in-the-room,Paragraph 1,One of the greatest strengths of The Decision Room is the women inside it.,,
+in-the-room,Button 1,Meet the members,/directory,

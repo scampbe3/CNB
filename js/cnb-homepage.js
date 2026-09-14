@@ -217,6 +217,7 @@
     if (!href) return false;
     try {
       const parsed = new URL(String(href), window.location.origin);
+      if (parsed.origin !== window.location.origin) return false;
       const path = parsed.pathname.replace(/\/+$/, "");
       return path === "/login" || path === "/account/login";
     } catch (err) {
