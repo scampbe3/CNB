@@ -1020,7 +1020,7 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
   body.cnb-page-learn #hero .cnb-home-grid.hero {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "title";
-    gap: 14px;
+    gap: 8px;
     text-align: center;
   }
 
@@ -1031,7 +1031,7 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
   body.cnb-page-learn #hero .cnb-home-title {
     grid-area: title;
     width: min(100%, 900px);
-    margin-inline: auto;
+    margin: 0 auto;
   }
 
   body.cnb-page-learn #hero .cnb-home-hero-media {
