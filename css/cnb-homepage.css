@@ -1078,6 +1078,40 @@ body.cnb-page-learn #access-membership .cnb-home-cta-row {
   justify-content: center;
 }
 
+body.cnb-page-learn #access-membership {
+  background:
+    radial-gradient(120% 140% at 50% -10%, rgba(255, 255, 255, 0.16), transparent 60%),
+    #14110f;
+  color: #fff;
+}
+
+body.cnb-page-learn #access-membership::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  opacity: 0.5;
+}
+
+body.cnb-page-learn #access-membership :is(
+  .cnb-home-title,
+  .cnb-home-subhead,
+  .cnb-home-body,
+  .cnb-home-kicker,
+  .cnb-home-eyebrow
+) {
+  color: #fff;
+}
+
+body.cnb-page-learn #access-membership .cnb-home-btn {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: #fff;
+}
+
+body.cnb-page-learn #access-membership .cnb-home-btn.primary {
+  background: #fff;
+  border-color: #fff;
+  color: #14110f;
+}
+
 #dinner-gallery-1 :is(.cnb-home-title, .cnb-cms-heading) {
   display: block;
   width: 100%;
