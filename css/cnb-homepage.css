@@ -1012,33 +1012,6 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
     margin-inline: auto;
   }
 
-  body.cnb-page-learn .cnb-home-root {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  body.cnb-page-learn :is(.cnb-site-header, #hero, .cnb-footer-gap, .cnb-site-footer) {
-    grid-column: 1 / -1;
-  }
-
-  body.cnb-page-learn #what-youll-find {
-    grid-column: 1;
-  }
-
-  body.cnb-page-learn #access-membership {
-    grid-column: 2;
-  }
-
-  body.cnb-page-learn :is(#what-youll-find, #access-membership) {
-    display: flex;
-    align-items: center;
-    min-width: 0;
-  }
-
-  body.cnb-page-learn :is(#what-youll-find, #access-membership) .cnb-home-inner {
-    width: 100%;
-  }
-
   body.cnb-page-learn #hero .cnb-home-hero-top {
     align-items: center;
     text-align: center;
@@ -1080,6 +1053,29 @@ body.cnb-page-membership #whats-inside .cnb-home-list li::before {
   body.cnb-page-learn #hero .cnb-home-body:nth-of-type(2) {
     grid-row: 4;
   }
+}
+
+body.cnb-page-learn :is(#what-youll-find, #access-membership) .cnb-home-grid.split {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.cnb-page-learn :is(#what-youll-find, #access-membership) .cnb-home-copy {
+  width: min(100%, 820px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+body.cnb-page-learn #what-youll-find .cnb-home-list {
+  width: min(100%, 680px);
+  margin-inline: auto;
+}
+
+body.cnb-page-learn #what-youll-find .cnb-home-list li {
+  text-align: center;
+}
+
+body.cnb-page-learn #access-membership .cnb-home-cta-row {
+  justify-content: center;
 }
 
 #dinner-gallery-1 :is(.cnb-home-title, .cnb-cms-heading) {
