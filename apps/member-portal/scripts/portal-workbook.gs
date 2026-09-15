@@ -8,6 +8,7 @@ function cnbPortalMenu() {
     .addSeparator().addItem('Add Library resource','cnbPortalAddResource')
     .addItem('Add advisory board','cnbPortalAddBoard')
     .addItem('Add dinner','cnbPortalAddDinner')
+    .addItem('Import staging editorial demo','cnbPortalImportStagingDemo')
     .addItem('Add taxonomy term','cnbPortalAddTerm')
     .addSeparator().addItem('Add page section','cnbPortalAddSection')
     .addItem('Duplicate selected section','cnbPortalDuplicateSection')
@@ -50,6 +51,38 @@ function cnbPortalAddResource(){cnbPortalRows('Library Resources',[
 function cnbPortalAddBoard(){cnbPortalEvent('Advisory Boards');}
 function cnbPortalAddDinner(){cnbPortalEvent('Blind Dinner Events');}
 function cnbPortalEvent(tab){cnbPortalRows(tab,[['Event ID',Utilities.getUuid()],['Title','New gathering'],['Description',''],['Status','Draft'],['Starts At','2026-10-01T18:00:00-04:00'],['Ends At','2026-10-01T19:30:00-04:00'],['Timezone','America/New_York'],['Capacity','20'],['Location Label','']]);}
+function cnbPortalAppendGroup(tab,key,fields){
+  var sheet=SpreadsheetApp.getActive().getSheetByName(tab);
+  if(!sheet)throw new Error('Missing '+tab+' tab. Import the starter workbook first.');
+  var values=sheet.getDataRange().getDisplayValues();
+  if(values.slice(1).some(function(row){return row[0]===key;}))return false;
+  var rows=fields.map(function(f){return [key,f[0],f[1]||'',f[2]||'',f[3]||''];});
+  var start=sheet.getLastRow()+1;sheet.getRange(start,1,rows.length,5).setNumberFormat('@').setValues(rows);
+  return true;
+}
+function cnbPortalImportStagingDemo(){
+  var ui=SpreadsheetApp.getUi();
+  if(ui.alert('Import staging editorial demo?','Adds four clearly marked demo Library resources and four demo gatherings to this private workbook. Existing rows are not changed.',ui.ButtonSet.YES_NO)!==ui.Button.YES)return;
+  var resources=[
+    ['21000000-0000-4000-8000-000000000001',[['Resource ID','21000000-0000-4000-8000-000000000001'],['Title','Questions before the answer (Demo)'],['Slug','questions-before-the-answer'],['Status','Published'],['Access','Member'],['Type','Essay'],['Summary','A short reflection on improving a consequential decision before trying to resolve it.'],['Body','Begin by naming what would have to be true for each available path to become wise. Then ask which assumption deserves evidence before commitment.'],['Author','The Decision Room'],['Publish Date','2026-09-01T00:00:00-04:00'],['Topic 1','Decision Making'],['Display Order','10']]],
+    ['21000000-0000-4000-8000-000000000002',[['Resource ID','21000000-0000-4000-8000-000000000002'],['Title','A responsible AI conversation (Demo)'],['Slug','responsible-ai-conversation'],['Status','Published'],['Access','Member'],['Type','AI Prompt'],['Summary','Prompts for moving an AI discussion beyond efficiency and toward judgment, accountability, and trust.'],['Body','Use these questions with a leadership team: Where must human judgment remain visible? Who can challenge the system? What would responsible failure look like?'],['Author','The Decision Room'],['Publish Date','2026-09-02T00:00:00-04:00'],['Topic 1','AI'],['Display Order','20']]],
+    ['21000000-0000-4000-8000-000000000003',[['Resource ID','21000000-0000-4000-8000-000000000003'],['Title','The decision-ready board brief (Demo)'],['Slug','board-decision-brief'],['Status','Published'],['Access','Member'],['Type','Decision Brief'],['Summary','A concise structure for giving a board enough context to offer useful counsel.'],['Body','State the decision, the tension, the options already considered, the constraints that cannot move, and the perspective you need from the room.'],['Author','The Decision Room'],['Publish Date','2026-09-03T00:00:00-04:00'],['Topic 1','Leadership'],['Display Order','30']]],
+    ['21000000-0000-4000-8000-000000000004',[['Resource ID','21000000-0000-4000-8000-000000000004'],['Title','Growth without hidden debt (Demo)'],['Slug','growth-without-hidden-debt'],['Status','Published'],['Access','Member'],['Type','Business Case'],['Summary','A fictional case about recognizing when organizational momentum begins borrowing from the future.'],['Body','A founder must choose between a faster milestone and a pace her team can sustain. Consider which signals distinguish healthy stretch from operational debt.'],['Author','The Decision Room'],['Publish Date','2026-09-04T00:00:00-04:00'],['Topic 1','Strategy'],['Display Order','40']]]
+  ];
+  var boards=[
+    ['31000000-0000-4000-8000-000000000001',[['Event ID','31000000-0000-4000-8000-000000000001'],['Title','The September Decision Room (Demo)'],['Description','A facilitated monthly board for one consequential question.'],['Status','Published'],['Starts At','2026-09-19T18:00:00-04:00'],['Ends At','2026-09-19T19:30:00-04:00'],['Timezone','America/New_York'],['Capacity','12'],['Location Label','Private video room']]],
+    ['31000000-0000-4000-8000-000000000002',[['Event ID','31000000-0000-4000-8000-000000000002'],['Title','The October Decision Room (Demo)'],['Description','Bring a live decision and leave with a clearer next move.'],['Status','Published'],['Starts At','2026-10-17T18:00:00-04:00'],['Ends At','2026-10-17T19:30:00-04:00'],['Timezone','America/New_York'],['Capacity','12'],['Location Label','Private video room']]]
+  ];
+  var dinners=[
+    ['31000000-0000-4000-8000-000000000003',[['Event ID','31000000-0000-4000-8000-000000000003'],['Title','A table for better questions (Demo)'],['Description','An intimate dinner shaped around thoughtful conversation rather than networking.'],['Status','Published'],['Starts At','2026-10-03T18:30:00-04:00'],['Ends At','2026-10-03T21:00:00-04:00'],['Timezone','America/New_York'],['Capacity','8'],['Location Label','Washington, DC']]],
+    ['31000000-0000-4000-8000-000000000004',[['Event ID','31000000-0000-4000-8000-000000000004'],['Title','The autumn blind dinner (Demo)'],['Description','A small, confidential table for women navigating meaningful decisions.'],['Status','Published'],['Starts At','2026-11-07T18:30:00-05:00'],['Ends At','2026-11-07T21:00:00-05:00'],['Timezone','America/New_York'],['Capacity','10'],['Location Label','New York, NY']]]
+  ];
+  var added=0;
+  resources.forEach(function(item){if(cnbPortalAppendGroup('Library Resources',item[0],item[1]))added++;});
+  boards.forEach(function(item){if(cnbPortalAppendGroup('Advisory Boards',item[0],item[1]))added++;});
+  dinners.forEach(function(item){if(cnbPortalAppendGroup('Blind Dinner Events',item[0],item[1]))added++;});
+  cnbPortalFormatWorkbook(true);ui.alert('Imported '+added+' staging editorial records. Review them, then use Preview changes before publishing.');
+}
 function cnbPortalAddTerm(){cnbPortalRows('Member Taxonomies',[['Term ID',Utilities.getUuid()],['Kind','expertise'],['Label','New term'],['Parent Term ID',''],['Active','TRUE'],['Display Order','1000']]);}
 
 var CNB_PAGES=['home','library','directory','advisory-boards','community','dinners'];
