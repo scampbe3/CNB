@@ -13,6 +13,8 @@ Use portal Administration for people, invitations, private files, meeting links,
 3. Correct any errors, then choose **Publish changes**. Nothing changes for members until publication succeeds.
 4. Check the portal. Previous publications are listed under **Administration > sheet publishing**. Restore a prior version if needed, giving a reason; update the workbook to match afterward.
 
+Choose **C+B Portal > Format workbook** after importing or whenever the workbook's presentation needs refreshing. It applies the standard header, column widths, wrapping, frozen columns, filters, compact row heights, and a consistent pastel color per record group across all seven tabs. Formatting does not edit CMS values or publish content.
+
 Missing resources/events are archived rather than deleted. Prefer changing `Status` to `Archived` instead of removing rows. Existing saved items and RSVPs keep their permanent IDs. Do not empty a whole populated catalog to remove content.
 
 ## Member Home and portal copy

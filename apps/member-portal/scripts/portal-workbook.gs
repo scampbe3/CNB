@@ -15,7 +15,8 @@ function cnbPortalMenu() {
     .addItem('Archive selected section','cnbPortalArchiveSection')
     .addItem('Open visual page preview','cnbPortalVisualPreview')
     .addItem('Open image library','cnbPortalMediaLibrary')
-    .addSeparator().addItem('Import starter ZIP (empty workbook only)','cnbPortalImportDialog')
+    .addSeparator().addItem('Format workbook','cnbPortalFormatWorkbook')
+    .addItem('Import starter ZIP (empty workbook only)','cnbPortalImportDialog')
     .addToUi();
 }
 function cnbPortalPreview() { cnbPortalSend(true); }
@@ -93,6 +94,41 @@ function cnbPortalSectionDropdowns() {
   var choices={'Page':CNB_PAGES,'Section Type':CNB_TYPES,'Status':['Draft','Published','Archived'],'Theme':['light','lined','black'],'Image Position':['left','right','above','below'],'Data Source':['features','events','connections','content','board','dinner']};
   sheet.getDataRange().getDisplayValues().forEach(function(row,i){if(choices[row[1]])sheet.getRange(i+1,3).setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(choices[row[1]],true).setAllowInvalid(false).build());});
 }
+function cnbPortalFormatWorkbook(silent) {
+  var names=['member-home','Portal Settings','Library Resources','Member Taxonomies','Advisory Boards','Blind Dinner Events','Page Sections'];
+  var palette=['#eef3f7','#f4eef8','#eef6ef','#fbf2e8','#f7ecec','#eef5f4','#f5f2e9','#edf0f8'];
+  var book=SpreadsheetApp.getActive(),formatted=0;
+  names.forEach(function(name){
+    var sheet=book.getSheetByName(name);if(!sheet)return;
+    var lastRow=Math.max(sheet.getLastRow(),1),lastColumn=5;
+    if(sheet.getMaxColumns()<lastColumn)sheet.insertColumnsAfter(sheet.getMaxColumns(),lastColumn-sheet.getMaxColumns());
+    var range=sheet.getRange(1,1,lastRow,lastColumn),values=range.getDisplayValues(),backgrounds=[];
+    var colors={},nextColor=0;
+    values.forEach(function(row,index){
+      if(index===0){backgrounds.push(['#11100f','#11100f','#11100f','#11100f','#11100f']);return;}
+      var key=row[0].trim();
+      if(!key){backgrounds.push(['#ffffff','#ffffff','#ffffff','#ffffff','#ffffff']);return;}
+      if(!colors[key]){colors[key]=palette[nextColor%palette.length];nextColor++;}
+      backgrounds.push([colors[key],colors[key],colors[key],colors[key],colors[key]]);
+    });
+    range.setBackgrounds(backgrounds).setVerticalAlignment('top').setFontFamily('Arial').setFontSize(10);
+    sheet.getRange(1,1,1,lastColumn).setFontWeight('bold').setFontColor('#ffffff').setHorizontalAlignment('left').setVerticalAlignment('middle');
+    sheet.getRange(2,1,Math.max(lastRow-1,1),2).setFontWeight('bold');
+    sheet.getRange(1,3,lastRow,3).setWrap(true);
+    sheet.setFrozenRows(1);sheet.setFrozenColumns(2);sheet.setHiddenGridlines(false);
+    sheet.setColumnWidth(1,220);sheet.setColumnWidth(2,190);sheet.setColumnWidth(3,620);sheet.setColumnWidth(4,280);sheet.setColumnWidth(5,320);
+    sheet.setRowHeight(1,32);if(lastRow>1)sheet.setRowHeights(2,lastRow-1,28);
+    var filter=sheet.getFilter();if(filter)filter.remove();range.createFilter();
+    var seen={};values.slice(1).forEach(function(row,index){
+      var key=row[0].trim();if(!key||seen[key])return;seen[key]=true;
+      sheet.getRange(index+2,1,1,lastColumn).setBorder(true,null,null,null,null,null,'#b8afa6',SpreadsheetApp.BorderStyle.SOLID_MEDIUM);
+    });
+    formatted++;
+  });
+  cnbPortalSectionDropdowns();
+  SpreadsheetApp.flush();
+  if(!silent)SpreadsheetApp.getUi().alert('Formatted '+formatted+' portal tabs. Content values were not changed.');
+}
 function cnbPortalOpen(path) {
   var base=PropertiesService.getScriptProperties().getProperty('PORTAL_URL');
   if(!base || !/^https:\/\/[a-z0-9.-]+(?::\d+)?\/?$/i.test(base)) throw new Error('Configure the HTTPS portal origin in Script Properties first.');
@@ -112,6 +148,6 @@ function cnbPortalImportZip(encoded) {
   var book=SpreadsheetApp.getActive(),blobs=Utilities.unzip(Utilities.newBlob(Utilities.base64Decode(encoded),'application/zip','starter.zip'));
   var parsed={};blobs.forEach(function(blob){var name=blob.getName().split('/').pop().replace(/\.csv$/,'');if(names.indexOf(name)>=0)parsed[name]=Utilities.parseCsv(blob.getDataAsString('UTF-8'));});
   names.forEach(function(name){var sheet=book.getSheetByName(name);if(sheet && sheet.getLastRow()>1)throw new Error('Refusing to overwrite populated tab '+name);if(!parsed[name]||parsed[name][0].join(',')!=='section,field,value,link,notes')throw new Error('Missing or invalid template '+name);});
-  names.forEach(function(name){var sheet=book.getSheetByName(name)||book.insertSheet(name),rows=parsed[name];sheet.getRange(1,1,rows.length,5).setNumberFormat('@').setValues(rows);sheet.setFrozenRows(1);sheet.setColumnWidth(2,180);sheet.setColumnWidth(3,480);sheet.getRange(1,3,rows.length,1).setWrap(true);});
-  cnbPortalSectionDropdowns();return 'Seven tabs imported. Keep this workbook private. Configure its service-account Viewer and publishing settings before previewing.';
+  names.forEach(function(name){var sheet=book.getSheetByName(name)||book.insertSheet(name),rows=parsed[name];sheet.getRange(1,1,rows.length,5).setNumberFormat('@').setValues(rows);});
+  cnbPortalFormatWorkbook(true);return 'Seven tabs imported and formatted. Keep this workbook private. Configure its service-account Viewer and publishing settings before previewing.';
 }
