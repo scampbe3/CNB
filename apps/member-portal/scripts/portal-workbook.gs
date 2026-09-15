@@ -60,6 +60,15 @@ function cnbPortalAppendGroup(tab,key,fields){
   var start=sheet.getLastRow()+1;sheet.getRange(start,1,rows.length,5).setNumberFormat('@').setValues(rows);
   return true;
 }
+function cnbPortalSetDefault(tab,key,field,value){
+  var sheet=SpreadsheetApp.getActive().getSheetByName(tab);
+  if(!sheet)throw new Error('Missing '+tab+' tab. Import the starter workbook first.');
+  var values=sheet.getDataRange().getDisplayValues();
+  for(var i=1;i<values.length;i++){
+    if(values[i][0]===key&&values[i][1]===field){if(!values[i][2])sheet.getRange(i+1,3).setValue(value);return;}
+  }
+  sheet.appendRow([key,field,value,'','Staging default; replace with Amanda-approved community guidelines before launch.']);
+}
 function cnbPortalImportStagingDemo(){
   var ui=SpreadsheetApp.getUi();
   if(ui.alert('Import staging editorial demo?','Adds four clearly marked demo Library resources and four demo gatherings to this private workbook. Existing rows are not changed.',ui.ButtonSet.YES_NO)!==ui.Button.YES)return;
@@ -78,10 +87,13 @@ function cnbPortalImportStagingDemo(){
     ['31000000-0000-4000-8000-000000000004',[['Event ID','31000000-0000-4000-8000-000000000004'],['Title','The autumn blind dinner (Demo)'],['Description','A small, confidential table for women navigating meaningful decisions.'],['Status','Published'],['Starts At','2026-11-07T18:30:00-05:00'],['Ends At','2026-11-07T21:00:00-05:00'],['Timezone','America/New_York'],['Capacity','10'],['Location Label','New York, NY']]]
   ];
   var added=0;
+  var base=PropertiesService.getScriptProperties().getProperty('PORTAL_URL');
+  if(!base||!/^https:\/\//.test(base))throw new Error('Configure the HTTPS portal origin in Script Properties first.');
+  cnbPortalSetDefault('Portal Settings','community','Guidelines URL',base.replace(/\/$/,'')+'/terms');
   resources.forEach(function(item){if(cnbPortalAppendGroup('Library Resources',item[0],item[1]))added++;});
   boards.forEach(function(item){if(cnbPortalAppendGroup('Advisory Boards',item[0],item[1]))added++;});
   dinners.forEach(function(item){if(cnbPortalAppendGroup('Blind Dinner Events',item[0],item[1]))added++;});
-  cnbPortalFormatWorkbook(true);ui.alert('Imported '+added+' staging editorial records. Review them, then use Preview changes before publishing.');
+  cnbPortalFormatWorkbook(true);ui.alert('Imported '+added+' staging editorial records and enabled discussion posting with the staging terms link. Review them, then use Preview changes before publishing.');
 }
 function cnbPortalAddTerm(){cnbPortalRows('Member Taxonomies',[['Term ID',Utilities.getUuid()],['Kind','expertise'],['Label','New term'],['Parent Term ID',''],['Active','TRUE'],['Display Order','1000']]);}
 
