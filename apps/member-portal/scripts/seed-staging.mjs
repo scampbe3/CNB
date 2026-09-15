@@ -66,6 +66,14 @@ const profiles = [
     "I work where reputation, leadership, and change meet. I am usually asking what needs to be said, by whom, and when.",
   ],
 ];
+const avatarVersions = {
+  amara: "amara-v2.webp",
+  imani: "imani-v2.webp",
+  lena: "lena.webp",
+  nia: "nia.webp",
+  simone: "simone-v2.webp",
+  zora: "zora-v2.webp",
+};
 
 const ids = {
   resources: [
@@ -129,7 +137,7 @@ for (const profile of profiles) {
     ).then((data) => data.user);
   }
   const avatarName = profile[0].split(".")[0];
-  const avatarPath = `demo/${avatarName}.webp`;
+  const avatarPath = `demo/${avatarVersions[avatarName]}`;
   const avatar = await readFile(
     new URL(`./demo-avatars/${avatarName}.webp`, import.meta.url),
   );
