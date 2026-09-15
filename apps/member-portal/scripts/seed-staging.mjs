@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { readFile } from "node:fs/promises";
 
 if (process.env.ALLOW_HOSTED_DEMO_SEED !== "1") {
   throw new Error("Set ALLOW_HOSTED_DEMO_SEED=1 to confirm this is staging.");
@@ -127,7 +128,19 @@ for (const profile of profiles) {
       `Create ${profile[0]}`,
     ).then((data) => data.user);
   }
-  members.push({ id: user.id, profile });
+  const avatarName = profile[0].split(".")[0];
+  const avatarPath = `demo/${avatarName}.webp`;
+  const avatar = await readFile(
+    new URL(`./demo-avatars/${avatarName}.webp`, import.meta.url),
+  );
+  await checked(
+    db.storage.from("member-avatars").upload(avatarPath, avatar, {
+      contentType: "image/webp",
+      upsert: true,
+    }),
+    `Upload portrait for ${profile[1]}`,
+  );
+  members.push({ id: user.id, profile, avatarPath });
 }
 
 await checked(
@@ -142,7 +155,7 @@ await checked(
 );
 await checked(
   db.from("member_profiles").upsert(
-    members.map(({ id, profile }) => ({
+    members.map(({ id, profile, avatarPath }) => ({
       user_id: id,
       display_name: profile[1],
       title: profile[2],
@@ -151,6 +164,7 @@ await checked(
       city: profile[4],
       region: profile[5],
       country: "United States",
+      avatar_path: avatarPath,
       directory_visible: true,
       onboarding_complete: true,
     })),
