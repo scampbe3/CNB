@@ -14,6 +14,7 @@
     "bootstrap-admin": "node --env-file-if-exists=.env.local scripts/bootstrap-admin.mjs",
     "preflight": "node --env-file-if-exists=.env.local scripts/preflight.mjs",
     "import-roster": "node --env-file-if-exists=.env.local scripts/import-roster.mjs",
+    "seed:staging": "node --env-file-if-exists=.env.local scripts/seed-staging.mjs",
     "format": "prettier --write app components lib tests scripts/*.mjs *.ts *.json"
   },
   "devDependencies": {

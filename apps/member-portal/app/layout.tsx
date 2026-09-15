@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     template: "%s | The Decision Room",
   },
   description: "A private advisory community. A place to think together.",
+  icons: {
+    icon: "/images/cb-icon-white.png",
+    shortcut: "/images/cb-icon-white.png",
+    apple: "/images/cb-icon-white.png",
+  },
   robots: { index: false, follow: false },
 };
 export default function RootLayout({
