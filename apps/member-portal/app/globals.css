@@ -849,6 +849,18 @@ main {
 .comment-tools .section {
   margin-top: 0;
 }
+.comment-tools .contribution-editor[open],
+.comment-tools .reply-composer[open] {
+  flex: 1 0 100%;
+  min-width: 0;
+}
+.comment-tools .reply-composer[open] .form {
+  margin-top: 16px;
+  width: 100%;
+}
+.contribution-editor > .form + .form {
+  margin-top: 12px;
+}
 .reply-children {
   margin-left: 42px;
   padding-left: 20px;

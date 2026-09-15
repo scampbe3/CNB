@@ -1044,7 +1044,7 @@ function DiscussionReplies({
             />
           )}
           {open && guidelines && (
-            <details>
+            <details className="reply-composer">
               <summary>Reply to {comment.author_name}</summary>
               <ActionForm action="comment" label="Share reply">
                 <input name="id" type="hidden" value={threadId} />
@@ -1113,7 +1113,7 @@ function ContributionEditor({
   title?: string;
 }) {
   return (
-    <details className="section">
+    <details className="section contribution-editor">
       <summary>
         Edit your {kind === "thread" ? "conversation" : "response"}
       </summary>
