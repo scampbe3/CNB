@@ -8,7 +8,7 @@ This document defines how to add the Decision Room member system without replaci
 
 ## Implementation record (2026-09-14)
 
-The additive portal is implemented in `apps/member-portal` with nine SQL migrations in `supabase/migrations`. Work is isolated in `D:\CNB-member-portal` on `implementation/member-portal`; the original worktree's unrelated changes remain untouched. Hosted setup status is recorded in the operations guide; local implementation is not a claim of completed production launch.
+The additive portal is implemented in `apps/member-portal` with ten SQL migrations in `supabase/migrations`. Work is isolated in `D:\CNB-member-portal` on `implementation/member-portal`; the original worktree's unrelated changes remain untouched. Hosted setup status is recorded in the operations guide; local implementation is not a claim of completed production launch.
 
 The [application README](../apps/member-portal/README.md), [operations guide](member-portal-operations.md) and [content guide](member-portal-content-guide.md) describe the delivered code and required launch checks. The numbered sections below retain the agreed design baseline; internal table/route/file proposals are not an assertion that each was implemented with that exact name.
 
