@@ -858,6 +858,14 @@ main {
   margin-top: 16px;
   width: 100%;
 }
+.reply-report {
+  flex-basis: 100%;
+}
+.reply-report .form,
+.report-panel .form {
+  margin-top: 16px;
+  max-width: 680px;
+}
 .contribution-editor > .form + .form {
   margin-top: 12px;
 }

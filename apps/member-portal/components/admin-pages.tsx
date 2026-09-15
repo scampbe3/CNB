@@ -80,27 +80,48 @@ export async function AdminPage({
                 </ActionForm>
               ) : (
                 m.user_id !== user.id && (
-                  <ActionForm
-                    action="admin-member"
-                    label="Update membership"
-                    confirm="Change this member's access?"
-                  >
-                    <input type="hidden" name="id" value={m.user_id} />
-                    <label>
-                      Access
-                      <select
-                        name="status"
-                        defaultValue={
-                          m.status === "invited" ? "suspended" : m.status
-                        }
-                      >
-                        <option value="active">Active</option>
-                        <option value="suspended">Suspended</option>
-                        <option value="revoked">Revoked</option>
-                      </select>
-                    </label>
-                    <Field name="reason" label="Reason (private)" required />
-                  </ActionForm>
+                  <>
+                    <ActionForm
+                      action="admin-member"
+                      label="Update membership"
+                      confirm="Change this member's access?"
+                    >
+                      <input type="hidden" name="id" value={m.user_id} />
+                      <label>
+                        Access
+                        <select
+                          name="status"
+                          defaultValue={
+                            m.status === "invited" ? "suspended" : m.status
+                          }
+                        >
+                          <option value="active">Active</option>
+                          <option value="suspended">Suspended</option>
+                          <option value="revoked">Banned</option>
+                        </select>
+                      </label>
+                      <Field name="reason" label="Reason (private)" required />
+                    </ActionForm>
+                    <ActionForm
+                      action="admin-warning"
+                      label="Send private warning"
+                      confirm="Send this warning to the member?"
+                    >
+                      <input type="hidden" name="id" value={m.user_id} />
+                      <TextArea
+                        name="message"
+                        label="Warning shown to the member"
+                        required
+                        maxLength={2000}
+                      />
+                      <Field
+                        name="reason"
+                        label="Administrative reason (private)"
+                        required
+                        maxLength={1000}
+                      />
+                    </ActionForm>
+                  </>
                 )
               )}
             </article>
@@ -422,13 +443,16 @@ export async function AdminPage({
         .limit(100),
     );
     const reports = checked(
-      await db.from("discussion_reports").select("*").eq("resolved", false),
+      await db
+        .from("discussion_reports")
+        .select("*")
+        .eq("resolved", false)
+        .order("created_at"),
     );
     const comments = checked(
       await db
         .from("discussion_comments")
         .select("*")
-        .eq("hidden", false)
         .order("created_at", { ascending: false })
         .limit(100),
     );
@@ -438,8 +462,27 @@ export async function AdminPage({
         {reports.length ? (
           reports.map((r) => (
             <article className="admin-item" key={r.id}>
+              <p>
+                <strong>
+                  {r.reported_member_id
+                    ? "Member"
+                    : r.comment_id
+                      ? "Response"
+                      : "Conversation"}{" "}
+                  report
+                </strong>
+              </p>
               <p>{r.reason}</p>
-              <Link href={`/community/${r.thread_id}`}>Open conversation</Link>
+              {r.thread_id && (
+                <Link href={`/community/${r.thread_id}`}>
+                  Open conversation
+                </Link>
+              )}
+              {r.reported_member_id && (
+                <Link href={`/members/${r.reported_member_id}`}>
+                  Open member profile
+                </Link>
+              )}
               <ActionForm action="admin-report" label="Mark resolved">
                 <input name="id" type="hidden" value={r.id} />
               </ActionForm>
@@ -478,8 +521,13 @@ export async function AdminPage({
         {comments.map((c) => (
           <article key={c.id} className="admin-item">
             <p>{c.body}</p>
-            <ActionForm action="admin-comment" label="Hide comment">
+            <p className="status">{c.hidden ? "Hidden" : "Visible"}</p>
+            <ActionForm
+              action="admin-comment"
+              label={c.hidden ? "Restore comment" : "Hide comment"}
+            >
               <input name="id" type="hidden" value={c.id} />
+              <input name="hidden" type="hidden" value={String(!c.hidden)} />
             </ActionForm>
           </article>
         ))}

@@ -333,15 +333,33 @@ async function perform(form: FormData): Promise<FormState> {
       }),
     );
     if (remove && text(form, "kind") === "thread") redirect("/community");
-  } else if (action === "report")
-    checked(
-      await db.from("discussion_reports").insert({
-        reporter_id: user.id,
-        thread_id: id(form),
-        reason: z.string().min(3).max(1000).parse(text(form, "reason")),
-      }),
-    );
-  else if (action === "intro")
+  } else if (action === "report") {
+    const targetType = z
+      .enum(["thread", "comment", "member"])
+      .parse(text(form, "target_type"));
+    const target = id(form);
+    const report = {
+      reporter_id: user.id,
+      thread_id: targetType === "thread" ? target : null,
+      comment_id: targetType === "comment" ? target : null,
+      reported_member_id: targetType === "member" ? target : null,
+      reason: z.string().min(3).max(1000).parse(text(form, "reason")),
+    };
+    if (targetType === "comment") {
+      const comment = checked(
+        await db
+          .from("discussion_comments")
+          .select("thread_id")
+          .eq("id", target)
+          .single(),
+      );
+      report.thread_id = comment.thread_id;
+    }
+    const result = await db.from("discussion_reports").insert(report);
+    if (result.error?.code === "23505")
+      throw new Error("You have already reported this item for review.");
+    checked(result);
+  } else if (action === "intro")
     checked(
       await db.from("introduction_requests").insert({
         requester_id: user.id,
@@ -371,6 +389,14 @@ async function perform(form: FormData): Promise<FormState> {
           .enum(["active", "suspended", "revoked"])
           .parse(text(form, "status")),
         reason: text(form, "reason"),
+      }),
+    );
+  else if (action === "admin-warning")
+    checked(
+      await db.rpc("issue_member_warning", {
+        target: id(form),
+        message: z.string().min(10).max(2000).parse(text(form, "message")),
+        reason: z.string().min(3).max(1000).parse(text(form, "reason")),
       }),
     );
   else if (action === "admin-invite") {
@@ -454,22 +480,20 @@ async function perform(form: FormData): Promise<FormState> {
     };
   } else if (action === "admin-thread")
     checked(
-      await db
-        .from("discussion_threads")
-        .update({
-          status: z
-            .enum(["open", "locked", "hidden"])
-            .parse(text(form, "status")),
-          pinned: form.get("pinned") === "on",
-        })
-        .eq("id", id(form)),
+      await db.rpc("moderate_thread", {
+        target: id(form),
+        new_status: z
+          .enum(["open", "locked", "hidden"])
+          .parse(text(form, "status")),
+        pin: form.get("pinned") === "on",
+      }),
     );
   else if (action === "admin-comment")
     checked(
-      await db
-        .from("discussion_comments")
-        .update({ hidden: true })
-        .eq("id", id(form)),
+      await db.rpc("moderate_comment", {
+        target: id(form),
+        hide: text(form, "hidden") === "true",
+      }),
     );
   else if (action === "admin-report")
     checked(

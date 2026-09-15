@@ -396,19 +396,34 @@ export async function MemberPage({
             <SavedLibrary query={query} />
           </section>
         ) : (
-          <section className="section panel form-panel">
-            <h2>Make a connection.</h2>
-            <p>Tell Amanda why you would like an introduction.</p>
-            <ActionForm action="intro" label="Request an introduction">
-              <input type="hidden" name="id" value={p.user_id} />
-              <TextArea
-                name="context"
-                label="What would you like to discuss?"
-                maxLength={2000}
-                required
-              />
-            </ActionForm>
-          </section>
+          <>
+            <section className="section panel form-panel">
+              <h2>Make a connection.</h2>
+              <p>Tell Amanda why you would like an introduction.</p>
+              <ActionForm action="intro" label="Request an introduction">
+                <input type="hidden" name="id" value={p.user_id} />
+                <TextArea
+                  name="context"
+                  label="What would you like to discuss?"
+                  maxLength={2000}
+                  required
+                />
+              </ActionForm>
+            </section>
+            <details className="section report-panel">
+              <summary>Report this member</summary>
+              <ActionForm action="report" label="Send private report">
+                <input name="id" type="hidden" value={p.user_id} />
+                <input name="target_type" type="hidden" value="member" />
+                <TextArea
+                  name="reason"
+                  label="What should Amanda know?"
+                  required
+                  maxLength={1000}
+                />
+              </ActionForm>
+            </details>
+          </>
         )}
       </>
     );
@@ -714,6 +729,7 @@ export async function MemberPage({
               <summary>Report this conversation</summary>
               <ActionForm action="report" label="Send report to Amanda">
                 <input name="id" type="hidden" value={thread.id} />
+                <input name="target_type" type="hidden" value="thread" />
                 <TextArea
                   name="reason"
                   label="What should Amanda know?"
@@ -837,6 +853,14 @@ export async function MemberPage({
         .eq("requester_id", user.id)
         .order("created_at", { ascending: false }),
     ) as Intro[];
+    const warnings = checked(
+      await db
+        .from("member_warnings")
+        .select("id,message,created_at")
+        .eq("member_id", user.id)
+        .is("withdrawn_at", null)
+        .order("created_at", { ascending: false }),
+    );
     return (
       <>
         <Heading title="Your account." />
@@ -851,6 +875,25 @@ export async function MemberPage({
             Download my information
           </a>
         </div>
+        {warnings.length > 0 && (
+          <section
+            className="section moderation-notices"
+            aria-labelledby="account-notices-title"
+          >
+            <p className="eyebrow">Private notices from Amanda</p>
+            <h2 id="account-notices-title">Account notices</h2>
+            {warnings.map((warning) => (
+              <article className="panel" key={warning.id}>
+                <p className="status">
+                  {new Date(warning.created_at).toLocaleDateString("en-US", {
+                    dateStyle: "long",
+                  })}
+                </p>
+                <p className="reading">{warning.message}</p>
+              </article>
+            ))}
+          </section>
+        )}
         <section className="section" id="introduction-requests">
           <div className="section-bar">
             <div>
@@ -1054,6 +1097,21 @@ function DiscussionReplies({
                   label="Your reply"
                   required
                   maxLength={5000}
+                />
+              </ActionForm>
+            </details>
+          )}
+          {comment.author_id !== currentUser && (
+            <details className="reply-report">
+              <summary>Report response</summary>
+              <ActionForm action="report" label="Send private report">
+                <input name="id" type="hidden" value={comment.id} />
+                <input name="target_type" type="hidden" value="comment" />
+                <TextArea
+                  name="reason"
+                  label="What should Amanda know?"
+                  required
+                  maxLength={1000}
                 />
               </ActionForm>
             </details>

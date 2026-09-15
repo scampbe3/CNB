@@ -348,6 +348,7 @@ const tables = {
     created_at: "2026-09-12T10:00:00.000Z",
   })),
   discussion_reports: [],
+  member_warnings: [],
   introduction_requests: [],
   member_invitations: [],
   file_assets: [],

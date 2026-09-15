@@ -43,6 +43,7 @@ beforeAll(async () => {
     "202609140007_member_conversations.sql",
     "202609140008_daily_delivery.sql",
     "202609140009_editorial_media.sql",
+    "202609150003_moderation_workflows.sql",
   ])
     await db.exec(
       readFileSync(resolve("../../supabase/migrations", file), "utf8"),
@@ -544,6 +545,92 @@ it("requires guidelines before posting and enforces contribution ownership", asy
     (
       await asUser(b, "select * from public.discussion_threads where id=$1", [
         id,
+      ])
+    ).rows,
+  ).toHaveLength(0);
+});
+it("reports conversations, responses, and members and keeps warnings private", async () => {
+  const thread = (
+    await asUser(
+      a,
+      "insert into public.discussion_threads(author_id,title,body) values($1,'Moderation test','A reportable conversation') returning id",
+      [a],
+    )
+  ).rows[0] as { id: string };
+  const comment = (
+    await asUser(
+      b,
+      "insert into public.discussion_comments(thread_id,author_id,body) values($1,$2,'A reportable response') returning id",
+      [thread.id, b],
+    )
+  ).rows[0] as { id: string };
+  await asUser(
+    b,
+    "insert into public.discussion_reports(reporter_id,thread_id,reason) values($1,$2,'Please review this conversation')",
+    [b, thread.id],
+  );
+  await asUser(
+    a,
+    "insert into public.discussion_reports(reporter_id,thread_id,comment_id,reason) values($1,$2,$3,'Please review this response')",
+    [a, thread.id, comment.id],
+  );
+  await asUser(
+    a,
+    "insert into public.discussion_reports(reporter_id,reported_member_id,reason) values($1,$2,'Please review this member account')",
+    [a, b],
+  );
+  expect(
+    (
+      await asUser(
+        admin,
+        "select * from public.discussion_reports where not resolved",
+      )
+    ).rows,
+  ).toHaveLength(3);
+  expect(
+    (await asUser(b, "select * from public.discussion_reports")).rows,
+  ).toHaveLength(1);
+  await expect(
+    asUser(
+      a,
+      "insert into public.discussion_reports(reporter_id,reported_member_id,reason) values($1,$1,'Self report')",
+      [a],
+    ),
+  ).rejects.toThrow();
+  await expect(
+    asUser(
+      a,
+      "select public.issue_member_warning($1,'A private warning for the member.','A reviewed concern')",
+      [b],
+    ),
+  ).rejects.toThrow("Administrator");
+  await asUser(
+    admin,
+    "select public.issue_member_warning($1,'Please keep future contributions respectful.','A reviewed concern')",
+    [b],
+  );
+  expect(
+    (await asUser(b, "select message from public.member_warnings")).rows,
+  ).toEqual([{ message: "Please keep future contributions respectful." }]);
+  expect(
+    (await asUser(a, "select * from public.member_warnings")).rows,
+  ).toHaveLength(0);
+  await asUser(admin, "select public.moderate_comment($1,true)", [comment.id]);
+  expect(
+    (
+      await asUser(a, "select * from public.discussion_comments where id=$1", [
+        comment.id,
+      ])
+    ).rows,
+  ).toHaveLength(0);
+  await asUser(admin, "select public.moderate_comment($1,false)", [comment.id]);
+  await asUser(admin, "select public.moderate_thread($1,'hidden',false)", [
+    thread.id,
+  ]);
+  expect(
+    (
+      await asUser(a, "select * from public.discussion_threads where id=$1", [
+        thread.id,
       ])
     ).rows,
   ).toHaveLength(0);
