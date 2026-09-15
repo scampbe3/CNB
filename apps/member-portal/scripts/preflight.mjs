@@ -126,6 +126,6 @@ if (!failures && process.argv.includes("--online")) {
   );
 }
 console.log(
-  "Still required manually: private workbook sharing, Auth signup disabled, SMTP/templates, policy approval, staging invitations, backups and monitoring. No email was sent by this check.",
+  "Still required manually before member launch: client policy approval, backup/restore rehearsal, monitoring, and the hosted acceptance checklist. No email was sent by this check.",
 );
 process.exitCode = failures ? 1 : 0;
