@@ -453,6 +453,19 @@ main {
 .feature-card h2 {
   margin: 25px 0 16px;
 }
+.policy-copy {
+  max-width: 860px;
+}
+.policy-copy h2 {
+  margin-bottom: 22px;
+}
+.policy-copy h3 {
+  font-size: 26px;
+  margin: 30px 0 10px;
+}
+.policy-copy p:last-child {
+  margin-bottom: 0;
+}
 .feature-card p {
   max-width: 400px;
 }
