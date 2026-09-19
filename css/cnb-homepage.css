@@ -2456,10 +2456,6 @@ body.cnb-page-work-with-amanda #engagement-butter-lye :is(
 }
 
 @media (max-width: 720px) {
-  [data-cnb-home-root][data-cnb-page="member-home"] > #the-library .cnb-cms-copy {
-    text-align: right;
-  }
-
   .cnb-home-cta-row {
     flex-direction: column;
     align-items: stretch;
