@@ -1238,6 +1238,24 @@ body.cnb-page-learn #access-membership .cnb-home-btn.primary {
 }
 
 @media (min-width: 721px) {
+  [data-cnb-home-root][data-cnb-page="member-home"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [data-cnb-home-root][data-cnb-page="member-home"] > * {
+    grid-column: 1 / -1;
+  }
+
+  [data-cnb-home-root][data-cnb-page="member-home"] > #the-library {
+    grid-column: 1;
+  }
+
+  [data-cnb-home-root][data-cnb-page="member-home"] > #in-the-room {
+    grid-column: 2;
+    border-left: 1px solid var(--cnb-border);
+  }
+
   .cnb-home-section.is-layout-band-card .cnb-home-image {
     height: clamp(260px, 32vw, 420px);
   }
