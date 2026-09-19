@@ -209,7 +209,7 @@ export default async function Page({
   }
   const context = await requireMember(path[0] === "admin");
   return (
-    <Shell admin={context.membership.role === "admin"}>
+    <Shell>
       {path[0] === "admin" ? (
         <AdminPage
           section={path[1]}

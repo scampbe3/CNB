@@ -398,10 +398,25 @@ test("member cannot open administration, administrator can", async ({
   page,
 }, info) => {
   await login(page);
+  await page.getByRole("link", { name: "Account", exact: true }).click();
+  await expect(
+    page.getByRole("link", { name: "Administration", exact: true }),
+  ).toHaveCount(0);
   await page.goto("/admin/members");
   await expect(page).toHaveURL("/");
   await page.context().clearCookies();
   await login(page, true);
+  await expect(
+    page
+      .getByRole("navigation", { name: "Member navigation" })
+      .getByRole("link", { name: "Administration", exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole("link", { name: "Account", exact: true }).click();
+  await expect(
+    page.getByRole("link", { name: "Administration", exact: true }),
+  ).toBeVisible();
+  await page.getByRole("link", { name: "Administration", exact: true }).click();
+  await expect(page).toHaveURL(/\/admin$/);
   for (const section of [
     "members",
     "invitations",

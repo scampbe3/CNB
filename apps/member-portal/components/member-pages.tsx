@@ -35,7 +35,7 @@ export async function MemberPage({
   path: string[];
   query: Query;
 }) {
-  const { db, user } = await requireMember();
+  const { db, user, membership } = await requireMember();
   const copy = await portalCopy();
   const route = path[0] || "home";
   if (route === "home") {
@@ -865,6 +865,11 @@ export async function MemberPage({
       <>
         <Heading title="Your account." />
         <div className="page-actions">
+          {membership.role === "admin" && (
+            <Link className="button" href="/admin">
+              Administration
+            </Link>
+          )}
           <Link className="button" href={`/members/${user.id}`}>
             View profile
           </Link>

@@ -265,11 +265,9 @@ export function ProfileFields({
 }
 export function Shell({
   children,
-  admin = false,
   member = true,
 }: {
   children: React.ReactNode;
-  admin?: boolean;
   member?: boolean;
 }) {
   const links = member
@@ -317,7 +315,6 @@ export function Shell({
                     {label}
                   </Link>
                 ))}
-                {admin && <Link href="/admin">Administration</Link>}
               </nav>
             </details>
           </div>
