@@ -588,6 +588,32 @@ body.cnb-page-membership .cnb-home-section[data-has-image="true"]::before {
   color: #fff;
 }
 
+body.cnb-page-cnb-home :is(#selected-experience, #testimonials) {
+  background: radial-gradient(120% 140% at 50% -10%, rgba(255, 255, 255, 0.16), transparent 60%),
+    #14110f;
+  color: #fff;
+}
+
+body.cnb-page-cnb-home :is(#selected-experience, #testimonials)::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  opacity: 0.5;
+}
+
+body.cnb-page-cnb-home :is(#selected-experience, #testimonials)::after {
+  display: none;
+}
+
+body.cnb-page-cnb-home :is(#selected-experience, #testimonials) .cnb-cms-copy {
+  max-width: 920px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+body.cnb-page-cnb-home :is(#selected-experience, #testimonials)
+  :is(.cnb-home-title, .cnb-home-body, .cnb-home-subhead, .cnb-home-eyebrow, .cnb-cms-heading) {
+  color: #fff;
+}
+
 .cnb-home-section[data-theme="ink"]::before {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
   opacity: 0.5;
@@ -1238,6 +1264,11 @@ body.cnb-page-learn #access-membership .cnb-home-btn.primary {
 }
 
 @media (min-width: 721px) {
+  body.cnb-page-cnb-home :is(#decision-room, #experience-publishing, #experience-consulting)
+    .cnb-home-grid.split .cnb-home-media {
+    order: -1;
+  }
+
   [data-cnb-home-root][data-cnb-page="member-home"] {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
