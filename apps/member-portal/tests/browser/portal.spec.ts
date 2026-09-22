@@ -141,6 +141,47 @@ test("anonymous visitors can read public resources but cannot enter the director
   await page.goto("/library/better-questions");
   await expect(page).toHaveURL(/\/login\?next=/);
 });
+test("login artwork remains visible and compact at this viewport", async ({
+  page,
+}, info) => {
+  await page.goto("/login");
+  const brand = page.getByRole("link", {
+    name: "Cupcakes and Broccoli website",
+  });
+  await expect(brand).toBeVisible();
+  await expect(brand.locator(".auth-logo")).toHaveJSProperty("complete", true);
+  await expect(page.locator(".auth-artwork")).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      name: "A place for better questions. And the women who ask them.",
+    }),
+  ).toBeVisible();
+  await expect(page.locator(".auth-art > .eyebrow")).toBeVisible();
+
+  const layout = await page.locator(".auth-art").evaluate((panel) => {
+    const panelRect = panel.getBoundingClientRect();
+    const textRects = [
+      panel.querySelector(".auth-wordmark")!,
+      panel.querySelector("h2")!,
+      panel.querySelector(".eyebrow")!,
+    ].map((element) => element.getBoundingClientRect());
+    return {
+      panelHeight: panelRect.height,
+      viewportWidth: window.innerWidth,
+      textFits: textRects.every(
+        (rect) => rect.top >= panelRect.top && rect.bottom <= panelRect.bottom,
+      ),
+    };
+  });
+  expect(layout.textFits).toBe(true);
+  if (layout.viewportWidth <= 760)
+    expect(layout.panelHeight).toBeLessThanOrEqual(174);
+  await accessible(page);
+  await page.screenshot({
+    path: info.outputPath("login-artwork.png"),
+    fullPage: true,
+  });
+});
 test("login, member home and directory work at this viewport", async ({
   page,
 }, info) => {

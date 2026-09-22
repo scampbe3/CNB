@@ -122,10 +122,19 @@ export async function AuthPage({
   return (
     <div className="auth-page">
       <aside className="auth-art">
-        <a className="auth-wordmark" href="https://www.cupcakesandbroccoli.com">
-          cupcakes + broccoli
+        <a
+          className="auth-wordmark"
+          href="https://www.cupcakesandbroccoli.com"
+          aria-label="Cupcakes and Broccoli website"
+        >
+          <img className="auth-logo" src="/images/cb-icon-white.png" alt="" />
+          <span>cupcakes + broccoli</span>
         </a>
-        <img src="/images/member-home.webp" alt="The Decision Room artwork" />
+        <img
+          className="auth-artwork"
+          src="/images/member-home.webp"
+          alt="The Decision Room artwork"
+        />
         <h2>A place for better questions. And the women who ask them.</h2>
         <p className="eyebrow">The Decision Room</p>
       </aside>

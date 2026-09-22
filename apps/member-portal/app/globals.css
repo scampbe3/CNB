@@ -650,7 +650,7 @@ main {
   justify-content: space-between;
   color: var(--paper);
 }
-.auth-art img {
+.auth-artwork {
   width: 260px;
   max-height: 330px;
   object-fit: cover;
@@ -692,8 +692,18 @@ main {
   color: var(--muted);
 }
 .auth-wordmark {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 14px;
   font: 30px var(--serif);
   text-decoration: none;
+}
+.auth-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 .article {
   max-width: 780px;
@@ -1094,12 +1104,53 @@ main {
     grid-template-columns: 1fr;
   }
   .auth-art {
-    padding: 24px;
+    position: relative;
+    display: block;
+    height: clamp(156px, 35vw, 174px);
+    min-height: 0;
+    padding: 14px 18px 12px;
+    overflow: hidden;
   }
-  .auth-art img,
-  .auth-art h2,
+  .auth-wordmark {
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+    font-size: clamp(18px, 5vw, 23px);
+    line-height: 1;
+  }
+  .auth-logo {
+    width: clamp(38px, 10vw, 44px);
+    height: clamp(38px, 10vw, 44px);
+  }
+  .auth-artwork {
+    position: absolute;
+    right: clamp(14px, 4vw, 22px);
+    bottom: -8px;
+    width: clamp(72px, 20vw, 96px);
+    height: clamp(100px, 27vw, 126px);
+    max-height: none;
+    margin: 0;
+    object-position: center 24%;
+    border-radius: 48px 48px 8px 8px;
+  }
+  .auth-art h2 {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    bottom: 27px;
+    width: calc(100% - clamp(112px, 29vw, 145px));
+    max-width: none;
+    font-size: clamp(17px, 4.5vw, 22px);
+    line-height: 1.03;
+  }
   .auth-art > p {
-    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    bottom: 8px;
+    margin: 0;
+    color: rgba(246, 241, 234, 0.68);
+    font-size: 8px;
   }
   .auth-content {
     padding: 44px 26px;
