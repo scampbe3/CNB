@@ -2100,10 +2100,34 @@
     hydrate(data);
   };
 
-  const fetchJson = (url) =>
-    fetch(url, { cache: "no-store" })
-      .then((res) => (res.ok ? res.json() : null))
-      .catch(() => null);
+  const getJsonCandidates = (url) => {
+    const candidates = [url];
+    const jsdelivrMatch = String(url || "").match(
+      /^https:\/\/cdn\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/([^?#]+)(?:[?#].*)?$/i
+    );
+    if (jsdelivrMatch) {
+      const [, owner, repo, ref, path] = jsdelivrMatch;
+      // A new commit can reach GitHub before every jsDelivr edge has the JSON file.
+      candidates.push(`https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${path}`);
+    }
+    return candidates;
+  };
+
+  const fetchJson = async (url) => {
+    const candidates = getJsonCandidates(url);
+    for (const candidate of candidates) {
+      try {
+        const res = await fetch(candidate, { cache: "no-store" });
+        if (!res.ok) continue;
+        const data = await res.json();
+        window.CNB_LAST_JSON_URL = candidate;
+        return data;
+      } catch (_) {
+        // Try the next source before falling back to embedded page defaults.
+      }
+    }
+    return null;
+  };
 
   const loadJsonp = (url, timeoutMs = 8000) =>
     new Promise((resolve, reject) => {
