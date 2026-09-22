@@ -1125,7 +1125,8 @@ main {
   .auth-artwork {
     position: absolute;
     right: clamp(14px, 4vw, 22px);
-    bottom: -8px;
+    top: 50%;
+    transform: translateY(-50%);
     width: clamp(72px, 20vw, 96px);
     height: clamp(100px, 27vw, 126px);
     max-height: none;

@@ -160,6 +160,9 @@ test("login artwork remains visible and compact at this viewport", async ({
 
   const layout = await page.locator(".auth-art").evaluate((panel) => {
     const panelRect = panel.getBoundingClientRect();
+    const artworkRect = panel
+      .querySelector(".auth-artwork")!
+      .getBoundingClientRect();
     const textRects = [
       panel.querySelector(".auth-wordmark")!,
       panel.querySelector("h2")!,
@@ -168,14 +171,25 @@ test("login artwork remains visible and compact at this viewport", async ({
     return {
       panelHeight: panelRect.height,
       viewportWidth: window.innerWidth,
+      artworkFits:
+        artworkRect.top >= panelRect.top &&
+        artworkRect.bottom <= panelRect.bottom,
+      artworkCenterDelta: Math.abs(
+        artworkRect.top +
+          artworkRect.height / 2 -
+          (panelRect.top + panelRect.height / 2),
+      ),
       textFits: textRects.every(
         (rect) => rect.top >= panelRect.top && rect.bottom <= panelRect.bottom,
       ),
     };
   });
   expect(layout.textFits).toBe(true);
-  if (layout.viewportWidth <= 760)
+  if (layout.viewportWidth <= 760) {
     expect(layout.panelHeight).toBeLessThanOrEqual(174);
+    expect(layout.artworkFits).toBe(true);
+    expect(layout.artworkCenterDelta).toBeLessThan(1);
+  }
   await accessible(page);
   await page.screenshot({
     path: info.outputPath("login-artwork.png"),
