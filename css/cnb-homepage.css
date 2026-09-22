@@ -91,6 +91,13 @@ body.cnb-homepage-active .content {
   min-height: 100vh;
 }
 
+@media (min-width: 768px) {
+  /* Squarespace's About code block is one grid column wider than the shared site canvas. */
+  body.cnb-page-about .fe-block:has([data-cnb-home-root]) {
+    grid-column-end: 26 !important;
+  }
+}
+
 .cnb-site-header {
   position: fixed;
   top: 0;
